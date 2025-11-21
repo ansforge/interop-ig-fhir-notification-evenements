@@ -1,0 +1,1621 @@
+# Introduction
+
+Ce document présente une étude « métier » de mise en œuvre d’un
+mécanisme de notifications d’événements dans le domaine sanitaire,
+médico-administratif, médico-social et social. Il sert à évaluer les
+besoins en interopérabilité. Il sert également à définir le périmètre
+métier nécessaire à l’implémentation de ce mécanisme entre composants de
+systèmes d’information (SI) et entre les systèmes d’information (SI).
+
+A noter que les contraintes de sécurité concernant les flux échangés ne
+sont pas traitées dans ce document. Celles-ci sont du ressort de chaque
+responsable de l’implémentation du mécanisme qui est dans l’obligation
+de se conformer au cadre juridique en la matière. L’ANS propose des
+référentiels dédiés à la politique de sécurité (la PGSSI-S[^1]) et des
+mécanismes de sécurisation sont définis dans les volets de la couche
+Transport[^2] du Cadre d’Interopérabilité des systèmes d’information de
+santé (CI-SIS).
+
+Ci-dessous des exemples de cas d’usage concernant le mécanisme de
+notification d’évènements.
+
+## Lectorat cible
+
+Les lecteurs cibles sont principalement des chefs de projets ainsi que
+toute personne concernée par la maîtrise d’ouvrage et qui spécifie des
+projets avec des interfaces interopérables.
+
+## Exemples de cas d’usage
+
+### Parcours de soins d’une personne diabétique
+
+**<u>Pré-conditions :</u>**
+
+1.  Une plateforme de suivi d’une personne prise en charge dédiée à la
+    coordination des soins concentre les paramétrages des droits de
+    notification ainsi que le mécanisme opératoire des notifications.
+
+2.  Les professionnels de santé présentés dans ce cas d’usage sont
+    enregistrés sur cette plateforme. Les médecins sont identifiés comme
+    pouvant recevoir des notifications liées aux personnes prises en
+    charge.
+
+3.  La personne prise en charge a été confirmé positivement diabétique
+    par un dépistage. Son médecin traitant et un diabétologue lui ont
+    défini son plan personnalisé de soins (PPS). Le plan de soin est
+    stocké dans l’espace réservé à cet effet sur la plateforme de suivi.
+
+**<u>Scénario nominal :</u>**
+
+1.  La personne prise en charge connait une complication nécessitant une
+    hospitalisation.
+
+2.  L’hôpital dans lequel est admise la personne prise en charge envoie
+    cette information à la plateforme de suivi.
+
+3.  Le médecin traitant reçoit par conséquent une notification via un
+    canal sécurisé indiquant que la personne prise en charge a été admis
+    à l’hôpital.
+
+4.  Le diabétologue reçoit également une notification via un canal
+    sécurisé indiquant que la personne prise en charge a été admise à
+    l’hôpital.
+
+### Mise à disposition de résultats d’examen de laboratoire
+
+**<u>Pré-conditions :</u>**
+
+1.  Un patient et son médecin traitant sont inscrits à un service de
+    notification offert par la plateforme de suivi. Le canal de
+    diffusion de notification préférentiel du médecin traitant est par
+    exemple le sms et celui du patient est la messagerie électronique.
+
+2.  Le médecin traitant rédige une ordonnance d’examens biologiques pour
+    le patient. Ce dernier se rend au laboratoire muni de sa
+    prescription.
+
+3.  Le professionnel de santé du laboratoire effectue les prélèvements
+    indiqués sur l’ordonnance, saisit les données nécessaires dans le SI
+    du laboratoire, met les prélèvements à analyser et recueille les
+    résultats.
+
+**<u>Scénario nominal :</u>**
+
+1.  Le laboratoire transmet les résultats à la plateforme de suivi.
+
+2.  La plateforme de suivi notifie le patient et son médecin traitant de
+    la disponibilité des résultats d’analyse selon le canal préférentiel
+    de chacun.
+
+### Consultation d’un « pool » de notifications
+
+**<u>Pré-conditions :</u>**
+
+1.  L’ensemble des notifications émises par la plateforme de suivi sont
+    consultables dans le logiciel métier du professionnel de santé.
+
+2.  Une notification non consultée est marquée comme « Non lue ».
+
+**<u>Scénario nominal :</u>**
+
+1.  Lorsque le professionnel consulte une notification, celle-ci passe
+    en statut « Lue ».
+
+2.  La plateforme de suivi est alors automatiquement notifiée de ce
+    changement de statut et se met à jour en conséquence.
+
+**<u>Scénario alternatif :</u>**
+
+1.  Le professionnel peut forcer le statut de la notification de « Lue »
+    à « Non lue ».
+
+2.  La plateforme de suivi est alors automatiquement notifiée de ce
+    changement de statut et se met à jour en conséquence. La plateforme
+    sauvegarde l’historique des changements.
+
+Remarque : le « pool » de notification peut être intégré dans le
+logiciel métier du professionnel ou dans un outil « externe » qui peut
+gérer les notifications provenant de sources diverses.
+
+## Méthode d’élaboration des spécifications métier
+
+Les spécifications « métier » présentées dans ce document suivent la
+méthode[^3] d’élaboration des spécifications fonctionnelles des échanges
+élaborée par l’ANS. Cette méthode est constituée de plusieurs étapes :
+
+- **Etape 1**: Organisation du contexte métier;
+
+- **Etape 2**: Définition des processus métier collaboratifs;
+
+- **Etape 3**: Description de chaque processus défini et identification
+  des flux échangés
+
+- **Etape 4**: Qualification des flux échangés;
+
+- **Etape 5**: Pour chaque flux, identification des informations
+  véhiculées;
+
+- **Etape 6**: Elaboration du modèle hiérarchique de chaque flux
+  structuré (sous forme d’un ou plusieurs diagramme de classes UML). Le
+  modèle hiérarchique élaboré reposera sur la reprise des composants
+  mutualisés dans le modèle des objets de santé (MOS[^4]) et des
+  nomenclatures associées. A l'issue de cette élaboration, il se peut
+  que de nouveaux composants jusqu'alors inexistants dans le MOS aient
+  été définis et soient intégrés par la suite au MOS.
+
+# Élaboration des spécifications métier
+
+## Etape 1: Organisation du contexte métier
+
+Le but de cette étape est d’organiser la vue métier dans laquelle
+s’insère le projet et d'identifier le ou les processus du périmètre du
+projet. Les concepts suivants doivent être définis :  
+  
+- le domaine d'activité dans lequel se situe le projet; le domaine est
+composé d'un ou de plusieurs groupes de processus.  
+- les groupes de processus qui sont composés eux-mêmes d’un ensemble de
+processus métier.
+
+Le domaine de la notification d'évènements est relatif au traitement et
+la gestion des notifications d'évènements concernant une personne prise
+en charge dans le domaine sanitaire, médico-administratif, médico-social
+et social.
+
+<div class="figure">
+    <img src="organisationContexteMetier.png"
+    alt="Organisation du contexte métier"
+    title="Organisation du contexte métier"
+    style="width:5.74528in;height:2.95283in">
+</div>
+
+Figure 1 : Organisation du contexte métier
+
+Cette étude métier couvre les processus suivants :
+
+**La gestion des abonnements**:
+
+- La création ou la mise à jour d’un d’abonnement
+
+- La suppression d’un abonnement
+
+**La gestion des évènements:**
+
+- L’émission d’un événement
+
+**La gestion des notifications:**
+
+- La transmission d’un ordre de notification.
+
+## Etape 2: Définition du processus collaboratif
+
+Le but de cette étape est de définir les processus métier identifiés
+dans le diagramme défini à l’étape 1. Cette modélisation est entreprise
+de façon macroscopique en représentant les processus par des diagrammes
+de cas d’utilisation UML. Les définitions de termes utilisés dans cette
+étape ainsi que tout au long du document sont listées ci-dessous. A
+noter que chaque sous-section peut contenir ses définitions propres,
+notamment celles des flux d'informations identifiés.
+
+\- **Personne prise en charge**: Il s’agit de la personne prise en
+charge que ce soit au niveau sanitaire, médico-administratif,
+médico-social et social. Cette personne peut être un usager dans le
+secteur social ou un patient.
+
+\- **Évènement**: un événement correspond à un fait significatif lors de
+la prise en charge d’une personne. Par exemple, un événement peut être
+la disponibilité d’un nouveau document comme un compte-rendu d’examen de
+biologie, l’admission d’une personne dans un hôpital ou l’inscription
+d’une personne dans un programme de suivi de personnes en risque de
+perte d’autonomie.
+
+\- **Abonnement**[^5]: un abonnement porte sur les types d'évènements
+qui intéressent l’abonné et doivent faire l’objet d’une notification. Un
+abonnement est défini par l’identification de l’abonné, le médium de
+notification à utiliser, la personne prise en charge associée aux
+évènements, le type d’événement donnant lieu à notification et la
+période de validité de l’abonnement.
+
+\- **Média de notification**: un média de notification est le moyen de
+communication par lequel la notification parvient à l’abonné (ex. sms,
+mail, pop-up dans une application…).
+
+\- **Professionnel**: un professionnel est une personne qui participe à
+la prise en charge d’une personne que ce soit au niveau sanitaire,
+médico-administratif, médico-social et social.
+
+Les sous-sections suivantes présentent les cas d'utilisation identifiés
+dans le système ainsi que les acteurs et les actions qui y contenus.
+
+### \[Cas d’utilisation\] Gestion des abonnements (CI-SIS-NE-PGA-CU001) 
+
+**<u>Cas d'usage</u>** : Un souscripteur habilité crée, modifie ou
+supprime un abonnement aux notifications d’événements sur une plateforme
+ou un système de gestion dédié à cet effet pour le compte d’une personne
+physique ou morale.
+
+#### "Diagramme de cas d’utilisation : Création ou mise à jour d’un abonnement (CI-SIS-NE-CU-SA-001)"
+
+Le processus métier de gestion d'abonnement amène à considérer un cas
+d'utilisation de "Création ou de mise à jour d’un abonnement" avec les
+différents acteurs impliqués.
+
+<div class="figure">
+    <img src="CI-SIS-NE-CU-SA-001.png"
+    alt="Création ou mise à jour d’un abonnement"
+    title="CI-SIS-NE-CU-SA-001"
+    style="width:5.07547in;height:1.35433in">
+</div>
+
+Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un
+abonnement (CI-SIS-NE-CU-SA-001)
+
+#### Les acteurs impliqués 
+
+| **Acteur** | **Description** |
+|----|----|
+| Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. |
+| Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
+
+Table 1: Table des acteurs impliqués dans le cas d’utilisation Création
+ou mise à jour d’un abonnement
+
+##### Détails du cas d'utilisation
+
+Cette section décrit en détail chaque cas d'utilisation de la manière
+usuelle: description, pré-condition, scénario(s), exception,
+post-condition, contraintes fonctionnelles, autres contraintes.
+
+Qui:
+
+Gestionnaire d'abonnements, Souscripteur
+
+Description:
+
+Scénario nominal : Le souscripteur crée ou met à jour un abonnement pour
+un abonné. Cet abonné peut être une personne physique ou morale.
+
+Pré-Conditions:
+
+\- Les personnes physiques ou morales impliquées dans la notification
+d’évènements sont enregistrées via un gestionnaire d’inscriptions et par
+conséquent connues du système.  
+- Le paramétrage des média de diffusion est pris en charge par le
+gestionnaire d’inscriptions.  
+- L’abonné effectue une demande d’abonnements à notification au
+souscripteur.
+
+Scénario Alternatif:
+
+L’abonné peut être lui-même habilité à gérer son propre abonnement sans
+passer par un souscripteur.
+
+#### "Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001) "
+
+Le processus métier de gestion d'abonnement amène à considérer un cas
+d'utilisation de "Suppression d’un abonnement" avec les différents
+acteurs impliqués.
+
+<div class="figure">
+    <img src="CI-SIS-NE-CU-DA-001.png"
+    alt="Suppression d’un abonnement"
+    title="CI-SIS-NE-CU-DA-001"
+    style="width:5.10377in;height:1.24528in">
+</div>
+
+Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement
+(CI-SIS-NE-CU-DA-001)
+
+##### Les acteurs impliqués 
+
+Voir section 2.2.1.1.1.
+
+##### Détails du cas d'utilisation
+
+Cette section décrit en détail chaque cas d'utilisation de la manière
+usuelle: description, pré-condition, scénario(s), exception,
+post-condition, contraintes fonctionnelles, autres contraintes.
+
+Qui:
+
+Gestionnaire d'abonnements, Souscripteur
+
+Description:
+
+Le souscripteur supprime un abonnement.  
+Le cas "Suppression d’un abonnement" est distinct du cas d’utilisation
+"Création ou mise à jour d’un abonnement" parce que les informations
+métier manipulées sont différentes.
+
+Scenario Alternatif:
+
+L'abonné peut être lui-même habilité à gérer son propre abonnement sans
+passer par un souscripteur.
+
+###  \[Cas d’utilisation\] Gestion des évènements (CI-SIS-NE-PGE-CU001) 
+
+**<u>Cas d'usage</u>** : Un acteur déclenche l'envoi d'un évènement à
+une plateforme ou un système de gestion dédié à cet effet.
+
+#### "Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-NE-CU-EE-001)"
+
+Le processus métier de gestion d'évènements amène à considérer un cas
+d'utilisation d’une "Emission d'un évènement" avec les différents
+acteurs impliqués.
+
+<div class="figure">
+    <img src="CI-SIS-NE-CU-EE-001.png"
+    alt="Emission d'un évènement"
+    title="CI-SIS-NE-CU-EE-001"
+    style="width:4.97917in;height:0.84092in">
+</div>
+
+Figure 4 : Diagramme de cas d'utilisation : Emission d'un évènement
+(CI-SIS-NE-CU-EE-001)
+
+#### Les acteurs impliqués 
+
+| Acteur | Description |
+|----|----|
+| Emetteur | L'émetteur est une personne morale ou physique qui envoie un évènement au gestionnaire d'abonnements soit de manière automatique, soit manuellement. L'émetteur est enregistré et connu par le système qui réceptionne et traite les évènements. |
+| Gestionnaire d'abonnements | Le gestionnaire d’abonnements joue aussi le rôle de gestionnaire d’évènements. C’est un acteur système qui enregistre tous les événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
+
+Table 2: Table des acteurs impliqués dans le cas d’utilisation Emission
+d’un évènement
+
+#### Détails du cas d'utilisation
+
+Cette section décrit en détail chaque cas d'utilisation de la manière
+usuelle: description, pré-condition, scénario(s), exception,
+post-condition, contraintes fonctionnelles, autres contraintes.
+
+Qui:
+
+Gestionnaire d'abonnements, Emetteur
+
+Description:
+
+L’émission d’un évènement concerne l'envoi d'un évènement par un
+émetteur. Cet évènement peut donner lieu à la transmission d’un ordre de
+notification.
+
+Pré-Conditions:
+
+L'émetteur est pré-enregistré via le gestionnaire d’inscriptions.
+
+### \[Cas d’utilisation\] Gestion des notifications (CI-SIS-NE-PGN-CU001)
+
+**<u>Cas d'usage</u> :** Une plateforme ou un système de gestion dédié
+traite l'évènement de manière à pouvoir aviser les abonnés auxquels
+l'évènement est destiné, cela se traduit par la transmission d'un ordre
+de notification.
+
+#### "Diagramme de cas d'utilisation: Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001)"
+
+Le processus métier de gestion d'évènement amène à considérer un cas
+d'utilisation de "Transmission d'un ordre de notification" avec les
+différents acteurs impliqués.
+
+<div class="figure">
+    <img src="CI-SIS-NE-CU-TO-001.png"
+    alt="Transmission d'un ordre de notification"
+    title="CI-SIS-NE-CU-TO-001"
+    style="width:4.86806in;height:1.91338in">
+</div>
+
+Figure 5 : Diagramme de cas d'utilisation : Transmission d'un ordre de
+notification (CI-SIS-NE-CU-TO-001)
+
+#### Les acteurs impliqués 
+
+| Acteur | Description |
+|----|----|
+| Abonné | Un abonné est une personne destinatrice des notifications d'évènements dans le cadre d’un abonnement. Un abonné peut être un professionnel, une structure, la personne prise en charge ou une tierce personne autorisée à recevoir des notifications sur la personne prise en charge. |
+| Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. Il joue aussi le rôle d’un gestionnaire d’évènements et enregistre tous les événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
+| Gestionnaire de notifications | Le gestionnaire de notifications est un acteur système qui envoie les notifications aux abonnés concernés en fonction des informations recueillies depuis les gestionnaires d’abonnements. |
+
+Table 3: Table des acteurs impliqués dans le cas d’utilisation
+Transmission d’un ordre de notification
+
+#### Les détails du cas d'utilisation
+
+Cette section décrit en détail chaque cas d'utilisation de la manière
+usuelle: description, pré-condition, scénario(s), exception,
+post-condition, contraintes fonctionnelles, autres contraintes.
+
+Qui:
+
+Gestionnaire de notifications, Gestionnaire d'abonnements, Abonné
+
+**Description:**
+
+Scénario nominal générique : Un événement enregistré déclenche
+automatiquement l’envoi d’une notification à un ou plusieurs abonné(s)
+dans la mesure où leur abonnement est configuré pour recevoir ce type
+d’événement :
+
+\- L'émetteur transmet l’évènement via le gestionnaire d’abonnements.
+
+\- Le gestionnaire d’abonnements traite l'évènement et identifie les
+destinataires de la notification en fonction des abonnements en sa
+possession.
+
+\- Le gestionnaire d’abonnements transmet un ordre de notification au
+gestionnaire de notifications.
+
+\- L'abonné ou les abonnés sont prévenus de l’événement via le
+gestionnaire de notifications.
+
+<u>Exemple de cas d’usage</u> : En tenant compte des pré-conditions du
+cas d'usage présenté ci-dessous, le scénario décrit le cas d'une sortie
+d’hôpital d’une personne prise en charge.
+
+\- Un hôpital (émetteur) transmet au gestionnaire d’abonnements un
+nouvel évènement concernant la sortie d’hôpital du patient X.
+
+\- Le gestionnaire d’abonnements traite l'évènement et identifie le
+professionnel abonné à la notification d’évènements du patient X.
+
+\- Le gestionnaire d’abonnements transmet un ordre de notification au
+gestionnaire de notifications.
+
+\- Le professionnel abonné est prévenu de la sortie d’hôpital du patient
+X via le gestionnaire de notifications.
+
+**Pré-Conditions:**
+
+Ces pré-conditions sont spécifiques à l’exemple de cas d’usage présenté
+ci-dessous et servent d'illustration :  
+- L’abonné est enregistré via le gestionnaire d’inscriptions.  
+- Le professionnel, l’hôpital et la personne prise en charge sont
+enregistrés et la préférence de média de notification est paramétrée via
+le gestionnaire d’inscriptions.
+
+**<u>Contraintes « métier»:</u>**
+
+Les 4 types d’évènements pris en compte à ce jour sont :
+
+1.  Flux du dépôt de document
+
+2.  Flux d'admission dans un établissement de santé
+
+3.  Flux de sortie d'un établissement de santé
+
+4.  Flux de création d'une note pour un patient dans le cahier de
+    liaison
+
+## Etape 3 : Description du processus collaboratif et identification des flux 
+
+L’objectif de cette étape est de décrire les processus métier
+collaboratifs définis dans les cas d'utilisation de l’étape 2, ainsi que
+les flux échangés par les acteurs. Dans ce document, les processus sont
+modélisés avec des diagrammes d'activités UML.
+
+### \[Activité\] Gestion des abonnements (CI-SIS-NE-PGA-DA001)
+
+Cette section présente la modélisation du processus de la création ou de
+mise à jour d’un abonnement. Elle contient également une description des
+acteurs, des actions correspondantes et les flux d’échanges.
+
+#### Diagramme d’activité : Création ou mise à jour d’un abonnement (CI-SIS-NE-DA-SA-001)
+
+Le processus métier de gestion d'abonnement implique le flux d’échange
+de demande de création ou de mises à jour "SouscriptionAbonnement".
+
+<div class="figure">
+    <img src="CI-SIS-NE-DA-SA-001.png"
+    alt="Diagramme d'activité : Création ou mise à jour d’un
+abonnement"
+    title="CI-SIS-NE-DA-SA-001"
+    style="width:3.82075in;height:3.47589in">
+</div>
+
+Figure 6 : Diagramme d'activité : Création ou mise à jour d’un
+abonnement (CI-SIS-NE-DA-SA-001)
+
+**Acteurs**
+
+| Acteur | Description |
+|----|----|
+| Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
+| Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui stocke les abonnements et les paramètres d’usage des notifications d’événements. |
+
+Table 4 : Liste des acteurs
+
+**Actions**
+
+Initier une demande de création ou de mise à jour d'un abonnement
+
+Le souscripteur transmet au gestionnaire d’abonnements les
+caractéristiques de l’abonnement (abonné, média de notification, type
+d’événement à notifier, etc.). Cette action peut également concerner une
+demande de mise à jour d’un d’abonnement.
+
+Créer ou mettre à jour l'abonnement
+
+Le gestionnaire d’abonnements traite la demande du souscripteur.  
+
+#### Diagramme d’activité : Suppression d’un abonnement (CI-SIS-NE-DA-DA-001)
+
+Le processus métier de gestion d'abonnement implique le flux d’échange
+de demande de création ou de mise à jour : "SuppressionAbonnement".
+
+<div class="figure">
+    <img src="CI-SIS-NE-DA-DA-001.png"
+    alt="Diagramme d'activité : Suppression d'un abonnement"
+    title="CI-SIS-NE-DA-DA-001"
+    style="width:5.80541in;height:4.01042in">
+</div>
+
+Figure 7 : Diagramme d'activité : Suppression d'un abonnement
+(CI-SIS-NE-DA-DA-001)
+
+**Acteurs**
+
+| Acteur | Description |
+|----|----|
+| Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
+| Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. |
+
+Table 5 : Liste des acteurs
+
+**Actions**
+
+Initier une demande de suppression d'abonnement
+
+Le souscripteur transmet au gestionnaire d’abonnements les
+caractéristiques de l’abonnement à supprimer.
+
+Supprimer un abonnement
+
+Le gestionnaire d’abonnements traite la demande de suppression du
+souscripteur.
+
+### \[Activité\] Gestion des évènements (CI-SIS-NE-PGE-DA001)
+
+Cette section présente la modélisation du processus de l'émission d'un
+évènement. Elle contient également une description des acteurs, des
+actions correspondantes et les flux d’échanges.
+
+#### Diagramme d'activité : Emission d'un évènement (CI-SIS-NE-DA-EE-001)
+
+Le processus métier de gestion d'évènement implique le flux d’échange
+entre l'émetteur et la plateforme ou le système de gestion :
+"EmissionEvenement".
+
+<div class="figure">
+    <img src="CI-SIS-NE-DA-EE-001.png"
+    alt="Diagramme d'activité : Emission d'un évènement"
+    title="CI-SIS-NE-DA-EE-001"
+    style="width:3.75694in;height:2.91466in">
+</div>
+
+Figure 8 : Diagramme d'activité : Emission d'un évènement
+(CI-SIS-NE-DA-EE-001)
+
+**Acteurs**
+
+| Acteur | Description |
+|----|----|
+| Emetteur | L'émetteur est une personne morale ou physique qui envoie un évènement au gestionnaire d’abonnements soit de manière automatique, soit manuellement. L'Emetteur est enregistré et donc connu par le système qui réceptionne et traite les évènements. |
+| Gestionnaire d’abonnements | Le gestionnaire d’abonnements joue aussi le rôle de gestionnaire d’événements. C’est un acteur système qui enregistre l’ensemble des événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
+
+Table 6 : Liste des acteurs
+
+**Actions**
+
+Emettre un évènement
+
+L'émission est déclenchée suite à une action.  
+Les actions sont de type admission ou sortie d'un établissement de
+santé, dépôt de document, rédaction d'une lettre de liaison, etc.  
+Les émissions sont donc les vecteurs de l'envoi de l'évènement.
+
+Traiter l'évènement
+
+L'évènement est traité par une plateforme ou un système de gestion qui
+analyse, qualifie et vérifie si cet évènement est lié à des abonnements.
+
+### \[Activité\] Gestion des notifications (CI-SIS-NE-PGN-DA001) 
+
+Cette section présente la modélisation du processus de la transmission
+de l'ordre de notification d'un évènement. Elle contient également une
+description des acteurs, des actions correspondantes et les flux
+d’échanges.
+
+#### Diagramme d'activité : Transmission d'un ordre de notification (CI-SIS-NE-DA-TO-001)
+
+Le processus métier de gestion de notification implique le flux
+d’échange : "TransmissionOrdreNotification".
+
+<div class="figure">
+    <img src="CI-SIS-NE-DA-TO-001.png"
+    alt="Diagramme d'activité : Transmission d'un ordre de
+notification"
+    title="CI-SIS-NE-DA-TO-001"
+    style="width:4.8656in;height:4.53681in">
+</div>
+
+Figure 9 : Diagramme d'activité : Transmission d'un ordre de
+notification (CI-SIS-NE-DA-TO-001)
+
+**Acteurs**
+
+| Acteur | Description |
+|----|----|
+| Gestionnaire d’abonnements | Le gestionnaire d’abonnements joue aussi le rôle de gestionnaire d’évènements. C’est un acteur système qui enregistre l’ensemble des événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
+| Gestionnaire de notifications | Le gestionnaire de notifications est un acteur système qui envoie les notifications aux abonnés concernés en fonction des informations recueillies depuis les gestionnaires d’abonnements et d’événements. |
+| Abonné | Un abonné est une personne destinatrice des notifications d'évènements dans le cadre d’un abonnement. Un abonné peut être un professionnel, une structure, la personne prise en charge ou une tierce personne autorisée à recevoir des notifications concernant la personne prise en charge. |
+
+Table 7 : Liste des acteurs
+
+**Actions**
+
+Traiter l'évènement
+
+La plateforme ou le système dédié prend en compte l'évènement liée à une
+action réalisée et l'analyse.  
+Les actions sont de type admission ou sortie d'un établissement de
+santé, dépôt de document, création d’une note dans le cahier de liaison,
+etc.  
+La plateforme ou le système dédié vérifie si le contexte de cet
+évènement (l'action opérée et la personne prise en charge) concerne des
+abonnés destinataires.  
+Si des abonnés sont identifiés, un ordre de notification de l'évènement
+est transmis.  
+Les abonnés sont forcément habilités à recevoir les notifications.
+
+Transmettre un ordre de notification
+
+La plateforme ou le système dédié prend en compte l'ordre de
+notification d'évènement et traite l'envoi.
+
+Réceptionner la notification
+
+L'abonné est en mesure de réceptionner la notification via son propre
+système.
+
+## Etape 4: Qualification des flux échangés 
+
+Les flux échangés entre les acteurs ont été identifiés à l'étape 3.
+Cette nouvelle étape vise à qualifier les flux d'informations en
+définissant parmi eux ceux qui sont structurés. Cette qualification est
+effectuée en élaborant un tableau répertoriant les flux identifiés à
+l'étape précédente et présenté ci-dessous.
+
+<table style="width:91%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 29%" />
+<col style="width: 16%" />
+<col style="width: 19%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Numéro du flux</th>
+<th style="text-align: left;">Nom du flux</th>
+<th style="text-align: left;">Partenaire Emetteur</th>
+<th style="text-align: left;">Partenaire Récepteur</th>
+<th style="text-align: left;">Nature du flux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Flux1</td>
+<td style="text-align: left;">SouscriptionAbonnement</td>
+<td style="text-align: left;">Souscripteur</td>
+<td style="text-align: left;">Gestionnaire d’abonnements</td>
+<td style="text-align: left;"><strong>Flux structuré</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Flux2</td>
+<td style="text-align: left;">SuppressionAbonnement</td>
+<td style="text-align: left;">Souscripteur</td>
+<td style="text-align: left;">Gestionnaire d’abonnements</td>
+<td style="text-align: left;"><strong>Flux structuré</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Flux3</td>
+<td style="text-align: left;">EmissionEvenement</td>
+<td style="text-align: left;">Emetteur</td>
+<td style="text-align: left;">Gestionnaire d’abonnements</td>
+<td style="text-align: left;"><strong>Flux structuré</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Flux4</td>
+<td style="text-align: left;">TransmissionOrdreNotification</td>
+<td style="text-align: left;">Gestionnaire d’abonnements</td>
+<td style="text-align: left;"><p>Gestionnaire de</p>
+<p>notifications</p></td>
+<td style="text-align: left;"><strong>Flux structuré</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Flux5</td>
+<td style="text-align: left;">NotificationEvenement</td>
+<td style="text-align: left;"><p>Gestionnaire de</p>
+<p>notifications</p></td>
+<td style="text-align: left;">Abonné</td>
+<td style="text-align: left;"><strong>Flux structuré</strong></td>
+</tr>
+</tbody>
+</table>
+
+Table 8 : Liste des flux identifiés
+
+## Etape 5: Identification des informations véhiculées dans les flux
+
+Dans cette section, il s'agit de définir les informations « métier »
+présentes dans chaque flux structuré identifié. La Table ci-dessous
+liste les concepts présents dans les flux identifiés.
+
+| Concepts | Définition |
+|----|----|
+| Emetteur | L ‘émetteur est la personne (physique ou morale) qui informe le gestionnaire d’abonnements d’un événement concernant une personne prise en charge. |
+| Abonné | C’est une personne destinatrice des notifications dans le cadre d’un abonnement. Un abonné peut être un professionnel, une structure ou une tierce personne autorisée à recevoir des notifications sur la prise en charge d’une personne. |
+| Abonnement | Un abonnement porte sur les types d'évènements qui intéressent l’abonné et doivent faire l’objet d’une notification. |
+| Evènement | Un événement correspond à un fait significatif lors de la prise en charge d’une personne. |
+| PersonnePriseEnCharge | C’est une personne prise en charge que ce soit au niveau sanitaire, médico-administratif, médico-social et social. |
+| AbonnéPP | Il s’agit d’une personne physique (un professionnel, une personne prise en charge, une personne tierce, etc.) qui possède un abonnement et qui est susceptible de recevoir des notifications concernant des évènements auxquels elle est inscrite. |
+| AbonnéPM | Il s’agit d’une personne morale qui possède un abonnement et qui est susceptible de recevoir des notifications concernant des évènements auxquels elle est inscrite. |
+
+Table 9 : Liste des concepts «  métier » identifiés
+
+## Etape 6: Élaboration du modèle hiérarchique des flux structurés 
+
+Le but de cette étape est d'élaborer des diagrammes de classe (modèle
+hiérarchique) de chaque flux structuré à partir des informations métier
+identifiées. La représentation formalisée du flux doit prendre en compte
+deux exigences supplémentaires:
+
+• Harmonisation du modèle avec d'autres flux: il faut réutiliser les
+classes génériques et mutualisées, mises à disposition dans le modèle
+des objets de santé (MOS);
+
+• Hiérarchie: le modèle doit adopter une structure hiérarchique au plus
+proche du besoin métier.
+
+La Table ci-dessous liste les objets « métier » identifiés et leurs
+correspondances avec les classes du MOS (Version 1.5).
+
+<table style="width:88%;">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 36%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Objets identifiés</th>
+<th>Objets MOS correspondants</th>
+<th style="text-align: center;">Attributs MOS à restreindre dans le
+modèle du flux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Professionnel</strong></td>
+<td><p>PersonnePhysique,</p>
+<p>Professionnel</p></td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><strong>Abonné</strong></td>
+<td><p>PersonnePhysique,</p>
+<p>Professionnel,</p>
+<p>Patient,</p>
+<p>EntitéJuridique</p></td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><strong>Emetteur</strong></td>
+<td><p>PersonnePhysique,</p>
+<p>Professionnel,</p>
+<p>EntitéJuridique</p></td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><strong>EntitéJuridique</strong></td>
+<td>EntitéJuridique</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><strong>PersonnePriseEnCharge</strong></td>
+<td><p>PersonnePhysique</p>
+<p>Patient</p></td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><strong>Abonnement</strong></td>
+<td><ul>
+<li></li>
+</ul></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Evènement</strong></td>
+<td>Evènement</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><strong>AbonnéPP</strong></td>
+<td>PersonnePhysique</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><strong>AbonnéPM</strong></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+Table 10 : Liste des correspondances entre les concepts « métier »
+identifiés et les concepts du MOS
+
+A noter que les objets identifiés qui ne se trouvent pas dans le MOS
+vont faire l’objet d’une demande d’évolution du MOS ou rester spécifique
+au projet.
+
+Les sections qui suivent présentent les diagrammes de classes de chaque
+flux structuré identifié. Il est à noter que les flux
+**TransmissionOrdreNotification** et **NotificationEvenement** sont
+modélisés avec le même diagramme de classe, étant donné que ces flux
+peuvent contenir les mêmes informations métier.
+
+### Flux 1 – SouscriptionAbonnement
+
+Ci-dessous le diagramme de classe concernant le Flux 1-
+SouscriptionAbonnement. Cette section contient également la description
+des attributs dans chaque classe identifiée.
+
+<div class="figure">
+    <img src="SouscriptionAbonnement.png"
+    alt=" Diagramme de classe – SouscriptionAbonnement"
+    title="SouscriptionAbonnement"
+    style="width:6.3in;height:3.8125in">
+</div>
+
+Figure 10: Diagramme de classe – SouscriptionAbonnement
+
+#### Classe "Abonnement"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idAbonnement : \[0..1\] Identifiant | Identifiant de l’abonnement. | Non[^6] |
+| mediaDiffusion : \[1..1\] Code | Média de diffusion de la notification (sms, mail, etc.). | Oui |
+| validiteDebut : \[1..1\] DateHeure | Date de début de l’abonnement. | Oui |
+| validiteFin : \[1..1\] DateHeure | Date de fin de l’abonnement. | Oui |
+| dateDemande : \[0..1\] DateHeure | Date de la demande de création, modification ou suppression de l’abonnement. | Non |
+
+Table 11 : Attributs de la classe "Abonnement"
+
+#### Classe "Abonne"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idAbonne : \[1..1\] Identifiant | Identifiant unique de l’abonné. | Oui |
+
+Table 12 : Attributs de la classe "Abonné"
+
+#### Classe "PersonnePhysique"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 64%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nomFamille : [0..1] Texte</td>
+<td>Toute personne possède un nom de famille (appelé auparavant nom
+patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par
+exemple du nom du père.<br />
+Ref.: Service-public.fr<br />
+Synonymes : nom patronymique, nom de naissance.</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>prenomUsuel: [0..1] Texte</td>
+<td>Le prénom usuel est un des prénoms inscrit dans l'acte de
+naissance.</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+
+Table 13 : Attributs de la classe "PersonnePhysique"
+
+#### Classe "Evenement"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| typeEvenement : \[1..1\] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
+
+Table 14 : Attributs de la classe "Evènement"
+
+#### Classe "PersonnePriseEnCharge"
+
+<table style="width:99%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 55%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idPersonnePriseEnCharge : [0..1] Identifiant</td>
+<td>Identifiant(s) de la personne prise en charge (identifiants de
+santé, identifiants locaux, etc.).</td>
+<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr>
+<td>adresse : [0..*] Adresse</td>
+<td>Adresse(s) de correspondance permettant de contacter la personne
+prise en charge :<br />
+- lorsque les structures ne sont pas identifiées : cas des remplaçants
+ou des professionnels venant de s’inscrire mais non encore
+installés;<br />
+- hors de leurs lieux d’exercice, s’ils le souhaitent.<br />
+Remarque : La première occurrence correspond aux coordonnées de
+correspondance du RPPS.</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>telecommunication : [0..*] Telecommunication</td>
+<td>Adresse(s) de télécommunication de la personne prise en charge
+(numéro de téléphone, adresse email, URL, etc.).</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Si la personne prise en charge est un patient, ce champ
+contiendra l’identifiant du patient.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+Table 15: Attributs de la classe "PersonnePriseEnCharge"
+
+#### Classe "Professionnel"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 57%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idPP : [0..1] Identifiant</td>
+<td>Identifiant national de la personne physique:<br />
+** Pour les professionnels: N° RPPS ou ADELI<br />
+** Pour les acteurs non professionnels de santé employés d’une structure
+: l’identifiant est composé de l’identifiant principal de la structure
+et de l’identifiant interne attribué par la structure<br />
+** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
+Etudiant (identifiant ordinal dont les règles de génération sont propres
+à chaque ordre).</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>telecommunication : [0..*] Telecommunication</td>
+<td>Adresse(s) de télécommunication du professionnel (numéro de
+téléphone, adresse email, URL, etc.).</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>adresse : [0..*] Adresse</td>
+<td>Adresse(s) de correspondance du professionnel.</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+
+Table 16 : Attributs de la classe "Professionnel"
+
+#### 
+
+#### Classe "AbonnePP"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| **identifiantAbonnePP : \[0..1\] Identifiant** | Identifiant de la physique (i.e. il peut s’agir du NIR pour la personne prise en charge). | Non |
+| **typeAbonnePP : \[0..1\] Code** | Type de la personne physique abonnée (professionnel, personne prise en charge, patient, personne tierce, etc.). | Non |
+| **addresse : \[0..\*\] Addresse** | Point(s) de contact de la personne physique abonnée. | Non |
+| **telecommunication: \[1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
+
+Table 17 : Attributs de la classe "AbonnePP"
+
+#### Classe "AbonnePM"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| **identifiantAbonnePM : \[0..1\] Identifiant** | Identifiant de la personne morale. | Non |
+| **typeAbonnePM : \[0..1\] Code** | Type de la personne morale abonnée. | Non |
+| **addresse : \[0..\*\] Addresse** | Point(s) de contact de la personne morale abonnée. | Non |
+| **telecommunication: \[1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
+| **nom : \[0..1\] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
+
+Table 18 : Attributs de la classe "AbonnePM"
+
+#### Classe "EntiteJuridique"
+
+<table style="width:96%;">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 51%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numFINESS : [0..1] Identifiant</td>
+<td>Identifiant FINESS de l'entité juridique attribué lors de sa
+création.<br />
+Les personnes morales identifiées par des numéros FINESS sont également
+dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement
+de liens avec le domaine sanitaire ou le domaine médico-social, il est,
+s'il existe, à privilégier pour l’identification de ces personnes
+morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
+d’identification des acteurs sanitaires et médico-sociaux - Politique
+Générale de Sécurité des Systèmes d’Information de Santé
+(PGSSI-S)).</td>
+<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr>
+<td>addresseEJ : [0..*] Texte Addresse</td>
+<td>Point(s) de contact.</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>telecommunication [0..*] telecommunication</td>
+<td>Adresse(s) de télécommunication (numéro de téléphone, adresse email,
+URL, etc.).</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>raisonSociale : [0..1] Texte</td>
+<td>Nom de l’entité juridique.</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
+même valeur du numéro FINESS de l’entité juridique<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+Table 19 : Attributs de la classe "EntiteJuridique"
+
+#### Classe "Emetteur"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idEmetteur : \[1..1\] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Oui |
+
+Table 20 : Attributs de la classe "Emetteur"
+
+### Flux 2 – SuppressionAbonnement
+
+Ci-dessous le diagramme de classe concernant le Flux 2-
+SuppressionAbonnement. Les sous-sections suivantes donnent des
+définitions aux attributs de chaque class identifiée.
+
+<div class="figure">
+    <img src="SuppressionAbonnement.png"
+    alt=" Diagramme de classe – SuppressionAbonnement"
+    title="SuppressionAbonnement"
+    style="width:2.05224in;height:0.77606in">
+</div>
+
+Figure 11: Diagramme de classe – SuppressionAbonnement
+
+#### 
+
+#### Classe "SuppressionAbonnement"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idAbonnement : \[1..1\] Identifiant | Identifiant unique de l’abonnement. | Oui |
+
+Table 21 : Attributs de la classe "SuppressionAbonnement"
+
+### 
+
+### Flux 3 – EmissionEvenement
+
+Ci-dessous le diagramme de classe concernant le Flux 3-
+EmissionEvenement. Les sous-sections suivantes donnent des définitions
+aux attributs de chaque class identifiée.
+
+<div class="figure">
+    <img src="EmissionAbonnement.png"
+    alt=" Diagramme de classe – EmissionAbonnement"
+    title="EmissionAbonnement"
+    style="width:6.3in;height:1.95903in">
+</div>
+
+Figure 12: Diagramme de classe - EmissionAbonnement
+
+#### Classe "Emetteur"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idEmetteur : \[1..1\] Identifiant | Identifiant unique de l’émetteur. | Oui |
+
+Table 22 : Attributs de la classe "Emetteur"
+
+#### Classe "Evenement"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| typeEvenement : \[1..1\] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
+| description : \[1..1\] Texte | Contenu de l’évènement. | Oui |
+| occurence : \[1..1\] DateHeure | Date et heure à laquelle l’évènement a eu lieu. | Oui |
+| declaration: \[0..1\] DateHeure | Date et heure de la transmission de l’évènement. | Non[^7] |
+
+Table 23 : Attributs de la classe "Evènement"
+
+#### Classe "PersonnePhysique"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 65%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nomFamille : [0..1] Texte</td>
+<td>Toute personne possède un nom de famille (appelé auparavant nom
+patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par
+exemple du nom du père.<br />
+Ref.: Service-public.fr<br />
+Synonymes : nom patronymique, nom de naissance.</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>prenomUsuel : [0..1] Texte</td>
+<td>Le prénom usuel est un des prénoms inscrit dans l'acte de
+naissance.</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+
+Table 24 : Attributs de la classe "PersonnePhysique"
+
+#### Classe "EntiteJuridique"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 53%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numFINESS : [0..1] Identifiant</td>
+<td>Identifiant FINESS de l'entité juridique attribué lors de sa
+création.<br />
+Les personnes morales identifiées par des numéros FINESS sont également
+dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement
+de liens avec le domaine sanitaire ou le domaine médico-social, il est,
+s'il existe, à privilégier pour l’identification de ces personnes
+morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
+d’identification des acteurs sanitaires et médico-sociaux - Politique
+Générale de Sécurité des Systèmes d’Information de Santé
+(PGSSI-S)).</td>
+<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr>
+<td>addresseEJ : [0..*] Texte Addresse</td>
+<td>Point(s) de contact.</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>telecommunication [0..*] telecommunication</td>
+<td>Adresse(s) de télécommunication (numéro de téléphone, adresse email,
+URL, etc.).</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>raisonSociale : [0..1] Texte</td>
+<td>Nom de l’entité juridique.</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
+même valeur du numéro FINESS de l’entité juridique<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+Table 25 : Attributs de la classe "EntiteJuridique"
+
+#### Classe "PersonnePriseEnCharge"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 55%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idPersonnePriseEnCharge : [0..1] Identifiant</td>
+<td>Identifiant(s) de la personne prise en charge.</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>adresse : [0..*] Adresse</td>
+<td>Adresse(s) de correspondance permettant de contacter la personne
+prise en charge :<br />
+- lorsque les structures ne sont pas identifiées : cas des remplaçants
+ou des professionnels venant de s’inscrire mais non encore
+installés;<br />
+- hors de leurs lieux d’exercice, s’ils le souhaitent.<br />
+Remarque : La première occurrence correspond aux coordonnées de
+correspondance du RPPS.</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>telecommunication : [0..*] Telecommunication</td>
+<td>Adresse(s) de télécommunication de la personne prise en charge
+(numéro de téléphone, adresse email, URL, etc.).</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+
+Table 26 : Attributs de la classe "PersonnePriseEnCharge"
+
+#### Classe "Professionnel"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 60%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idPP : [0..1] Identifiant</td>
+<td>Identifiant national de la personne physique:<br />
+** Pour les professionnels: N° RPPS ou ADELI<br />
+** Pour les acteurs non professionnels de santé employés d’une structure
+: l’identifiant est composé de l’identifiant principal de la structure
+et de l’identifiant interne attribué par la structure<br />
+** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
+Etudiant (identifiant ordinal dont les règles de génération sont propres
+à chaque ordre).</td>
+<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr>
+<td>telecommunication : [0..*] Telecommunication</td>
+<td>Adresse(s) de télécommunication du professionnel (numéro de
+téléphone, adresse email, URL, etc.).</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>adresse : [0..*] Adresse</td>
+<td>Adresse(s) de correspondance du professionnel.</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
+même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+Table 27 : Attributs de la classe "Professionnel"
+
+### Flux 4 – TransmissionOrdreNotification 
+
+Ci-dessous le diagramme de classe concernant le Flux
+4-TransmissionOrdreNotification et le Flux 5- NotificationEvenement. Les
+sous-sections suivantes donnent des définitions aux attributs de chaque
+classe identifiée
+
+<div class="figure">
+    <img src="TransmissionOrdreNotification.png"
+    alt=" Diagramme de classe – TransmissionOrdreNotification"
+    title="TransmissionOrdreNotification"
+    style="width:6.3in;height:4.59583in">
+</div>
+
+Figure 13: Diagramme de classe – TransmissionOrdreNotification
+
+#### Classe "Abonne"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idAbonne : \[1..1\] Identifiant | Identifiant unique de l’abonné. | Oui |
+
+Table 28 : Attributs de la classe "Abonné"
+
+#### Classe "Evenement"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| typeEvenement : \[1..1\] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
+| description : \[1..1\] Texte | Contenu de l’évènement. | Oui |
+| occurrence : \[0..1\] DateHeure | Date à laquelle l’évènement a eu lieu. | Non |
+| declaration: \[0..1\] DateHeure | Date et heure de la transmission de l’évènement. | Non[^8] |
+
+Table 29 : Attributs de la classe "Evènement"
+
+#### Classe "PersonnePhysique"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 65%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nomFamille : [0..1] Texte</td>
+<td>Toute personne possède un nom de famille (appelé auparavant nom
+patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par
+exemple du nom du père.<br />
+Ref.: Service-public.fr<br />
+Synonymes : nom patronymique, nom de naissance.</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>prenomUsuel : [0..1] Texte</td>
+<td>Le prénom usuel est un des prénoms inscrit dans l'acte de
+naissance.</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+
+Table 30 : Attributs de la classe "PersonnePhysique"
+
+#### Classe "Professionnel"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 55%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idPP : [0..1] Identifiant</td>
+<td>Identifiant national de la personne physique:<br />
+** Pour les professionnels: N° RPPS ou ADELI<br />
+** Pour les acteurs non professionnels de santé employés d’une structure
+: l’identifiant est composé de l’identifiant principal de la structure
+et de l’identifiant interne attribué par la structure<br />
+** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
+Etudiant (identifiant ordinal dont les règles de génération sont propres
+à chaque ordre).</td>
+<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr>
+<td>telecommunication : [0..*] Telecommunication</td>
+<td>Adresse(s) de télécommunication du professionnel (numéro de
+téléphone, adresse email, URL, etc.).</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
+même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+Table 31 : Attributs de la classe "Professionnel"
+
+#### Classe "Abonnement"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idAbonnement : \[1..1\] Identifiant | Identifiant unique de l’abonnement. | Oui |
+| mediaNotification : \[1..1\] Code | Media de diffusion de la notification (sms, mail, etc.). | Oui |
+
+Table 32 : Attributs de la classe "Abonnement"
+
+#### Classe "PersonnePriseEnCharge"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idPersonnePriseEnCharge : \[0..1\] Identifiant | Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.). | Non[^9] |
+| telecommunication : \[0..\*\] Telecommunication | Adresse(s) de télécommunication de la personne prise en charge qui est abonnée aux notifications (numéro de téléphone, adresse email, URL, etc.). | Non |
+
+Table 33 : Attributs de la classe "PersonnePriseEnCharge"
+
+#### Classe "EntiteJuridique"
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 50%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numFINESS : [0..1] Identifiant</td>
+<td>Identifiant FINESS de l'entité juridique attribué lors de sa
+création.<br />
+Les personnes morales identifiées par des numéros FINESS sont également
+dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement
+de liens avec le domaine sanitaire ou le domaine médico-social, il est,
+s'il existe, à privilégier pour l’identification de ces personnes
+morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
+d’identification des acteurs sanitaires et médico-sociaux - Politique
+Générale de Sécurité des Systèmes d’Information de Santé
+(PGSSI-S)).</td>
+<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr>
+<td>telecommunication [0..*] telecommunication</td>
+<td>Adresse(s) de télécommunication (numéro de téléphone, adresse email,
+URL, etc.).</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>raisonSociale : [0..1] Texte</td>
+<td>Nom de l’entité juridique.</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
+même valeur du numéro FINESS de l’entité juridique (personne morale)<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+Table 34 : Attributs de la classe "EntiteJuridique"
+
+#### Classe "Emetteur"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| idEmetteur : \[0..1\] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Non |
+| dateDeclaration : \[0..1\] DateHeure | Date et heure de la transmission de l’évènement. | Non |
+
+Table 35 : Attributs de la classe "Emetteur"
+
+#### Classe "AbonnePP"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| **identifiantAbonnePP : \[0..1\] Identifiant** | Identifiant de la personne physique (il peut s’agir du NIR, par exemple, pour la personne prise en charge). | Non |
+| **typeAbonnePP : \[0..1\] Code** | Type de la personne physique abonnée (professionnel, personne prise en charge, personne tierce, etc.). | Non |
+| **telecommunication: \[1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
+
+Table 36 : Attributs de la classe "AbonnePP"
+
+#### Classe "AbonnePM"
+
+| Nom | Description | Obligatoire |
+|----|----|----|
+| **identifiantAbonnePM : \[0..1\] Identifiant** | Identifiant de la personne morale. | Non |
+| **typeAbonnePM : \[0..1\] Code** | Type de la personne morale abonnée. | Non |
+| **telecommunication: \[1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
+| **nom : \[0..1\] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
+
+Table 37 : Attributs de la classe "AbonnePM"
+
+### Flux 5 – NotificationEvenement
+
+Ce flux est modélisé par le même modèle hiérarchique du Flux 3 –
+TransmissionOrdreNotification étant donné qu’ils peuvent contenir les
+mêmes informations métier.
