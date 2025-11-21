@@ -1,10 +1,10 @@
 ExampleIG : Validation Results
 =========================================
 
-err = 3, warn = 14, info = 8
+err = 3, warn = 15, info = 8
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
- Build Errors : 0 / 3 / 0
+ Build Errors : 0 / 4 / 0
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 2
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 2
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code] : 3 / 0 / 1
@@ -17,6 +17,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS : 0 / 1 / 1
 </table>
 == n/a ==
+WARNING: /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/output/specifications_fonctionnelles.html: Illegal HTML: Illegal HTML element: section
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide

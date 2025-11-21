@@ -4,7 +4,6 @@
 
 * [Accueil](index.md)
 * [Historique des versions](change-log.md)
-* [Vue d'ensemble](sf1.md)
 * [Flux 02](st_flux2.md)
 * [Flux 01](st_flux1.md)
 * [Artifacts Summary](artifacts.md)
