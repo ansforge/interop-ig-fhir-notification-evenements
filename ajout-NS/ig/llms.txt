@@ -13,6 +13,7 @@
 * [Autres Ressources](autres_ressources.md)
 * [Specifications Fonctionnelles](specifications_fonctionnelles.md)
 * [Vue d'ensemble](construction_des_flux.md)
+* [Normes et Standards](norme_standard.md)
 * [Téléchargements et usages](downloads.md)
 
 ## Resources
