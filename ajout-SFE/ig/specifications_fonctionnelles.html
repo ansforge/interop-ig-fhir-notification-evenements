@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Specifications Fonctionnelles - ANS IG Example v0.1.0</title>
+    <title>Volume 1 - Etude fonctionnelle - ANS IG Example v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -155,7 +155,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Specifications Fonctionnelles</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Volume 1 - Etude fonctionnelle</b></li>
 
           <span style="float:right;">
 
@@ -186,7 +186,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">ANS IG Example - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/[code]/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Specifications Fonctionnelles</h2>
+  <h2>Volume 1 - Etude fonctionnelle</h2>
   
 
 
@@ -203,47 +203,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>    <ul>
-      <li><a href="#lectorat-cible" id="markdown-toc-lectorat-cible">Lectorat cible</a></li>
-      <li><a href="#exemples-de-cas-dusage" id="markdown-toc-exemples-de-cas-dusage">Exemples de cas d’usage</a>        <ul>
-          <li><a href="#parcours-de-soins-dune-personne-diabétique" id="markdown-toc-parcours-de-soins-dune-personne-diabétique">Parcours de soins d’une personne diabétique</a></li>
-          <li><a href="#mise-à-disposition-de-résultats-dexamen-de-laboratoire" id="markdown-toc-mise-à-disposition-de-résultats-dexamen-de-laboratoire">Mise à disposition de résultats d’examen de laboratoire</a></li>
-          <li><a href="#consultation-dun-pool-de-notifications" id="markdown-toc-consultation-dun-pool-de-notifications">Consultation d’un « pool » de notifications</a></li>
-        </ul>
-      </li>
-      <li><a href="#méthode-délaboration-des-spécifications-métier" id="markdown-toc-méthode-délaboration-des-spécifications-métier">Méthode d’élaboration des spécifications métier</a></li>
-    </ul>
-  </li>
-  <li><a href="#élaboration-des-spécifications-métier" id="markdown-toc-élaboration-des-spécifications-métier">Élaboration des spécifications métier</a>    <ul>
-      <li><a href="#etape-1-organisation-du-contexte-métier" id="markdown-toc-etape-1-organisation-du-contexte-métier">Etape 1: Organisation du contexte métier</a></li>
-      <li><a href="#etape-2-définition-du-processus-collaboratif" id="markdown-toc-etape-2-définition-du-processus-collaboratif">Etape 2: Définition du processus collaboratif</a>        <ul>
-          <li><a href="#cas-dutilisation-gestion-des-abonnements-ci-sis-ne-pga-cu001" id="markdown-toc-cas-dutilisation-gestion-des-abonnements-ci-sis-ne-pga-cu001">[Cas d’utilisation] Gestion des abonnements (CI-SIS-NE-PGA-CU001)</a></li>
-          <li><a href="#cas-dutilisation-gestion-des-évènements-ci-sis-ne-pge-cu001" id="markdown-toc-cas-dutilisation-gestion-des-évènements-ci-sis-ne-pge-cu001"> [Cas d’utilisation] Gestion des évènements (CI-SIS-NE-PGE-CU001)</a></li>
-          <li><a href="#cas-dutilisation-gestion-des-notifications-ci-sis-ne-pgn-cu001" id="markdown-toc-cas-dutilisation-gestion-des-notifications-ci-sis-ne-pgn-cu001">[Cas d’utilisation] Gestion des notifications (CI-SIS-NE-PGN-CU001)</a></li>
-        </ul>
-      </li>
-      <li><a href="#etape-3-description-du-processus-collaboratif-et-identification-des-flux" id="markdown-toc-etape-3-description-du-processus-collaboratif-et-identification-des-flux">Etape 3 : Description du processus collaboratif et identification des flux</a>        <ul>
-          <li><a href="#activité-gestion-des-abonnements-ci-sis-ne-pga-da001" id="markdown-toc-activité-gestion-des-abonnements-ci-sis-ne-pga-da001">[Activité] Gestion des abonnements (CI-SIS-NE-PGA-DA001)</a></li>
-          <li><a href="#activité-gestion-des-évènements-ci-sis-ne-pge-da001" id="markdown-toc-activité-gestion-des-évènements-ci-sis-ne-pge-da001">[Activité] Gestion des évènements (CI-SIS-NE-PGE-DA001)</a></li>
-          <li><a href="#activité-gestion-des-notifications-ci-sis-ne-pgn-da001" id="markdown-toc-activité-gestion-des-notifications-ci-sis-ne-pgn-da001">[Activité] Gestion des notifications (CI-SIS-NE-PGN-DA001)</a></li>
-        </ul>
-      </li>
-      <li><a href="#etape-4-qualification-des-flux-échangés" id="markdown-toc-etape-4-qualification-des-flux-échangés">Etape 4: Qualification des flux échangés</a></li>
-      <li><a href="#etape-5-identification-des-informations-véhiculées-dans-les-flux" id="markdown-toc-etape-5-identification-des-informations-véhiculées-dans-les-flux">Etape 5: Identification des informations véhiculées dans les flux</a></li>
-      <li><a href="#etape-6-élaboration-du-modèle-hiérarchique-des-flux-structurés" id="markdown-toc-etape-6-élaboration-du-modèle-hiérarchique-des-flux-structurés">Etape 6: Élaboration du modèle hiérarchique des flux structurés</a>        <ul>
-          <li><a href="#flux-1--souscriptionabonnement" id="markdown-toc-flux-1--souscriptionabonnement">Flux 1 – SouscriptionAbonnement</a></li>
-          <li><a href="#flux-2--suppressionabonnement" id="markdown-toc-flux-2--suppressionabonnement">Flux 2 – SuppressionAbonnement</a></li>
-          <li><a href="#flux-3--emissionevenement" id="markdown-toc-flux-3--emissionevenement">Flux 3 – EmissionEvenement</a></li>
-          <li><a href="#flux-4--transmissionordrenotification" id="markdown-toc-flux-4--transmissionordrenotification">Flux 4 – TransmissionOrdreNotification</a></li>
-          <li><a href="#flux-5--notificationevenement" id="markdown-toc-flux-5--notificationevenement">Flux 5 – NotificationEvenement</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#élaboration-des-spécifications-métier" id="markdown-toc-élaboration-des-spécifications-métier">Élaboration des spécifications métier</a></li>
 </ul>
 
 </div>
-<h1 id="introduction">Introduction</h1>
+<h3 id="introduction">Introduction</h3>
 
 <p>Ce document présente une étude « métier » de mise en œuvre d’un
 mécanisme de notifications d’événements dans le domaine sanitaire,
@@ -264,15 +229,15 @@ santé (CI-SIS).</p>
 <p>Ci-dessous des exemples de cas d’usage concernant le mécanisme de
 notification d’évènements.</p>
 
-<h2 id="lectorat-cible">Lectorat cible</h2>
+<h4 id="lectorat-cible">Lectorat cible</h4>
 
 <p>Les lecteurs cibles sont principalement des chefs de projets ainsi que
 toute personne concernée par la maîtrise d’ouvrage et qui spécifie des
 projets avec des interfaces interopérables.</p>
 
-<h2 id="exemples-de-cas-dusage">Exemples de cas d’usage</h2>
+<h4 id="exemples-de-cas-dusage">Exemples de cas d’usage</h4>
 
-<h3 id="parcours-de-soins-dune-personne-diabétique">Parcours de soins d’une personne diabétique</h3>
+<h5 id="parcours-de-soins-dune-personne-diabétique">Parcours de soins d’une personne diabétique</h5>
 
 <p><strong><u>Pré-conditions :</u></strong></p>
 
@@ -319,7 +284,7 @@ l’hôpital.</p>
   </li>
 </ol>
 
-<h3 id="mise-à-disposition-de-résultats-dexamen-de-laboratoire">Mise à disposition de résultats d’examen de laboratoire</h3>
+<h5 id="mise-à-disposition-de-résultats-dexamen-de-laboratoire">Mise à disposition de résultats d’examen de laboratoire</h5>
 
 <p><strong><u>Pré-conditions :</u></strong></p>
 
@@ -356,7 +321,7 @@ de chacun.</p>
   </li>
 </ol>
 
-<h3 id="consultation-dun-pool-de-notifications">Consultation d’un « pool » de notifications</h3>
+<h5 id="consultation-dun-pool-de-notifications">Consultation d’un « pool » de notifications</h5>
 
 <p><strong><u>Pré-conditions :</u></strong></p>
 
@@ -401,7 +366,7 @@ sauvegarde l’historique des changements.</p>
 logiciel métier du professionnel ou dans un outil « externe » qui peut
 gérer les notifications provenant de sources diverses.</p>
 
-<h2 id="méthode-délaboration-des-spécifications-métier">Méthode d’élaboration des spécifications métier</h2>
+<h4 id="méthode-délaboration-des-spécifications-métier">Méthode d’élaboration des spécifications métier</h4>
 
 <p>Les spécifications « métier » présentées dans ce document suivent la
 méthode[^3] d’élaboration des spécifications fonctionnelles des échanges
@@ -436,9 +401,9 @@ que de nouveaux composants jusqu'alors inexistants dans le MOS aient
   </li>
 </ul>
 
-<h1 id="élaboration-des-spécifications-métier">Élaboration des spécifications métier</h1>
+<h3 id="élaboration-des-spécifications-métier">Élaboration des spécifications métier</h3>
 
-<h2 id="etape-1-organisation-du-contexte-métier">Etape 1: Organisation du contexte métier</h2>
+<h4 id="etape-1-organisation-du-contexte-métier">Etape 1: Organisation du contexte métier</h4>
 
 <p>Le but de cette étape est d’organiser la vue métier dans laquelle
 s’insère le projet et d'identifier le ou les processus du périmètre du
@@ -487,7 +452,7 @@ et social.</p>
   <li>La transmission d’un ordre de notification.</li>
 </ul>
 
-<h2 id="etape-2-définition-du-processus-collaboratif">Etape 2: Définition du processus collaboratif</h2>
+<h4 id="etape-2-définition-du-processus-collaboratif">Etape 2: Définition du processus collaboratif</h4>
 
 <p>Le but de cette étape est de définir les processus métier identifiés
 dans le diagramme défini à l’étape 1. Cette modélisation est entreprise
@@ -527,14 +492,14 @@ médico-administratif, médico-social et social.</p>
 <p>Les sous-sections suivantes présentent les cas d'utilisation identifiés
 dans le système ainsi que les acteurs et les actions qui y contenus.</p>
 
-<h3 id="cas-dutilisation-gestion-des-abonnements-ci-sis-ne-pga-cu001">[Cas d’utilisation] Gestion des abonnements (CI-SIS-NE-PGA-CU001)</h3>
+<h5 id="cas-dutilisation-gestion-des-abonnements-ci-sis-ne-pga-cu001">[Cas d’utilisation] Gestion des abonnements (CI-SIS-NE-PGA-CU001)</h5>
 
 <p><strong><u>Cas d'usage</u></strong> : Un souscripteur habilité crée, modifie ou
 supprime un abonnement aux notifications d’événements sur une plateforme
 ou un système de gestion dédié à cet effet pour le compte d’une personne
 physique ou morale.</p>
 
-<h4 id="diagramme-de-cas-dutilisation--création-ou-mise-à-jour-dun-abonnement-ci-sis-ne-cu-sa-001">"Diagramme de cas d’utilisation : Création ou mise à jour d’un abonnement (CI-SIS-NE-CU-SA-001)"</h4>
+<h6 id="diagramme-de-cas-dutilisation--création-ou-mise-à-jour-dun-abonnement-ci-sis-ne-cu-sa-001">"Diagramme de cas d’utilisation : Création ou mise à jour d’un abonnement (CI-SIS-NE-CU-SA-001)"</h6>
 
 <p>Le processus métier de gestion d'abonnement amène à considérer un cas
 d'utilisation de "Création ou de mise à jour d’un abonnement" avec les
@@ -547,7 +512,7 @@ différents acteurs impliqués.</p>
 <p>Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un
 abonnement (CI-SIS-NE-CU-SA-001)</p>
 
-<h4 id="les-acteurs-impliqués">Les acteurs impliqués</h4>
+<h6 id="les-acteurs-impliqués">Les acteurs impliqués</h6>
 
 <table>
   <thead>
@@ -571,7 +536,7 @@ abonnement (CI-SIS-NE-CU-SA-001)</p>
 <p>Table 1: Table des acteurs impliqués dans le cas d’utilisation Création
 ou mise à jour d’un abonnement</p>
 
-<h5 id="détails-du-cas-dutilisation">Détails du cas d'utilisation</h5>
+<p>####### Détails du cas d'utilisation <!-- Problème d'affichage dans l'IG --></p>
 
 <p>Cette section décrit en détail chaque cas d'utilisation de la manière
 usuelle: description, pré-condition, scénario(s), exception,
@@ -603,7 +568,7 @@ souscripteur.</li>
 <p>L’abonné peut être lui-même habilité à gérer son propre abonnement sans
 passer par un souscripteur.</p>
 
-<h4 id="diagramme-de-cas-dutilisation--suppression-dun-abonnement-ci-sis-ne-cu-da-001-">"Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001) "</h4>
+<h6 id="diagramme-de-cas-dutilisation--suppression-dun-abonnement-ci-sis-ne-cu-da-001-">"Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001) "</h6>
 
 <p>Le processus métier de gestion d'abonnement amène à considérer un cas
 d'utilisation de "Suppression d’un abonnement" avec les différents
@@ -616,11 +581,11 @@ acteurs impliqués.</p>
 <p>Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement
 (CI-SIS-NE-CU-DA-001)</p>
 
-<h5 id="les-acteurs-impliqués-1">Les acteurs impliqués</h5>
+<p>####### Les acteurs impliqués <!-- Problème d'affichage dans l'IG --></p>
 
 <p>Voir section 2.2.1.1.1.</p>
 
-<h5 id="détails-du-cas-dutilisation-1">Détails du cas d'utilisation</h5>
+<p>####### Détails du cas d'utilisation <!-- Problème d'affichage dans l'IG --></p>
 
 <p>Cette section décrit en détail chaque cas d'utilisation de la manière
 usuelle: description, pré-condition, scénario(s), exception,
@@ -642,12 +607,12 @@ métier manipulées sont différentes.</p>
 <p>L'abonné peut être lui-même habilité à gérer son propre abonnement sans
 passer par un souscripteur.</p>
 
-<h3 id="cas-dutilisation-gestion-des-évènements-ci-sis-ne-pge-cu001"> [Cas d’utilisation] Gestion des évènements (CI-SIS-NE-PGE-CU001)</h3>
+<h5 id="cas-dutilisation-gestion-des-évènements-ci-sis-ne-pge-cu001"> [Cas d’utilisation] Gestion des évènements (CI-SIS-NE-PGE-CU001)</h5>
 
 <p><strong><u>Cas d'usage</u></strong> : Un acteur déclenche l'envoi d'un évènement à
 une plateforme ou un système de gestion dédié à cet effet.</p>
 
-<h4 id="diagramme-de-cas-dutilisation--emission-dun-évènement-ci-sis-ne-cu-ee-001">"Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-NE-CU-EE-001)"</h4>
+<h6 id="diagramme-de-cas-dutilisation--emission-dun-évènement-ci-sis-ne-cu-ee-001">"Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-NE-CU-EE-001)"</h6>
 
 <p>Le processus métier de gestion d'évènements amène à considérer un cas
 d'utilisation d’une "Emission d'un évènement" avec les différents
@@ -660,7 +625,7 @@ acteurs impliqués.</p>
 <p>Figure 4 : Diagramme de cas d'utilisation : Emission d'un évènement
 (CI-SIS-NE-CU-EE-001)</p>
 
-<h4 id="les-acteurs-impliqués-2">Les acteurs impliqués</h4>
+<h6 id="les-acteurs-impliqués-1">Les acteurs impliqués</h6>
 
 <table>
   <thead>
@@ -684,7 +649,7 @@ acteurs impliqués.</p>
 <p>Table 2: Table des acteurs impliqués dans le cas d’utilisation Emission
 d’un évènement</p>
 
-<h4 id="détails-du-cas-dutilisation-2">Détails du cas d'utilisation</h4>
+<h6 id="détails-du-cas-dutilisation">Détails du cas d'utilisation</h6>
 
 <p>Cette section décrit en détail chaque cas d'utilisation de la manière
 usuelle: description, pré-condition, scénario(s), exception,
@@ -704,14 +669,14 @@ notification.</p>
 
 <p>L'émetteur est pré-enregistré via le gestionnaire d’inscriptions.</p>
 
-<h3 id="cas-dutilisation-gestion-des-notifications-ci-sis-ne-pgn-cu001">[Cas d’utilisation] Gestion des notifications (CI-SIS-NE-PGN-CU001)</h3>
+<h5 id="cas-dutilisation-gestion-des-notifications-ci-sis-ne-pgn-cu001">[Cas d’utilisation] Gestion des notifications (CI-SIS-NE-PGN-CU001)</h5>
 
 <p><strong><u>Cas d'usage</u> :</strong> Une plateforme ou un système de gestion dédié
 traite l'évènement de manière à pouvoir aviser les abonnés auxquels
 l'évènement est destiné, cela se traduit par la transmission d'un ordre
 de notification.</p>
 
-<h4 id="diagramme-de-cas-dutilisation-transmission-dun-ordre-de-notification-ci-sis-ne-cu-to-001">"Diagramme de cas d'utilisation: Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001)"</h4>
+<h6 id="diagramme-de-cas-dutilisation-transmission-dun-ordre-de-notification-ci-sis-ne-cu-to-001">"Diagramme de cas d'utilisation: Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001)"</h6>
 
 <p>Le processus métier de gestion d'évènement amène à considérer un cas
 d'utilisation de "Transmission d'un ordre de notification" avec les
@@ -724,7 +689,7 @@ différents acteurs impliqués.</p>
 <p>Figure 5 : Diagramme de cas d'utilisation : Transmission d'un ordre de
 notification (CI-SIS-NE-CU-TO-001)</p>
 
-<h4 id="les-acteurs-impliqués-3">Les acteurs impliqués</h4>
+<h6 id="les-acteurs-impliqués-2">Les acteurs impliqués</h6>
 
 <table>
   <thead>
@@ -752,7 +717,7 @@ notification (CI-SIS-NE-CU-TO-001)</p>
 <p>Table 3: Table des acteurs impliqués dans le cas d’utilisation
 Transmission d’un ordre de notification</p>
 
-<h4 id="les-détails-du-cas-dutilisation">Les détails du cas d'utilisation</h4>
+<h6 id="les-détails-du-cas-dutilisation">Les détails du cas d'utilisation</h6>
 
 <p>Cette section décrit en détail chaque cas d'utilisation de la manière
 usuelle: description, pré-condition, scénario(s), exception,
@@ -828,20 +793,20 @@ liaison</p>
   </li>
 </ol>
 
-<h2 id="etape-3-description-du-processus-collaboratif-et-identification-des-flux">Etape 3 : Description du processus collaboratif et identification des flux</h2>
+<h4 id="etape-3-description-du-processus-collaboratif-et-identification-des-flux">Etape 3 : Description du processus collaboratif et identification des flux</h4>
 
 <p>L’objectif de cette étape est de décrire les processus métier
 collaboratifs définis dans les cas d'utilisation de l’étape 2, ainsi que
 les flux échangés par les acteurs. Dans ce document, les processus sont
 modélisés avec des diagrammes d'activités UML.</p>
 
-<h3 id="activité-gestion-des-abonnements-ci-sis-ne-pga-da001">[Activité] Gestion des abonnements (CI-SIS-NE-PGA-DA001)</h3>
+<h5 id="activité-gestion-des-abonnements-ci-sis-ne-pga-da001">[Activité] Gestion des abonnements (CI-SIS-NE-PGA-DA001)</h5>
 
 <p>Cette section présente la modélisation du processus de la création ou de
 mise à jour d’un abonnement. Elle contient également une description des
 acteurs, des actions correspondantes et les flux d’échanges.</p>
 
-<h4 id="diagramme-dactivité-création-ou-mise-à-jour-dun-abonnement-ci-sis-ne-da-sa-001">Diagramme d’activité : Création ou mise à jour d’un abonnement (CI-SIS-NE-DA-SA-001)</h4>
+<h6 id="diagramme-dactivité-création-ou-mise-à-jour-dun-abonnement-ci-sis-ne-da-sa-001">Diagramme d’activité : Création ou mise à jour d’un abonnement (CI-SIS-NE-DA-SA-001)</h6>
 
 <p>Le processus métier de gestion d'abonnement implique le flux d’échange
 de demande de création ou de mises à jour "SouscriptionAbonnement".</p>
@@ -890,7 +855,7 @@ demande de mise à jour d’un d’abonnement.</p>
 
 <p>Le gestionnaire d’abonnements traite la demande du souscripteur.</p>
 
-<h4 id="diagramme-dactivité-suppression-dun-abonnement-ci-sis-ne-da-da-001">Diagramme d’activité : Suppression d’un abonnement (CI-SIS-NE-DA-DA-001)</h4>
+<h6 id="diagramme-dactivité-suppression-dun-abonnement-ci-sis-ne-da-da-001">Diagramme d’activité : Suppression d’un abonnement (CI-SIS-NE-DA-DA-001)</h6>
 
 <p>Le processus métier de gestion d'abonnement implique le flux d’échange
 de demande de création ou de mise à jour : "SuppressionAbonnement".</p>
@@ -937,13 +902,13 @@ caractéristiques de l’abonnement à supprimer.</p>
 <p>Le gestionnaire d’abonnements traite la demande de suppression du
 souscripteur.</p>
 
-<h3 id="activité-gestion-des-évènements-ci-sis-ne-pge-da001">[Activité] Gestion des évènements (CI-SIS-NE-PGE-DA001)</h3>
+<h5 id="activité-gestion-des-évènements-ci-sis-ne-pge-da001">[Activité] Gestion des évènements (CI-SIS-NE-PGE-DA001)</h5>
 
 <p>Cette section présente la modélisation du processus de l'émission d'un
 évènement. Elle contient également une description des acteurs, des
 actions correspondantes et les flux d’échanges.</p>
 
-<h4 id="diagramme-dactivité--emission-dun-évènement-ci-sis-ne-da-ee-001">Diagramme d'activité : Emission d'un évènement (CI-SIS-NE-DA-EE-001)</h4>
+<h6 id="diagramme-dactivité--emission-dun-évènement-ci-sis-ne-da-ee-001">Diagramme d'activité : Emission d'un évènement (CI-SIS-NE-DA-EE-001)</h6>
 
 <p>Le processus métier de gestion d'évènement implique le flux d’échange
 entre l'émetteur et la plateforme ou le système de gestion :
@@ -993,14 +958,14 @@ Les émissions sont donc les vecteurs de l'envoi de l'évènement.</p>
 <p>L'évènement est traité par une plateforme ou un système de gestion qui
 analyse, qualifie et vérifie si cet évènement est lié à des abonnements.</p>
 
-<h3 id="activité-gestion-des-notifications-ci-sis-ne-pgn-da001">[Activité] Gestion des notifications (CI-SIS-NE-PGN-DA001)</h3>
+<h5 id="activité-gestion-des-notifications-ci-sis-ne-pgn-da001">[Activité] Gestion des notifications (CI-SIS-NE-PGN-DA001)</h5>
 
 <p>Cette section présente la modélisation du processus de la transmission
 de l'ordre de notification d'un évènement. Elle contient également une
 description des acteurs, des actions correspondantes et les flux
 d’échanges.</p>
 
-<h4 id="diagramme-dactivité--transmission-dun-ordre-de-notification-ci-sis-ne-da-to-001">Diagramme d'activité : Transmission d'un ordre de notification (CI-SIS-NE-DA-TO-001)</h4>
+<h6 id="diagramme-dactivité--transmission-dun-ordre-de-notification-ci-sis-ne-da-to-001">Diagramme d'activité : Transmission d'un ordre de notification (CI-SIS-NE-DA-TO-001)</h6>
 
 <p>Le processus métier de gestion de notification implique le flux
 d’échange : "TransmissionOrdreNotification".</p>
@@ -1066,7 +1031,7 @@ notification d'évènement et traite l'envoi.</p>
 <p>L'abonné est en mesure de réceptionner la notification via son propre
 système.</p>
 
-<h2 id="etape-4-qualification-des-flux-échangés">Etape 4: Qualification des flux échangés</h2>
+<h4 id="etape-4-qualification-des-flux-échangés">Etape 4: Qualification des flux échangés</h4>
 
 <p>Les flux échangés entre les acteurs ont été identifiés à l'étape 3.
 Cette nouvelle étape vise à qualifier les flux d'informations en
@@ -1134,7 +1099,7 @@ l'étape précédente et présenté ci-dessous.</p>
 
 <p>Table 8 : Liste des flux identifiés</p>
 
-<h2 id="etape-5-identification-des-informations-véhiculées-dans-les-flux">Etape 5: Identification des informations véhiculées dans les flux</h2>
+<h4 id="etape-5-identification-des-informations-véhiculées-dans-les-flux">Etape 5: Identification des informations véhiculées dans les flux</h4>
 
 <p>Dans cette section, il s'agit de définir les informations « métier »
 présentes dans chaque flux structuré identifié. La Table ci-dessous
@@ -1181,7 +1146,7 @@ liste les concepts présents dans les flux identifiés.</p>
 
 <p>Table 9 : Liste des concepts «  métier » identifiés</p>
 
-<h2 id="etape-6-élaboration-du-modèle-hiérarchique-des-flux-structurés">Etape 6: Élaboration du modèle hiérarchique des flux structurés</h2>
+<h4 id="etape-6-élaboration-du-modèle-hiérarchique-des-flux-structurés">Etape 6: Élaboration du modèle hiérarchique des flux structurés</h4>
 
 <p>Le but de cette étape est d'élaborer des diagrammes de classe (modèle
 hiérarchique) de chaque flux structuré à partir des informations métier
@@ -1283,7 +1248,7 @@ flux structuré identifié. Il est à noter que les flux
 modélisés avec le même diagramme de classe, étant donné que ces flux
 peuvent contenir les mêmes informations métier.</p>
 
-<h3 id="flux-1--souscriptionabonnement">Flux 1 – SouscriptionAbonnement</h3>
+<h5 id="flux-1--souscriptionabonnement">Flux 1 – SouscriptionAbonnement</h5>
 
 <p>Ci-dessous le diagramme de classe concernant le Flux 1-
 SouscriptionAbonnement. Cette section contient également la description
@@ -1295,7 +1260,7 @@ des attributs dans chaque classe identifiée.</p>
 
 <p>Figure 10: Diagramme de classe – SouscriptionAbonnement</p>
 
-<h4 id="classe-abonnement">Classe "Abonnement"</h4>
+<h6 id="classe-abonnement">Classe "Abonnement"</h6>
 
 <table>
   <thead>
@@ -1336,7 +1301,7 @@ des attributs dans chaque classe identifiée.</p>
 
 <p>Table 11 : Attributs de la classe "Abonnement"</p>
 
-<h4 id="classe-abonne">Classe "Abonne"</h4>
+<h6 id="classe-abonne">Classe "Abonne"</h6>
 
 <table>
   <thead>
@@ -1357,7 +1322,7 @@ des attributs dans chaque classe identifiée.</p>
 
 <p>Table 12 : Attributs de la classe "Abonné"</p>
 
-<h4 id="classe-personnephysique">Classe "PersonnePhysique"</h4>
+<h6 id="classe-personnephysique">Classe "PersonnePhysique"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -1393,7 +1358,7 @@ naissance.</td>
 
 <p>Table 13 : Attributs de la classe "PersonnePhysique"</p>
 
-<h4 id="classe-evenement">Classe "Evenement"</h4>
+<h6 id="classe-evenement">Classe "Evenement"</h6>
 
 <table>
   <thead>
@@ -1414,7 +1379,7 @@ naissance.</td>
 
 <p>Table 14 : Attributs de la classe "Evènement"</p>
 
-<h4 id="classe-personnepriseencharge">Classe "PersonnePriseEnCharge"</h4>
+<h6 id="classe-personnepriseencharge">Classe "PersonnePriseEnCharge"</h6>
 
 <table style="width:99%;">
 <colgroup>
@@ -1466,7 +1431,7 @@ contiendra l’identifiant du patient.<a href="#fnref1" class="footnote-back" ro
 
 <p>Table 15: Attributs de la classe "PersonnePriseEnCharge"</p>
 
-<h4 id="classe-professionnel">Classe "Professionnel"</h4>
+<h6 id="classe-professionnel">Classe "Professionnel"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -1510,9 +1475,7 @@ téléphone, adresse email, URL, etc.).</td>
 
 <p>Table 16 : Attributs de la classe "Professionnel"</p>
 
-<p>####</p>
-
-<h4 id="classe-abonnepp">Classe "AbonnePP"</h4>
+<h6 id="classe-abonnepp">Classe "AbonnePP"</h6>
 
 <table>
   <thead>
@@ -1548,7 +1511,7 @@ téléphone, adresse email, URL, etc.).</td>
 
 <p>Table 17 : Attributs de la classe "AbonnePP"</p>
 
-<h4 id="classe-abonnepm">Classe "AbonnePM"</h4>
+<h6 id="classe-abonnepm">Classe "AbonnePM"</h6>
 
 <table>
   <thead>
@@ -1589,7 +1552,7 @@ téléphone, adresse email, URL, etc.).</td>
 
 <p>Table 18 : Attributs de la classe "AbonnePM"</p>
 
-<h4 id="classe-entitejuridique">Classe "EntiteJuridique"</h4>
+<h6 id="classe-entitejuridique">Classe "EntiteJuridique"</h6>
 
 <table style="width:96%;">
 <colgroup>
@@ -1647,7 +1610,7 @@ même valeur du numéro FINESS de l’entité juridique<a href="#fnref1" class="
 
 <p>Table 19 : Attributs de la classe "EntiteJuridique"</p>
 
-<h4 id="classe-emetteur">Classe "Emetteur"</h4>
+<h6 id="classe-emetteur">Classe "Emetteur"</h6>
 
 <table>
   <thead>
@@ -1668,7 +1631,7 @@ même valeur du numéro FINESS de l’entité juridique<a href="#fnref1" class="
 
 <p>Table 20 : Attributs de la classe "Emetteur"</p>
 
-<h3 id="flux-2--suppressionabonnement">Flux 2 – SuppressionAbonnement</h3>
+<h5 id="flux-2--suppressionabonnement">Flux 2 – SuppressionAbonnement</h5>
 
 <p>Ci-dessous le diagramme de classe concernant le Flux 2-
 SuppressionAbonnement. Les sous-sections suivantes donnent des
@@ -1680,9 +1643,7 @@ définitions aux attributs de chaque class identifiée.</p>
 
 <p>Figure 11: Diagramme de classe – SuppressionAbonnement</p>
 
-<p>####</p>
-
-<h4 id="classe-suppressionabonnement">Classe "SuppressionAbonnement"</h4>
+<h6 id="classe-suppressionabonnement">Classe "SuppressionAbonnement"</h6>
 
 <table>
   <thead>
@@ -1703,9 +1664,7 @@ définitions aux attributs de chaque class identifiée.</p>
 
 <p>Table 21 : Attributs de la classe "SuppressionAbonnement"</p>
 
-<p>###</p>
-
-<h3 id="flux-3--emissionevenement">Flux 3 – EmissionEvenement</h3>
+<h5 id="flux-3--emissionevenement">Flux 3 – EmissionEvenement</h5>
 
 <p>Ci-dessous le diagramme de classe concernant le Flux 3-
 EmissionEvenement. Les sous-sections suivantes donnent des définitions
@@ -1717,7 +1676,7 @@ aux attributs de chaque class identifiée.</p>
 
 <p>Figure 12: Diagramme de classe - EmissionAbonnement</p>
 
-<h4 id="classe-emetteur-1">Classe "Emetteur"</h4>
+<h6 id="classe-emetteur-1">Classe "Emetteur"</h6>
 
 <table>
   <thead>
@@ -1738,7 +1697,7 @@ aux attributs de chaque class identifiée.</p>
 
 <p>Table 22 : Attributs de la classe "Emetteur"</p>
 
-<h4 id="classe-evenement-1">Classe "Evenement"</h4>
+<h6 id="classe-evenement-1">Classe "Evenement"</h6>
 
 <table>
   <thead>
@@ -1774,7 +1733,7 @@ aux attributs de chaque class identifiée.</p>
 
 <p>Table 23 : Attributs de la classe "Evènement"</p>
 
-<h4 id="classe-personnephysique-1">Classe "PersonnePhysique"</h4>
+<h6 id="classe-personnephysique-1">Classe "PersonnePhysique"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -1810,7 +1769,7 @@ naissance.</td>
 
 <p>Table 24 : Attributs de la classe "PersonnePhysique"</p>
 
-<h4 id="classe-entitejuridique-1">Classe "EntiteJuridique"</h4>
+<h6 id="classe-entitejuridique-1">Classe "EntiteJuridique"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -1868,7 +1827,7 @@ même valeur du numéro FINESS de l’entité juridique<a href="#fnref1" class="
 
 <p>Table 25 : Attributs de la classe "EntiteJuridique"</p>
 
-<h4 id="classe-personnepriseencharge-1">Classe "PersonnePriseEnCharge"</h4>
+<h6 id="classe-personnepriseencharge-1">Classe "PersonnePriseEnCharge"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -1912,7 +1871,7 @@ correspondance du RPPS.</td>
 
 <p>Table 26 : Attributs de la classe "PersonnePriseEnCharge"</p>
 
-<h4 id="classe-professionnel-1">Classe "Professionnel"</h4>
+<h6 id="classe-professionnel-1">Classe "Professionnel"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -1963,7 +1922,7 @@ même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).<a href="#fn
 
 <p>Table 27 : Attributs de la classe "Professionnel"</p>
 
-<h3 id="flux-4--transmissionordrenotification">Flux 4 – TransmissionOrdreNotification</h3>
+<h5 id="flux-4--transmissionordrenotification">Flux 4 – TransmissionOrdreNotification</h5>
 
 <p>Ci-dessous le diagramme de classe concernant le Flux
 4-TransmissionOrdreNotification et le Flux 5- NotificationEvenement. Les
@@ -1976,7 +1935,7 @@ classe identifiée</p>
 
 <p>Figure 13: Diagramme de classe – TransmissionOrdreNotification</p>
 
-<h4 id="classe-abonne-1">Classe "Abonne"</h4>
+<h6 id="classe-abonne-1">Classe "Abonne"</h6>
 
 <table>
   <thead>
@@ -1997,7 +1956,7 @@ classe identifiée</p>
 
 <p>Table 28 : Attributs de la classe "Abonné"</p>
 
-<h4 id="classe-evenement-2">Classe "Evenement"</h4>
+<h6 id="classe-evenement-2">Classe "Evenement"</h6>
 
 <table>
   <thead>
@@ -2033,7 +1992,7 @@ classe identifiée</p>
 
 <p>Table 29 : Attributs de la classe "Evènement"</p>
 
-<h4 id="classe-personnephysique-2">Classe "PersonnePhysique"</h4>
+<h6 id="classe-personnephysique-2">Classe "PersonnePhysique"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -2069,7 +2028,7 @@ naissance.</td>
 
 <p>Table 30 : Attributs de la classe "PersonnePhysique"</p>
 
-<h4 id="classe-professionnel-2">Classe "Professionnel"</h4>
+<h6 id="classe-professionnel-2">Classe "Professionnel"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -2115,7 +2074,7 @@ même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).<a href="#fn
 
 <p>Table 31 : Attributs de la classe "Professionnel"</p>
 
-<h4 id="classe-abonnement-1">Classe "Abonnement"</h4>
+<h6 id="classe-abonnement-1">Classe "Abonnement"</h6>
 
 <table>
   <thead>
@@ -2141,7 +2100,7 @@ même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).<a href="#fn
 
 <p>Table 32 : Attributs de la classe "Abonnement"</p>
 
-<h4 id="classe-personnepriseencharge-2">Classe "PersonnePriseEnCharge"</h4>
+<h6 id="classe-personnepriseencharge-2">Classe "PersonnePriseEnCharge"</h6>
 
 <table>
   <thead>
@@ -2167,7 +2126,7 @@ même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).<a href="#fn
 
 <p>Table 33 : Attributs de la classe "PersonnePriseEnCharge"</p>
 
-<h4 id="classe-entitejuridique-2">Classe "EntiteJuridique"</h4>
+<h6 id="classe-entitejuridique-2">Classe "EntiteJuridique"</h6>
 
 <table style="width:98%;">
 <colgroup>
@@ -2220,7 +2179,7 @@ même valeur du numéro FINESS de l’entité juridique (personne morale)<a href
 
 <p>Table 34 : Attributs de la classe "EntiteJuridique"</p>
 
-<h4 id="classe-emetteur-2">Classe "Emetteur"</h4>
+<h6 id="classe-emetteur-2">Classe "Emetteur"</h6>
 
 <table>
   <thead>
@@ -2246,7 +2205,7 @@ même valeur du numéro FINESS de l’entité juridique (personne morale)<a href
 
 <p>Table 35 : Attributs de la classe "Emetteur"</p>
 
-<h4 id="classe-abonnepp-1">Classe "AbonnePP"</h4>
+<h6 id="classe-abonnepp-1">Classe "AbonnePP"</h6>
 
 <table>
   <thead>
@@ -2277,7 +2236,7 @@ même valeur du numéro FINESS de l’entité juridique (personne morale)<a href
 
 <p>Table 36 : Attributs de la classe "AbonnePP"</p>
 
-<h4 id="classe-abonnepm-1">Classe "AbonnePM"</h4>
+<h6 id="classe-abonnepm-1">Classe "AbonnePM"</h6>
 
 <table>
   <thead>
@@ -2313,7 +2272,7 @@ même valeur du numéro FINESS de l’entité juridique (personne morale)<a href
 
 <p>Table 37 : Attributs de la classe "AbonnePM"</p>
 
-<h3 id="flux-5--notificationevenement">Flux 5 – NotificationEvenement</h3>
+<h5 id="flux-5--notificationevenement">Flux 5 – NotificationEvenement</h5>
 
 <p>Ce flux est modélisé par le même modèle hiérarchique du Flux 3 –
 TransmissionOrdreNotification étant donné qu’ils peuvent contenir les
@@ -2360,7 +2319,7 @@ mêmes informations métier.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 21, 2025 14:04+0000">2025-11-21</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 24, 2025 10:17+0000">2025-11-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

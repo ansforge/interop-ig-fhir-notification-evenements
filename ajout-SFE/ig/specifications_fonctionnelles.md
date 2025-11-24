@@ -1,11 +1,11 @@
-# Specifications Fonctionnelles - ANS IG Example v0.1.0
+# Volume 1 - Etude fonctionnelle - ANS IG Example v0.1.0
 
 * [**Table of Contents**](toc.md)
-* **Specifications Fonctionnelles**
+* **Volume 1 - Etude fonctionnelle**
 
-## Specifications Fonctionnelles
+## Volume 1 - Etude fonctionnelle
 
-# Introduction
+### Introduction
 
 Ce document présente une étude « métier » de mise en œuvre d’un mécanisme de notifications d’événements dans le domaine sanitaire, médico-administratif, médico-social et social. Il sert à évaluer les besoins en interopérabilité. Il sert également à définir le périmètre métier nécessaire à l’implémentation de ce mécanisme entre composants de systèmes d’information (SI) et entre les systèmes d’information (SI).
 
@@ -13,13 +13,13 @@ A noter que les contraintes de sécurité concernant les flux échangés ne sont
 
 Ci-dessous des exemples de cas d’usage concernant le mécanisme de notification d’évènements.
 
-## Lectorat cible
+#### Lectorat cible
 
 Les lecteurs cibles sont principalement des chefs de projets ainsi que toute personne concernée par la maîtrise d’ouvrage et qui spécifie des projets avec des interfaces interopérables.
 
-## Exemples de cas d’usage
+#### Exemples de cas d’usage
 
-### Parcours de soins d’une personne diabétique
+##### Parcours de soins d’une personne diabétique
 
 **_Pré-conditions :_**
 
@@ -34,7 +34,7 @@ Les lecteurs cibles sont principalement des chefs de projets ainsi que toute per
 1. Le médecin traitant reçoit par conséquent une notification via un canal sécurisé indiquant que la personne prise en charge a été admis à l’hôpital.
 1. Le diabétologue reçoit également une notification via un canal sécurisé indiquant que la personne prise en charge a été admise à l’hôpital.
 
-### Mise à disposition de résultats d’examen de laboratoire
+##### Mise à disposition de résultats d’examen de laboratoire
 
 **_Pré-conditions :_**
 
@@ -47,7 +47,7 @@ Les lecteurs cibles sont principalement des chefs de projets ainsi que toute per
 1. Le laboratoire transmet les résultats à la plateforme de suivi.
 1. La plateforme de suivi notifie le patient et son médecin traitant de la disponibilité des résultats d’analyse selon le canal préférentiel de chacun.
 
-### Consultation d’un « pool » de notifications
+##### Consultation d’un « pool » de notifications
 
 **_Pré-conditions :_**
 
@@ -66,7 +66,7 @@ Les lecteurs cibles sont principalement des chefs de projets ainsi que toute per
 
 Remarque : le « pool » de notification peut être intégré dans le logiciel métier du professionnel ou dans un outil « externe » qui peut gérer les notifications provenant de sources diverses.
 
-## Méthode d’élaboration des spécifications métier
+#### Méthode d’élaboration des spécifications métier
 
 Les spécifications « métier » présentées dans ce document suivent la méthode[^3] d’élaboration des spécifications fonctionnelles des échanges élaborée par l’ANS. Cette méthode est constituée de plusieurs étapes :
 
@@ -77,9 +77,9 @@ Les spécifications « métier » présentées dans ce document suivent la mé
 * **Etape 5**: Pour chaque flux, identification des informations véhiculées;
 * **Etape 6**: Elaboration du modèle hiérarchique de chaque flux structuré (sous forme d’un ou plusieurs diagramme de classes UML). Le modèle hiérarchique élaboré reposera sur la reprise des composants mutualisés dans le modèle des objets de santé (MOS[^4]) et des nomenclatures associées. A l'issue de cette élaboration, il se peut que de nouveaux composants jusqu'alors inexistants dans le MOS aient été définis et soient intégrés par la suite au MOS.
 
-# Élaboration des spécifications métier
+### Élaboration des spécifications métier
 
-## Etape 1: Organisation du contexte métier
+#### Etape 1: Organisation du contexte métier
 
 Le but de cette étape est d’organiser la vue métier dans laquelle s’insère le projet et d'identifier le ou les processus du périmètre du projet. Les concepts suivants doivent être définis :
 
@@ -105,7 +105,7 @@ Cette étude métier couvre les processus suivants :
 
 * La transmission d’un ordre de notification.
 
-## Etape 2: Définition du processus collaboratif
+#### Etape 2: Définition du processus collaboratif
 
 Le but de cette étape est de définir les processus métier identifiés dans le diagramme défini à l’étape 1. Cette modélisation est entreprise de façon macroscopique en représentant les processus par des diagrammes de cas d’utilisation UML. Les définitions de termes utilisés dans cette étape ainsi que tout au long du document sont listées ci-dessous. A noter que chaque sous-section peut contenir ses définitions propres, notamment celles des flux d'informations identifiés.
 
@@ -121,17 +121,17 @@ Le but de cette étape est de définir les processus métier identifiés dans le
 
 Les sous-sections suivantes présentent les cas d'utilisation identifiés dans le système ainsi que les acteurs et les actions qui y contenus.
 
-### [Cas d’utilisation] Gestion des abonnements (CI-SIS-NE-PGA-CU001)
+##### [Cas d’utilisation] Gestion des abonnements (CI-SIS-NE-PGA-CU001)
 
 **_Cas d'usage_** : Un souscripteur habilité crée, modifie ou supprime un abonnement aux notifications d’événements sur une plateforme ou un système de gestion dédié à cet effet pour le compte d’une personne physique ou morale.
 
-#### "Diagramme de cas d’utilisation : Création ou mise à jour d’un abonnement (CI-SIS-NE-CU-SA-001)"
+###### "Diagramme de cas d’utilisation : Création ou mise à jour d’un abonnement (CI-SIS-NE-CU-SA-001)"
 
 Le processus métier de gestion d'abonnement amène à considérer un cas d'utilisation de "Création ou de mise à jour d’un abonnement" avec les différents acteurs impliqués.
 
 Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un abonnement (CI-SIS-NE-CU-SA-001)
 
-#### Les acteurs impliqués
+###### Les acteurs impliqués
 
 | | |
 | :--- | :--- |
@@ -140,7 +140,7 @@ Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un a
 
 Table 1: Table des acteurs impliqués dans le cas d’utilisation Création ou mise à jour d’un abonnement
 
-##### Détails du cas d'utilisation
+####### Détails du cas d'utilisation 
 
 Cette section décrit en détail chaque cas d'utilisation de la manière usuelle: description, pré-condition, scénario(s), exception, post-condition, contraintes fonctionnelles, autres contraintes.
 
@@ -163,17 +163,17 @@ Scénario Alternatif:
 
 L’abonné peut être lui-même habilité à gérer son propre abonnement sans passer par un souscripteur.
 
-#### "Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001) "
+###### "Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001) "
 
 Le processus métier de gestion d'abonnement amène à considérer un cas d'utilisation de "Suppression d’un abonnement" avec les différents acteurs impliqués.
 
 Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001)
 
-##### Les acteurs impliqués
+####### Les acteurs impliqués 
 
 Voir section 2.2.1.1.1.
 
-##### Détails du cas d'utilisation
+####### Détails du cas d'utilisation 
 
 Cette section décrit en détail chaque cas d'utilisation de la manière usuelle: description, pré-condition, scénario(s), exception, post-condition, contraintes fonctionnelles, autres contraintes.
 
@@ -190,17 +190,17 @@ Scenario Alternatif:
 
 L'abonné peut être lui-même habilité à gérer son propre abonnement sans passer par un souscripteur.
 
-###  [Cas d’utilisation] Gestion des évènements (CI-SIS-NE-PGE-CU001)
+#####  [Cas d’utilisation] Gestion des évènements (CI-SIS-NE-PGE-CU001)
 
 **_Cas d'usage_** : Un acteur déclenche l'envoi d'un évènement à une plateforme ou un système de gestion dédié à cet effet.
 
-#### "Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-NE-CU-EE-001)"
+###### "Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-NE-CU-EE-001)"
 
 Le processus métier de gestion d'évènements amène à considérer un cas d'utilisation d’une "Emission d'un évènement" avec les différents acteurs impliqués.
 
 Figure 4 : Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-NE-CU-EE-001)
 
-#### Les acteurs impliqués
+###### Les acteurs impliqués
 
 | | |
 | :--- | :--- |
@@ -209,7 +209,7 @@ Figure 4 : Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-
 
 Table 2: Table des acteurs impliqués dans le cas d’utilisation Emission d’un évènement
 
-#### Détails du cas d'utilisation
+###### Détails du cas d'utilisation
 
 Cette section décrit en détail chaque cas d'utilisation de la manière usuelle: description, pré-condition, scénario(s), exception, post-condition, contraintes fonctionnelles, autres contraintes.
 
@@ -225,17 +225,17 @@ Pré-Conditions:
 
 L'émetteur est pré-enregistré via le gestionnaire d’inscriptions.
 
-### [Cas d’utilisation] Gestion des notifications (CI-SIS-NE-PGN-CU001)
+##### [Cas d’utilisation] Gestion des notifications (CI-SIS-NE-PGN-CU001)
 
 **_Cas d'usage_:** Une plateforme ou un système de gestion dédié traite l'évènement de manière à pouvoir aviser les abonnés auxquels l'évènement est destiné, cela se traduit par la transmission d'un ordre de notification.
 
-#### "Diagramme de cas d'utilisation: Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001)"
+###### "Diagramme de cas d'utilisation: Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001)"
 
 Le processus métier de gestion d'évènement amène à considérer un cas d'utilisation de "Transmission d'un ordre de notification" avec les différents acteurs impliqués.
 
 Figure 5 : Diagramme de cas d'utilisation : Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001)
 
-#### Les acteurs impliqués
+###### Les acteurs impliqués
 
 | | |
 | :--- | :--- |
@@ -245,7 +245,7 @@ Figure 5 : Diagramme de cas d'utilisation : Transmission d'un ordre de notific
 
 Table 3: Table des acteurs impliqués dans le cas d’utilisation Transmission d’un ordre de notification
 
-#### Les détails du cas d'utilisation
+###### Les détails du cas d'utilisation
 
 Cette section décrit en détail chaque cas d'utilisation de la manière usuelle: description, pré-condition, scénario(s), exception, post-condition, contraintes fonctionnelles, autres contraintes.
 
@@ -291,15 +291,15 @@ Les 4 types d’évènements pris en compte à ce jour sont :
 1. Flux de sortie d'un établissement de santé
 1. Flux de création d'une note pour un patient dans le cahier de liaison
 
-## Etape 3 : Description du processus collaboratif et identification des flux
+#### Etape 3 : Description du processus collaboratif et identification des flux
 
 L’objectif de cette étape est de décrire les processus métier collaboratifs définis dans les cas d'utilisation de l’étape 2, ainsi que les flux échangés par les acteurs. Dans ce document, les processus sont modélisés avec des diagrammes d'activités UML.
 
-### [Activité] Gestion des abonnements (CI-SIS-NE-PGA-DA001)
+##### [Activité] Gestion des abonnements (CI-SIS-NE-PGA-DA001)
 
 Cette section présente la modélisation du processus de la création ou de mise à jour d’un abonnement. Elle contient également une description des acteurs, des actions correspondantes et les flux d’échanges.
 
-#### Diagramme d’activité : Création ou mise à jour d’un abonnement (CI-SIS-NE-DA-SA-001)
+###### Diagramme d’activité : Création ou mise à jour d’un abonnement (CI-SIS-NE-DA-SA-001)
 
 Le processus métier de gestion d'abonnement implique le flux d’échange de demande de création ou de mises à jour "SouscriptionAbonnement".
 
@@ -324,7 +324,7 @@ Créer ou mettre à jour l'abonnement
 
 Le gestionnaire d’abonnements traite la demande du souscripteur.
 
-#### Diagramme d’activité : Suppression d’un abonnement (CI-SIS-NE-DA-DA-001)
+###### Diagramme d’activité : Suppression d’un abonnement (CI-SIS-NE-DA-DA-001)
 
 Le processus métier de gestion d'abonnement implique le flux d’échange de demande de création ou de mise à jour : "SuppressionAbonnement".
 
@@ -349,11 +349,11 @@ Supprimer un abonnement
 
 Le gestionnaire d’abonnements traite la demande de suppression du souscripteur.
 
-### [Activité] Gestion des évènements (CI-SIS-NE-PGE-DA001)
+##### [Activité] Gestion des évènements (CI-SIS-NE-PGE-DA001)
 
 Cette section présente la modélisation du processus de l'émission d'un évènement. Elle contient également une description des acteurs, des actions correspondantes et les flux d’échanges.
 
-#### Diagramme d'activité : Emission d'un évènement (CI-SIS-NE-DA-EE-001)
+###### Diagramme d'activité : Emission d'un évènement (CI-SIS-NE-DA-EE-001)
 
 Le processus métier de gestion d'évènement implique le flux d’échange entre l'émetteur et la plateforme ou le système de gestion : "EmissionEvenement".
 
@@ -380,11 +380,11 @@ Traiter l'évènement
 
 L'évènement est traité par une plateforme ou un système de gestion qui analyse, qualifie et vérifie si cet évènement est lié à des abonnements.
 
-### [Activité] Gestion des notifications (CI-SIS-NE-PGN-DA001)
+##### [Activité] Gestion des notifications (CI-SIS-NE-PGN-DA001)
 
 Cette section présente la modélisation du processus de la transmission de l'ordre de notification d'un évènement. Elle contient également une description des acteurs, des actions correspondantes et les flux d’échanges.
 
-#### Diagramme d'activité : Transmission d'un ordre de notification (CI-SIS-NE-DA-TO-001)
+###### Diagramme d'activité : Transmission d'un ordre de notification (CI-SIS-NE-DA-TO-001)
 
 Le processus métier de gestion de notification implique le flux d’échange : "TransmissionOrdreNotification".
 
@@ -418,7 +418,7 @@ Réceptionner la notification
 
 L'abonné est en mesure de réceptionner la notification via son propre système.
 
-## Etape 4: Qualification des flux échangés
+#### Etape 4: Qualification des flux échangés
 
 Les flux échangés entre les acteurs ont été identifiés à l'étape 3. Cette nouvelle étape vise à qualifier les flux d'informations en définissant parmi eux ceux qui sont structurés. Cette qualification est effectuée en élaborant un tableau répertoriant les flux identifiés à l'étape précédente et présenté ci-dessous.
 
@@ -432,7 +432,7 @@ Les flux échangés entre les acteurs ont été identifiés à l'étape 3. Cette
 
 Table 8 : Liste des flux identifiés
 
-## Etape 5: Identification des informations véhiculées dans les flux
+#### Etape 5: Identification des informations véhiculées dans les flux
 
 Dans cette section, il s'agit de définir les informations « métier » présentes dans chaque flux structuré identifié. La Table ci-dessous liste les concepts présents dans les flux identifiés.
 
@@ -448,7 +448,7 @@ Dans cette section, il s'agit de définir les informations « métier » présen
 
 Table 9 : Liste des concepts «  métier » identifiés
 
-## Etape 6: Élaboration du modèle hiérarchique des flux structurés
+#### Etape 6: Élaboration du modèle hiérarchique des flux structurés
 
 Le but de cette étape est d'élaborer des diagrammes de classe (modèle hiérarchique) de chaque flux structuré à partir des informations métier identifiées. La représentation formalisée du flux doit prendre en compte deux exigences supplémentaires:
 
@@ -477,13 +477,13 @@ A noter que les objets identifiés qui ne se trouvent pas dans le MOS vont faire
 
 Les sections qui suivent présentent les diagrammes de classes de chaque flux structuré identifié. Il est à noter que les flux **TransmissionOrdreNotification** et **NotificationEvenement** sont modélisés avec le même diagramme de classe, étant donné que ces flux peuvent contenir les mêmes informations métier.
 
-### Flux 1 – SouscriptionAbonnement
+##### Flux 1 – SouscriptionAbonnement
 
 Ci-dessous le diagramme de classe concernant le Flux 1- SouscriptionAbonnement. Cette section contient également la description des attributs dans chaque classe identifiée.
 
 Figure 10: Diagramme de classe – SouscriptionAbonnement
 
-#### Classe "Abonnement"
+###### Classe "Abonnement"
 
 | | | |
 | :--- | :--- | :--- |
@@ -495,7 +495,7 @@ Figure 10: Diagramme de classe – SouscriptionAbonnement
 
 Table 11 : Attributs de la classe "Abonnement"
 
-#### Classe "Abonne"
+###### Classe "Abonne"
 
 | | | |
 | :--- | :--- | :--- |
@@ -503,7 +503,7 @@ Table 11 : Attributs de la classe "Abonnement"
 
 Table 12 : Attributs de la classe "Abonné"
 
-#### Classe "PersonnePhysique"
+###### Classe "PersonnePhysique"
 
 | | | |
 | :--- | :--- | :--- |
@@ -512,7 +512,7 @@ Table 12 : Attributs de la classe "Abonné"
 
 Table 13 : Attributs de la classe "PersonnePhysique"
 
-#### Classe "Evenement"
+###### Classe "Evenement"
 
 | | | |
 | :--- | :--- | :--- |
@@ -520,7 +520,7 @@ Table 13 : Attributs de la classe "PersonnePhysique"
 
 Table 14 : Attributs de la classe "Evènement"
 
-#### Classe "PersonnePriseEnCharge"
+###### Classe "PersonnePriseEnCharge"
 
 | | | |
 | :--- | :--- | :--- |
@@ -534,7 +534,7 @@ Table 14 : Attributs de la classe "Evènement"
 
 Table 15: Attributs de la classe "PersonnePriseEnCharge"
 
-#### Classe "Professionnel"
+###### Classe "Professionnel"
 
 | | | |
 | :--- | :--- | :--- |
@@ -544,9 +544,7 @@ Table 15: Attributs de la classe "PersonnePriseEnCharge"
 
 Table 16 : Attributs de la classe "Professionnel"
 
-####
-
-#### Classe "AbonnePP"
+###### Classe "AbonnePP"
 
 | | | |
 | :--- | :--- | :--- |
@@ -557,7 +555,7 @@ Table 16 : Attributs de la classe "Professionnel"
 
 Table 17 : Attributs de la classe "AbonnePP"
 
-#### Classe "AbonnePM"
+###### Classe "AbonnePM"
 
 | | | |
 | :--- | :--- | :--- |
@@ -569,7 +567,7 @@ Table 17 : Attributs de la classe "AbonnePP"
 
 Table 18 : Attributs de la classe "AbonnePM"
 
-#### Classe "EntiteJuridique"
+###### Classe "EntiteJuridique"
 
 | | | |
 | :--- | :--- | :--- |
@@ -584,7 +582,7 @@ Table 18 : Attributs de la classe "AbonnePM"
 
 Table 19 : Attributs de la classe "EntiteJuridique"
 
-#### Classe "Emetteur"
+###### Classe "Emetteur"
 
 | | | |
 | :--- | :--- | :--- |
@@ -592,15 +590,13 @@ Table 19 : Attributs de la classe "EntiteJuridique"
 
 Table 20 : Attributs de la classe "Emetteur"
 
-### Flux 2 – SuppressionAbonnement
+##### Flux 2 – SuppressionAbonnement
 
 Ci-dessous le diagramme de classe concernant le Flux 2- SuppressionAbonnement. Les sous-sections suivantes donnent des définitions aux attributs de chaque class identifiée.
 
 Figure 11: Diagramme de classe – SuppressionAbonnement
 
-####
-
-#### Classe "SuppressionAbonnement"
+###### Classe "SuppressionAbonnement"
 
 | | | |
 | :--- | :--- | :--- |
@@ -608,15 +604,13 @@ Figure 11: Diagramme de classe – SuppressionAbonnement
 
 Table 21 : Attributs de la classe "SuppressionAbonnement"
 
-###
-
-### Flux 3 – EmissionEvenement
+##### Flux 3 – EmissionEvenement
 
 Ci-dessous le diagramme de classe concernant le Flux 3- EmissionEvenement. Les sous-sections suivantes donnent des définitions aux attributs de chaque class identifiée.
 
 Figure 12: Diagramme de classe - EmissionAbonnement
 
-#### Classe "Emetteur"
+###### Classe "Emetteur"
 
 | | | |
 | :--- | :--- | :--- |
@@ -624,7 +618,7 @@ Figure 12: Diagramme de classe - EmissionAbonnement
 
 Table 22 : Attributs de la classe "Emetteur"
 
-#### Classe "Evenement"
+###### Classe "Evenement"
 
 | | | |
 | :--- | :--- | :--- |
@@ -635,7 +629,7 @@ Table 22 : Attributs de la classe "Emetteur"
 
 Table 23 : Attributs de la classe "Evènement"
 
-#### Classe "PersonnePhysique"
+###### Classe "PersonnePhysique"
 
 | | | |
 | :--- | :--- | :--- |
@@ -644,7 +638,7 @@ Table 23 : Attributs de la classe "Evènement"
 
 Table 24 : Attributs de la classe "PersonnePhysique"
 
-#### Classe "EntiteJuridique"
+###### Classe "EntiteJuridique"
 
 | | | |
 | :--- | :--- | :--- |
@@ -659,7 +653,7 @@ Table 24 : Attributs de la classe "PersonnePhysique"
 
 Table 25 : Attributs de la classe "EntiteJuridique"
 
-#### Classe "PersonnePriseEnCharge"
+###### Classe "PersonnePriseEnCharge"
 
 | | | |
 | :--- | :--- | :--- |
@@ -669,7 +663,7 @@ Table 25 : Attributs de la classe "EntiteJuridique"
 
 Table 26 : Attributs de la classe "PersonnePriseEnCharge"
 
-#### Classe "Professionnel"
+###### Classe "Professionnel"
 
 | | | |
 | :--- | :--- | :--- |
@@ -683,13 +677,13 @@ Table 26 : Attributs de la classe "PersonnePriseEnCharge"
 
 Table 27 : Attributs de la classe "Professionnel"
 
-### Flux 4 – TransmissionOrdreNotification
+##### Flux 4 – TransmissionOrdreNotification
 
 Ci-dessous le diagramme de classe concernant le Flux 4-TransmissionOrdreNotification et le Flux 5- NotificationEvenement. Les sous-sections suivantes donnent des définitions aux attributs de chaque classe identifiée
 
 Figure 13: Diagramme de classe – TransmissionOrdreNotification
 
-#### Classe "Abonne"
+###### Classe "Abonne"
 
 | | | |
 | :--- | :--- | :--- |
@@ -697,7 +691,7 @@ Figure 13: Diagramme de classe – TransmissionOrdreNotification
 
 Table 28 : Attributs de la classe "Abonné"
 
-#### Classe "Evenement"
+###### Classe "Evenement"
 
 | | | |
 | :--- | :--- | :--- |
@@ -708,7 +702,7 @@ Table 28 : Attributs de la classe "Abonné"
 
 Table 29 : Attributs de la classe "Evènement"
 
-#### Classe "PersonnePhysique"
+###### Classe "PersonnePhysique"
 
 | | | |
 | :--- | :--- | :--- |
@@ -717,7 +711,7 @@ Table 29 : Attributs de la classe "Evènement"
 
 Table 30 : Attributs de la classe "PersonnePhysique"
 
-#### Classe "Professionnel"
+###### Classe "Professionnel"
 
 | | | |
 | :--- | :--- | :--- |
@@ -730,7 +724,7 @@ Table 30 : Attributs de la classe "PersonnePhysique"
 
 Table 31 : Attributs de la classe "Professionnel"
 
-#### Classe "Abonnement"
+###### Classe "Abonnement"
 
 | | | |
 | :--- | :--- | :--- |
@@ -739,7 +733,7 @@ Table 31 : Attributs de la classe "Professionnel"
 
 Table 32 : Attributs de la classe "Abonnement"
 
-#### Classe "PersonnePriseEnCharge"
+###### Classe "PersonnePriseEnCharge"
 
 | | | |
 | :--- | :--- | :--- |
@@ -748,7 +742,7 @@ Table 32 : Attributs de la classe "Abonnement"
 
 Table 33 : Attributs de la classe "PersonnePriseEnCharge"
 
-#### Classe "EntiteJuridique"
+###### Classe "EntiteJuridique"
 
 | | | |
 | :--- | :--- | :--- |
@@ -762,7 +756,7 @@ Table 33 : Attributs de la classe "PersonnePriseEnCharge"
 
 Table 34 : Attributs de la classe "EntiteJuridique"
 
-#### Classe "Emetteur"
+###### Classe "Emetteur"
 
 | | | |
 | :--- | :--- | :--- |
@@ -771,7 +765,7 @@ Table 34 : Attributs de la classe "EntiteJuridique"
 
 Table 35 : Attributs de la classe "Emetteur"
 
-#### Classe "AbonnePP"
+###### Classe "AbonnePP"
 
 | | | |
 | :--- | :--- | :--- |
@@ -781,7 +775,7 @@ Table 35 : Attributs de la classe "Emetteur"
 
 Table 36 : Attributs de la classe "AbonnePP"
 
-#### Classe "AbonnePM"
+###### Classe "AbonnePM"
 
 | | | |
 | :--- | :--- | :--- |
@@ -792,7 +786,7 @@ Table 36 : Attributs de la classe "AbonnePP"
 
 Table 37 : Attributs de la classe "AbonnePM"
 
-### Flux 5 – NotificationEvenement
+##### Flux 5 – NotificationEvenement
 
 Ce flux est modélisé par le même modèle hiérarchique du Flux 3 – TransmissionOrdreNotification étant donné qu’ils peuvent contenir les mêmes informations métier.
 

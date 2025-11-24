@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/EyeColorVS | *Version*:0.1.0 |
-| Draft as of 2025-11-21 | *Computable Name*:EyeColorVS |
+| Draft as of 2025-11-24 | *Computable Name*:EyeColorVS |
 
  
 Different eye colors. 
@@ -56,7 +56,7 @@ Ce jeu de valeur (ValueSet) contient 3 concepts
   "name" : "EyeColorVS",
   "title" : "EyeColor Value Set",
   "status" : "draft",
-  "date" : "2025-11-21T14:04:11+00:00",
+  "date" : "2025-11-24T10:17:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
