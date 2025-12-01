@@ -259,7 +259,7 @@ abonnement (CI-SIS-NE-CU-SA-001)
 Table 1: Table des acteurs impliqués dans le cas d’utilisation Création
 ou mise à jour d’un abonnement
 
-####### Détails du cas d'utilisation <!-- Problème d'affichage dans l'IG -->
+- Détails du cas d'utilisation <!-- Problème d'affichage dans l'IG : initialement #######-->
 
 Cette section décrit en détail chaque cas d'utilisation de la manière
 usuelle: description, pré-condition, scénario(s), exception,
@@ -305,11 +305,11 @@ acteurs impliqués.
 Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement
 (CI-SIS-NE-CU-DA-001)
 
-####### Les acteurs impliqués <!-- Problème d'affichage dans l'IG -->
+- Les acteurs impliqués <!-- Problème d'affichage dans l'IG : initialement #######-->
 
 Voir section 2.2.1.1.1.
 
-####### Détails du cas d'utilisation <!-- Problème d'affichage dans l'IG -->
+- Détails du cas d'utilisation <!-- Problème d'affichage dans l'IG : initialement #######-->
 
 Cette section décrit en détail chaque cas d'utilisation de la manière
 usuelle: description, pré-condition, scénario(s), exception,
