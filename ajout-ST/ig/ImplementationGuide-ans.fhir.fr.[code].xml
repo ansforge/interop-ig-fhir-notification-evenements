@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG Example"/>
   <status value="draft"/>
-  <date value="2025-11-24T10:43:57+00:00"/>
+  <date value="2025-12-01T15:11:53+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -625,10 +625,10 @@
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="construction_des_flux.html"/>
+            <valueUrl value="st_intro.html"/>
           </extension>
-          <nameUrl value="construction_des_flux.html"/>
-          <title value="Vue d'ensemble"/>
+          <nameUrl value="st_intro.html"/>
+          <title value="Introduction"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -636,7 +636,7 @@
             <valueUrl value="st_flux1.html"/>
           </extension>
           <nameUrl value="st_flux1.html"/>
-          <title value="Flux 01"/>
+          <title value="Flux 1:SouscriptionAbonnement"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -644,7 +644,31 @@
             <valueUrl value="st_flux2.html"/>
           </extension>
           <nameUrl value="st_flux2.html"/>
-          <title value="Flux 02"/>
+          <title value="Flux 2:SuppressionAbonnement"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="st_flux3.html"/>
+          </extension>
+          <nameUrl value="st_flux3.html"/>
+          <title value="Flux 3:EmissionEvenement"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="st_flux4.html"/>
+          </extension>
+          <nameUrl value="st_flux4.html"/>
+          <title value="Flux 4:TransmissionOrdreNotification"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="st_flux5.html"/>
+          </extension>
+          <nameUrl value="st_flux5.html"/>
+          <title value="Flux 5:NotificationEvenement"/>
           <generation value="markdown"/>
         </page>
       </page>

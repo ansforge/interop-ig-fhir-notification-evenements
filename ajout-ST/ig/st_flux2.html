@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Flux 02 - ANS IG Example v0.1.0</title>
+    <title>Flux 2:SuppressionAbonnement - ANS IG Example v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -105,13 +105,22 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="construction_des_flux.html">Construction des flux</a>
+        <a href="st_intro.html">Introduction</a>
       </li>
       <li>
-        <a href="st_flux1.html">Flux 01</a>
+        <a href="st_flux1.html">Souscription Abonnement</a>
       </li>
       <li>
-        <a href="st_flux2.html">Flux 02</a>
+        <a href="st_flux2.html">SuppressionAbonnement</a>
+      </li>
+      <li>
+        <a href="st_flux3.html">EmissionEvenement</a>
+      </li>
+      <li>
+        <a href="st_flux4.html">TransmissionOrdreNotification</a>
+      </li>
+      <li>
+        <a href="st_flux5.html">NotificationEvenement</a>
       </li>
     </ul>
   </li>
@@ -155,7 +164,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 02</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 2:SuppressionAbonnement</b></li>
 
           <span style="float:right;">
 
@@ -163,7 +172,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="change-log.html">next&gt;</a>
+          | <a href="st_flux3.html">next&gt;</a>
 
           </span>
 
@@ -185,8 +194,8 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">ANS IG Example - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/[code]/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Flux 02</h2>
+  <!--ReleaseHeader--><p id="publish-box">ANS IG Example - version de développement local (v0.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/[code]/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <h2>Flux 2:SuppressionAbonnement</h2>
   
 
 
@@ -203,19 +212,87 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#nom-du-flux" id="markdown-toc-nom-du-flux">Nom du flux</a></li>
-  <li><a href="#construction-du-flux" id="markdown-toc-construction-du-flux">Construction du flux</a></li>
+  <li><a href="#correspondances-entre-objets-métier-et-ressources-du-standard-hl7-fhir" id="markdown-toc-correspondances-entre-objets-métier-et-ressources-du-standard-hl7-fhir">Correspondances entre objets métier et ressources du standard HL7 FHIR</a></li>
+  <li><a href="#construction-des-flux" id="markdown-toc-construction-des-flux">Construction des flux</a></li>
 </ul>
 
 </div>
+<h3 id="correspondances-entre-objets-métier-et-ressources-du-standard-hl7-fhir">Correspondances entre objets métier et ressources du standard HL7 FHIR</h3>
 
-<h3 id="nom-du-flux">Nom du flux</h3>
+<p>Dans cette section, une mise en correspondance est faite entre les
+objets identifiés à l’issue de l’étude métier de la notification
+d’évènements [1] et les ressources et éléments du standard HL7 FHIR.</p>
 
-<p>Description du flux</p>
+<p>Les sections qui suivent détaillent la mise en correspondance des
+informations métier [1] contenues dans les flux de la Table 2 avec les
+éléments des ressources[^4] FHIR correspondantes. Pour les attributs qui
+ne sont pas définis dans les ressources FHIR, des extensions (marquées
+par « <em>extension</em> ») sont définies.</p>
 
-<h3 id="construction-du-flux">Construction du flux</h3>
+<p>Le <strong>Flux 2 – SuppressionAbonnement</strong>  permet de supprimer un abonnement. Les informations véhiculées
+dans ce flux sont nécessaires pour identifier l’abonnement à supprimer.</p>
 
-<p>Explication de comment doit être construit le flux</p>
+<table style="width:100%;">
+<caption><p>Tableau 4 Mise en correspondance pour le flux 2:
+SuppressionAbonnement</p></caption>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 30%" />
+<col style="width: 16%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="2"> Eléments métier</th>
+<th colspan="2">Eléments FHIR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom Objet</td>
+<td>Nom attribut</td>
+<td>Ressource</td>
+<td>Elément</td>
+</tr>
+<tr>
+<td>Abonnement</td>
+<td>idAbonnement : [1..1] Identifiant</td>
+<td><strong>Subscription</strong></td>
+<td>id : id [0..1]<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Cet identifiant technique est fourni dans la réponse au
+flux 1 de souscription. Il peut ainsi être utilisé par la suite pour la
+mise à jour ou la suppression d’un abonnement.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+<h3 id="construction-des-flux">Construction des flux</h3>
+
+<p>La demande de suppression d’un abonnement est réalisée en émettant une
+requête HTTP DELETE au gestionnaire d’abonnements. L’identifiant de la
+ressource Subscription (id) est utilisé pour permettre au Gestionnaire
+d’abonnements d’identifier l’abonnement à supprimer.</p>
+
+<p>La requête HTTP DELETE est ainsi formée :</p>
+
+<p>DELETE [base]/Subscription/[id]</p>
+
+<p>Où [base] est l’endpoint FHIR mis à disposition par le gestionnaire
+d’abonnements et [id] correspond à l’élément id de la ressource à
+supprimer.</p>
+
+<p>Si la suppression de l’abonnement est correctement effectuée, le système
+Gestionnaire d’abonnements doit retourner un code « 200 deleted ».</p>
+
+<p>En cas d’erreur, le Gestionnaire d’abonnements doit répondre avec les
+codes HTTP appropriés tels que définis par l’API REST FHIR et renvoyer
+une ressource de type OperationOutcome dans le corps de la réponse.</p>
+
 
 
 
@@ -247,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="change-log.html">next&gt;</a>
+                <a href="st_flux3.html">next&gt;</a>
 
               </td>
             </tr>
@@ -257,7 +334,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 24, 2025 10:43+0000">2025-11-24</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 1, 2025 15:11+0000">2025-12-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

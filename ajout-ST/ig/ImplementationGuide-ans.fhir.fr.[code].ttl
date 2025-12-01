@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG Example"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-11-24T10:43:57+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-01T15:11:53+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1692,16 +1692,16 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "construction_des_flux.html"^^xsd:anyURI ;
-               fhir:l fhir:construction_des_flux.html
+               fhir:v "st_intro.html"^^xsd:anyURI ;
+               fhir:l fhir:st_intro.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "construction_des_flux.html"^^xsd:anyURI ;
-             fhir:l fhir:construction_des_flux.html
+             fhir:v "st_intro.html"^^xsd:anyURI ;
+             fhir:l fhir:st_intro.html
            ] ;
-           fhir:title [ fhir:v "Vue d'ensemble" ] ;
+           fhir:title [ fhir:v "Introduction" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -1720,7 +1720,7 @@
              fhir:v "st_flux1.html"^^xsd:anyURI ;
              fhir:l fhir:st_flux1.html
            ] ;
-           fhir:title [ fhir:v "Flux 01" ] ;
+           fhir:title [ fhir:v "Flux 1:SouscriptionAbonnement" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -1739,7 +1739,64 @@
              fhir:v "st_flux2.html"^^xsd:anyURI ;
              fhir:l fhir:st_flux2.html
            ] ;
-           fhir:title [ fhir:v "Flux 02" ] ;
+           fhir:title [ fhir:v "Flux 2:SuppressionAbonnement" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+             ] ;
+             fhir:value [
+               a fhir:Url ;
+               fhir:v "st_flux3.html"^^xsd:anyURI ;
+               fhir:l fhir:st_flux3.html
+             ]
+           ] ) ;
+           fhir:name [
+             a fhir:Url ;
+             fhir:v "st_flux3.html"^^xsd:anyURI ;
+             fhir:l fhir:st_flux3.html
+           ] ;
+           fhir:title [ fhir:v "Flux 3:EmissionEvenement" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+             ] ;
+             fhir:value [
+               a fhir:Url ;
+               fhir:v "st_flux4.html"^^xsd:anyURI ;
+               fhir:l fhir:st_flux4.html
+             ]
+           ] ) ;
+           fhir:name [
+             a fhir:Url ;
+             fhir:v "st_flux4.html"^^xsd:anyURI ;
+             fhir:l fhir:st_flux4.html
+           ] ;
+           fhir:title [ fhir:v "Flux 4:TransmissionOrdreNotification" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+             ] ;
+             fhir:value [
+               a fhir:Url ;
+               fhir:v "st_flux5.html"^^xsd:anyURI ;
+               fhir:l fhir:st_flux5.html
+             ]
+           ] ) ;
+           fhir:name [
+             a fhir:Url ;
+             fhir:v "st_flux5.html"^^xsd:anyURI ;
+             fhir:l fhir:st_flux5.html
+           ] ;
+           fhir:title [ fhir:v "Flux 5:NotificationEvenement" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
