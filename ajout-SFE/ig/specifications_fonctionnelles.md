@@ -140,7 +140,7 @@ Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un a
 
 Table 1: Table des acteurs impliqués dans le cas d’utilisation Création ou mise à jour d’un abonnement
 
-####### Détails du cas d'utilisation 
+* Détails du cas d'utilisation 
 
 Cette section décrit en détail chaque cas d'utilisation de la manière usuelle: description, pré-condition, scénario(s), exception, post-condition, contraintes fonctionnelles, autres contraintes.
 
@@ -169,11 +169,11 @@ Le processus métier de gestion d'abonnement amène à considérer un cas d'util
 
 Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001)
 
-####### Les acteurs impliqués 
+* Les acteurs impliqués 
 
 Voir section 2.2.1.1.1.
 
-####### Détails du cas d'utilisation 
+* Détails du cas d'utilisation 
 
 Cette section décrit en détail chaque cas d'utilisation de la manière usuelle: description, pré-condition, scénario(s), exception, post-condition, contraintes fonctionnelles, autres contraintes.
 
