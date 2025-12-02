@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
@@ -46,6 +47,7 @@
     h3,h4,h5,h6{--heading-prefix:"6.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
     <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
@@ -163,7 +165,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-fr-patient.html">next&gt;</a>
+          | <a href="CapabilityStatement-NdE-Emetteur.html">next&gt;</a>
 
           </span>
 
@@ -176,7 +178,6 @@
       <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
-
 <style type="text/css">
 h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
 h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
@@ -197,19 +198,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Structures: Resource Profiles</a>
+         <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Structures: Extension Definitions</a>
+         <a href="#2">Behavior: Search Parameters</a>
       </li>
       <li>
-         <a href="#3">Terminology: Value Sets</a>
+         <a href="#3">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#4">Terminology: Code Systems</a>
+         <a href="#4">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#5">Example: Example Instances</a>
+         <a href="#5">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -218,6 +225,73 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:html="http://www.w3.org/1999/xhtml">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-NdE-Emetteur.html"
+                  title="CapabilityStatement/NdE-Emetteur">CI-SIS Notification-D-Evenements - NdE_Emetteur</a>
+            </td>
+            <td>
+<p>L'émetteur est un système ou sous-système qui envoie un évènement au gestionnaire
+d'évènements soit de manière automatique, soit manuellement. L'émetteur est enregistré et
+connu par le système qui réceptionne et traite les évènements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-NdE-GestionnaireDAbonnements.html"
+                  title="CapabilityStatement/NdE-GestionnaireDAbonnements">CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements</a>
+            </td>
+            <td>
+<p>Le  gestionnaire  d’abonnements  est  un  acteur  système  qui  stocke  les
+abonnements  et  les paramètres d’usage des notifications d’événements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-NdE-GestionnaireDeNotifications.html"
+                  title="CapabilityStatement/NdE-GestionnaireDeNotifications">CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications</a>
+            </td>
+            <td>
+<p>Le  gestionnaire  de  notifications  est  un  acteur  système  qui  envoie  les  notifications
+aux  abonnés concernés  en  fonction  des  informations  recueillies  depuis  les  gestionnaires
+d’abonnements.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-NdE-Souscripteur.html"
+                  title="CapabilityStatement/NdE-Souscripteur">CI-SIS Notification-D-Evenements - NdE_Souscripteur</a>
+            </td>
+            <td>
+<p>Un  souscripteur  est  la  personne  (physique  ou  morale)  qui  est  habilitée  à  créer,  modifier  ou supprimer un abonnement
+au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Behavior: Search Parameters </h3>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-NdE-CommunicationRequest-EventType.html"
+                  title="SearchParameter/NdE-CommunicationRequest-EventType">NdE-CommunicationRequest-EventType</a>
+            </td>
+            <td>
+<p>Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
    <h3>Structures: Resource Profiles </h3>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -225,16 +299,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-patient.html"
-                  title="StructureDefinition/fr-patient">Patient français</a>
+               <a href="StructureDefinition-nde-eventdeclaration.html"
+                  title="StructureDefinition/nde-eventdeclaration">NdE_EventDeclarationNdE</a>
             </td>
             <td>
-<p>Description du patient français</p>
+<p>EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nde-notificationrequest.html"
+                  title="StructureDefinition/nde-notificationrequest">NdE_NotificationRequestNdE</a>
+            </td>
+            <td>
+<p>Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-nde-subscription.html"
+                  title="StructureDefinition/nde-subscription">NdE_SubscriptionNdE</a>
+            </td>
+            <td>
+<p>SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.</p>
 </td>
          </tr>
       </tbody>
    </table>
-   <a name="2"> </a>
+   <a name="4"> </a>
    <h3>Structures: Extension Definitions </h3>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -242,16 +334,87 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-EyeColor.html"
-                  title="StructureDefinition/EyeColor">EyeColor</a>
+               <a href="StructureDefinition-declarant.html"
+                  title="StructureDefinition/declarant">Declarant</a>
             </td>
             <td>
-<p>Eye color extension</p>
+<p>Référence aux profils français des ressources qui identifient l’émetteur de l’évènement (Practitioner pour un professionnel, Organization pour un établissement)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-event-emission-time.html"
+                  title="StructureDefinition/event-emission-time">Emission Time</a>
+            </td>
+            <td>
+<p>Cette information identifie la date l’heure de l’émission d’un évènement.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-event-time.html"
+                  title="StructureDefinition/event-time">Event Time</a>
+            </td>
+            <td>
+<p>Date à laquelle l’évènement a eu lieu.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-event-type.html"
+                  title="StructureDefinition/event-type">Event Type</a>
+            </td>
+            <td>
+<p>Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-recipient-endpoint.html"
+                  title="StructureDefinition/recipient-endpoint">NdE_RecipientEndpoint</a>
+            </td>
+            <td>
+<p>Cette information contient les données nécessaires pour contacter l’abonné</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-start.html" title="StructureDefinition/start">Start</a>
+            </td>
+            <td>
+<p>Cette information identifie la date de début de validité d’un abonnement.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-subject.html"
+                  title="StructureDefinition/subject">Subject</a>
+            </td>
+            <td>
+<p>Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-subscriber.html"
+                  title="StructureDefinition/subscriber">Subscriber</a>
+            </td>
+            <td>
+<p>Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-subscription-date.html"
+                  title="StructureDefinition/subscription-date">Subscription Date</a>
+            </td>
+            <td>
+<p>Date de création de l’abonnement.</p>
 </td>
          </tr>
       </tbody>
    </table>
-   <a name="3"> </a>
+   <a name="5"> </a>
    <h3>Terminology: Value Sets </h3>
     <p>These define sets of codes used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -292,7 +455,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="4"> </a>
+   <a name="6"> </a>
    <h3>Terminology: Code Systems </h3>
     <p>These define new code systems used by systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -318,7 +481,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="5"> </a>
+   <a name="7"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -326,10 +489,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-frpatient-exemple.html" title="Patient/frpatient-exemple">frpatient-exemple</a>
+               <a href="CommunicationRequest-com1.html" title="CommunicationRequest/com1">com1</a>
             </td>
             <td>
-<p>Exemple d'un patient français</p>
+<p>Exemple de demande de notification pour sortie du patient Robert Langdon.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CommunicationRequest-com2.html" title="CommunicationRequest/com2">com2</a>
+            </td>
+            <td>
+<p>Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Subscription-sub1.html" title="Subscription/sub1">sub1</a>
+            </td>
+            <td>
+
 </td>
          </tr>
       </tbody>
@@ -364,7 +543,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="StructureDefinition-fr-patient.html">next&gt;</a>
+                <a href="CapabilityStatement-NdE-Emetteur.html">next&gt;</a>
 
               </td>
             </tr>
@@ -374,7 +553,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 1, 2025 15:13+0000">2025-12-01</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 2, 2025 14:16+0000">2025-12-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

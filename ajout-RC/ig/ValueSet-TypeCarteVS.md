@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS | *Version*:0.1.0 |
-| Draft as of 2025-12-01 | *Computable Name*:TypeCarteVS |
+| Draft as of 2025-12-02 | *Computable Name*:TypeCarteVS |
 
  
 Type Carte Value Set. 
@@ -56,7 +56,7 @@ Ce jeu de valeur (ValueSet) contient 4 concepts
   "name" : "TypeCarteVS",
   "title" : "Type Carte Value Set",
   "status" : "draft",
-  "date" : "2025-12-01T15:13:39+00:00",
+  "date" : "2025-12-02T14:16:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

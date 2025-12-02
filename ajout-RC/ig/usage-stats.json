@@ -5,18 +5,84 @@
   "jurisdiction": "FR",
   "extensions": [
     {
-      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor",
-      "title": "EyeColor",
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant",
+      "title": "Declarant",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time",
+      "title": "Emission Time",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time",
+      "title": "Event Time",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type",
+      "title": "Event Type",
       "types": [
         "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint",
+      "title": "NdE_RecipientEndpoint",
+      "types": [
+        "url"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start",
+      "title": "Start",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject",
+      "title": "Subject",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber",
+      "title": "Subscriber",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date",
+      "title": "Subscription Date",
+      "types": [
+        "dateTime"
       ]
     }
   ],
   "profiles": {
-    "Patient": [
+    "CommunicationRequest": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient",
-        "title": "Patient français"
+        "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE",
+        "title": "NdE_EventDeclarationNdE"
+      },
+      {
+        "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE",
+        "title": "NdE_NotificationRequestNdE"
+      }
+    ],
+    "Subscription": [
+      {
+        "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE",
+        "title": "NdE_SubscriptionNdE"
       }
     ]
   },
@@ -33,10 +99,10 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
-      "StructureDefinition.snapshot.element.type"
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
@@ -62,8 +128,37 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
-    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor": [
-      "Patient"
+    "http://interopsante.org/fhir/StructureDefinition/FrPatientIdentReliability": [
+      "CommunicationRequest.contained",
+      "Subscription.contained"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant": [
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time": [
+      "CommunicationRequest"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time": [
+      "CommunicationRequest"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type": [
+      "CommunicationRequest",
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint": [
+      "CommunicationRequest.recipient"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start": [
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject": [
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber": [
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date": [
+      "Subscription"
     ]
   }
 }

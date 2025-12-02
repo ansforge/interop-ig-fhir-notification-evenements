@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="NdE-CommunicationRequest-EventType"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ParamètreRecherche NdE-CommunicationRequest-EventType</b></p><a name="NdE-CommunicationRequest-EventType"> </a><a name="hcNdE-CommunicationRequest-EventType"> </a><h2>NdE_CommunicationRequest_EventType</h2><p>Paramètre <code>event-type</code>:<code>token</code></p><div><p>Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)</p>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/communicationrequest.html">CommunicationRequest</a></td></tr><tr><td>Expression</td><td><code>extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value</code></td></tr><tr><td>Mode de traitement</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>
+  </text>
+  <url value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/NdE_CommunicationRequest_EventType"/>
+  <version value="0.1.0"/>
+  <name value="NdE_CommunicationRequest_EventType"/>
+  <status value="active"/>
+  <date value="2021-12-01"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <code value="event-type"/>
+  <base value="CommunicationRequest"/>
+  <type value="token"/>
+  <expression value="extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value"/>
+  <xpathUsage value="normal"/>
+  <multipleOr value="true"/>
+  <multipleAnd value="true"/>
+</SearchParameter>

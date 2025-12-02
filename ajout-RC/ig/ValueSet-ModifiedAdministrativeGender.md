@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/ModifiedAdministrativeGender | *Version*:0.1.0 |
-| Draft as of 2025-12-01 | *Computable Name*:ModifiedAdministrativeGender |
+| Draft as of 2025-12-02 | *Computable Name*:ModifiedAdministrativeGender |
 
  
 AdministrativeGender without unknown code 
 
  **References** 
 
-* [Patient français](StructureDefinition-fr-patient.md)
+Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par exemple dans les spécifications et / ou implémentations qui utilisent ce contenu)
 
 ### Définition logique (CLD)
 
@@ -62,7 +62,7 @@ Ce jeu de valeur (ValueSet) contient 3 concepts
   "name" : "ModifiedAdministrativeGender",
   "title" : "ModifiedAdministrativeGender",
   "status" : "draft",
-  "date" : "2025-12-01T15:13:39+00:00",
+  "date" : "2025-12-02T14:16:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

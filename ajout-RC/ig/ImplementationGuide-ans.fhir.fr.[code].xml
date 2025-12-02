@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG Example"/>
   <status value="draft"/>
-  <date value="2025-12-01T15:13:39+00:00"/>
+  <date value="2025-12-02T14:16:53+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -44,6 +44,16 @@
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_fr_core">
+    <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
+    <packageId value="hl7.fhir.fr.core"/>
+    <version value="2.1.0"/>
+  </dependsOn>
+  <dependsOn id="ans_fr_terminologies">
+    <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
+    <packageId value="ans.fr.terminologies"/>
+    <version value="1.4.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -488,6 +498,72 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/NdE-Emetteur"/>
+      </reference>
+      <name value="CI-SIS Notification-D-Evenements - NdE_Emetteur"/>
+      <description value="L'émetteur est un système ou sous-système qui envoie un évènement au gestionnaire&#xA;d'évènements soit de manière automatique, soit manuellement. L'émetteur est enregistré et&#xA;connu par le système qui réceptionne et traite les évènements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/NdE-GestionnaireDAbonnements"/>
+      </reference>
+      <name value="CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements"/>
+      <description value="Le  gestionnaire  d’abonnements  est  un  acteur  système  qui  stocke  les&#xA;abonnements  et  les paramètres d’usage des notifications d’événements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/NdE-GestionnaireDeNotifications"/>
+      </reference>
+      <name value="CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications"/>
+      <description value="Le  gestionnaire  de  notifications  est  un  acteur  système  qui  envoie  les  notifications&#xA;aux  abonnés concernés  en  fonction  des  informations  recueillies  depuis  les  gestionnaires&#xA;d’abonnements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/NdE-Souscripteur"/>
+      </reference>
+      <name value="CI-SIS Notification-D-Evenements - NdE_Souscripteur"/>
+      <description value="Un  souscripteur  est  la  personne  (physique  ou  morale)  qui  est  habilitée  à  créer,  modifier  ou supprimer un abonnement&#xA;au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CommunicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="CommunicationRequest/com1"/>
+      </reference>
+      <name value="com1"/>
+      <description value="Exemple de demande de notification pour sortie du patient Robert Langdon."/>
+      <exampleCanonical value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CommunicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="CommunicationRequest/com2"/>
+      </reference>
+      <name value="com2"/>
+      <description value="Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon."/>
+      <exampleCanonical value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -502,10 +578,43 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EyeColor"/>
+        <reference value="StructureDefinition/declarant"/>
       </reference>
-      <name value="EyeColor"/>
-      <description value="Eye color extension"/>
+      <name value="Declarant"/>
+      <description value="Référence aux profils français des ressources qui identifient l’émetteur de l’évènement (Practitioner pour un professionnel, Organization pour un établissement)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/event-emission-time"/>
+      </reference>
+      <name value="Emission Time"/>
+      <description value="Cette information identifie la date l’heure de l’émission d’un évènement."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/event-time"/>
+      </reference>
+      <name value="Event Time"/>
+      <description value="Date à laquelle l’évènement a eu lieu."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/event-type"/>
+      </reference>
+      <name value="Event Type"/>
+      <description value="Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.).."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -518,17 +627,6 @@
       <name value="EyeColor Value Set"/>
       <description value="Different eye colors."/>
       <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/frpatient-exemple"/>
-      </reference>
-      <name value="frpatient-exemple"/>
-      <description value="Exemple d'un patient français"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -554,13 +652,111 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/NdE-CommunicationRequest-EventType"/>
+      </reference>
+      <name value="NdE-CommunicationRequest-EventType"/>
+      <description value="Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-patient"/>
+        <reference value="StructureDefinition/nde-eventdeclaration"/>
       </reference>
-      <name value="Patient français"/>
-      <description value="Description du patient français"/>
+      <name value="NdE_EventDeclarationNdE"/>
+      <description value="EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/nde-notificationrequest"/>
+      </reference>
+      <name value="NdE_NotificationRequestNdE"/>
+      <description value="Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/recipient-endpoint"/>
+      </reference>
+      <name value="NdE_RecipientEndpoint"/>
+      <description value="Cette information contient les données nécessaires pour contacter l’abonné"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/nde-subscription"/>
+      </reference>
+      <name value="NdE_SubscriptionNdE"/>
+      <description value="SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/start"/>
+      </reference>
+      <name value="Start"/>
+      <description value="Cette information identifie la date de début de validité d’un abonnement."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Subscription"/>
+      </extension>
+      <reference>
+        <reference value="Subscription/sub1"/>
+      </reference>
+      <name value="sub1"/>
+      <exampleCanonical value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/subject"/>
+      </reference>
+      <name value="Subject"/>
+      <description value="Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/subscriber"/>
+      </reference>
+      <name value="Subscriber"/>
+      <description value="Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.).."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/subscription-date"/>
+      </reference>
+      <name value="Subscription Date"/>
+      <description value="Date de création de l’abonnement."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

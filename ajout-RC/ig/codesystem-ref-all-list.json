@@ -10,39 +10,73 @@
       "oids" : ["2.16.840.1.113883.4.642.4.2"],
       "uses" : {
       },
-      "ValueSet-ModifiedAdministrativeGender.html" : "ModifiedAdministrativeGender",
-      "http://hl7.org/fhir/R4/valueset-administrative-gender.html" : "AdministrativeGender"
+      "ValueSet-ModifiedAdministrativeGender.html" : "ModifiedAdministrativeGender"
     },
     {
-      "url" : "http://hl7.org/fhir/identifier-use",
+      "url" : "http://hl7.org/fhir/request-priority",
       "version" : "4.0.1",
-      "status" : "active",
-      "name" : "IdentifierUse",
-      "title" : "IdentifierUse",
-      "description" : "Identifies the purpose for this identifier, if known .",
-      "oids" : ["2.16.840.1.113883.4.642.4.58"],
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "RequestPriority",
+      "description" : "Identifies the level of importance to be assigned to actioning the request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.116"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-identifier-use.html" : "IdentifierUse"
+      "http://hl7.org/fhir/R4/valueset-request-priority.html" : "Request priority"
     },
     {
-      "url" : "http://hl7.org/fhir/link-type",
+      "url" : "http://hl7.org/fhir/request-status",
       "version" : "4.0.1",
-      "status" : "active",
-      "name" : "LinkType",
-      "title" : "LinkType",
-      "description" : "The type of link between this patient resource and another patient resource.",
-      "oids" : ["2.16.840.1.113883.4.642.4.424"],
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.112"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-link-type.html" : "LinkType"
+      "http://hl7.org/fhir/R4/valueset-request-status.html" : "RequestStatus"
+    },
+    {
+      "url" : "http://hl7.org/fhir/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
+    },
+    {
+      "url" : "http://hl7.org/fhir/subscription-channel-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriptionChannelType",
+      "title" : "SubscriptionChannelType",
+      "description" : "The type of method used to execute a subscription.",
+      "oids" : ["2.16.840.1.113883.4.642.4.501"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-subscription-channel-type.html" : "SubscriptionChannelType"
+    },
+    {
+      "url" : "http://hl7.org/fhir/subscription-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriptionStatus",
+      "title" : "SubscriptionStatus",
+      "description" : "The status of a subscription.",
+      "oids" : ["2.16.840.1.113883.4.642.4.503"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-subscription-status.html" : "SubscriptionStatus"
     },
     {
       "url" : "http://snomed.info/sct",
-      "version" : null,
+      "version" : "http://snomed.info/sct/900000000000207008/version/20251001",
       "status" : "active",
       "name" : "SNOMED_CT",
-      "title" : "SNOMED CT (all versions)",
+      "title" : "SNOMED CT core",
       "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
@@ -51,52 +85,40 @@
       "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set"
     },
     {
-      "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
-      "version" : "2.0.0",
+      "url" : "http://terminology.hl7.org/CodeSystem/communication-category",
+      "version" : "1.0.1",
       "status" : "active",
-      "name" : "ContactRole2",
-      "title" : "contactRole2",
-      "description" : "Code system of concepts which specify a relationship role that the next of kin/associated parties plays with regard to the patient. Also used in referrals, for example, it may be necessary to identify the contact representative at the clinic that sent a referral. Used in HL7 Version 2 messaging in the NK1 and CTD segments after 2.5, when it replace 2.16.840.1.113883.18.57.",
-      "oids" : ["2.16.840.1.113883.18.58"],
+      "name" : "CommunicationCategory",
+      "title" : "CommunicationCategory",
+      "description" : "Codes for general categories of communications such as alerts, instructions, etc.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1076"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html" : "Patient Contact Relationship "
+      "http://hl7.org/fhir/R4/valueset-communication-category.html" : "CommunicationCategory"
     },
     {
-      "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-      "version" : "5.0.0",
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+      "version" : "3.1.0",
       "status" : "active",
-      "name" : "IdentifierType",
-      "title" : "identifierType",
-      "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
-      "oids" : ["2.16.840.1.113883.18.108"],
+      "name" : "ActReason",
+      "title" : "ActReason",
+      "description" : "A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.\r\n\r\n*Examples:* Example reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
+      "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
+      "http://terminology.hl7.org/7.0.0/ValueSet-v3-ActReason.html" : "v3 Code System ActReason"
     },
     {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-      "version" : "3.0.0",
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
+      "version" : "4.0.0",
       "status" : "active",
-      "name" : "MaritalStatus",
-      "title" : "MaritalStatus",
-      "description" : "\\* \\* \\* No description supplied \\* \\* \\*\r\n\r\n*Open Issue:* The specific meanings of these codes can vary somewhat by jurisdiction and implementation so caution should be used when determining equivalency.\r\n\r\n*Open Issue:* fixing and completion of the hierarchy and proper good definitions of all the concepts is badly needed.",
-      "oids" : ["2.16.840.1.113883.5.2"],
+      "name" : "ParticipationMode",
+      "title" : "ParticipationMode",
+      "description" : "A set of codes specifying the modality by which the Entity playing the Role is participating in the Act.\r\n\r\n*Examples:* Physically present, over the telephone, written communication.\r\n\r\n*Rationale:* Particularly for author (originator) participants this is used to specify whether the information represented by the act was initially provided verbally, (hand-)written, or electronically.\r\n\r\n*Open Issue:* There needs to be a reexamination of the hierarchies as there seems to be some muddling between ELECTRONIC and other concepts that involve electronic communication that are in other hierarchies.",
+      "oids" : ["2.16.840.1.113883.5.1064"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "NullFlavor",
-      "title" : "NullFlavor",
-      "description" : "A collection of codes specifying why a valid value is not present.",
-      "oids" : ["2.16.840.1.113883.5.1008"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
+      "http://terminology.hl7.org/7.0.0/ValueSet-v3-ParticipationMode.html" : "ParticipationMode"
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system",
@@ -118,8 +140,32 @@
       "description" : "Type de carte professionnelle et personnelle.",
       "uses" : {
       },
-      "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set",
-      "ValueSet-TypeCarteVS.html" : "Type Carte Value Set"
+      "ValueSet-TypeCarteVS.html" : "Type Carte Value Set",
+      "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement",
+      "version" : "20240329120000",
+      "status" : "active",
+      "name" : "TRE_R254_TypeEvenement",
+      "title" : null,
+      "description" : "Liste de types d'évènement",
+      "oids" : ["1.2.250.1.213.1.1.4.337"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J46-TypeEvenementNotification-CISIS.html" : "JDV_J46_TypeEvenementNotification_CISIS"
+    },
+    {
+      "url" : "urn:ietf:bcp:47",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "Ietf3066",
+      "title" : "Tags for the Identification of Languages",
+      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+      "oids" : ["2.16.840.1.113883.6.121"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
     }
   ]
 }

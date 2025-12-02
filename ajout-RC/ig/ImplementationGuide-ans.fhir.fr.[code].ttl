@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG Example"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-12-01T15:13:39+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-02T14:16:53+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -79,6 +79,22 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
      fhir:version [ fhir:v "5.2.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
+     fhir:uri [
+       fhir:v "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
+     fhir:version [ fhir:v "2.1.0" ]
+  ] [
+     fhir:id [ fhir:v "ans_fr_terminologies" ] ;
+     fhir:uri [
+       fhir:v "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies>
+     ] ;
+     fhir:packageId [ fhir:v "ans.fr.terminologies" ] ;
+     fhir:version [ fhir:v "1.4.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -1405,6 +1421,134 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "CapabilityStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-Emetteur> ;
+         fhir:reference [ fhir:v "CapabilityStatement/NdE-Emetteur" ]
+       ] ;
+       fhir:name [ fhir:v "CI-SIS Notification-D-Evenements - NdE_Emetteur" ] ;
+       fhir:description [ fhir:v "L'émetteur est un système ou sous-système qui envoie un évènement au gestionnaire\nd'évènements soit de manière automatique, soit manuellement. L'émetteur est enregistré et\nconnu par le système qui réceptionne et traite les évènements." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CapabilityStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDAbonnements> ;
+         fhir:reference [ fhir:v "CapabilityStatement/NdE-GestionnaireDAbonnements" ]
+       ] ;
+       fhir:name [ fhir:v "CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements" ] ;
+       fhir:description [ fhir:v "Le  gestionnaire  d’abonnements  est  un  acteur  système  qui  stocke  les\nabonnements  et  les paramètres d’usage des notifications d’événements." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CapabilityStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDeNotifications> ;
+         fhir:reference [ fhir:v "CapabilityStatement/NdE-GestionnaireDeNotifications" ]
+       ] ;
+       fhir:name [ fhir:v "CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications" ] ;
+       fhir:description [ fhir:v "Le  gestionnaire  de  notifications  est  un  acteur  système  qui  envoie  les  notifications\naux  abonnés concernés  en  fonction  des  informations  recueillies  depuis  les  gestionnaires\nd’abonnements." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CapabilityStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-Souscripteur> ;
+         fhir:reference [ fhir:v "CapabilityStatement/NdE-Souscripteur" ]
+       ] ;
+       fhir:name [ fhir:v "CI-SIS Notification-D-Evenements - NdE_Souscripteur" ] ;
+       fhir:description [ fhir:v "Un  souscripteur  est  la  personne  (physique  ou  morale)  qui  est  habilitée  à  créer,  modifier  ou supprimer un abonnement\nau service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CommunicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CommunicationRequest/com1> ;
+         fhir:reference [ fhir:v "CommunicationRequest/com1" ]
+       ] ;
+       fhir:name [ fhir:v "com1" ] ;
+       fhir:description [ fhir:v "Exemple de demande de notification pour sortie du patient Robert Langdon." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"^^xsd:anyURI ;
+         fhir:l <http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CommunicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CommunicationRequest/com2> ;
+         fhir:reference [ fhir:v "CommunicationRequest/com2" ]
+       ] ;
+       fhir:name [ fhir:v "com2" ] ;
+       fhir:description [ fhir:v "Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"^^xsd:anyURI ;
+         fhir:l <http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "CodeSystem"
          ]
        ] ) ;
@@ -1430,11 +1574,74 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor> ;
-         fhir:reference [ fhir:v "StructureDefinition/EyeColor" ]
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant> ;
+         fhir:reference [ fhir:v "StructureDefinition/declarant" ]
        ] ;
-       fhir:name [ fhir:v "EyeColor" ] ;
-       fhir:description [ fhir:v "Eye color extension" ] ;
+       fhir:name [ fhir:v "Declarant" ] ;
+       fhir:description [ fhir:v "Référence aux profils français des ressources qui identifient l’émetteur de l’évènement (Practitioner pour un professionnel, Organization pour un établissement)" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time> ;
+         fhir:reference [ fhir:v "StructureDefinition/event-emission-time" ]
+       ] ;
+       fhir:name [ fhir:v "Emission Time" ] ;
+       fhir:description [ fhir:v "Cette information identifie la date l’heure de l’émission d’un évènement." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time> ;
+         fhir:reference [ fhir:v "StructureDefinition/event-time" ]
+       ] ;
+       fhir:name [ fhir:v "Event Time" ] ;
+       fhir:description [ fhir:v "Date à laquelle l’évènement a eu lieu." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type> ;
+         fhir:reference [ fhir:v "StructureDefinition/event-type" ]
+       ] ;
+       fhir:name [ fhir:v "Event Type" ] ;
+       fhir:description [ fhir:v "Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.).." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -1459,28 +1666,6 @@
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Patient"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Patient/frpatient-exemple> ;
-         fhir:reference [ fhir:v "Patient/frpatient-exemple" ]
-       ] ;
-       fhir:name [ fhir:v "frpatient-exemple" ] ;
-       fhir:description [ fhir:v "Exemple d'un patient français" ] ;
-       fhir:example [
-         a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient>
        ]
      ] [
        fhir:extension ( [
@@ -1532,15 +1717,204 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "SearchParameter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/NdE-CommunicationRequest-EventType> ;
+         fhir:reference [ fhir:v "SearchParameter/NdE-CommunicationRequest-EventType" ]
+       ] ;
+       fhir:name [ fhir:v "NdE-CommunicationRequest-EventType" ] ;
+       fhir:description [ fhir:v "Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-patient" ]
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration> ;
+         fhir:reference [ fhir:v "StructureDefinition/nde-eventdeclaration" ]
        ] ;
-       fhir:name [ fhir:v "Patient français" ] ;
-       fhir:description [ fhir:v "Description du patient français" ] ;
+       fhir:name [ fhir:v "NdE_EventDeclarationNdE" ] ;
+       fhir:description [ fhir:v "EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest> ;
+         fhir:reference [ fhir:v "StructureDefinition/nde-notificationrequest" ]
+       ] ;
+       fhir:name [ fhir:v "NdE_NotificationRequestNdE" ] ;
+       fhir:description [ fhir:v "Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint> ;
+         fhir:reference [ fhir:v "StructureDefinition/recipient-endpoint" ]
+       ] ;
+       fhir:name [ fhir:v "NdE_RecipientEndpoint" ] ;
+       fhir:description [ fhir:v "Cette information contient les données nécessaires pour contacter l’abonné" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription> ;
+         fhir:reference [ fhir:v "StructureDefinition/nde-subscription" ]
+       ] ;
+       fhir:name [ fhir:v "NdE_SubscriptionNdE" ] ;
+       fhir:description [ fhir:v "SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start> ;
+         fhir:reference [ fhir:v "StructureDefinition/start" ]
+       ] ;
+       fhir:name [ fhir:v "Start" ] ;
+       fhir:description [ fhir:v "Cette information identifie la date de début de validité d’un abonnement." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Subscription"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Subscription/sub1> ;
+         fhir:reference [ fhir:v "Subscription/sub1" ]
+       ] ;
+       fhir:name [ fhir:v "sub1" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE"^^xsd:anyURI ;
+         fhir:l <http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject> ;
+         fhir:reference [ fhir:v "StructureDefinition/subject" ]
+       ] ;
+       fhir:name [ fhir:v "Subject" ] ;
+       fhir:description [ fhir:v "Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber> ;
+         fhir:reference [ fhir:v "StructureDefinition/subscriber" ]
+       ] ;
+       fhir:name [ fhir:v "Subscriber" ] ;
+       fhir:description [ fhir:v "Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.).." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date> ;
+         fhir:reference [ fhir:v "StructureDefinition/subscription-date" ]
+       ] ;
+       fhir:name [ fhir:v "Subscription Date" ] ;
+       fhir:description [ fhir:v "Date de création de l’abonnement." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false

@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2025-12-01 | *Computable Name*:ExampleIG |
+| Draft as of 2025-12-02 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -41,13 +41,22 @@ Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohé
 
 
 
+
+
+
+
 ### Propriété intellectuelle
 
 Certaines ressources sémantiques de ce guide sont protégées par des droits de propriété intellectuelle couverte par les déclarations ci-dessous. L’utilisation de ces ressources est soumise à l’acceptation et au respect des conditions précisées dans la licence d’utilisation de chacune d’entre elle.
 
+* ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
+
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [CompetenceCS](CodeSystem-competence-code-system.md), [ExampleIG](index.md)...Show 22 more,[EyeColorVS](ValueSet-EyeColorVS.md),[MeltingPotVS](ValueSet-MeltingPotVS.md),[ModifiedAdministrativeGender](ValueSet-ModifiedAdministrativeGender.md),[NdE_CommunicationRequest_EventType](SearchParameter-NdE-CommunicationRequest-EventType.md),[NdE_Declarant](StructureDefinition-declarant.md),[NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md),[NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md),[NdE_EventEmissionTime](StructureDefinition-event-emission-time.md),[NdE_EventTime](StructureDefinition-event-time.md),[NdE_EventType](StructureDefinition-event-type.md),[NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md),[NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md),[NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md),[NdE_RecipientEndpoint](StructureDefinition-recipient-endpoint.md),[NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md),[NdE_Start](StructureDefinition-start.md),[NdE_Subject](StructureDefinition-subject.md),[NdE_Subscriber](StructureDefinition-subscriber.md),[NdE_SubscriptionDate](StructureDefinition-subscription-date.md),[NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md),[TypeCarteCS](CodeSystem-type-carte-code-system.md)and[TypeCarteVS](ValueSet-TypeCarteVS.md)
+
+
 * This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
 
-* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://tx.fhir.org/r4/ValueSet/snomedct): [EyeColor](StructureDefinition-EyeColor.md), [EyeColorVS](ValueSet-EyeColorVS.md) and [MeltingPotVS](ValueSet-MeltingPotVS.md)
+* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-900000000000207008-20251001.html): [EyeColorVS](ValueSet-EyeColorVS.md) and [MeltingPotVS](ValueSet-MeltingPotVS.md)
 
 
 
@@ -63,7 +72,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-12-01T15:13:39+00:00",
+  "date" : "2025-12-02T14:16:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -114,6 +123,18 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
       "version" : "5.2.0"
+    },
+    {
+      "id" : "hl7_fhir_fr_core",
+      "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
+      "packageId" : "hl7.fhir.fr.core",
+      "version" : "2.1.0"
+    },
+    {
+      "id" : "ans_fr_terminologies",
+      "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
+      "packageId" : "ans.fr.terminologies",
+      "version" : "1.4.0"
     }
   ],
   "definition" : {
@@ -836,6 +857,90 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/NdE-Emetteur"
+        },
+        "name" : "CI-SIS Notification-D-Evenements - NdE_Emetteur",
+        "description" : "L'émetteur est un système ou sous-système qui envoie un évènement au gestionnaire\nd'évènements soit de manière automatique, soit manuellement. L'émetteur est enregistré et\nconnu par le système qui réceptionne et traite les évènements.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/NdE-GestionnaireDAbonnements"
+        },
+        "name" : "CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements",
+        "description" : "Le  gestionnaire  d’abonnements  est  un  acteur  système  qui  stocke  les\nabonnements  et  les paramètres d’usage des notifications d’événements.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/NdE-GestionnaireDeNotifications"
+        },
+        "name" : "CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications",
+        "description" : "Le  gestionnaire  de  notifications  est  un  acteur  système  qui  envoie  les  notifications\naux  abonnés concernés  en  fonction  des  informations  recueillies  depuis  les  gestionnaires\nd’abonnements.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/NdE-Souscripteur"
+        },
+        "name" : "CI-SIS Notification-D-Evenements - NdE_Souscripteur",
+        "description" : "Un  souscripteur  est  la  personne  (physique  ou  morale)  qui  est  habilitée  à  créer,  modifier  ou supprimer un abonnement\nau service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CommunicationRequest"
+          }
+        ],
+        "reference" : {
+          "reference" : "CommunicationRequest/com1"
+        },
+        "name" : "com1",
+        "description" : "Exemple de demande de notification pour sortie du patient Robert Langdon.",
+        "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CommunicationRequest"
+          }
+        ],
+        "reference" : {
+          "reference" : "CommunicationRequest/com2"
+        },
+        "name" : "com2",
+        "description" : "Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon.",
+        "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "CodeSystem"
           }
         ],
@@ -854,10 +959,52 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           }
         ],
         "reference" : {
-          "reference" : "StructureDefinition/EyeColor"
+          "reference" : "StructureDefinition/declarant"
         },
-        "name" : "EyeColor",
-        "description" : "Eye color extension",
+        "name" : "Declarant",
+        "description" : "Référence aux profils français des ressources qui identifient l’émetteur de l’évènement (Practitioner pour un professionnel, Organization pour un établissement)",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/event-emission-time"
+        },
+        "name" : "Emission Time",
+        "description" : "Cette information identifie la date l’heure de l’émission d’un évènement.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/event-time"
+        },
+        "name" : "Event Time",
+        "description" : "Date à laquelle l’évènement a eu lieu.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/event-type"
+        },
+        "name" : "Event Type",
+        "description" : "Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..",
         "exampleBoolean" : false
       },
       {
@@ -873,20 +1020,6 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "name" : "EyeColor Value Set",
         "description" : "Different eye colors.",
         "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Patient"
-          }
-        ],
-        "reference" : {
-          "reference" : "Patient/frpatient-exemple"
-        },
-        "name" : "frpatient-exemple",
-        "description" : "Exemple d'un patient français",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient"
       },
       {
         "extension" : [
@@ -920,14 +1053,139 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "SearchParameter"
+          }
+        ],
+        "reference" : {
+          "reference" : "SearchParameter/NdE-CommunicationRequest-EventType"
+        },
+        "name" : "NdE-CommunicationRequest-EventType",
+        "description" : "Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:resource"
           }
         ],
         "reference" : {
-          "reference" : "StructureDefinition/fr-patient"
+          "reference" : "StructureDefinition/nde-eventdeclaration"
         },
-        "name" : "Patient français",
-        "description" : "Description du patient français",
+        "name" : "NdE_EventDeclarationNdE",
+        "description" : "EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/nde-notificationrequest"
+        },
+        "name" : "NdE_NotificationRequestNdE",
+        "description" : "Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/recipient-endpoint"
+        },
+        "name" : "NdE_RecipientEndpoint",
+        "description" : "Cette information contient les données nécessaires pour contacter l’abonné",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/nde-subscription"
+        },
+        "name" : "NdE_SubscriptionNdE",
+        "description" : "SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/start"
+        },
+        "name" : "Start",
+        "description" : "Cette information identifie la date de début de validité d’un abonnement.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Subscription"
+          }
+        ],
+        "reference" : {
+          "reference" : "Subscription/sub1"
+        },
+        "name" : "sub1",
+        "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/subject"
+        },
+        "name" : "Subject",
+        "description" : "Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient).",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/subscriber"
+        },
+        "name" : "Subscriber",
+        "description" : "Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/subscription-date"
+        },
+        "name" : "Subscription Date",
+        "description" : "Date de création de l’abonnement.",
         "exampleBoolean" : false
       },
       {
