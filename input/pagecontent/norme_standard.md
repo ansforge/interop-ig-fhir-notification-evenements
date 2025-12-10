@@ -64,13 +64,25 @@ considéré hors périmètre du besoin pour cette étude qui correspond aux
 flux d’abonnement à notification, de déclaration d’événement et d’ordre
 de notification.
 
+[^1]: Un professionnel est une personne participant, dans le cadre de
+    son activité professionnelle, à la prise en charge d’usagers.
+
+[^2]: Une personne prise en charge peut être un usager dans le secteur
+    social ou un patient.
+
+[^3]: Une personne tierce peut être, par exemple, un membre de la
+    famille qui s’occupe quotidiennement de la personne prise en charge.
+
+[^4]: Cette étude ne fait pas l’objet de ce document. Elle fait partie
+    du document « Etude métier – Notification d’évènements » \[1\].
+
 ### HL7
 
 #### Organisme Producteur
 
 ##### Présentation
 
-HL7[^5] (*Health Level Seven*) est un organisme à but non lucratif
+HL7<sup>[5](http://www.hl7.org/)</sup> (*Health Level Seven*) est un organisme à but non lucratif
 accrédité par l’ANSI (*American National Standards Institute*) et
 impliqué dans le développement de standards d’interopérabilité
 internationaux pour l’informatique de santé. Il regroupe des experts de
@@ -96,12 +108,12 @@ contexte sanitaire ou clinique.
 
 ##### Présentation
 
-FHIR[^6] (*Fast Healthcare Interoperability Resources*) est un standard
+FHIR<sup>[6](https://www.hl7.org/fhir/)</sup> (*Fast Healthcare Interoperability Resources*) est un standard
 élaboré par HL7 qui décrit un ensemble de formats de données et
 d’éléments (appelés ressources) ainsi qu’une API (*Application
 Programming Interface*) pour l’échange des informations de santé.
 
-La ressource FHIR **Subscription**[^7] concernée par cette étude est
+La ressource FHIR **Subscription**<sup>[7](https://www.hl7.org/fhir/subscription.html)</sup> concernée par cette étude est
 utilisée pour définir un abonnement de notifications « push » d’un
 serveur vers un autre système. Le mécanisme fonctionne comme suit : une
 fois qu’un abonnement est enregistré sur le serveur, ce dernier vérifie
@@ -124,8 +136,8 @@ manière totalement différente.
 ##### Normes et standards sous-jacents
 
 FHIR est conçu pour une utilisation sur internet et peut être mis en
-œuvre via XML ou JSON, HTTP, le format Atom[^8] et le standard
-d’autorisation OAuth[^9]. Les ressources FHIR peuvent être réutilisées
+œuvre via XML ou JSON, HTTP, le format Atom<sup>[8](https://validator.w3.org/feed/docs/atom.html)</sup> et le standard
+d’autorisation OAuth<sup>[9](https://oauth.net/)</sup>. Les ressources FHIR peuvent être réutilisées
 d’une façon interopérable (indépendamment de l’infrastructure technique
 des systèmes d’information les implémentant). Lorsqu’elles sont mises en
 œuvre en JSON, les ressources FHIR peuvent être utilisées nativement
@@ -146,9 +158,8 @@ grandes parties:
   sont définies. Cette partie présente des informations telles les types
   de données, les codes utilisés et les formats XML et JSON.
 
-- L’implémentation qui contient des informations sur la mise en œuvre
-  des ressources selon l’architecture REST[^10], ainsi que les types de
-  messages et de documents qui peuvent être mis en œuvre avec les
+- L’implémentation qui contient des informations sur la mise en œuvre
+des ressources selon l’architecture REST<sup>[10](https://fr.wikipedia.org/wiki/Representational_state_transfer)</sup>, ainsi que les types de messages et de documents qui peuvent être mis en œuvre avec les
   ressources FHIR.
 
 - Les ressources et qui contiennent les définitions détaillées des
@@ -156,8 +167,7 @@ grandes parties:
 
 ##### Processus d’élaboration et gouvernance
 
-La méthodologie[^11] d’élaboration des ressources FHIR (dont la
-ressource **Subscription**) se base sur trois composants principaux :
+La méthodologie<sup>[11](http://wiki.hl7.org/index.php?title=FHIR_Methodology_Process#Methodology_Locations)</sup> d’élaboration des ressources FHIR (dont la ressource **Subscription**) se base sur trois composants principaux :
 
 - Le méta modèle qui se base sur une ressource « Profile » et qui
   définit la structure des ressources FHIR, les éléments de données et
@@ -167,21 +177,19 @@ ressource **Subscription**) se base sur trois composants principaux :
 - La partie technique qui concerne des aspects comme la création des
   ressources et la manière dont l’outillage est utilisé pour créer du
   contenu. Cette partie se trouve dans le document FHIR Guide to
-  Authoring Resources[^12].
+  Authoring Resources<sup>[12](http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Authoring_Resources)</sup>.
 
 - La partie contenu qui couvre les aspects « qualité » et fournit des
   lignes directrices et des meilleures pratiques pour la création et le
   maintien des ressources. Cette partie se trouve dans le document FHIR
-  Guide to Designing Resources[^13] et FHIR Design Patterns[^14].
+  Guide to Designing Resources<sup>[13](http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Designing_Resources)</sup> et FHIR Design Patterns<sup>[14](http://wiki.hl7.org/index.php?title=FHIR_Design_Patterns)</sup>.
 
-- Afin de maintenir et faire évoluer les ressources, la gouvernance de
-  FHIR est alignée avec les exigences de la gouvernance[^15] des autres
-  normes produites par HL7. Elle est gérée par trois groupes:
+- Afin de maintenir et faire évoluer les ressources, la gouvernance deFHIR est alignée avec les exigences de la
+  gouvernance<sup>[15](http://wiki.hl7.org/index.php?title=FHIR_Governance_Process)</sup> des autres normes produites par HL7. Elle est gérée par trois groupes:
 
-- FHIR Governance Board[^16] qui établit les principes guidant le
-  développement des spécifications, les ressources FHIR, etc.
+- FHIR Governance Board<sup>[16](http://wiki.hl7.org/index.php?title=FHIR_Governance_Board)</sup> qui établit les principes    guidant le développement des spécifications, les ressources FHIR, etc.
 
-- FHIR Management Group (FMG)[^17] qui maintient et gère les ressources
+- FHIR Management Group (FMG)<sup>[17](http://wiki.hl7.org/index.php?title=FHIR_Management_Group)</sup> qui maintient et gère  les ressources
   FHIR. Ceci inclut les propositions d’évolution (Change Requests), les
   procédures de gestion des Ballots, la relation avec les groupes de
   travail HL7, la gestion des Connectathons (évènements de tests), etc.
@@ -198,16 +206,16 @@ ressource **Subscription**) se base sur trois composants principaux :
   - Est-ce que c’est complexe d’intégrer l’évolution souhaitée dans les
     outils ?
 
-- Modeling and Methodology[^18] qui gère les règles des bonnes pratiques
+- Modeling and Methodology<sup>[18](http://wiki.hl7.org/index.php?title=Modeling_and_Methodology)</sup> qui gère les règles des bonnes pratiques
   qui gouvernent la création des ressources.
 
-FHIR utilise l’outil gForge[^19] pour la traçabilité des demandes[^20]
+FHIR utilise l’outil gForge<sup>[19](https://www.gforge.org/)</sup> pour la traçabilité des demandes<sup>[20](http://wiki.hl7.org/index.php?title=FHIR_Change_requests)</sup>
 d’évolutions des spécifications.
 
 ##### Maturité et adoption
 
-FHIR a mis en œuvre un modèle[^21] de maturité de ressources basé sur le
-CMM[^22] (*Capability Maturity Model*) afin de fournir aux développeurs
+FHIR a mis en œuvre un modèle<sup>[21](http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model)</sup> de maturité de ressources basé sur le
+CMM<sup>[22](http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model)</sup> (*Capability Maturity Model*) afin de fournir aux développeurs
 une idée de la maturité d’une ressource avant son utilisation et son
 implémentation. Ci-dessous les 5 niveaux de maturité utilisés par FHIR :
 
@@ -223,17 +231,17 @@ implémentation. Ci-dessous les 5 niveaux de maturité utilisés par FHIR :
 
 - Niveau 2 : la ressource est testée et échangée avec succès entre au
   moins trois systèmes développés indépendamment dans un environnement
-  de test comme un Connectathon[^23] et dont les résultats ont été
+  de test comme un Connectathon<sup>[23](http://wiki.hl7.org/index.php?title=FHIR_Connectathon_12)</sup> et dont les résultats ont été
   reportés au groupe de gestion FHIR.
 
-- Niveau 3 : le respect par la ressource des normes de qualité[^24]
+- Niveau 3 : le respect par la ressource des normes de qualité<sup>[24](http://wiki.hl7.org/index.php?title=DSTU_2_QA_guidelines)</sup>
   adoptées par FHIR a été vérifié. De plus, la ressource a fait l'objet
   d'un « ballot » avec au moins 10 commentaires de développeurs en
   provenance d'au moins 3 organisations et qui ont donné lieu à au moins
   une évolution de fond.
 
 - Niveau 4 : la ressource est testée dans son champ d'application et
-  publiée officiellement, par exemple dans un STU[^25] et mis en œuvre
+  publiée officiellement, par exemple dans un STU[^25] et mise en œuvre
   dans plusieurs projets de prototypes. De plus, le groupe de travail
   estime que la ressource est suffisamment stable pour exiger une
   consultation des développeurs avant toute modification sans
@@ -246,26 +254,32 @@ implémentation. Ci-dessous les 5 niveaux de maturité utilisés par FHIR :
 
 Le niveau de maturité de la ressource **Subscription** est de 1.
 
+[^25]: STU (*Standard for Trial Use*) signifie que le standard a été
+    testé et implémenté dans des environnements de tests mais qui peut
+    toujours subir des évolutions afin d’atteindre un statut normatif
+
+[^26]: en tant que STU
+
 ##### Outillage
 
 Des outils sont élaborés pour implémenter et tester des systèmes basés
 sur le standard FHIR, dont :
 
-- FHIR Notepad++[^27]
+- FHIR Notepad++<sup>[27](http://www.healthintersections.com.au/FhirServer/fhirnpp.htm)</sup>
 
-- Value Set Editor[^28]
+- Value Set Editor<sup>[28](http://www.healthintersections.com.au/FhirServer/fhirvse.htm)</sup>
 
-- Des serveurs[^29] publiquement accessibles à des fins de tests
+- Des serveurs<sup>[29](http://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing)</sup> publiquement accessibles à des fins de tests
 
-- Java Validator[^30] ainsi qu’un ensemble[^31] d’outils de validation
+- Java Validator<sup>[30](http://hl7.org/implement/standards/fhir/validator.zip)</sup> ainsi qu’un ensemble<sup>[31](http://hl7.org/implement/standards/fhir/validation.html)</sup> d’outils de validation
   des ressources FHIR
 
-- HAPI[^32], une librairie de développement des ressources FHIR en Java
+- HAPI<sup>[32](http://hapifhir.io/index.html)</sup>, une librairie de développement des ressources FHIR en Java
 
-- Des schémas[^33] XSD de validation et de génération[^34] de code
+- Des schémas<sup>[33](http://hl7.org/implement/standards/fhir/fhir-all-xsd.zip)</sup> XSD de validation et de génération<sup>[34](http://hl7.org/implement/standards/fhir/fhir-codegen-xsd.zip)</sup> de code
 
 - D’autres outils sont également disponibles pour mettre en œuvre et
-  tester des ressources FHIR comme XmlSpy[^35], Oxygen[^36], etc.
+  tester des ressources FHIR comme XmlSpy<sup>[35](http://www.altova.com/xmlspy.html)</sup>, Oxygen<sup>[36](http://www.oxygenxml.com/)</sup>, etc.
 
 L’ensemble de ces outils peuvent être utilisés pour la ressource
 **Subscription**.
@@ -304,8 +318,7 @@ les technologies de gestion de contenu, etc.
 
 ##### Présentation
 
-OASIS WS-notification[^37] est une famille de spécifications qui se
-basent sur des services Web pour mettre en œuvre un mécanisme de
+OASIS WS-notification<sup>[37](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsn)</sup> est une famille de spécifications qui se basent sur des services Web pour mettre en œuvre un mécanisme de
 notification. Ceci inclut :
 
 - les échanges de messages standardisés par des fournisseurs de
@@ -352,7 +365,7 @@ données des flux identifiées dans l’étude métier \[1\].
 L’infrastructure de base des standards OASIS est le langage XML.
 
 En ce qui concerne le standard WS notification, il est principalement
-basé sur langage XML et des standards établis tels SOAP[^38] et WSDL
+basé sur langage XML et des standards établis tels SOAP<sup>[38](https://www.w3.org/TR/soap/)</sup> et WSDL
 pour la mise en œuvre, l’accès et la définition de services web. Ces
 standards ne sont pas adaptés aux dispositifs mobiles.
 
@@ -365,13 +378,13 @@ plusieurs documents si elles traitent des aspects différents du même
 standard.
 
 En ce qui concerne le standard WS Notification, les spécifications se
-composent en trois documents qui contient les spécifications
+composent en trois documents qui contiennent les spécifications
 [WS-BaseNotification
-v1.3](http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm)[^39],
+v1.3](http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm)<sup>[39](http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm)</sup>,
 [WS-BrokeredNotification
-v1.3](http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm)[^40]
+v1.3](http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm)<sup>[40](http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm)</sup>
 et WS-[Topics
-v1.3](http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm)[^41].
+v1.3](http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm)<sup>[41](http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm)</sup>.
 Ces documents sont accessibles publiquement et gratuitement sur
 internet.
 
@@ -431,10 +444,10 @@ de conformité pour les standards OASIS :
 
 - **XML 1.0 Second Edition Conformance Test Suite (2001)** qui fournit
   un ensemble de tests pour déterminer la conformité des standards OASIS
-  aux recommandations XML 1.0 de l’organisation W3C[^42].
+  aux recommandations XML 1.0 de l’organisation W3C<sup>[42](https://www.w3.org/)</sup>.
 
 - **DOM Level 1 Conformance Test Suite (2001)** qui est un ensemble
-  d’outils développés par le NIST[^43] et soumis à OASIS. Il fournit un
+  d’outils développés par le NIST<sup>[43](https://www.nist.gov/)</sup> et soumis à OASIS. Il fournit un
   ensemble standardisé d’objets pour représenter les documents HTML et
   XML, un modèle qui concernent la façon dont ces objets peuvent être
   combinés ainsi qu’une interface pour les manipuler.
@@ -450,17 +463,17 @@ de faciliter aux utilisateurs l’implémentation et le test des standards
 
 ### Synthèse
 
-Cette section présent une synthèse comparative des normes, standards et
+Cette section présente une synthèse comparative des normes, standards et
 profils analysés dans les sections précédentes. Les items de cette
 synthèse sont inspirés des documents suivants :
 
 - La doctrine du CI-SIS \[2\].
 
-- « Evaluating HIT Standards[^44] » document sur la comparaison des
-  standards publié par l’organisation HIMSS[^45].
+- « Evaluating HIT Standards<sup>[44](http://www.himss.org/evaluating-hit-standards?ItemNumber=22775)</sup> » document sur la comparaison des
+  standards publié par l’organisation HIMSS<sup>[45](http://www.himss.org/)</sup>.
 
-- La méthode CAMSS[^46], soutenue par le programme de la commission
-  européenne concernant les solutions d’interopérabilité pour les
+- La méthode CAMSS<sup>(Common Assessment Method for Standards and Specifications)[46](http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm)</sup>, soutenue par le programme de
+  la commission européenne concernant les solutions d’interopérabilité pour les
   administrations publiques. Cette initiative vise à promouvoir la
   collaboration entre les états membres de l’union européenne dans la
   définition d’une méthode d’évaluation commune de standards pour le
@@ -823,103 +836,3 @@ graphique ANS et mise à jour du nom ASIP</td>
 </tr>
 </tbody>
 </table>
-
-[^1]: Un professionnel est une personne participant, dans le cadre de
-    son activité professionnelle, à la prise en charge d’usagers.
-
-[^2]: Une personne prise en charge peut être un usager dans le secteur
-    social ou un patient.
-
-[^3]: Une personne tierce peut être, par exemple, un membre de la
-    famille qui s’occupe quotidiennement de la personne prise en charge.
-
-[^4]: Cette étude ne fait pas l’objet de ce document. Elle fait partie
-    du document « Etude métier – Notification d’évènements » \[1\].
-
-[^5]: http://www.hl7.org/
-
-[^6]: https://www.hl7.org/fhir/
-
-[^7]: https://www.hl7.org/fhir/subscription.html
-
-[^8]: https://validator.w3.org/feed/docs/atom.html
-
-[^9]: <https://oauth.net/>
-
-[^10]: https://fr.wikipedia.org/wiki/Representational_state_transfer
-
-[^11]: http://wiki.hl7.org/index.php?title=FHIR_Methodology_Process#Methodology_Locations
-
-[^12]: http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Authoring_Resources
-
-[^13]: http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Designing_Resources
-
-[^14]: http://wiki.hl7.org/index.php?title=FHIR_Design_Patterns
-
-[^15]: http://wiki.hl7.org/index.php?title=FHIR_Governance_Process
-
-[^16]: http://wiki.hl7.org/index.php?title=FHIR_Governance_Board
-
-[^17]: http://wiki.hl7.org/index.php?title=FHIR_Management_Group
-
-[^18]: http://wiki.hl7.org/index.php?title=Modeling_and_Methodology
-
-[^19]: Gforge.org
-
-[^20]: http://wiki.hl7.org/index.php?title=FHIR_Change_requests
-
-[^21]: http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model
-
-[^22]: http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model
-
-[^23]: http://wiki.hl7.org/index.php?title=FHIR_Connectathon_12
-
-[^24]: http://wiki.hl7.org/index.php?title=DSTU_2_QA_guidelines
-
-[^25]: STU (*Standard for Trial Use*) signifie que le standard a été
-    testé et implémenté dans des environnements de tests mais qui peut
-    toujours subir des évolutions afin d’atteindre un statut normatif
-
-[^26]: en tant que STU
-
-[^27]: http://www.healthintersections.com.au/FhirServer/fhirnpp.htm
-
-[^28]: http://www.healthintersections.com.au/FhirServer/fhirvse.htm
-
-[^29]: http://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing
-
-[^30]: http://hl7.org/implement/standards/fhir/validator.zip
-
-[^31]: http://hl7.org/implement/standards/fhir/validation.html
-
-[^32]: http://hapifhir.io/index.html
-
-[^33]: http://hl7.org/implement/standards/fhir/fhir-all-xsd.zip
-
-[^34]: http://hl7.org/implement/standards/fhir/fhir-codegen-xsd.zip
-
-[^35]: http://www.altova.com/xmlspy.html
-
-[^36]: http://www.oxygenxml.com/
-
-[^37]:
-    > https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsn
-
-[^38]: https://www.w3.org/TR/soap/
-
-[^39]: http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm
-
-[^40]: http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm
-
-[^41]: http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm
-
-[^42]: https://www.w3.org/
-
-[^43]: https://www.nist.gov/
-
-[^44]: http://www.himss.org/evaluating-hit-standards?ItemNumber=22775
-
-[^45]: http://www.himss.org/
-
-[^46]: Common Assessment method for standards and specifications :
-    http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm
