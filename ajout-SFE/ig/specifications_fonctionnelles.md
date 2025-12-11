@@ -9,7 +9,7 @@
 
 Ce document présente une étude « métier » de mise en œuvre d’un mécanisme de notifications d’événements dans le domaine sanitaire, médico-administratif, médico-social et social. Il sert à évaluer les besoins en interopérabilité. Il sert également à définir le périmètre métier nécessaire à l’implémentation de ce mécanisme entre composants de systèmes d’information (SI) et entre les systèmes d’information (SI).
 
-A noter que les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. Celles-ci sont du ressort de chaque responsable de l’implémentation du mécanisme qui est dans l’obligation de se conformer au cadre juridique en la matière. L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S[^1]) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport[^2] du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS).
+A noter que les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. Celles-ci sont du ressort de chaque responsable de l’implémentation du mécanisme qui est dans l’obligation de se conformer au cadre juridique en la matière. L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S[1](https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante) ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport[2](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication) du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS).
 
 Ci-dessous des exemples de cas d’usage concernant le mécanisme de notification d’évènements.
 
@@ -68,14 +68,14 @@ Remarque : le « pool » de notification peut être intégré dans le logicie
 
 #### Méthode d’élaboration des spécifications métier
 
-Les spécifications « métier » présentées dans ce document suivent la méthode[^3] d’élaboration des spécifications fonctionnelles des échanges élaborée par l’ANS. Cette méthode est constituée de plusieurs étapes :
+Les spécifications « métier » présentées dans ce document suivent la méthode[3](http://esante.gouv.fr/sites/MOS/MOS/0.html) d’élaboration des spécifications fonctionnelles des échanges élaborée par l’ANS. Cette méthode est constituée de plusieurs étapes :
 
 * **Etape 1**: Organisation du contexte métier;
 * **Etape 2**: Définition des processus métier collaboratifs;
 * **Etape 3**: Description de chaque processus défini et identification des flux échangés
 * **Etape 4**: Qualification des flux échangés;
 * **Etape 5**: Pour chaque flux, identification des informations véhiculées;
-* **Etape 6**: Elaboration du modèle hiérarchique de chaque flux structuré (sous forme d’un ou plusieurs diagramme de classes UML). Le modèle hiérarchique élaboré reposera sur la reprise des composants mutualisés dans le modèle des objets de santé (MOS[^4]) et des nomenclatures associées. A l'issue de cette élaboration, il se peut que de nouveaux composants jusqu'alors inexistants dans le MOS aient été définis et soient intégrés par la suite au MOS.
+* **Etape 6**: Elaboration du modèle hiérarchique de chaque flux structuré (sous forme d’un ou plusieurs diagramme de classes UML). Le modèle hiérarchique élaboré reposera sur la reprise des composants mutualisés dans le modèle des objets de santé (MOS[4](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration)) et des nomenclatures associées. A l'issue de cette élaboration, il se peut que de nouveaux composants jusqu'alors inexistants dans le MOS aient été définis et soient intégrés par la suite au MOS.
 
 ### Élaboration des spécifications métier
 
@@ -115,7 +115,7 @@ Le but de cette étape est de définir les processus métier identifiés dans le
 
 - **Abonnement**[^5]: un abonnement porte sur les types d'évènements qui intéressent l’abonné et doivent faire l’objet d’une notification. Un abonnement est défini par l’identification de l’abonné, le médium de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.
 
-- **Média de notification**: un média de notification est le moyen de communication par lequel la notification parvient à l’abonné (ex. sms, mail, pop-up dans une application…).
+- **Média de notification**: un média de notification est le moyen de communication par lequel la notification parvient à l’abonné (ex. sms, mail, pop-up dans une application…).v
 
 - **Professionnel**: un professionnel est une personne qui participe à la prise en charge d’une personne que ce soit au niveau sanitaire, médico-administratif, médico-social et social.
 
@@ -487,13 +487,15 @@ Figure 10: Diagramme de classe – SouscriptionAbonnement
 
 | | | |
 | :--- | :--- | :--- |
-| idAbonnement : [0..1] Identifiant | Identifiant de l’abonnement. | Non[^6] |
+| idAbonnement : [0..1] Identifiant | Identifiant de l’abonnement. | Non[7](#fn6) |
 | mediaDiffusion : [1..1] Code | Média de diffusion de la notification (sms, mail, etc.). | Oui |
 | validiteDebut : [1..1] DateHeure | Date de début de l’abonnement. | Oui |
 | validiteFin : [1..1] DateHeure | Date de fin de l’abonnement. | Oui |
 | dateDemande : [0..1] DateHeure | Date de la demande de création, modification ou suppression de l’abonnement. | Non |
 
 Table 11 : Attributs de la classe "Abonnement"
+
+1. L’identifiant de l’abonnement est une information obligatoire. Par contre, cette information ne circule pas dans le flux d’échange qui concerne la création d’un abonnement et peut être automatiquement générée par le gestionnaire d’abonnements.[↩](#fnref6)
 
 ###### Classe "Abonne"
 
@@ -524,15 +526,13 @@ Table 14 : Attributs de la classe "Evènement"
 
 | | | |
 | :--- | :--- | :--- |
-| idPersonnePriseEnCharge : [0..1] Identifiant | Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.). | Non[1](#fn1) |
+| idPersonnePriseEnCharge : [0..1] Identifiant | Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.). | Non[7](#fn7) |
 | adresse : [0..*] Adresse | Adresse(s) de correspondance permettant de contacter la personne prise en charge :- lorsque les structures ne sont pas identifiées : cas des remplaçants ou des professionnels venant de s’inscrire mais non encore installés;- hors de leurs lieux d’exercice, s’ils le souhaitent.Remarque : La première occurrence correspond aux coordonnées de correspondance du RPPS. | Non |
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.). | Non |
 
 -------
-
-1. Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.[↩︎](#fnref1)
-
 Table 15: Attributs de la classe "PersonnePriseEnCharge"
+1. Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.[↩︎](#fnref7)
 
 ###### Classe "Professionnel"
 
@@ -571,16 +571,14 @@ Table 18 : Attributs de la classe "AbonnePM"
 
 | | | |
 | :--- | :--- | :--- |
-| numFINESS : [0..1] Identifiant | Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)). | Non[1](#fn1) |
+| numFINESS : [0..1] Identifiant | Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)). | Non[8](#fn8) |
 | addresseEJ : [0..*] Texte Addresse | Point(s) de contact. | Non |
 | telecommunication [0..*] telecommunication | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Non |
 | raisonSociale : [0..1] Texte | Nom de l’entité juridique. | Non |
 
 -------
-
-1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique[↩︎](#fnref1)
-
 Table 19 : Attributs de la classe "EntiteJuridique"
+1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique[↩︎](#fnref8)
 
 ###### Classe "Emetteur"
 
@@ -625,9 +623,11 @@ Table 22 : Attributs de la classe "Emetteur"
 | typeEvenement : [1..1] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
 | description : [1..1] Texte | Contenu de l’évènement. | Oui |
 | occurence : [1..1] DateHeure | Date et heure à laquelle l’évènement a eu lieu. | Oui |
-| declaration: [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non[^7] |
+| declaration : [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non[9](#fn9) |
 
 Table 23 : Attributs de la classe "Evènement"
+
+1. Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.[↩︎](#fnref9)
 
 ###### Classe "PersonnePhysique"
 
@@ -642,16 +642,14 @@ Table 24 : Attributs de la classe "PersonnePhysique"
 
 | | | |
 | :--- | :--- | :--- |
-| numFINESS : [0..1] Identifiant | Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)). | Non[1](#fn1) |
+| numFINESS : [0..1] Identifiant | Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)). | Non[10](#fn10) |
 | addresseEJ : [0..*] Texte Addresse | Point(s) de contact. | Non |
 | telecommunication [0..*] telecommunication | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Non |
 | raisonSociale : [0..1] Texte | Nom de l’entité juridique. | Non |
 
 -------
-
-1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique[↩︎](#fnref1)
-
 Table 25 : Attributs de la classe "EntiteJuridique"
+1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique[↩︎](#fnref10)
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -667,15 +665,15 @@ Table 26 : Attributs de la classe "PersonnePriseEnCharge"
 
 | | | |
 | :--- | :--- | :--- |
-| idPP : [0..1] Identifiant | Identifiant national de la personne physique:** Pour les professionnels: N° RPPS ou ADELI** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro Etudiant (identifiant ordinal dont les règles de génération sont propres à chaque ordre). | Non[1](#fn1) |
+| idPP : [0..1] Identifiant | Identifiant national de la personne physique:** Pour les professionnels: N° RPPS ou ADELI** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro Etudiant (identifiant ordinal dont les règles de génération sont propres à chaque ordre). | Non[11](#fn11) |
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication du professionnel (numéro de téléphone, adresse email, URL, etc.). | Non |
 | adresse : [0..*] Adresse | Adresse(s) de correspondance du professionnel. | Non |
 
+Table 27 : Attributs de la classe "Professionnel"
+
 -------
 
-1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).[↩︎](#fnref1)
-
-Table 27 : Attributs de la classe "Professionnel"
+1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).[↩︎](#fnref11)
 
 ##### Flux 4 – TransmissionOrdreNotification
 
@@ -698,9 +696,11 @@ Table 28 : Attributs de la classe "Abonné"
 | typeEvenement : [1..1] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
 | description : [1..1] Texte | Contenu de l’évènement. | Oui |
 | occurrence : [0..1] DateHeure | Date à laquelle l’évènement a eu lieu. | Non |
-| declaration: [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non[^8] |
+| declaration : [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non[12](#fn12) |
 
 Table 29 : Attributs de la classe "Evènement"
+
+1. Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.[↩︎](#fnref12)
 
 ###### Classe "PersonnePhysique"
 
@@ -715,14 +715,12 @@ Table 30 : Attributs de la classe "PersonnePhysique"
 
 | | | |
 | :--- | :--- | :--- |
-| idPP : [0..1] Identifiant | Identifiant national de la personne physique:** Pour les professionnels: N° RPPS ou ADELI** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro Etudiant (identifiant ordinal dont les règles de génération sont propres à chaque ordre). | Non[1](#fn1) |
+| idPP : [0..1] Identifiant | Identifiant national de la personne physique:** Pour les professionnels: N° RPPS ou ADELI** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro Etudiant (identifiant ordinal dont les règles de génération sont propres à chaque ordre). | Non[13](#fn13) |
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication du professionnel (numéro de téléphone, adresse email, URL, etc.). | Non |
 
 -------
-
-1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).[↩︎](#fnref1)
-
 Table 31 : Attributs de la classe "Professionnel"
+1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).[↩︎](#fnref13)
 
 ###### Classe "Abonnement"
 
@@ -737,24 +735,26 @@ Table 32 : Attributs de la classe "Abonnement"
 
 | | | |
 | :--- | :--- | :--- |
-| idPersonnePriseEnCharge : [0..1] Identifiant | Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.). | Non[^9] |
+| idPersonnePriseEnCharge : [0..1] Identifiant | Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.). | Non[14](#fn14) |
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication de la personne prise en charge qui est abonnée aux notifications (numéro de téléphone, adresse email, URL, etc.). | Non |
 
 Table 33 : Attributs de la classe "PersonnePriseEnCharge"
+
+1. Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.[↩︎](#fnref14)
 
 ###### Classe "EntiteJuridique"
 
 | | | |
 | :--- | :--- | :--- |
-| numFINESS : [0..1] Identifiant | Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)). | Non[1](#fn1) |
+| numFINESS : [0..1] Identifiant | Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)). | Non[15](#fn15) |
 | telecommunication [0..*] telecommunication | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Non |
 | raisonSociale : [0..1] Texte | Nom de l’entité juridique. | Non |
 
+Table 34 : Attributs de la classe "EntiteJuridique"
+
 -------
 
-1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique (personne morale)[↩︎](#fnref1)
-
-Table 34 : Attributs de la classe "EntiteJuridique"
+1. L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique (personne morale)[↩︎](#fnref15)
 
 ###### Classe "Emetteur"
 
