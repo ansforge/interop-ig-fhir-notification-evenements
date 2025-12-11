@@ -11,9 +11,11 @@ A noter que les contraintes de sécurité concernant les flux échangés ne
 sont pas traitées dans ce document. Celles-ci sont du ressort de chaque
 responsable de l’implémentation du mécanisme qui est dans l’obligation
 de se conformer au cadre juridique en la matière. L’ANS propose des
-référentiels dédiés à la politique de sécurité (la PGSSI-S[^1]) et des
+référentiels dédiés à la politique de sécurité (la PGSSI-S<sup>[1](https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante)</sup>
+) et des
 mécanismes de sécurisation sont définis dans les volets de la couche
-Transport[^2] du Cadre d’Interopérabilité des systèmes d’information de
+Transport<sup>[2](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication)</sup>
+ du Cadre d’Interopérabilité des systèmes d’information de
 santé (CI-SIS).
 
 Ci-dessous des exemples de cas d’usage concernant le mécanisme de
@@ -120,7 +122,7 @@ gérer les notifications provenant de sources diverses.
 #### Méthode d’élaboration des spécifications métier
 
 Les spécifications « métier » présentées dans ce document suivent la
-méthode[^3] d’élaboration des spécifications fonctionnelles des échanges
+méthode<sup>[3](http://esante.gouv.fr/sites/MOS/MOS/0.html)</sup> d’élaboration des spécifications fonctionnelles des échanges
 élaborée par l’ANS. Cette méthode est constituée de plusieurs étapes :
 
 - **Etape 1**: Organisation du contexte métier;
@@ -138,7 +140,7 @@ méthode[^3] d’élaboration des spécifications fonctionnelles des échanges
 - **Etape 6**: Elaboration du modèle hiérarchique de chaque flux
   structuré (sous forme d’un ou plusieurs diagramme de classes UML). Le
   modèle hiérarchique élaboré reposera sur la reprise des composants
-  mutualisés dans le modèle des objets de santé (MOS[^4]) et des
+  mutualisés dans le modèle des objets de santé (MOS<sup>[4](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration)</sup>) et des
   nomenclatures associées. A l'issue de cette élaboration, il se peut
   que de nouveaux composants jusqu'alors inexistants dans le MOS aient
   été définis et soient intégrés par la suite au MOS.
@@ -217,7 +219,7 @@ période de validité de l’abonnement.
 
 \- **Média de notification**: un média de notification est le moyen de
 communication par lequel la notification parvient à l’abonné (ex. sms,
-mail, pop-up dans une application…).
+mail, pop-up dans une application…).v
 
 \- **Professionnel**: un professionnel est une personne qui participe à
 la prise en charge d’une personne que ce soit au niveau sanitaire,
@@ -226,7 +228,7 @@ médico-administratif, médico-social et social.
 Les sous-sections suivantes présentent les cas d'utilisation identifiés
 dans le système ainsi que les acteurs et les actions qui y contenus.
 
-##### \[Cas d’utilisation\] Gestion des abonnements (CI-SIS-NE-PGA-CU001) 
+##### \[Cas d’utilisation\] Gestion des abonnements (CI-SIS-NE-PGA-CU001)
 
 **<u>Cas d'usage</u>** : Un souscripteur habilité crée, modifie ou
 supprime un abonnement aux notifications d’événements sur une plateforme
@@ -879,15 +881,53 @@ Figure 10: Diagramme de classe – SouscriptionAbonnement
 
 ###### Classe "Abonnement"
 
-| Nom | Description | Obligatoire |
-|----|----|----|
-| idAbonnement : \[0..1\] Identifiant | Identifiant de l’abonnement. | Non[^6] |
-| mediaDiffusion : \[1..1\] Code | Média de diffusion de la notification (sms, mail, etc.). | Oui |
-| validiteDebut : \[1..1\] DateHeure | Date de début de l’abonnement. | Oui |
-| validiteFin : \[1..1\] DateHeure | Date de fin de l’abonnement. | Oui |
-| dateDemande : \[0..1\] DateHeure | Date de la demande de création, modification ou suppression de l’abonnement. | Non |
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Obligatoire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>idAbonnement : [0..1] Identifiant</td>
+      <td>Identifiant de l’abonnement.</td>
+      <td>Non<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>7</sup></a></td>
+    </tr>
+    <tr>
+      <td>mediaDiffusion : [1..1] Code</td>
+      <td>Média de diffusion de la notification (sms, mail, etc.).</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <td>validiteDebut : [1..1] DateHeure</td>
+      <td>Date de début de l’abonnement.</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <td>validiteFin : [1..1] DateHeure</td>
+      <td>Date de fin de l’abonnement.</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <td>dateDemande : [0..1] DateHeure</td>
+      <td>Date de la demande de création, modification ou suppression de l’abonnement.</td>
+      <td>Non</td>
+    </tr>
+  </tbody>
+</table>
 
 Table 11 : Attributs de la classe "Abonnement"
+
+<ol>
+  <li value="6" id="fn6">
+    <p>
+      L’identifiant de l’abonnement est une information obligatoire. Par contre, cette information ne circule pas dans le flux d’échange qui concerne la création d’un abonnement et peut être automatiquement générée par le gestionnaire d’abonnements.
+      <a href="#fnref6">↩</a>
+    </p>
+  </li>
+</ol>
 
 ###### Classe "Abonne"
 
@@ -961,8 +1001,8 @@ Table 14 : Attributs de la classe "Evènement"
 <td>idPersonnePriseEnCharge : [0..1] Identifiant</td>
 <td>Identifiant(s) de la personne prise en charge (identifiants de
 santé, identifiants locaux, etc.).</td>
-<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></td>
+<td>Non<a href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a></td>
 </tr>
 <tr>
 <td>adresse : [0..*] Adresse</td>
@@ -987,14 +1027,17 @@ correspondance du RPPS.</td>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
-<ol>
-<li id="fn1"><p>Si la personne prise en charge est un patient, ce champ
-contiendra l’identifiant du patient.<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 
 Table 15: Attributs de la classe "PersonnePriseEnCharge"
+
+<ol start="7">
+  <li id="fn7">
+    <p>Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.
+      <a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
+</ol>
+</section>
 
 ###### Classe "Professionnel"
 
@@ -1091,8 +1134,8 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></td>
+<td>Non<a href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a></td>
 </tr>
 <tr>
 <td>addresseEJ : [0..*] Texte Addresse</td>
@@ -1115,14 +1158,18 @@ URL, etc.).</td>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
-<ol>
-<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
-même valeur du numéro FINESS de l’entité juridique<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 
 Table 19 : Attributs de la classe "EntiteJuridique"
+
+<ol>
+  <li value="8" id="fn8">
+    <p>
+      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique
+      <a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
+</ol>
+</section>
 
 ###### Classe "Emetteur"
 
@@ -1180,14 +1227,48 @@ Table 22 : Attributs de la classe "Emetteur"
 
 ###### Classe "Evenement"
 
-| Nom | Description | Obligatoire |
-|----|----|----|
-| typeEvenement : \[1..1\] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
-| description : \[1..1\] Texte | Contenu de l’évènement. | Oui |
-| occurence : \[1..1\] DateHeure | Date et heure à laquelle l’évènement a eu lieu. | Oui |
-| declaration: \[0..1\] DateHeure | Date et heure de la transmission de l’évènement. | Non[^7] |
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Obligatoire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>typeEvenement : [1..1] Code</td>
+      <td>Type de l’évènement (dépôt de document, sortie d’hôpital, etc.).</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <td>description : [1..1] Texte</td>
+      <td>Contenu de l’évènement.</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <td>occurence : [1..1] DateHeure</td>
+      <td>Date et heure à laquelle l’évènement a eu lieu.</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <td>declaration : [0..1] DateHeure</td>
+      <td>Date et heure de la transmission de l’évènement.</td>
+      <td>Non<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></td>
+    </tr>
+  </tbody>
+</table>
 
 Table 23 : Attributs de la classe "Evènement"
+
+<ol>
+  <li value="9" id="fn9">
+    <p>
+      Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.
+      <a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
+</ol>
 
 ###### Classe "PersonnePhysique"
 
@@ -1253,8 +1334,8 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></td>
+<td>Non<a href="#fn10" class="footnote-ref" id="fnref10"
+role="doc-noteref"><sup>10</sup></a></td>
 </tr>
 <tr>
 <td>addresseEJ : [0..*] Texte Addresse</td>
@@ -1277,14 +1358,18 @@ URL, etc.).</td>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
-<ol>
-<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
-même valeur du numéro FINESS de l’entité juridique<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 
 Table 25 : Attributs de la classe "EntiteJuridique"
+
+<ol>
+  <li value="10" id="fn10">
+    <p>
+      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique
+      <a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
+</ol>
+</section>
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -1356,8 +1441,8 @@ et de l’identifiant interne attribué par la structure<br />
 ** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
 Etudiant (identifiant ordinal dont les règles de génération sont propres
 à chaque ordre).</td>
-<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></td>
+<td>Non<a href="#fn11" class="footnote-ref" id="fnref11"
+role="doc-noteref"><sup>11</sup></a></td>
 </tr>
 <tr>
 <td>telecommunication : [0..*] Telecommunication</td>
@@ -1372,17 +1457,21 @@ téléphone, adresse email, URL, etc.).</td>
 </tr>
 </tbody>
 </table>
+
+Table 27 : Attributs de la classe "Professionnel"
+
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
-même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+  <li value="11" id="fn11">
+    <p>
+      L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).
+      <a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
 </ol>
 </section>
-
-Table 27 : Attributs de la classe "Professionnel"
 
 ##### Flux 4 – TransmissionOrdreNotification 
 
@@ -1410,14 +1499,48 @@ Table 28 : Attributs de la classe "Abonné"
 
 ###### Classe "Evenement"
 
-| Nom | Description | Obligatoire |
-|----|----|----|
-| typeEvenement : \[1..1\] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
-| description : \[1..1\] Texte | Contenu de l’évènement. | Oui |
-| occurrence : \[0..1\] DateHeure | Date à laquelle l’évènement a eu lieu. | Non |
-| declaration: \[0..1\] DateHeure | Date et heure de la transmission de l’évènement. | Non[^8] |
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Obligatoire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>typeEvenement : [1..1] Code</td>
+      <td>Type de l’évènement (dépôt de document, sortie d’hôpital, etc.).</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <td>description : [1..1] Texte</td>
+      <td>Contenu de l’évènement.</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <td>occurrence : [0..1] DateHeure</td>
+      <td>Date à laquelle l’évènement a eu lieu.</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <td>declaration : [0..1] DateHeure</td>
+      <td>Date et heure de la transmission de l’évènement.</td>
+      <td>Non<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></td>
+    </tr>
+  </tbody>
+</table>
 
 Table 29 : Attributs de la classe "Evènement"
+
+<ol>
+  <li value="12" id="fn12">
+    <p>
+      Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.
+      <a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
+</ol>
 
 ###### Classe "PersonnePhysique"
 
@@ -1481,8 +1604,8 @@ et de l’identifiant interne attribué par la structure<br />
 ** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
 Etudiant (identifiant ordinal dont les règles de génération sont propres
 à chaque ordre).</td>
-<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></td>
+<td>Non<a href="#fn13" class="footnote-ref" id="fnref13"
+role="doc-noteref"><sup>13</sup></a></td>
 </tr>
 <tr>
 <td>telecommunication : [0..*] Telecommunication</td>
@@ -1495,14 +1618,18 @@ téléphone, adresse email, URL, etc.).</td>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
-<ol>
-<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
-même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 
 Table 31 : Attributs de la classe "Professionnel"
+
+<ol>
+  <li value="13" id="fn13">
+    <p>
+      L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).
+      <a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
+</ol>
+</section>
 
 ###### Classe "Abonnement"
 
@@ -1515,12 +1642,38 @@ Table 32 : Attributs de la classe "Abonnement"
 
 ###### Classe "PersonnePriseEnCharge"
 
-| Nom | Description | Obligatoire |
-|----|----|----|
-| idPersonnePriseEnCharge : \[0..1\] Identifiant | Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.). | Non[^9] |
-| telecommunication : \[0..\*\] Telecommunication | Adresse(s) de télécommunication de la personne prise en charge qui est abonnée aux notifications (numéro de téléphone, adresse email, URL, etc.). | Non |
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Obligatoire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>idPersonnePriseEnCharge : [0..1] Identifiant</td>
+      <td>Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.).</td>
+      <td>Non<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a></td>
+    </tr>
+    <tr>
+      <td>telecommunication : [0..*] Telecommunication</td>
+      <td>Adresse(s) de télécommunication de la personne prise en charge qui est abonnée aux notifications (numéro de téléphone, adresse email, URL, etc.).</td>
+      <td>Non</td>
+    </tr>
+  </tbody>
+</table>
 
 Table 33 : Attributs de la classe "PersonnePriseEnCharge"
+
+<ol>
+  <li value="14" id="fn14">
+    <p>
+      Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.
+      <a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
+</ol>
 
 ###### Classe "EntiteJuridique"
 
@@ -1550,8 +1703,8 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a></td>
+<td>Non<a href="#fn15" class="footnote-ref" id="fnref15"
+role="doc-noteref"><sup>15</sup></a></td>
 </tr>
 <tr>
 <td>telecommunication [0..*] telecommunication</td>
@@ -1566,17 +1719,22 @@ URL, etc.).</td>
 </tr>
 </tbody>
 </table>
+
+Table 34 : Attributs de la classe "EntiteJuridique"
+
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>L’attribut idEmetteur de la classe Emetteur peut être la
-même valeur du numéro FINESS de l’entité juridique (personne morale)<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+  <li value="15" id="fn15">
+    <p>
+      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique (personne morale)
+      <a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a>
+    </p>
+  </li>
 </ol>
-</section>
 
-Table 34 : Attributs de la classe "EntiteJuridique"
+</section>
 
 ###### Classe "Emetteur"
 
