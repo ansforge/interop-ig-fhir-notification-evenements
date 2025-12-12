@@ -19,13 +19,6 @@ Après un rappel synthétique du contexte en section 2, pour chaque norme, stand
 
 Des tableaux de synthèses qui reprennent ces éléments afin d’en faciliter la comparaison sont fournis en section 5.
 
-**_Note éditoriale :_**
-
-Afin de préserver la fluidité de lecture, les références sont gérées de la manière suivante dans le document :
-
-* les références aux documents de référence listés en annexe 2 sont indiquées par le numéro du document entre crochets – [1] fait donc référence au premier document de la liste de l’annexe 2 ;
-* les références aux sites web permettant d’approfondir les aspects techniques référencés sont directement intégrés sous forme de liens cliquables dans des notes de bas de page.
-
 ### Présentation synthétique de la notification d’évènements
 
 Cette étude s’insère dans le cadre de la mise en œuvre d’un mécanisme de notification d’évènements dans le domaine sanitaire, médico-administratif, médico-social ou social. Ce mécanisme permet à une personne (que ce soit un professionnel[1](#fn:1), une personne prise en charge[2](#fn:2) ou une personne tierce[3](#fn:3)) ou à une entité géographique de recevoir des notifications d’évènements.
