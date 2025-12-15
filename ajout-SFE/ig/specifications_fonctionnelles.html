@@ -222,11 +222,9 @@ systèmes d’information (SI) et entre les systèmes d’information (SI).</p>
 sont pas traitées dans ce document. Celles-ci sont du ressort de chaque
 responsable de l’implémentation du mécanisme qui est dans l’obligation
 de se conformer au cadre juridique en la matière. L’ANS propose des
-référentiels dédiés à la politique de sécurité (la PGSSI-S<sup><a href="https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante">1</a></sup>
-) et des
-mécanismes de sécurisation sont définis dans les volets de la couche
-Transport<sup><a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication">2</a></sup>
- du Cadre d’Interopérabilité des systèmes d’information de
+référentiels dédiés à la politique de sécurité (la <a href="https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante">PGSSI-S</a>) et des
+mécanismes de sécurisation sont définis dans les volets de la <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication">couche
+Transport</a> du Cadre d’Interopérabilité des systèmes d’information de
 santé (CI-SIS).</p>
 
 <p>Ci-dessous des exemples de cas d’usage concernant le mécanisme de
@@ -372,7 +370,7 @@ gérer les notifications provenant de sources diverses.</p>
 <h4 id="méthode-délaboration-des-spécifications-métier">Méthode d’élaboration des spécifications métier</h4>
 
 <p>Les spécifications « métier » présentées dans ce document suivent la
-méthode<sup><a href="http://esante.gouv.fr/sites/MOS/MOS/0.html">3</a></sup> d’élaboration des spécifications fonctionnelles des échanges
+<a href="http://esante.gouv.fr/sites/MOS/MOS/0.html">méthode d’élaboration</a> des spécifications fonctionnelles des échanges
 élaborée par l’ANS. Cette méthode est constituée de plusieurs étapes :</p>
 
 <ul>
@@ -397,7 +395,7 @@ véhiculées;</p>
     <p><strong>Etape 6</strong>: Elaboration du modèle hiérarchique de chaque flux
 structuré (sous forme d’un ou plusieurs diagramme de classes UML). Le
 modèle hiérarchique élaboré reposera sur la reprise des composants
-mutualisés dans le modèle des objets de santé (MOS<sup><a href="http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration">4</a></sup>) et des
+mutualisés dans le modèle des objets de santé (<a href="http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration">MOS</a>) et des
 nomenclatures associées. A l'issue de cette élaboration, il se peut
 que de nouveaux composants jusqu'alors inexistants dans le MOS aient
 été définis et soient intégrés par la suite au MOS.</p>
@@ -1283,7 +1281,7 @@ des attributs dans chaque classe identifiée.</p>
     <tr>
       <td>idAbonnement : [0..1] Identifiant</td>
       <td>Identifiant de l’abonnement.</td>
-      <td>Non<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>7</sup></a></td>
+      <td>Non (L’identifiant de l’abonnement est une information obligatoire. Par contre, cette information ne circule pas dans le flux d’échange qui concerne la création d’un abonnement et peut être automatiquement générée par le gestionnaire d’abonnements)</td>
     </tr>
     <tr>
       <td>mediaDiffusion : [1..1] Code</td>
@@ -1309,15 +1307,6 @@ des attributs dans chaque classe identifiée.</p>
 </table>
 
 <p>Table 11 : Attributs de la classe "Abonnement"</p>
-
-<ol>
-  <li value="6" id="fn6">
-    <p>
-      L’identifiant de l’abonnement est une information obligatoire. Par contre, cette information ne circule pas dans le flux d’échange qui concerne la création d’un abonnement et peut être automatiquement générée par le gestionnaire d’abonnements.
-      <a href="#fnref6">↩</a>
-    </p>
-  </li>
-</ol>
 
 <h6 id="classe-abonne">Classe "Abonne"</h6>
 
@@ -1417,7 +1406,7 @@ naissance.</td>
 <td>idPersonnePriseEnCharge : [0..1] Identifiant</td>
 <td>Identifiant(s) de la personne prise en charge (identifiants de
 santé, identifiants locaux, etc.).</td>
-<td>Non<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></td>
+<td>Non (Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient)</td>
 </tr>
 <tr>
 <td>adresse : [0..*] Adresse</td>
@@ -1439,19 +1428,8 @@ correspondance du RPPS.</td>
 </tr>
 </tbody>
 </table>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
 
-Table 15: Attributs de la classe "PersonnePriseEnCharge"
-
-<ol start="7">
-  <li id="fn7">
-    <p>Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.
-      <a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
+<p>Table 15: Attributs de la classe "PersonnePriseEnCharge"</p>
 
 <h6 id="classe-professionnel">Classe "Professionnel"</h6>
 
@@ -1602,7 +1580,7 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></td>
+<td>Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique)</td>
 </tr>
 <tr>
 <td>addresseEJ : [0..*] Texte Addresse</td>
@@ -1622,20 +1600,8 @@ URL, etc.).</td>
 </tr>
 </tbody>
 </table>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
 
-Table 19 : Attributs de la classe "EntiteJuridique"
-
-<ol>
-  <li value="8" id="fn8">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique
-      <a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
+<p>Table 19 : Attributs de la classe "EntiteJuridique"</p>
 
 <h6 id="classe-emetteur">Classe "Emetteur"</h6>
 
@@ -1753,21 +1719,12 @@ aux attributs de chaque class identifiée.</p>
     <tr>
       <td>declaration : [0..1] DateHeure</td>
       <td>Date et heure de la transmission de l’évènement.</td>
-      <td>Non<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></td>
+      <td>Non (Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.)</td>
     </tr>
   </tbody>
 </table>
 
 <p>Table 23 : Attributs de la classe "Evènement"</p>
-
-<ol>
-  <li value="9" id="fn9">
-    <p>
-      Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.
-      <a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
 
 <h6 id="classe-personnephysique-1">Classe "PersonnePhysique"</h6>
 
@@ -1833,7 +1790,7 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></td>
+<td>Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique)</td>
 </tr>
 <tr>
 <td>addresseEJ : [0..*] Texte Addresse</td>
@@ -1853,20 +1810,8 @@ URL, etc.).</td>
 </tr>
 </tbody>
 </table>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
 
-Table 25 : Attributs de la classe "EntiteJuridique"
-
-<ol>
-  <li value="10" id="fn10">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique
-      <a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
+<p>Table 25 : Attributs de la classe "EntiteJuridique"</p>
 
 <h6 id="classe-personnepriseencharge-1">Classe "PersonnePriseEnCharge"</h6>
 
@@ -1938,7 +1883,7 @@ et de l’identifiant interne attribué par la structure<br />
 ** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
 Etudiant (identifiant ordinal dont les règles de génération sont propres
 à chaque ordre).</td>
-<td>Non<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></td>
+<td>Non&lt; (L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).) </td>
 </tr>
 <tr>
 <td>telecommunication : [0..*] Telecommunication</td>
@@ -1955,18 +1900,6 @@ téléphone, adresse email, URL, etc.).</td>
 </table>
 
 <p>Table 27 : Attributs de la classe "Professionnel"</p>
-
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
-<ol>
-  <li value="11" id="fn11">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).
-      <a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
 
 <h5 id="flux-4--transmissionordrenotification">Flux 4 – TransmissionOrdreNotification</h5>
 
@@ -2031,21 +1964,12 @@ classe identifiée</p>
     <tr>
       <td>declaration : [0..1] DateHeure</td>
       <td>Date et heure de la transmission de l’évènement.</td>
-      <td>Non<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></td>
+      <td>Non (Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.)</td>
     </tr>
   </tbody>
 </table>
 
 <p>Table 29 : Attributs de la classe "Evènement"</p>
-
-<ol>
-  <li value="12" id="fn12">
-    <p>
-      Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.
-      <a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
 
 <h6 id="classe-personnephysique-2">Classe "PersonnePhysique"</h6>
 
@@ -2109,7 +2033,7 @@ et de l’identifiant interne attribué par la structure<br />
 ** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
 Etudiant (identifiant ordinal dont les règles de génération sont propres
 à chaque ordre).</td>
-<td>Non<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a></td>
+<td>Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).)</td>
 </tr>
 <tr>
 <td>telecommunication : [0..*] Telecommunication</td>
@@ -2119,20 +2043,8 @@ téléphone, adresse email, URL, etc.).</td>
 </tr>
 </tbody>
 </table>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
 
-Table 31 : Attributs de la classe "Professionnel"
-
-<ol>
-  <li value="13" id="fn13">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).
-      <a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
+<p>Table 31 : Attributs de la classe "Professionnel"</p>
 
 <h6 id="classe-abonnement-1">Classe "Abonnement"</h6>
 
@@ -2174,7 +2086,7 @@ Table 31 : Attributs de la classe "Professionnel"
     <tr>
       <td>idPersonnePriseEnCharge : [0..1] Identifiant</td>
       <td>Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.).</td>
-      <td>Non<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a></td>
+      <td>Non (Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.)</td>
     </tr>
     <tr>
       <td>telecommunication : [0..*] Telecommunication</td>
@@ -2185,15 +2097,6 @@ Table 31 : Attributs de la classe "Professionnel"
 </table>
 
 <p>Table 33 : Attributs de la classe "PersonnePriseEnCharge"</p>
-
-<ol>
-  <li value="14" id="fn14">
-    <p>
-      Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.
-      <a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
 
 <h6 id="classe-entitejuridique-2">Classe "EntiteJuridique"</h6>
 
@@ -2223,7 +2126,7 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a></td>
+<td>Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique (personne morale))</td>
 </tr>
 <tr>
 <td>telecommunication [0..*] telecommunication</td>
@@ -2240,19 +2143,6 @@ URL, etc.).</td>
 </table>
 
 <p>Table 34 : Attributs de la classe "EntiteJuridique"</p>
-
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr />
-<ol>
-  <li value="15" id="fn15">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique (personne morale)
-      <a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-
-</section>
 
 <h6 id="classe-emetteur-2">Classe "Emetteur"</h6>
 
@@ -2394,7 +2284,7 @@ mêmes informations métier.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 11, 2025 10:55+0000">2025-12-11</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 15, 2025 08:46+0000">2025-12-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
