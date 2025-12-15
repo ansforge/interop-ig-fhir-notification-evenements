@@ -11,11 +11,9 @@ A noter que les contraintes de sécurité concernant les flux échangés ne
 sont pas traitées dans ce document. Celles-ci sont du ressort de chaque
 responsable de l’implémentation du mécanisme qui est dans l’obligation
 de se conformer au cadre juridique en la matière. L’ANS propose des
-référentiels dédiés à la politique de sécurité (la PGSSI-S<sup>[1](https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante)</sup>
-) et des
-mécanismes de sécurisation sont définis dans les volets de la couche
-Transport<sup>[2](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication)</sup>
- du Cadre d’Interopérabilité des systèmes d’information de
+référentiels dédiés à la politique de sécurité (la [PGSSI-S](https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante)) et des
+mécanismes de sécurisation sont définis dans les volets de la [couche
+Transport](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication) du Cadre d’Interopérabilité des systèmes d’information de
 santé (CI-SIS).
 
 Ci-dessous des exemples de cas d’usage concernant le mécanisme de
@@ -122,7 +120,7 @@ gérer les notifications provenant de sources diverses.
 #### Méthode d’élaboration des spécifications métier
 
 Les spécifications « métier » présentées dans ce document suivent la
-méthode<sup>[3](http://esante.gouv.fr/sites/MOS/MOS/0.html)</sup> d’élaboration des spécifications fonctionnelles des échanges
+[méthode d’élaboration](http://esante.gouv.fr/sites/MOS/MOS/0.html) des spécifications fonctionnelles des échanges
 élaborée par l’ANS. Cette méthode est constituée de plusieurs étapes :
 
 - **Etape 1**: Organisation du contexte métier;
@@ -140,7 +138,7 @@ méthode<sup>[3](http://esante.gouv.fr/sites/MOS/MOS/0.html)</sup> d’élaborat
 - **Etape 6**: Elaboration du modèle hiérarchique de chaque flux
   structuré (sous forme d’un ou plusieurs diagramme de classes UML). Le
   modèle hiérarchique élaboré reposera sur la reprise des composants
-  mutualisés dans le modèle des objets de santé (MOS<sup>[4](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration)</sup>) et des
+  mutualisés dans le modèle des objets de santé ([MOS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration)) et des
   nomenclatures associées. A l'issue de cette élaboration, il se peut
   que de nouveaux composants jusqu'alors inexistants dans le MOS aient
   été définis et soient intégrés par la suite au MOS.
@@ -251,7 +249,7 @@ différents acteurs impliqués.
 Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un
 abonnement (CI-SIS-NE-CU-SA-001)
 
-###### Les acteurs impliqués 
+###### Les acteurs impliqués
 
 | **Acteur** | **Description** |
 |----|----|
@@ -893,7 +891,7 @@ Figure 10: Diagramme de classe – SouscriptionAbonnement
     <tr>
       <td>idAbonnement : [0..1] Identifiant</td>
       <td>Identifiant de l’abonnement.</td>
-      <td>Non<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>7</sup></a></td>
+      <td>Non (L’identifiant de l’abonnement est une information obligatoire. Par contre, cette information ne circule pas dans le flux d’échange qui concerne la création d’un abonnement et peut être automatiquement générée par le gestionnaire d’abonnements)</td>
     </tr>
     <tr>
       <td>mediaDiffusion : [1..1] Code</td>
@@ -919,15 +917,6 @@ Figure 10: Diagramme de classe – SouscriptionAbonnement
 </table>
 
 Table 11 : Attributs de la classe "Abonnement"
-
-<ol>
-  <li value="6" id="fn6">
-    <p>
-      L’identifiant de l’abonnement est une information obligatoire. Par contre, cette information ne circule pas dans le flux d’échange qui concerne la création d’un abonnement et peut être automatiquement générée par le gestionnaire d’abonnements.
-      <a href="#fnref6">↩</a>
-    </p>
-  </li>
-</ol>
 
 ###### Classe "Abonne"
 
@@ -1001,8 +990,7 @@ Table 14 : Attributs de la classe "Evènement"
 <td>idPersonnePriseEnCharge : [0..1] Identifiant</td>
 <td>Identifiant(s) de la personne prise en charge (identifiants de
 santé, identifiants locaux, etc.).</td>
-<td>Non<a href="#fn7" class="footnote-ref" id="fnref7"
-role="doc-noteref"><sup>7</sup></a></td>
+<td>Non (Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient)</td>
 </tr>
 <tr>
 <td>adresse : [0..*] Adresse</td>
@@ -1024,20 +1012,8 @@ correspondance du RPPS.</td>
 </tr>
 </tbody>
 </table>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
 
 Table 15: Attributs de la classe "PersonnePriseEnCharge"
-
-<ol start="7">
-  <li id="fn7">
-    <p>Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.
-      <a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
 
 ###### Classe "Professionnel"
 
@@ -1087,10 +1063,10 @@ Table 16 : Attributs de la classe "Professionnel"
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| **identifiantAbonnePP : \[0..1\] Identifiant** | Identifiant de la physique (i.e. il peut s’agir du NIR pour la personne prise en charge). | Non |
-| **typeAbonnePP : \[0..1\] Code** | Type de la personne physique abonnée (professionnel, personne prise en charge, patient, personne tierce, etc.). | Non |
-| **addresse : \[0..\*\] Addresse** | Point(s) de contact de la personne physique abonnée. | Non |
-| **telecommunication: \[1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
+| **identifiantAbonnePP : [0..1] Identifiant** | Identifiant de la physique (i.e. il peut s’agir du NIR pour la personne prise en charge). | Non |
+| **typeAbonnePP : [0..1] Code** | Type de la personne physique abonnée (professionnel, personne prise en charge, patient, personne tierce, etc.). | Non |
+| **addresse : [0..\*\] Addresse** | Point(s) de contact de la personne physique abonnée. | Non |
+| **telecommunication: [1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 
 Table 17 : Attributs de la classe "AbonnePP"
 
@@ -1098,11 +1074,11 @@ Table 17 : Attributs de la classe "AbonnePP"
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| **identifiantAbonnePM : \[0..1\] Identifiant** | Identifiant de la personne morale. | Non |
-| **typeAbonnePM : \[0..1\] Code** | Type de la personne morale abonnée. | Non |
-| **addresse : \[0..\*\] Addresse** | Point(s) de contact de la personne morale abonnée. | Non |
-| **telecommunication: \[1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
-| **nom : \[0..1\] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
+| **identifiantAbonnePM : [0..1] Identifiant** | Identifiant de la personne morale. | Non |
+| **typeAbonnePM : [0..1] Code** | Type de la personne morale abonnée. | Non |
+| **addresse : [0..\*\] Addresse** | Point(s) de contact de la personne morale abonnée. | Non |
+| **telecommunication: [1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
+| **nom : [0..1] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
 
 Table 18 : Attributs de la classe "AbonnePM"
 
@@ -1134,8 +1110,7 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a></td>
+<td>Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique)</td>
 </tr>
 <tr>
 <td>addresseEJ : [0..*] Texte Addresse</td>
@@ -1155,27 +1130,14 @@ URL, etc.).</td>
 </tr>
 </tbody>
 </table>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
 
 Table 19 : Attributs de la classe "EntiteJuridique"
-
-<ol>
-  <li value="8" id="fn8">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique
-      <a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
 
 ###### Classe "Emetteur"
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| idEmetteur : \[1..1\] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Oui |
+| idEmetteur : [1..1] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Oui |
 
 Table 20 : Attributs de la classe "Emetteur"
 
@@ -1198,7 +1160,7 @@ Figure 11: Diagramme de classe – SuppressionAbonnement
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| idAbonnement : \[1..1\] Identifiant | Identifiant unique de l’abonnement. | Oui |
+| idAbonnement : [1..1] Identifiant | Identifiant unique de l’abonnement. | Oui |
 
 Table 21 : Attributs de la classe "SuppressionAbonnement"
 
@@ -1221,7 +1183,7 @@ Figure 12: Diagramme de classe - EmissionAbonnement
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| idEmetteur : \[1..1\] Identifiant | Identifiant unique de l’émetteur. | Oui |
+| idEmetteur : [1..1] Identifiant | Identifiant unique de l’émetteur. | Oui |
 
 Table 22 : Attributs de la classe "Emetteur"
 
@@ -1254,21 +1216,12 @@ Table 22 : Attributs de la classe "Emetteur"
     <tr>
       <td>declaration : [0..1] DateHeure</td>
       <td>Date et heure de la transmission de l’évènement.</td>
-      <td>Non<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></td>
+      <td>Non (Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.)</td>
     </tr>
   </tbody>
 </table>
 
 Table 23 : Attributs de la classe "Evènement"
-
-<ol>
-  <li value="9" id="fn9">
-    <p>
-      Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.
-      <a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
 
 ###### Classe "PersonnePhysique"
 
@@ -1334,8 +1287,7 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn10" class="footnote-ref" id="fnref10"
-role="doc-noteref"><sup>10</sup></a></td>
+<td>Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique)</td>
 </tr>
 <tr>
 <td>addresseEJ : [0..*] Texte Addresse</td>
@@ -1355,21 +1307,8 @@ URL, etc.).</td>
 </tr>
 </tbody>
 </table>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
 
 Table 25 : Attributs de la classe "EntiteJuridique"
-
-<ol>
-  <li value="10" id="fn10">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique
-      <a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -1441,8 +1380,7 @@ et de l’identifiant interne attribué par la structure<br />
 ** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
 Etudiant (identifiant ordinal dont les règles de génération sont propres
 à chaque ordre).</td>
-<td>Non<a href="#fn11" class="footnote-ref" id="fnref11"
-role="doc-noteref"><sup>11</sup></a></td>
+<td>Non< (L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).) </td>
 </tr>
 <tr>
 <td>telecommunication : [0..*] Telecommunication</td>
@@ -1460,20 +1398,7 @@ téléphone, adresse email, URL, etc.).</td>
 
 Table 27 : Attributs de la classe "Professionnel"
 
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-  <li value="11" id="fn11">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).
-      <a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
-
-##### Flux 4 – TransmissionOrdreNotification 
+##### Flux 4 – TransmissionOrdreNotification
 
 Ci-dessous le diagramme de classe concernant le Flux
 4-TransmissionOrdreNotification et le Flux 5- NotificationEvenement. Les
@@ -1493,7 +1418,7 @@ Figure 13: Diagramme de classe – TransmissionOrdreNotification
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| idAbonne : \[1..1\] Identifiant | Identifiant unique de l’abonné. | Oui |
+| idAbonne : [1..1] Identifiant | Identifiant unique de l’abonné. | Oui |
 
 Table 28 : Attributs de la classe "Abonné"
 
@@ -1526,21 +1451,12 @@ Table 28 : Attributs de la classe "Abonné"
     <tr>
       <td>declaration : [0..1] DateHeure</td>
       <td>Date et heure de la transmission de l’évènement.</td>
-      <td>Non<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></td>
+      <td>Non (Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.)</td>
     </tr>
   </tbody>
 </table>
 
 Table 29 : Attributs de la classe "Evènement"
-
-<ol>
-  <li value="12" id="fn12">
-    <p>
-      Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.
-      <a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
 
 ###### Classe "PersonnePhysique"
 
@@ -1604,8 +1520,7 @@ et de l’identifiant interne attribué par la structure<br />
 ** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro
 Etudiant (identifiant ordinal dont les règles de génération sont propres
 à chaque ordre).</td>
-<td>Non<a href="#fn13" class="footnote-ref" id="fnref13"
-role="doc-noteref"><sup>13</sup></a></td>
+<td>Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).)</td>
 </tr>
 <tr>
 <td>telecommunication : [0..*] Telecommunication</td>
@@ -1615,28 +1530,15 @@ téléphone, adresse email, URL, etc.).</td>
 </tr>
 </tbody>
 </table>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
 
 Table 31 : Attributs de la classe "Professionnel"
-
-<ol>
-  <li value="13" id="fn13">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).
-      <a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-</section>
 
 ###### Classe "Abonnement"
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| idAbonnement : \[1..1\] Identifiant | Identifiant unique de l’abonnement. | Oui |
-| mediaNotification : \[1..1\] Code | Media de diffusion de la notification (sms, mail, etc.). | Oui |
+| idAbonnement : [1..1] Identifiant | Identifiant unique de l’abonnement. | Oui |
+| mediaNotification : [1..1] Code | Media de diffusion de la notification (sms, mail, etc.). | Oui |
 
 Table 32 : Attributs de la classe "Abonnement"
 
@@ -1654,7 +1556,7 @@ Table 32 : Attributs de la classe "Abonnement"
     <tr>
       <td>idPersonnePriseEnCharge : [0..1] Identifiant</td>
       <td>Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.).</td>
-      <td>Non<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a></td>
+      <td>Non (Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.)</td>
     </tr>
     <tr>
       <td>telecommunication : [0..*] Telecommunication</td>
@@ -1665,15 +1567,6 @@ Table 32 : Attributs de la classe "Abonnement"
 </table>
 
 Table 33 : Attributs de la classe "PersonnePriseEnCharge"
-
-<ol>
-  <li value="14" id="fn14">
-    <p>
-      Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.
-      <a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
 
 ###### Classe "EntiteJuridique"
 
@@ -1703,8 +1596,7 @@ morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel
 d’identification des acteurs sanitaires et médico-sociaux - Politique
 Générale de Sécurité des Systèmes d’Information de Santé
 (PGSSI-S)).</td>
-<td>Non<a href="#fn15" class="footnote-ref" id="fnref15"
-role="doc-noteref"><sup>15</sup></a></td>
+<td>Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique (personne morale))</td>
 </tr>
 <tr>
 <td>telecommunication [0..*] telecommunication</td>
@@ -1722,26 +1614,12 @@ URL, etc.).</td>
 
 Table 34 : Attributs de la classe "EntiteJuridique"
 
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-  <li value="15" id="fn15">
-    <p>
-      L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique (personne morale)
-      <a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a>
-    </p>
-  </li>
-</ol>
-
-</section>
-
 ###### Classe "Emetteur"
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| idEmetteur : \[0..1\] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Non |
-| dateDeclaration : \[0..1\] DateHeure | Date et heure de la transmission de l’évènement. | Non |
+| idEmetteur : [0..1] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Non |
+| dateDeclaration : [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non |
 
 Table 35 : Attributs de la classe "Emetteur"
 
@@ -1749,9 +1627,9 @@ Table 35 : Attributs de la classe "Emetteur"
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| **identifiantAbonnePP : \[0..1\] Identifiant** | Identifiant de la personne physique (il peut s’agir du NIR, par exemple, pour la personne prise en charge). | Non |
-| **typeAbonnePP : \[0..1\] Code** | Type de la personne physique abonnée (professionnel, personne prise en charge, personne tierce, etc.). | Non |
-| **telecommunication: \[1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
+| **identifiantAbonnePP : [0..1] Identifiant** | Identifiant de la personne physique (il peut s’agir du NIR, par exemple, pour la personne prise en charge). | Non |
+| **typeAbonnePP : [0..1] Code** | Type de la personne physique abonnée (professionnel, personne prise en charge, personne tierce, etc.). | Non |
+| **telecommunication: [1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 
 Table 36 : Attributs de la classe "AbonnePP"
 
@@ -1759,10 +1637,10 @@ Table 36 : Attributs de la classe "AbonnePP"
 
 | Nom | Description | Obligatoire |
 |----|----|----|
-| **identifiantAbonnePM : \[0..1\] Identifiant** | Identifiant de la personne morale. | Non |
-| **typeAbonnePM : \[0..1\] Code** | Type de la personne morale abonnée. | Non |
-| **telecommunication: \[1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
-| **nom : \[0..1\] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
+| **identifiantAbonnePM : [0..1] Identifiant** | Identifiant de la personne morale. | Non |
+| **typeAbonnePM : [0..1] Code** | Type de la personne morale abonnée. | Non |
+| **telecommunication: [1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
+| **nom : [0..1] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
 
 Table 37 : Attributs de la classe "AbonnePM"
 
