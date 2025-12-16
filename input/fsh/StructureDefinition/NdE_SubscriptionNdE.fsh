@@ -2,11 +2,7 @@ Profile: NdE_SubscriptionNdE
 Parent: Subscription
 Id: nde-subscription
 Description: "SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement."
-* ^url = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE"
-* ^version = "2.0"
-* ^status = #active
-* ^date = "2021-12-01"
-* ^publisher = "ANS"
+
 * contained 1..
 * contained only FRCorePatientProfile or FRCorePatientINSProfile or FRCorePractitionerProfile or FRCoreOrganizationProfile or FRCoreRelatedPersonProfile
 * contained ^requirements = "Les ressources référencées par les attributs de la ressource Subscription doivent être présentes dans cet élément."

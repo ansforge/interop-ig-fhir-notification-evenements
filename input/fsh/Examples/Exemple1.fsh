@@ -18,7 +18,7 @@ Usage: #example
 
 * extension[EventType].valueCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement"
 * extension[EventType].valueCodeableConcept.coding.code = #SOR
-* extension[EventType].valueCodeableConcept.coding.display = "Sortie"
+* extension[EventType].valueCodeableConcept.coding.display = "Sortie d'un patient de l'établissement de santé"
 
 * status = #requested
 * end = "2020-02-07T13:28:17-05:00"
@@ -28,15 +28,12 @@ Usage: #example
 * channel.endpoint = "mailto:pierre.durand@aphp.fr"
 
 Instance: pat1
-InstanceOf: Patient
+InstanceOf: FRCorePatientProfile
 Usage: #inline
-* extension.url = "http://interopsante.org/fhir/StructureDefinition/FrPatientIdentReliability"
-* extension.extension[0].url = "identityReliability"
-* extension.extension[=].valueCoding = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445#VALI "Identité validée"
-* extension.extension[+].url = "validationDate"
-* extension.extension[=].valueDate = "2020-04-22"
-* extension.extension[+].url = "validationMode"
-* extension.extension[=].valueCoding = #CN "Carte nationale d'identité"
+
+* extension[FRCorePatientIdentityReliabilityExtension].extension[identityStatus].valueCoding = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445#VALI "Identité validée"
+* extension[FRCorePatientIdentityReliabilityExtension].extension[validationDate].valueDate = "2020-04-22"
+* extension[FRCorePatientIdentityReliabilityExtension].extension[validationMode].valueCoding = #CN "Carte nationale d'identité"
 * name.use = #usual
 * name.family = "Robert"
 * name.given = "Langdon"
@@ -49,7 +46,7 @@ Usage: #inline
 * birthDate = "1960-03-20"
 
 Instance: org1
-InstanceOf: Organization
+InstanceOf: FRCoreOrganizationProfile
 Usage: #inline
 * name = "Service de pneumologie, Hôpital Test"
 * telecom[0].system = #phone
@@ -60,12 +57,10 @@ Usage: #inline
 * address.line = "Aile ouest, étage 5"
 
 Instance: pract1
-InstanceOf: Practitioner
+InstanceOf: FRCorePractitionerProfile
 Usage: #inline
-* identifier.use = #official
-* identifier.type = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203#RPPS "N° RPPS"
-* identifier.system = "urn:oid:1.2.250.1.71.4.2.1"
-* identifier.value = "801234567897"
+* identifier[rpps].value = "801234567897"
+* identifier[rpps].system = "https://rpps.esante.gouv.fr"
 * name.use = #official
 * name.family = "Durand (Pneumologue)"
 * name.given = "Pierre"

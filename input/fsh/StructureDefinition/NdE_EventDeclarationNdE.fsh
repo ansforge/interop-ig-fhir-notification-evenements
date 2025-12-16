@@ -3,11 +3,7 @@ Parent: CommunicationRequest
 Id: nde-eventdeclaration
 Title: "NdE_EventDeclarationNdE"
 Description: "EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc."
-* ^url = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"
-* ^version = "2.0"
-* ^status = #active
-* ^date = "2021-12-01"
-* ^publisher = "ANS"
+
 * ^purpose = "Profil EventDeclaratioNdE représentant le flux 3 - EmissionEvenement du volet Notification d'évènements du CI-SIS"
 
 * obeys event-subject
@@ -41,5 +37,4 @@ Description: "EmissionEvenement contient les informations nécessaires pour tran
 Invariant: event-subject
 Description: "L’un des attributs subject ou about doit être présent"
 * severity = #error
-* expression = "count(subject) = 1 xor count(about) = 1"
-* xpath = "count(subject) = 1 xor count(about) = 1"
+* expression = "subject.exists() xor about.exists()"

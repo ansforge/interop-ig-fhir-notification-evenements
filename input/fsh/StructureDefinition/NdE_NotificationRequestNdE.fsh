@@ -2,12 +2,7 @@ Profile: NdE_NotificationRequestNdE
 Parent: CommunicationRequest
 Id: nde-notificationrequest
 Description: "Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification"
-* ^url = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"
-* ^version = "2.0"
-* ^status = #active
-* ^experimental = false
-* ^date = "2021-12-01"
-* ^publisher = "ASIP Santé"
+
 * ^purpose = "Profil NotificationRequestNdE représentant le flux 4 - TransmissionOrdreNotification du volet Notification d'évènements du CI-SIS"
 
 * obeys event-subject
