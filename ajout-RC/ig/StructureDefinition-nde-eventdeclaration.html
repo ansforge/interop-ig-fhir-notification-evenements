@@ -267,13 +267,13 @@
 
   </h2>
 
-  <table class="colsi">
+  <table class="colsd">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE|0.1.0"/></span>
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration|0.1.0"/></span>
       </td>
     </tr>
 
@@ -287,9 +287,9 @@
 
       <td colspan="4">
         
-          Active
+          Draft
           
-            as of 2021-12-01
+            as of 2025-12-16
           
         
       </td>
@@ -324,7 +324,6 @@
 <p><b>Utilisations:</b></p>
 <ul>
  <li>Exemples pour ce Profil: <a href="CommunicationRequest-com2.html">CommunicationRequest/com2</a></li>
- <li>CapabilityStatements utilisant ce Profil: <a href="CapabilityStatement-NdE-Emetteur.html">CI-SIS Notification-D-Evenements - NdE_Emetteur</a> and <a href="CapabilityStatement-NdE-GestionnaireDAbonnements.html">CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements</a></li>
 </ul>
 <p>You can also check for <a href="https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/nde-eventdeclaration">usages in the FHIR IG Statistics</a></p>
 
@@ -466,7 +465,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html">FR Core Organization Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html">FR Core Practitioner Profile</a>)<a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html"> {</a><a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html" title="The reference is a local reference to a contained resource.">c</a><a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html">}</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Who/what is requesting service</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // ce16f89f-a322-423f-8070-b9912d52d5da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // d4258b31-cf08-4928-9a69-b4086182b2a2
 document.getElementById('cbnde-eventdeclarationK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('nde-eventdeclarationK'), 'binding', document.getElementById('cbnde-eventdeclarationK-binding').checked, document.getElementById('ppnde-eventdeclarationK'));
 document.getElementById('cbnde-eventdeclarationK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -601,7 +600,7 @@ filterDesc(document.getElementById('nde-eventdeclarationK'), 'obligation', docum
     <td>CommunicationRequest</td>
     <td>L’un des attributs subject ou about doit être présent</td>
     <td>
-      <code>count(subject) = 1 xor count(about) = 1</code>
+      <code>subject.exists() xor about.exists()</code>
     </td>
   </tr>
   <tr>
@@ -673,7 +672,7 @@ filterDesc(document.getElementById('nde-eventdeclarationK'), 'obligation', docum
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html">FR Core Organization Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html">FR Core Practitioner Profile</a>)<a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html"> {</a><a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html" title="The reference is a local reference to a contained resource.">c</a><a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html">}</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Who/what is requesting service</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // ce16f89f-a322-423f-8070-b9912d52d5da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // d4258b31-cf08-4928-9a69-b4086182b2a2
 document.getElementById('cbnde-eventdeclarationD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('nde-eventdeclarationD'), 'binding', document.getElementById('cbnde-eventdeclarationD-binding').checked, document.getElementById('ppnde-eventdeclarationD'));
 document.getElementById('cbnde-eventdeclarationD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -715,7 +714,7 @@ filterDesc(document.getElementById('nde-eventdeclarationD'), 'obligation', docum
     <td>CommunicationRequest</td>
     <td>L’un des attributs subject ou about doit être présent</td>
     <td>
-      <code>count(subject) = 1 xor count(about) = 1</code>
+      <code>subject.exists() xor about.exists()</code>
     </td>
   </tr>
 </table>
@@ -838,7 +837,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A channel of communication<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.0.0/ValueSet-v3-ParticipationMode.html" title="http://terminology.hl7.org/ValueSet/v3-ParticipationMode" class="binding">ParticipationMode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes for communication mediums such as phone, fax, email, in person, etc.</span><br/></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A channel of communication<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ParticipationMode.html" title="http://terminology.hl7.org/ValueSet/v3-ParticipationMode" class="binding">ParticipationMode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes for communication mediums such as phone, fax, email, in person, etc.</span><br/></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="a18." data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Référence à une autre ressource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-nde-eventdeclaration-definitions.html#CommunicationRequest.subject" title="The patient that is the focus of this communication request." data-no-external="true">subject</a><a name="s-CommunicationRequest.subject"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
@@ -935,7 +934,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="Cet élément est inclus dans les résumés">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Why is communication needed?<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.0.0/ValueSet-v3-ActReason.html" title="http://terminology.hl7.org/ValueSet/v3-ActReason" class="binding">v3 Code System ActReason</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes for describing reasons for the occurrence of a communication.</span><br/></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Why is communication needed?<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActReason.html" title="http://terminology.hl7.org/ValueSet/v3-ActReason" class="binding">v3 Code System ActReason</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes for describing reasons for the occurrence of a communication.</span><br/></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a28." data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Référence à une autre ressource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-nde-eventdeclaration-definitions.html#CommunicationRequest.reasonReference" title="Indicates another resource whose existence justifies this request." data-no-external="true">reasonReference</a><a name="s-CommunicationRequest.reasonReference"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="Cet élément est inclus dans les résumés">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
@@ -946,7 +945,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Comments made about communication request<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // ce16f89f-a322-423f-8070-b9912d52d5da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // d4258b31-cf08-4928-9a69-b4086182b2a2
 document.getElementById('cbnde-eventdeclarationS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('nde-eventdeclarationS'), 'binding', document.getElementById('cbnde-eventdeclarationS-binding').checked, document.getElementById('ppnde-eventdeclarationS'));
 document.getElementById('cbnde-eventdeclarationS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1054,12 +1053,12 @@ filterDesc(document.getElementById('nde-eventdeclarationS'), 'obligation', docum
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="Codes for communication mediums such as phone, fax, email, in person, etc.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.0/ValueSet-v3-ParticipationMode.html">ParticipationMode</a>
+      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ParticipationMode.html">ParticipationMode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ParticipationMode" title="Cliquer pour copier lURL" class="btn-copy"></button>
     </td>
     <td title="La version nest pas explicitement indiquée, ce qui signifie quelle est fixée à 3.0.0, la version trouvée via les références de package">&#x1F4E6;3.0.0</td>
     <td>
-      <a href="http://terminology.hl7.org/7.0.0">THO v7.0</a>
+      <a href="http://terminology.hl7.org/7.0.1">THO v7.0</a>
     </td>
   </tr>
   <tr>
@@ -1069,12 +1068,12 @@ filterDesc(document.getElementById('nde-eventdeclarationS'), 'obligation', docum
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="Codes for describing reasons for the occurrence of a communication.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.0/ValueSet-v3-ActReason.html">v3 Code System ActReason</a>
+      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActReason.html">v3 Code System ActReason</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActReason" title="Cliquer pour copier lURL" class="btn-copy"></button>
     </td>
     <td title="La version nest pas explicitement indiquée, ce qui signifie quelle est fixée à 3.0.0, la version trouvée via les références de package">&#x1F4E6;3.0.0</td>
     <td>
-      <a href="http://terminology.hl7.org/7.0.0">THO v7.0</a>
+      <a href="http://terminology.hl7.org/7.0.1">THO v7.0</a>
     </td>
   </tr>
 </table>
@@ -1166,7 +1165,7 @@ filterDesc(document.getElementById('nde-eventdeclarationS'), 'obligation', docum
     <td>CommunicationRequest</td>
     <td>L’un des attributs subject ou about doit être présent</td>
     <td>
-      <code>count(subject) = 1 xor count(about) = 1</code>
+      <code>subject.exists() xor about.exists()</code>
     </td>
   </tr>
   <tr>
@@ -1404,7 +1403,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html">FR Core Organization Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html">FR Core Practitioner Profile</a>)<a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html"> {</a><a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html" title="The reference is a local reference to a contained resource.">c</a><a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html">}</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Who/what is requesting service</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // ce16f89f-a322-423f-8070-b9912d52d5da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // d4258b31-cf08-4928-9a69-b4086182b2a2
 document.getElementById('cbnde-eventdeclarationKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('nde-eventdeclarationKA'), 'binding', document.getElementById('cbnde-eventdeclarationKA-binding').checked, document.getElementById('ppnde-eventdeclarationKA'));
 document.getElementById('cbnde-eventdeclarationKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1539,7 +1538,7 @@ filterDesc(document.getElementById('nde-eventdeclarationKA'), 'obligation', docu
     <td>CommunicationRequest</td>
     <td>L’un des attributs subject ou about doit être présent</td>
     <td>
-      <code>count(subject) = 1 xor count(about) = 1</code>
+      <code>subject.exists() xor about.exists()</code>
     </td>
   </tr>
   <tr>
@@ -1611,7 +1610,7 @@ filterDesc(document.getElementById('nde-eventdeclarationKA'), 'obligation', docu
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html">FR Core Organization Profile</a> | <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html">FR Core Practitioner Profile</a>)<a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html"> {</a><a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html" title="The reference is a local reference to a contained resource.">c</a><a href="http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html">}</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Who/what is requesting service</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // ce16f89f-a322-423f-8070-b9912d52d5da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // d4258b31-cf08-4928-9a69-b4086182b2a2
 document.getElementById('cbnde-eventdeclarationDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('nde-eventdeclarationDA'), 'binding', document.getElementById('cbnde-eventdeclarationDA-binding').checked, document.getElementById('ppnde-eventdeclarationDA'));
 document.getElementById('cbnde-eventdeclarationDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1652,7 +1651,7 @@ filterDesc(document.getElementById('nde-eventdeclarationDA'), 'obligation', docu
     <td>CommunicationRequest</td>
     <td>L’un des attributs subject ou about doit être présent</td>
     <td>
-      <code>count(subject) = 1 xor count(about) = 1</code>
+      <code>subject.exists() xor about.exists()</code>
     </td>
   </tr>
 </table>
@@ -1775,7 +1774,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A channel of communication<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.0.0/ValueSet-v3-ParticipationMode.html" title="http://terminology.hl7.org/ValueSet/v3-ParticipationMode" class="binding">ParticipationMode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes for communication mediums such as phone, fax, email, in person, etc.</span><br/></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A channel of communication<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ParticipationMode.html" title="http://terminology.hl7.org/ValueSet/v3-ParticipationMode" class="binding">ParticipationMode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes for communication mediums such as phone, fax, email, in person, etc.</span><br/></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="a18." data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Référence à une autre ressource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-nde-eventdeclaration-definitions.html#CommunicationRequest.subject" title="The patient that is the focus of this communication request." data-no-external="true">subject</a><a name="sa-CommunicationRequest.subject"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
@@ -1872,7 +1871,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="Cet élément est inclus dans les résumés">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Why is communication needed?<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.0.0/ValueSet-v3-ActReason.html" title="http://terminology.hl7.org/ValueSet/v3-ActReason" class="binding">v3 Code System ActReason</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes for describing reasons for the occurrence of a communication.</span><br/></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Why is communication needed?<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActReason.html" title="http://terminology.hl7.org/ValueSet/v3-ActReason" class="binding">v3 Code System ActReason</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes for describing reasons for the occurrence of a communication.</span><br/></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a28." data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Référence à une autre ressource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-nde-eventdeclaration-definitions.html#CommunicationRequest.reasonReference" title="Indicates another resource whose existence justifies this request." data-no-external="true">reasonReference</a><a name="sa-CommunicationRequest.reasonReference"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="Cet élément est inclus dans les résumés">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
@@ -1883,7 +1882,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Comments made about communication request<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // ce16f89f-a322-423f-8070-b9912d52d5da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr><script type="text/javascript">  // d4258b31-cf08-4928-9a69-b4086182b2a2
 document.getElementById('cbnde-eventdeclarationSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('nde-eventdeclarationSA'), 'binding', document.getElementById('cbnde-eventdeclarationSA-binding').checked, document.getElementById('ppnde-eventdeclarationSA'));
 document.getElementById('cbnde-eventdeclarationSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1991,12 +1990,12 @@ filterDesc(document.getElementById('nde-eventdeclarationSA'), 'obligation', docu
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="Codes for communication mediums such as phone, fax, email, in person, etc.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.0/ValueSet-v3-ParticipationMode.html">ParticipationMode</a>
+      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ParticipationMode.html">ParticipationMode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ParticipationMode" title="Cliquer pour copier lURL" class="btn-copy"></button>
     </td>
     <td title="La version nest pas explicitement indiquée, ce qui signifie quelle est fixée à 3.0.0, la version trouvée via les références de package">&#x1F4E6;3.0.0</td>
     <td>
-      <a href="http://terminology.hl7.org/7.0.0">THO v7.0</a>
+      <a href="http://terminology.hl7.org/7.0.1">THO v7.0</a>
     </td>
   </tr>
   <tr>
@@ -2006,12 +2005,12 @@ filterDesc(document.getElementById('nde-eventdeclarationSA'), 'obligation', docu
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="Codes for describing reasons for the occurrence of a communication.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.0/ValueSet-v3-ActReason.html">v3 Code System ActReason</a>
+      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActReason.html">v3 Code System ActReason</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActReason" title="Cliquer pour copier lURL" class="btn-copy"></button>
     </td>
     <td title="La version nest pas explicitement indiquée, ce qui signifie quelle est fixée à 3.0.0, la version trouvée via les références de package">&#x1F4E6;3.0.0</td>
     <td>
-      <a href="http://terminology.hl7.org/7.0.0">THO v7.0</a>
+      <a href="http://terminology.hl7.org/7.0.1">THO v7.0</a>
     </td>
   </tr>
 </table>
@@ -2103,7 +2102,7 @@ filterDesc(document.getElementById('nde-eventdeclarationSA'), 'obligation', docu
     <td>CommunicationRequest</td>
     <td>L’un des attributs subject ou about doit être présent</td>
     <td>
-      <code>count(subject) = 1 xor count(about) = 1</code>
+      <code>subject.exists() xor about.exists()</code>
     </td>
   </tr>
   <tr>
@@ -2289,7 +2288,7 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 2, 2025 14:16+0000">2025-12-02</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 16, 2025 07:50+0000">2025-12-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

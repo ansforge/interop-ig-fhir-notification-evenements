@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-12-02T14:16:53+00:00",
+  "date" : "2025-12-16T07:50:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -37,7 +37,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.0.0"
+    "version" : "7.0.1"
   },
   {
     "id" : "hl7ext",
@@ -724,7 +724,7 @@
       },
       "name" : "com1",
       "description" : "Exemple de demande de notification pour sortie du patient Robert Langdon.",
-      "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"
     },
     {
       "extension" : [{
@@ -736,7 +736,7 @@
       },
       "name" : "com2",
       "description" : "Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon.",
-      "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"
     },
     {
       "extension" : [{
@@ -915,7 +915,7 @@
         "reference" : "Subscription/sub1"
       },
       "name" : "sub1",
-      "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE"
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"
     },
     {
       "extension" : [{

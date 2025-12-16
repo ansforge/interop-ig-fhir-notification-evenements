@@ -8,26 +8,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/SearchParameter/NdE_CommunicationRequest_EventType | *Version*:0.1.0 |
-| Active as of 2021-12-01 | *Computable Name*:NdE_CommunicationRequest_EventType |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/NdE-CommunicationRequest-EventType | *Version*:0.1.0 |
+| Active as of 2025-12-16 | *Computable Name*:NdE_CommunicationRequest_EventType |
 
  
 Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3) 
-
-## NdE_CommunicationRequest_EventType
-
-Paramètre `event-type`:`token`
-
-Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)
-
-| | |
-| :--- | :--- |
-| Ressource | [CommunicationRequest](http://hl7.org/fhir/R4/communicationrequest.html) |
-| Expression | `extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value` |
-| Mode de traitement | Normal |
-| Multiples | * multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies
-* multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie
- |
 
 
 
@@ -37,11 +22,11 @@ Permet de filtrer sur le type d'évènement véhiculé par la ressource Communic
 {
   "resourceType" : "SearchParameter",
   "id" : "NdE-CommunicationRequest-EventType",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/NdE_CommunicationRequest_EventType",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/NdE-CommunicationRequest-EventType",
   "version" : "0.1.0",
   "name" : "NdE_CommunicationRequest_EventType",
   "status" : "active",
-  "date" : "2021-12-01",
+  "date" : "2025-12-16T07:50:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -70,7 +55,6 @@ Permet de filtrer sur le type d'évènement véhiculé par la ressource Communic
   "base" : ["CommunicationRequest"],
   "type" : "token",
   "expression" : "extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value",
-  "xpathUsage" : "normal",
   "multipleOr" : true,
   "multipleAnd" : true
 }

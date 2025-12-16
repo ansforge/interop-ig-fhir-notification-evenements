@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE | *Version*:0.1.0 |
-| Active as of 2021-12-01 | *Computable Name*:NdE_NotificationRequestNdE |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest | *Version*:0.1.0 |
+| Draft as of 2025-12-16 | *Computable Name*:NdE_NotificationRequestNdE |
 
  
 Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification 
@@ -20,7 +20,6 @@ Profil NotificationRequestNdE représentant le flux 4 - TransmissionOrdreNotific
 **Utilisations:**
 
 * Exemples pour ce Profil: [CommunicationRequest/com1](CommunicationRequest-com1.md)
-* CapabilityStatements utilisant ce Profil: [CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md) and [CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/nde-notificationrequest)
 
@@ -40,12 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
 {
   "resourceType" : "StructureDefinition",
   "id" : "nde-notificationrequest",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest",
   "version" : "0.1.0",
   "name" : "NdE_NotificationRequestNdE",
-  "status" : "active",
-  "experimental" : false,
-  "date" : "2021-12-01",
+  "status" : "draft",
+  "date" : "2025-12-16T07:50:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -104,9 +102,8 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
             "key" : "event-subject",
             "severity" : "error",
             "human" : "L’un des attributs subject ou about doit être présent",
-            "expression" : "count(subject) = 1 xor count(about) = 1",
-            "xpath" : "count(subject) = 1 xor count(about) = 1",
-            "source" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"
+            "expression" : "subject.exists() xor about.exists()",
+            "source" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"
           }
         ]
       },
@@ -191,7 +188,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
           {
             "code" : "Reference",
             "targetProfile" : [
-              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE"
+              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"
             ]
           }
         ]

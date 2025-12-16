@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:NdE_EventType |
+| Draft as of 2025-12-16 | *Computable Name*:NdE_EventType |
 
 Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-event-type.csv), [Ex
   "name" : "NdE_EventType",
   "title" : "Event Type",
   "status" : "draft",
-  "date" : "2025-12-02T14:16:53+00:00",
+  "date" : "2025-12-16T07:50:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -88,6 +88,10 @@ Other representations of profile: [CSV](StructureDefinition-event-type.csv), [Ex
     {
       "type" : "element",
       "expression" : "Subscription"
+    },
+    {
+      "type" : "element",
+      "expression" : "CommunicationRequest"
     }
   ],
   "type" : "Extension",

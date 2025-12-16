@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:NdE_EventTime |
+| Draft as of 2025-12-16 | *Computable Name*:NdE_EventTime |
 
 Date à laquelle l’évènement a eu lieu.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-event-time.csv), [Ex
   "name" : "NdE_EventTime",
   "title" : "Event Time",
   "status" : "draft",
-  "date" : "2025-12-02T14:16:53+00:00",
+  "date" : "2025-12-16T07:50:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

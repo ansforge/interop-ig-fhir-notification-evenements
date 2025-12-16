@@ -35,21 +35,37 @@ Profil: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest
 
 -------
 
-> **Narratif généré : Organisation #org1****name**: Service de pneumologie, Hôpital Test**telecom**: ph: 022-655 6780,[pneumo@hopitalTest.fr](mailto:pneumo@hopitalTest.fr)**address**: Aile ouest, étage 5
+> **Narratif généré : Organisation #org1**
+
+Profil: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html)
+
+**name**: Service de pneumologie, Hôpital Test**telecom**: ph: 022-655 6780,[pneumo@hopitalTest.fr](mailto:pneumo@hopitalTest.fr)**address**: Aile ouest, étage 5
 
 -------
 
-> **Narratif généré : Patient #pat1**Langdon Robert Male, Date de Naissance :1960-03-20
+> **Narratif généré : Patient #pat1**
+
+Profil: [FR Core Patient Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html)
+
+Langdon Robert Male, Date de Naissance :1960-03-20
 -------
 
 | | |
 | :--- | :--- |
 | Coordonnées | ph: (03) 3410 5613(Mobile) |
+| FR Core Patient Ident Reliability Extension: | * identityStatus: [FR Core CodeSystem v2-0445: VALI](https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI) (Identité validée)
+* validationDate: 2020-04-22
+* validationMode: [non précisé]: CN (Carte nationale d'identité)
+ |
 
 
 -------
 
-> **Narratif généré : Praticien #pract1****identifier**: N° RPPS/801234567897 (utilisation : official, )**name**: Pierre Durand (Pneumologue) (Official)
+> **Narratif généré : Praticien #pract1**
+
+Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html)
+
+**identifier**:`https://rpps.esante.gouv.fr`/801234567897**name**: Pierre Durand (Pneumologue) (Official)
 
 
 
@@ -61,13 +77,18 @@ Profil: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest
   "id" : "com1",
   "meta" : {
     "profile" : [
-      "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"
+      "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"
     ]
   },
   "contained" : [
     {
       "resourceType" : "Organization",
       "id" : "org1",
+      "meta" : {
+        "profile" : [
+          "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"
+        ]
+      },
       "name" : "Service de pneumologie, Hôpital Test",
       "telecom" : [
         {
@@ -89,11 +110,16 @@ Profil: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest
     {
       "resourceType" : "Patient",
       "id" : "pat1",
+      "meta" : {
+        "profile" : [
+          "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"
+        ]
+      },
       "extension" : [
         {
           "extension" : [
             {
-              "url" : "identityReliability",
+              "url" : "identityStatus",
               "valueCoding" : {
                 "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445",
                 "code" : "VALI",
@@ -112,7 +138,7 @@ Profil: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest
               }
             }
           ],
-          "url" : "http://interopsante.org/fhir/StructureDefinition/FrPatientIdentReliability"
+          "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"
         }
       ],
       "name" : [
@@ -137,19 +163,14 @@ Profil: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest
     {
       "resourceType" : "Practitioner",
       "id" : "pract1",
+      "meta" : {
+        "profile" : [
+          "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"
+        ]
+      },
       "identifier" : [
         {
-          "use" : "official",
-          "type" : {
-            "coding" : [
-              {
-                "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
-                "code" : "RPPS",
-                "display" : "N° RPPS"
-              }
-            ]
-          },
-          "system" : "urn:oid:1.2.250.1.71.4.2.1",
+          "system" : "https://rpps.esante.gouv.fr",
           "value" : "801234567897"
         }
       ],

@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE | *Version*:0.1.0 |
-| Active as of 2021-12-01 | *Computable Name*:NdE_EventDeclarationNdE |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration | *Version*:0.1.0 |
+| Draft as of 2025-12-16 | *Computable Name*:NdE_EventDeclarationNdE |
 
  
 EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc. 
@@ -20,7 +20,6 @@ Profil EventDeclaratioNdE représentant le flux 3 - EmissionEvenement du volet N
 **Utilisations:**
 
 * Exemples pour ce Profil: [CommunicationRequest/com2](CommunicationRequest-com2.md)
-* CapabilityStatements utilisant ce Profil: [CI-SIS Notification-D-Evenements - NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md) and [CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/nde-eventdeclaration)
 
@@ -40,12 +39,12 @@ Other representations of profile: [CSV](StructureDefinition-nde-eventdeclaration
 {
   "resourceType" : "StructureDefinition",
   "id" : "nde-eventdeclaration",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration",
   "version" : "0.1.0",
   "name" : "NdE_EventDeclarationNdE",
   "title" : "NdE_EventDeclarationNdE",
-  "status" : "active",
-  "date" : "2021-12-01",
+  "status" : "draft",
+  "date" : "2025-12-16T07:50:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -105,9 +104,8 @@ Other representations of profile: [CSV](StructureDefinition-nde-eventdeclaration
             "key" : "event-subject",
             "severity" : "error",
             "human" : "L’un des attributs subject ou about doit être présent",
-            "expression" : "count(subject) = 1 xor count(about) = 1",
-            "xpath" : "count(subject) = 1 xor count(about) = 1",
-            "source" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"
+            "expression" : "subject.exists() xor about.exists()",
+            "source" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"
           }
         ]
       },

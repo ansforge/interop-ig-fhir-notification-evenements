@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE | *Version*:0.1.0 |
-| Active as of 2021-12-01 | *Computable Name*:NdE_SubscriptionNdE |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription | *Version*:0.1.0 |
+| Draft as of 2025-12-16 | *Computable Name*:NdE_SubscriptionNdE |
 
  
 SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement. 
@@ -18,7 +18,6 @@ SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnemen
 
 * Référer à ce Profil: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md)
 * Exemples pour ce Profil: [Subscription/sub1](Subscription-sub1.md)
-* CapabilityStatements utilisant ce Profil: [CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md) and [CI-SIS Notification-D-Evenements - NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/nde-subscription)
 
@@ -38,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
 {
   "resourceType" : "StructureDefinition",
   "id" : "nde-subscription",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription",
   "version" : "0.1.0",
   "name" : "NdE_SubscriptionNdE",
-  "status" : "active",
-  "date" : "2021-12-01",
+  "status" : "draft",
+  "date" : "2025-12-16T07:50:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

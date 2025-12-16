@@ -11,16 +11,16 @@
   fhir:id [ fhir:v "NdE-CommunicationRequest-EventType"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche NdE-CommunicationRequest-EventType</b></p><a name=\"NdE-CommunicationRequest-EventType\"> </a><a name=\"hcNdE-CommunicationRequest-EventType\"> </a><h2>NdE_CommunicationRequest_EventType</h2><p>Paramètre <code>event-type</code>:<code>token</code></p><div><p>Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/communicationrequest.html\">CommunicationRequest</a></td></tr><tr><td>Expression</td><td><code>extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value</code></td></tr><tr><td>Mode de traitement</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche NdE-CommunicationRequest-EventType</b></p><a name=\"NdE-CommunicationRequest-EventType\"> </a><a name=\"hcNdE-CommunicationRequest-EventType\"> </a><h2>NdE_CommunicationRequest_EventType</h2><p>Paramètre <code>event-type</code>:<code>token</code></p><div><p>Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/communicationrequest.html\">CommunicationRequest</a></td></tr><tr><td>Expression</td><td><code>extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
-     fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/NdE_CommunicationRequest_EventType"^^xsd:anyURI ;
-     fhir:l <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/NdE_CommunicationRequest_EventType>
+     fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/NdE-CommunicationRequest-EventType"^^xsd:anyURI ;
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/NdE-CommunicationRequest-EventType>
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "NdE_CommunicationRequest_EventType"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2021-12-01"^^xsd:date] ; # 
+  fhir:date [ fhir:v "2025-12-16T07:50:40+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -44,7 +44,6 @@
   fhir:base ( [ fhir:v "CommunicationRequest"] ) ; # 
   fhir:type [ fhir:v "token"] ; # 
   fhir:expression [ fhir:v "extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value"] ; # 
-  fhir:xpathUsage [ fhir:v "normal"] ; # 
   fhir:multipleOr [ fhir:v true] ; # 
   fhir:multipleAnd [ fhir:v true] . # 
 

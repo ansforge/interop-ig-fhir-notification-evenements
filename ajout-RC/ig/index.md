@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:ExampleIG |
+| Draft as of 2025-12-16 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -72,7 +72,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-12-02T14:16:53+00:00",
+  "date" : "2025-12-16T07:50:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -110,7 +110,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "7.0.0"
+      "version" : "7.0.1"
     },
     {
       "id" : "hl7ext",
@@ -921,7 +921,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         },
         "name" : "com1",
         "description" : "Exemple de demande de notification pour sortie du patient Robert Langdon.",
-        "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"
       },
       {
         "extension" : [
@@ -935,7 +935,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         },
         "name" : "com2",
         "description" : "Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon.",
-        "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"
       },
       {
         "extension" : [
@@ -1144,7 +1144,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "reference" : "Subscription/sub1"
         },
         "name" : "sub1",
-        "exampleCanonical" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"
       },
       {
         "extension" : [

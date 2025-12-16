@@ -71,17 +71,17 @@
   "profiles": {
     "CommunicationRequest": [
       {
-        "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE",
+        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration",
         "title": "NdE_EventDeclarationNdE"
       },
       {
-        "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE",
+        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest",
         "title": "NdE_NotificationRequestNdE"
       }
     ],
     "Subscription": [
       {
-        "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE",
+        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription",
         "title": "NdE_SubscriptionNdE"
       }
     ]
@@ -128,7 +128,7 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrPatientIdentReliability": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability": [
       "CommunicationRequest.contained",
       "Subscription.contained"
     ],

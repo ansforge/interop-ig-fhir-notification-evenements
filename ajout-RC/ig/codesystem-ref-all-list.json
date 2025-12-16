@@ -81,8 +81,8 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ValueSet-EyeColorVS.html" : "EyeColor Value Set",
-      "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set"
+      "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set",
+      "ValueSet-EyeColorVS.html" : "EyeColor Value Set"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/communication-category",
@@ -106,7 +106,7 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "http://terminology.hl7.org/7.0.0/ValueSet-v3-ActReason.html" : "v3 Code System ActReason"
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActReason.html" : "v3 Code System ActReason"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
@@ -118,7 +118,7 @@
       "oids" : ["2.16.840.1.113883.5.1064"],
       "uses" : {
       },
-      "http://terminology.hl7.org/7.0.0/ValueSet-v3-ParticipationMode.html" : "ParticipationMode"
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ParticipationMode.html" : "ParticipationMode"
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system",

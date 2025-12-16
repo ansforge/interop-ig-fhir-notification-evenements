@@ -28,34 +28,6 @@
     "name" : "NdE_Souscripteur"
   },
   {
-    "id" : "NdE-CommunicationRequest-EventType",
-    "type" : "SearchParameter",
-    "url" : "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/NdE_CommunicationRequest_EventType",
-    "version" : "0.1.0",
-    "name" : "NdE_CommunicationRequest_EventType"
-  },
-  {
-    "id" : "nde-eventdeclaration",
-    "type" : "StructureDefinition",
-    "url" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE",
-    "version" : "0.1.0",
-    "name" : "NdE_EventDeclarationNdE"
-  },
-  {
-    "id" : "nde-notificationrequest",
-    "type" : "StructureDefinition",
-    "url" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE",
-    "version" : "0.1.0",
-    "name" : "NdE_NotificationRequestNdE"
-  },
-  {
-    "id" : "nde-subscription",
-    "type" : "StructureDefinition",
-    "url" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE",
-    "version" : "0.1.0",
-    "name" : "NdE_SubscriptionNdE"
-  },
-  {
     "id" : "competence-code-system",
     "type" : "CodeSystem",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system",
@@ -75,6 +47,13 @@
     "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]",
     "version" : "0.1.0",
     "name" : "ExampleIG"
+  },
+  {
+    "id" : "NdE-CommunicationRequest-EventType",
+    "type" : "SearchParameter",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/NdE-CommunicationRequest-EventType",
+    "version" : "0.1.0",
+    "name" : "NdE_CommunicationRequest_EventType"
   },
   {
     "id" : "declarant",
@@ -103,6 +82,27 @@
     "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type",
     "version" : "0.1.0",
     "name" : "NdE_EventType"
+  },
+  {
+    "id" : "nde-eventdeclaration",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration",
+    "version" : "0.1.0",
+    "name" : "NdE_EventDeclarationNdE"
+  },
+  {
+    "id" : "nde-notificationrequest",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest",
+    "version" : "0.1.0",
+    "name" : "NdE_NotificationRequestNdE"
+  },
+  {
+    "id" : "nde-subscription",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription",
+    "version" : "0.1.0",
+    "name" : "NdE_SubscriptionNdE"
   },
   {
     "id" : "recipient-endpoint",

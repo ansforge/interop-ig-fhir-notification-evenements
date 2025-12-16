@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG Example"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-12-02T14:16:53+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-16T07:50:40+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -60,7 +60,7 @@
        fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.0.0" ]
+     fhir:version [ fhir:v "7.0.1" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -1516,8 +1516,8 @@
        fhir:description [ fhir:v "Exemple de demande de notification pour sortie du patient Robert Langdon." ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE"^^xsd:anyURI ;
-         fhir:l <http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest>
        ]
      ] [
        fhir:extension ( [
@@ -1538,8 +1538,8 @@
        fhir:description [ fhir:v "Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon." ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE"^^xsd:anyURI ;
-         fhir:l <http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration>
        ]
      ] [
        fhir:extension ( [
@@ -1853,8 +1853,8 @@
        fhir:name [ fhir:v "sub1" ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE"^^xsd:anyURI ;
-         fhir:l <http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription>
        ]
      ] [
        fhir:extension ( [
