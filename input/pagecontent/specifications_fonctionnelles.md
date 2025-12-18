@@ -208,7 +208,7 @@ biologie, l’admission d’une personne dans un hôpital ou l’inscription
 d’une personne dans un programme de suivi de personnes en risque de
 perte d’autonomie.
 
-\- **Abonnement**[^5]: un abonnement porte sur les types d'évènements
+\- **Abonnement**: un abonnement porte sur les types d'évènements
 qui intéressent l’abonné et doivent faire l’objet d’une notification. Un
 abonnement est défini par l’identification de l’abonné, le médium de
 notification à utiliser, la personne prise en charge associée aux
