@@ -113,7 +113,7 @@ Le but de cette étape est de définir les processus métier identifiés dans le
 
 - **Évènement**: un événement correspond à un fait significatif lors de la prise en charge d’une personne. Par exemple, un événement peut être la disponibilité d’un nouveau document comme un compte-rendu d’examen de biologie, l’admission d’une personne dans un hôpital ou l’inscription d’une personne dans un programme de suivi de personnes en risque de perte d’autonomie.
 
-- **Abonnement**[^5]: un abonnement porte sur les types d'évènements qui intéressent l’abonné et doivent faire l’objet d’une notification. Un abonnement est défini par l’identification de l’abonné, le médium de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.
+- **Abonnement**: un abonnement porte sur les types d'évènements qui intéressent l’abonné et doivent faire l’objet d’une notification. Un abonnement est défini par l’identification de l’abonné, le médium de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.
 
 - **Média de notification**: un média de notification est le moyen de communication par lequel la notification parvient à l’abonné (ex. sms, mail, pop-up dans une application…).v
 
