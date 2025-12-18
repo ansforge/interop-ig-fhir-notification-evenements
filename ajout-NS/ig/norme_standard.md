@@ -201,23 +201,23 @@ Cette section présente une synthèse comparative des normes, standards et profi
 
 #### Synthèse comparative des standards
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| Outillage**Des outils de tests sont mis en œuvre pour valider l’adhérence au standard.** | ✔ |  | ✔ |
-| Tests**Des tests sont effectués sur des versions de travail (dites STU – Standards for Trial Use) et/ou pour les guides d’implémentation normatifs.** | Non encore testé (maturité 1) |  | ✔ |
-| Processus de prise en compte des améliorations | ✔ |  | ✔ |
-| Existence de guides d’implémentation (Un guide d’implémentation combine un ou plusieurs standards afin de traiter des cas d’usage particuliers)**Les guides référencent les standards de base, c’est-à-dire des standards traitant des cas d’usage génériques et abstraits, avec au moins un cas d’usage et une optionalité sur les paramètres pour permettre les extensions. (Un standard de base traite des cas d’usage relativement génériques et diversifiés et qui restent à un niveau abstrait (et donc ne traitent pas des cas pointus dans un domaine spécifique))** | ✔ |  | ✔ |
-| Adapté aux dispositifs mobiles | ✔ |  |  |
-| Stabilité de la documentation |  |  | ✔ |
-| Adoption par le marché et utilisation (**L’adoption peut être démontrée par des exemples opérationnels d’implémentations conformes provenant de différents fournisseurs.**) |  |  | ✔ |
+| | | |
+| :--- | :--- | :--- |
+| Outillage**Des outils de tests sont mis en œuvre pour valider l’adhérence au standard.** | ✔ | ✔ |
+| Tests**Des tests sont effectués sur des versions de travail (dites STU – Standards for Trial Use) et/ou pour les guides d’implémentation normatifs.** | Non encore testé (maturité 1) | ✔ |
+| Processus de prise en compte des améliorations | ✔ | ✔ |
+| Existence de guides d’implémentation (Un guide d’implémentation combine un ou plusieurs standards afin de traiter des cas d’usage particuliers)**Les guides référencent les standards de base, c’est-à-dire des standards traitant des cas d’usage génériques et abstraits, avec au moins un cas d’usage et une optionalité sur les paramètres pour permettre les extensions.** | ✔ | ✔ |
+| Adapté aux dispositifs mobiles | ✔ |  |
+| Stabilité de la documentation |  | ✔ |
+| Adoption par le marché et utilisation (**L’adoption peut être démontrée par des exemples opérationnels d’implémentations conformes provenant de différents fournisseurs.**) |  | ✔ |
 | Neutralité* **les spécifications ne limitent pas la concurrence et l’innovation ;**
 * **les spécifications sont basées sur des développements scientifiques et technologiques de pointe.**
- |  |  | ✔ |
+ |  | ✔ |
 | Qualité* **la qualité est suffisante pour permettre le développement de produits et de services interopérables concurrents.**
- |  | ✔ | |
-| Accessibilité**Les spécifications sont disponibles au public à des conditions raisonnables (gratuitement ou à coût raisonnable).** | ✔ |  | ✔ |
-| Couverture des spécifications (notification d’évènements) | **partielle** |  | **partielle** |
-| Mises en œuvre existantes du cas d’usage (notification d’évènements) |  |  | ✔ |
+ |  | ✔ |
+| Accessibilité**Les spécifications sont disponibles au public à des conditions raisonnables (gratuitement ou à coût raisonnable).** | ✔ | ✔ |
+| Couverture des spécifications (notification d’évènements) | **partielle** | **partielle** |
+| Mises en œuvre existantes du cas d’usage (notification d’évènements) |  | ✔ |
 
 #### Synthèse comparative des organismes producteurs
 
@@ -242,45 +242,4 @@ La ressource FHIR Subscription et le standard WS notification sont tous les deux
 * la ressource FHIR Subscription peut être mise en œuvre via une technologie adaptée aux terminaux mobiles actuels ; elle n’est cependant pas stabilisée et pourrait subir des changements conséquents sur les prochaines années.
 
 En ce qui concerne leurs applicabilités dans le contexte de la notification d’évènements, il est à noter que les informations « métiers » identifiées dans [l’étude](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf) ne sont que partiellement couvertes par les deux standards étudiés dans ce document et qu’une mise en œuvre du cas d’usage nécessiterait des extensions quel que soit le standard utilisé.
-
-### ANNEXE
-
-#### Annexe 1 : Glossaire
-
-| | |
-| :--- | :--- |
-| ASIP Santé | Agence des Systèmes d’Information Partagés de Santé (ancienne dénomination de l’ANS) |
-| MHD | **Mobile Health Documents** |
-| HL7 | **Health Level 7** |
-| IHE | **Integrating the Healthcare Entreprise** |
-| FHIR | **Fast Healthcare Interoperability Ressources** |
-| CI-SIS | Cadre d’interopérabilité des systèmes d’information de santé |
-
-#### Annexe 2 : Documents de référence
-
-| |
-| :--- |
-| 1. Etude métier – Notification d’évènements (https://esante.gouv.fr/volet-notification-devenements)
-1. Doctrine du CI-SIS (https://esante.gouv.fr/interoperabilite/ci-sis/demarche-elaboration)
- |
-
-#### Annexe 3 : Historique du document
-
-| | |
-| :--- | :--- |
-| Référence | CI_SIS_STANDARDS_NOTIFICATION_EVENEMENTS_V1.0.DOCX |
-| Date de création | 01/09/2016 |
-| Date de dernière mise à jour | 10/08/2021 |
-| Rédaction (R) | ANS |
-| Version |  |
-| Nombre de pages | 17 |
-
-| | | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 0.1 | ASIP SANTÉ | 12/10/2016 | ASIP SANTÉ | 12/10/2016 | ASIP SANTÉ | 12/10/2016 |
-| Motif et nature de la modification : Diffusion du document pour concertation publique | | | | | | |
-| 1.0 | ASIP SANTÉ | 26/04/2018 | ASIP SANTÉ | 26/04/2018 | ASIP SANTÉ | 26/04/2018 |
-| Motif et nature de la modification : Diffusion du document pour publication finale | | | | | | |
-| 1.1 | ANS | 10/08/2021 | ANS | 10/08/2021 | ANS | 10/08/2021 |
-| Motif et nature de la modification : Passage à la charte graphique ANS et mise à jour du nom ASIP | | | | | | |
 
