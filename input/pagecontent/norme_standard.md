@@ -456,141 +456,123 @@ synthèse sont inspirés des documents suivants :
 #### Synthèse comparative des standards
 
 <table style="width:92%;">
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 23%" />
-<col style="width: 2%" />
-<col style="width: 15%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: center;">Critères d’évaluation des standards</th>
-<th style="text-align: center;">FHIR Subscription</th>
-<th style="text-align: center;"></th>
-<th style="text-align: center;">OASIS WS Notification</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<p>Outillage</p>
-<p><em>Des outils de tests sont mis en œuvre pour valider l’adhérence au standard.</em></p>
-</td>
-<td style="text-align: center;">✔</td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+  <colgroup>
+    <col style="width: 49%" />
+    <col style="width: 23%" />
+    <col style="width: 28%" />
+  </colgroup>
 
-<tr>
-<td>
-<p>Tests</p>
-<p><em>Des tests sont effectués sur des versions de travail (dites STU – Standards for Trial Use) et/ou pour les guides d’implémentation normatifs.</em></p>
-</td>
-<td style="text-align: center;">Non encore testé (maturité 1)</td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+  <thead>
+    <tr>
+      <th style="text-align: center;">Critères d’évaluation des standards</th>
+      <th style="text-align: center;">FHIR Subscription</th>
+      <th style="text-align: center;">OASIS WS Notification</th>
+    </tr>
+  </thead>
 
-<tr>
-<td>Processus de prise en compte des améliorations</td>
-<td style="text-align: center;">✔</td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+  <tbody>
+    <tr>
+      <td>
+        <p>Outillage</p>
+        <p><em>Des outils de tests sont mis en œuvre pour valider l’adhérence au standard.</em></p>
+      </td>
+      <td style="text-align: center;">✔</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-<tr>
-<td>
-<p>Existence de guides d’implémentation (Un guide d’implémentation combine un ou plusieurs standards afin de traiter des cas d’usage particuliers)</p>
-<p>
-<em>
-<br/>
-Les guides référencent les standards de base, c’est-à-dire des standards traitant des cas d’usage génériques et abstraits, avec au moins un cas d’usage et une optionalité sur les paramètres pour permettre les extensions.
-(Un standard de base traite des cas d’usage relativement génériques et diversifiés et qui restent à un niveau abstrait (et donc ne traitent pas des cas pointus dans un domaine spécifique))
-</em>
-</p>
-</td>
-<td style="text-align: center;">✔</td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+    <tr>
+      <td>
+        <p>Tests</p>
+        <p><em>Des tests sont effectués sur des versions de travail (dites STU – Standards for Trial Use) et/ou pour les guides d’implémentation normatifs.</em></p>
+      </td>
+      <td style="text-align: center;">Non encore testé (maturité 1)</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-<tr>
-<td>Adapté aux dispositifs mobiles</td>
-<td style="text-align: center;">✔</td>
-<td></td>
-<td></td>
-</tr>
+    <tr>
+      <td>Processus de prise en compte des améliorations</td>
+      <td style="text-align: center;">✔</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-<tr>
-<td>Stabilité de la documentation</td>
-<td></td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+    <tr>
+      <td>
+        <p>Existence de guides d’implémentation (Un guide d’implémentation combine un ou plusieurs standards afin de traiter des cas d’usage particuliers)</p>
+        <p><em>
+          Les guides référencent les standards de base, c’est-à-dire des standards traitant des cas d’usage génériques et abstraits, avec au moins un cas d’usage et une optionalité sur les paramètres pour permettre les extensions.
+        </em></p>
+      </td>
+      <td style="text-align: center;">✔</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-<tr>
-<td>
-Adoption par le marché et utilisation  
-(<em>L’adoption peut être démontrée par des exemples opérationnels d’implémentations conformes provenant de différents fournisseurs.</em>)
-</td>
-<td></td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+    <tr>
+      <td>Adapté aux dispositifs mobiles</td>
+      <td style="text-align: center;">✔</td>
+      <td></td>
+    </tr>
 
-<tr>
-<td>
-<p>Neutralité</p>
-<ul>
-<li><em>les spécifications ne limitent pas la concurrence et l’innovation ;</em></li>
-<li><em>les spécifications sont basées sur des développements scientifiques et technologiques de pointe.</em></li>
-</ul>
-</td>
-<td></td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+    <tr>
+      <td>Stabilité de la documentation</td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-<tr>
-<td>
-<p>Qualité</p>
-<ul>
-<li><em>la qualité est suffisante pour permettre le développement de produits et de services interopérables concurrents.</em></li>
-</ul>
-</td>
-<td></td>
-<td colspan="2" style="text-align: center;">✔</td>
-</tr>
+    <tr>
+      <td>
+        Adoption par le marché et utilisation  
+        (<em>L’adoption peut être démontrée par des exemples opérationnels d’implémentations conformes provenant de différents fournisseurs.</em>)
+      </td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-<tr>
-<td>
-<p>Accessibilité</p>
-<p><em>Les spécifications sont disponibles au public à des conditions raisonnables (gratuitement ou à coût raisonnable).</em></p>
-</td>
-<td style="text-align: center;">✔</td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+    <tr>
+      <td>
+        <p>Neutralité</p>
+        <ul>
+          <li><em>les spécifications ne limitent pas la concurrence et l’innovation ;</em></li>
+          <li><em>les spécifications sont basées sur des développements scientifiques et technologiques de pointe.</em></li>
+        </ul>
+      </td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-<tr>
-<td>
-<p>Couverture des spécifications (notification d’évènements)</p>
-</td>
-<td style="text-align: center;"><strong>partielle</strong></td>
-<td></td>
-<td style="text-align: center;"><strong>partielle</strong></td>
-</tr>
+    <tr>
+      <td>
+        <p>Qualité</p>
+        <ul>
+          <li><em>la qualité est suffisante pour permettre le développement de produits et de services interopérables concurrents.</em></li>
+        </ul>
+      </td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-<tr>
-<td>
-Mises en œuvre existantes du cas d’usage (notification d’évènements)
-</td>
-<td></td>
-<td></td>
-<td style="text-align: center;">✔</td>
-</tr>
+    <tr>
+      <td>
+        <p>Accessibilité</p>
+        <p><em>Les spécifications sont disponibles au public à des conditions raisonnables (gratuitement ou à coût raisonnable).</em></p>
+      </td>
+      <td style="text-align: center;">✔</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
 
-</tbody>
+    <tr>
+      <td>
+        <p>Couverture des spécifications (notification d’évènements)</p>
+      </td>
+      <td style="text-align: center;"><strong>partielle</strong></td>
+      <td style="text-align: center;"><strong>partielle</strong></td>
+    </tr>
+
+    <tr>
+      <td>Mises en œuvre existantes du cas d’usage (notification d’évènements)</td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+  </tbody>
 </table>
 
 #### Synthèse comparative des organismes producteurs
@@ -678,140 +660,3 @@ notification d’évènements, il est à noter que les informations
 couvertes par les deux standards étudiés dans ce document et qu’une mise
 en œuvre du cas d’usage nécessiterait des extensions quel que soit le
 standard utilisé.
-
-### ANNEXE
-
-#### Annexe 1 : Glossaire
-
-| Sigle / Acronyme | Signification |
-|----|----|
-| ASIP Santé | Agence des Systèmes d’Information Partagés de Santé (ancienne dénomination de l’ANS) |
-| MHD | *Mobile Health Documents* |
-| HL7 | *Health Level 7* |
-| IHE | *Integrating the Healthcare Entreprise* |
-| FHIR | *Fast Healthcare Interoperability Ressources* |
-| CI-SIS | Cadre d’interopérabilité des systèmes d’information de santé |
-
-#### Annexe 2 : Documents de référence
-
-<table style="width:87%;">
-<colgroup>
-<col style="width: 87%" />
-</colgroup>
-<thead>
-<tr>
-<th>Documents de référence</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ol type="1">
-<li><p>Etude métier – Notification d’évènements
-(https://esante.gouv.fr/volet-notification-devenements)</p></li>
-<li><p>Doctrine du CI-SIS
-(https://esante.gouv.fr/interoperabilite/ci-sis/demarche-elaboration)</p></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-
-#### Annexe 3 : Historique du document
-
-<table style="width:87%;">
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 59%" />
-</colgroup>
-<thead>
-<tr>
-<th colspan="2">Identification du document</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Référence</td>
-<td>CI_SIS_STANDARDS_NOTIFICATION_EVENEMENTS_V1.0.DOCX</td>
-</tr>
-<tr>
-<td>Date de création</td>
-<td>01/09/2016</td>
-</tr>
-<tr>
-<td>Date de dernière mise à jour</td>
-<td>10/08/2021</td>
-</tr>
-<tr>
-<td>Rédaction (R)</td>
-<td>ANS</td>
-</tr>
-<tr>
-<td>Version</td>
-<td></td>
-</tr>
-<tr>
-<td>Nombre de pages</td>
-<td>17</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 15%" />
-<col style="width: 14%" />
-<col style="width: 15%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: center;">Version</th>
-<th colspan="2">Rédigé par</th>
-<th colspan="2">Vérifié par</th>
-<th colspan="2">Validé par</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2" style="text-align: center;">0.1</td>
-<td>ASIP SANTÉ</td>
-<td>12/10/2016</td>
-<td>ASIP SANTÉ</td>
-<td>12/10/2016</td>
-<td>ASIP SANTÉ</td>
-<td>12/10/2016</td>
-</tr>
-<tr>
-<td colspan="6">Motif et nature de la modification : Diffusion du
-document pour concertation publique</td>
-</tr>
-<tr>
-<td rowspan="2" style="text-align: center;">1.0</td>
-<td>ASIP SANTÉ</td>
-<td>26/04/2018</td>
-<td>ASIP SANTÉ</td>
-<td>26/04/2018</td>
-<td>ASIP SANTÉ</td>
-<td>26/04/2018</td>
-</tr>
-<tr>
-<td colspan="6">Motif et nature de la modification : Diffusion du
-document pour publication finale</td>
-</tr>
-<tr>
-<td rowspan="2" style="text-align: center;">1.1</td>
-<td>ANS</td>
-<td>10/08/2021</td>
-<td>ANS</td>
-<td>10/08/2021</td>
-<td>ANS</td>
-<td>10/08/2021</td>
-</tr>
-<tr>
-<td colspan="6">Motif et nature de la modification : Passage à la charte
-graphique ANS et mise à jour du nom ASIP</td>
-</tr>
-</tbody>
-</table>
