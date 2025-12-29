@@ -29,7 +29,7 @@ pages:
             title: Vue d'ensemble
     specifications_techniques.md:
         st_intro.md:
-            title: Introduction
+            title: Volume 2 - Détail des transactions
         st_flux1.md:
             title: Flux 1:SouscriptionAbonnement
         st_flux2.md:
