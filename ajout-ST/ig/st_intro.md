@@ -1,10 +1,10 @@
-# Introduction - ANS IG Example v0.1.0
+# Volume 2 - Détail des transactions - ANS IG Example v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Specifications Techniques**](specifications_techniques.md)
-* **Introduction**
+* **Volume 2 - Détail des transactions**
 
-## Introduction
+## Volume 2 - Détail des transactions
 
 ### Introduction
 
