@@ -465,8 +465,7 @@ La Table ci-dessous liste les objets « métier » identifiés et leurs corres
 | **Emetteur** | PersonnePhysique,Professionnel,EntitéJuridique | Oui |
 | **EntitéJuridique** | EntitéJuridique | Oui |
 | **PersonnePriseEnCharge** | PersonnePhysiquePatient | Oui |
-| **Abonnement** | * 
- | - |
+| **Abonnement** | - | - |
 | **Evènement** | Evènement | Oui |
 | **AbonnéPP** | PersonnePhysique | Oui |
 | **AbonnéPM** | - | - |
