@@ -826,10 +826,9 @@ modèle du flux</th>
 </tr>
 <tr>
 <td><strong>Abonnement</strong></td>
-<td><ul>
-<li></li>
-</ul></td>
 <td>-</td>
+<td>-</td>
+</tr>
 </tr>
 <tr>
 <td><strong>Evènement</strong></td>
@@ -872,7 +871,7 @@ des attributs dans chaque classe identifiée.
     <img src="SouscriptionAbonnement.png"
     alt=" Diagramme de classe – SouscriptionAbonnement"
     title="SouscriptionAbonnement"
-    style="width:6.3in;height:3.8125in">
+    style="width:10in;height:auto;">
 </div>
 
 Figure 10: Diagramme de classe – SouscriptionAbonnement
@@ -1151,7 +1150,7 @@ définitions aux attributs de chaque class identifiée.
     <img src="SuppressionAbonnement.png"
     alt=" Diagramme de classe – SuppressionAbonnement"
     title="SuppressionAbonnement"
-    style="width:2.05224in;height:0.77606in">
+    style="width:7;height:auto;">
 </div>
 
 Figure 11: Diagramme de classe – SuppressionAbonnement
@@ -1174,7 +1173,7 @@ aux attributs de chaque class identifiée.
     <img src="EmissionAbonnement.png"
     alt=" Diagramme de classe – EmissionAbonnement"
     title="EmissionAbonnement"
-    style="width:6.3in;height:1.95903in">
+    style="width:10in;height:auto;">
 </div>
 
 Figure 12: Diagramme de classe - EmissionAbonnement
@@ -1409,7 +1408,7 @@ classe identifiée
     <img src="TransmissionOrdreNotification.png"
     alt=" Diagramme de classe – TransmissionOrdreNotification"
     title="TransmissionOrdreNotification"
-    style="width:6.3in;height:4.59583in">
+    style="width:10in;height:auto;">
 </div>
 
 Figure 13: Diagramme de classe – TransmissionOrdreNotification
