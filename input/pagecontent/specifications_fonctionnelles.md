@@ -161,14 +161,16 @@ la gestion des notifications d'évènements concernant une personne prise
 en charge dans le domaine sanitaire, médico-administratif, médico-social
 et social.
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="organisationContexteMetier.png"
     alt="Organisation du contexte métier"
     title="Organisation du contexte métier"
     style="width:5.74528in;height:2.95283in">
-</div>
 
-Figure 1 : Organisation du contexte métier
+    <p>
+    Figure 1 : Organisation du contexte métier
+    </p>
+</div>
 
 Cette étude métier couvre les processus suivants :
 
@@ -239,15 +241,17 @@ Le processus métier de gestion d'abonnement amène à considérer un cas
 d'utilisation de "Création ou de mise à jour d’un abonnement" avec les
 différents acteurs impliqués.
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="CI-SIS-NE-CU-SA-001.png"
     alt="Création ou mise à jour d’un abonnement"
     title="CI-SIS-NE-CU-SA-001"
     style="width:5.07547in;height:1.35433in">
-</div>
 
-Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un
+    <p>
+    Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un
 abonnement (CI-SIS-NE-CU-SA-001)
+    </p>
+</div>
 
 ###### Les acteurs impliqués
 
@@ -295,15 +299,17 @@ Le processus métier de gestion d'abonnement amène à considérer un cas
 d'utilisation de "Suppression d’un abonnement" avec les différents
 acteurs impliqués.
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="CI-SIS-NE-CU-DA-001.png"
     alt="Suppression d’un abonnement"
     title="CI-SIS-NE-CU-DA-001"
     style="width:5.10377in;height:1.24528in">
-</div>
 
-Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement
+      <p>
+      Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement
 (CI-SIS-NE-CU-DA-001)
+    </p>
+</div>
 
 - Les acteurs impliqués <!-- Problème d'affichage dans l'IG : initialement #######-->
 
@@ -342,15 +348,17 @@ Le processus métier de gestion d'évènements amène à considérer un cas
 d'utilisation d’une "Emission d'un évènement" avec les différents
 acteurs impliqués.
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="CI-SIS-NE-CU-EE-001.png"
     alt="Emission d'un évènement"
     title="CI-SIS-NE-CU-EE-001"
     style="width:4.97917in;height:0.84092in">
-</div>
 
-Figure 4 : Diagramme de cas d'utilisation : Emission d'un évènement
+    <p>
+    Figure 4 : Diagramme de cas d'utilisation : Emission d'un évènement
 (CI-SIS-NE-CU-EE-001)
+    </p>
+</div>
 
 ###### Les acteurs impliqués 
 
@@ -395,15 +403,17 @@ Le processus métier de gestion d'évènement amène à considérer un cas
 d'utilisation de "Transmission d'un ordre de notification" avec les
 différents acteurs impliqués.
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="CI-SIS-NE-CU-TO-001.png"
     alt="Transmission d'un ordre de notification"
     title="CI-SIS-NE-CU-TO-001"
     style="width:4.86806in;height:1.91338in">
-</div>
 
-Figure 5 : Diagramme de cas d'utilisation : Transmission d'un ordre de
+    <p>
+    Figure 5 : Diagramme de cas d'utilisation : Transmission d'un ordre de
 notification (CI-SIS-NE-CU-TO-001)
+    </p>
+</div>
 
 ###### Les acteurs impliqués 
 
@@ -501,16 +511,18 @@ acteurs, des actions correspondantes et les flux d’échanges.
 Le processus métier de gestion d'abonnement implique le flux d’échange
 de demande de création ou de mises à jour "SouscriptionAbonnement".
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="CI-SIS-NE-DA-SA-001.png"
     alt="Diagramme d'activité : Création ou mise à jour d’un
 abonnement"
     title="CI-SIS-NE-DA-SA-001"
     style="width:3.82075in;height:3.47589in">
-</div>
 
+    <p>
 Figure 6 : Diagramme d'activité : Création ou mise à jour d’un
 abonnement (CI-SIS-NE-DA-SA-001)
+    </p>
+</div>
 
 **Acteurs**
 
@@ -539,15 +551,17 @@ Le gestionnaire d’abonnements traite la demande du souscripteur.
 Le processus métier de gestion d'abonnement implique le flux d’échange
 de demande de création ou de mise à jour : "SuppressionAbonnement".
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="CI-SIS-NE-DA-DA-001.png"
     alt="Diagramme d'activité : Suppression d'un abonnement"
     title="CI-SIS-NE-DA-DA-001"
     style="width:5.80541in;height:4.01042in">
-</div>
 
+    <p>
 Figure 7 : Diagramme d'activité : Suppression d'un abonnement
 (CI-SIS-NE-DA-DA-001)
+    </p>
+</div>
 
 **Acteurs**
 
@@ -582,15 +596,17 @@ Le processus métier de gestion d'évènement implique le flux d’échange
 entre l'émetteur et la plateforme ou le système de gestion :
 "EmissionEvenement".
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="CI-SIS-NE-DA-EE-001.png"
     alt="Diagramme d'activité : Emission d'un évènement"
     title="CI-SIS-NE-DA-EE-001"
     style="width:3.75694in;height:2.91466in">
-</div>
 
+    <p>
 Figure 8 : Diagramme d'activité : Emission d'un évènement
 (CI-SIS-NE-DA-EE-001)
+    </p>
+</div>
 
 **Acteurs**
 
@@ -627,16 +643,18 @@ d’échanges.
 Le processus métier de gestion de notification implique le flux
 d’échange : "TransmissionOrdreNotification".
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="CI-SIS-NE-DA-TO-001.png"
     alt="Diagramme d'activité : Transmission d'un ordre de
 notification"
     title="CI-SIS-NE-DA-TO-001"
     style="width:4.8656in;height:4.53681in">
-</div>
 
+    <p>
 Figure 9 : Diagramme d'activité : Transmission d'un ordre de
 notification (CI-SIS-NE-DA-TO-001)
+    </p>
+</div>
 
 **Acteurs**
 
@@ -867,14 +885,16 @@ Ci-dessous le diagramme de classe concernant le Flux 1-
 SouscriptionAbonnement. Cette section contient également la description
 des attributs dans chaque classe identifiée.
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="SouscriptionAbonnement.png"
     alt=" Diagramme de classe – SouscriptionAbonnement"
     title="SouscriptionAbonnement"
     style="width:10in;height:auto;">
-</div>
 
+    <p>
 Figure 10: Diagramme de classe – SouscriptionAbonnement
+    </p>
+</div>
 
 ###### Classe "Abonnement"
 
@@ -1146,14 +1166,16 @@ Ci-dessous le diagramme de classe concernant le Flux 2-
 SuppressionAbonnement. Les sous-sections suivantes donnent des
 définitions aux attributs de chaque class identifiée.
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="SuppressionAbonnement.png"
     alt=" Diagramme de classe – SuppressionAbonnement"
     title="SuppressionAbonnement"
     style="width:7;height:auto;">
-</div>
 
+    <p>
 Figure 11: Diagramme de classe – SuppressionAbonnement
+    </p>    
+</div>
 
 ###### Classe "SuppressionAbonnement"
 
@@ -1169,14 +1191,16 @@ Ci-dessous le diagramme de classe concernant le Flux 3-
 EmissionEvenement. Les sous-sections suivantes donnent des définitions
 aux attributs de chaque class identifiée.
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="EmissionAbonnement.png"
     alt=" Diagramme de classe – EmissionAbonnement"
     title="EmissionAbonnement"
     style="width:10in;height:auto;">
-</div>
 
+    <p>
 Figure 12: Diagramme de classe - EmissionAbonnement
+    </p> 
+</div>
 
 ###### Classe "Emetteur"
 
@@ -1404,14 +1428,16 @@ Ci-dessous le diagramme de classe concernant le Flux
 sous-sections suivantes donnent des définitions aux attributs de chaque
 classe identifiée
 
-<div class="figure">
+<div class="figure" style="text-align: center;">
     <img src="TransmissionOrdreNotification.png"
     alt=" Diagramme de classe – TransmissionOrdreNotification"
     title="TransmissionOrdreNotification"
     style="width:10in;height:auto;">
-</div>
 
+    <p>
 Figure 13: Diagramme de classe – TransmissionOrdreNotification
+    </p>
+</div>
 
 ###### Classe "Abonne"
 
