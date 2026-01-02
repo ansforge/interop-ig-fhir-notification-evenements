@@ -88,7 +88,7 @@ Le but de cette étape est d’organiser la vue métier dans laquelle s’insèr
 
 Le domaine de la notification d'évènements est relatif au traitement et la gestion des notifications d'évènements concernant une personne prise en charge dans le domaine sanitaire, médico-administratif, médico-social et social.
 
-Figure 1 : Organisation du contexte métier
+ Figure 1 : Organisation du contexte métier 
 
 Cette étude métier couvre les processus suivants :
 
@@ -129,7 +129,7 @@ Les sous-sections suivantes présentent les cas d'utilisation identifiés dans l
 
 Le processus métier de gestion d'abonnement amène à considérer un cas d'utilisation de "Création ou de mise à jour d’un abonnement" avec les différents acteurs impliqués.
 
-Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un abonnement (CI-SIS-NE-CU-SA-001)
+ Figure 2 : Diagramme de cas d'utilisation : Création ou mise à jour d’un abonnement (CI-SIS-NE-CU-SA-001) 
 
 ###### Les acteurs impliqués
 
@@ -167,7 +167,7 @@ L’abonné peut être lui-même habilité à gérer son propre abonnement sans 
 
 Le processus métier de gestion d'abonnement amène à considérer un cas d'utilisation de "Suppression d’un abonnement" avec les différents acteurs impliqués.
 
-Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001)
+ Figure 3 : Diagramme de cas d'utilisation : Suppression d’un abonnement (CI-SIS-NE-CU-DA-001) 
 
 * Les acteurs impliqués 
 
@@ -198,7 +198,7 @@ L'abonné peut être lui-même habilité à gérer son propre abonnement sans pa
 
 Le processus métier de gestion d'évènements amène à considérer un cas d'utilisation d’une "Emission d'un évènement" avec les différents acteurs impliqués.
 
-Figure 4 : Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-NE-CU-EE-001)
+ Figure 4 : Diagramme de cas d'utilisation : Emission d'un évènement (CI-SIS-NE-CU-EE-001) 
 
 ###### Les acteurs impliqués
 
@@ -233,7 +233,7 @@ L'émetteur est pré-enregistré via le gestionnaire d’inscriptions.
 
 Le processus métier de gestion d'évènement amène à considérer un cas d'utilisation de "Transmission d'un ordre de notification" avec les différents acteurs impliqués.
 
-Figure 5 : Diagramme de cas d'utilisation : Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001)
+ Figure 5 : Diagramme de cas d'utilisation : Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001) 
 
 ###### Les acteurs impliqués
 
@@ -303,7 +303,7 @@ Cette section présente la modélisation du processus de la création ou de mise
 
 Le processus métier de gestion d'abonnement implique le flux d’échange de demande de création ou de mises à jour "SouscriptionAbonnement".
 
-Figure 6 : Diagramme d'activité : Création ou mise à jour d’un abonnement (CI-SIS-NE-DA-SA-001)
+ Figure 6 : Diagramme d'activité : Création ou mise à jour d’un abonnement (CI-SIS-NE-DA-SA-001) 
 
 **Acteurs**
 
@@ -328,7 +328,7 @@ Le gestionnaire d’abonnements traite la demande du souscripteur.
 
 Le processus métier de gestion d'abonnement implique le flux d’échange de demande de création ou de mise à jour : "SuppressionAbonnement".
 
-Figure 7 : Diagramme d'activité : Suppression d'un abonnement (CI-SIS-NE-DA-DA-001)
+ Figure 7 : Diagramme d'activité : Suppression d'un abonnement (CI-SIS-NE-DA-DA-001) 
 
 **Acteurs**
 
@@ -357,7 +357,7 @@ Cette section présente la modélisation du processus de l'émission d'un évèn
 
 Le processus métier de gestion d'évènement implique le flux d’échange entre l'émetteur et la plateforme ou le système de gestion : "EmissionEvenement".
 
-Figure 8 : Diagramme d'activité : Emission d'un évènement (CI-SIS-NE-DA-EE-001)
+ Figure 8 : Diagramme d'activité : Emission d'un évènement (CI-SIS-NE-DA-EE-001) 
 
 **Acteurs**
 
@@ -388,7 +388,7 @@ Cette section présente la modélisation du processus de la transmission de l'or
 
 Le processus métier de gestion de notification implique le flux d’échange : "TransmissionOrdreNotification".
 
-Figure 9 : Diagramme d'activité : Transmission d'un ordre de notification (CI-SIS-NE-DA-TO-001)
+ Figure 9 : Diagramme d'activité : Transmission d'un ordre de notification (CI-SIS-NE-DA-TO-001) 
 
 **Acteurs**
 
@@ -480,7 +480,7 @@ Les sections qui suivent présentent les diagrammes de classes de chaque flux st
 
 Ci-dessous le diagramme de classe concernant le Flux 1- SouscriptionAbonnement. Cette section contient également la description des attributs dans chaque classe identifiée.
 
-Figure 10: Diagramme de classe – SouscriptionAbonnement
+ Figure 10: Diagramme de classe – SouscriptionAbonnement 
 
 ###### Classe "Abonnement"
 
@@ -585,7 +585,7 @@ Table 20 : Attributs de la classe "Emetteur"
 
 Ci-dessous le diagramme de classe concernant le Flux 2- SuppressionAbonnement. Les sous-sections suivantes donnent des définitions aux attributs de chaque class identifiée.
 
-Figure 11: Diagramme de classe – SuppressionAbonnement
+ Figure 11: Diagramme de classe – SuppressionAbonnement 
 
 ###### Classe "SuppressionAbonnement"
 
@@ -599,7 +599,7 @@ Table 21 : Attributs de la classe "SuppressionAbonnement"
 
 Ci-dessous le diagramme de classe concernant le Flux 3- EmissionEvenement. Les sous-sections suivantes donnent des définitions aux attributs de chaque class identifiée.
 
-Figure 12: Diagramme de classe - EmissionAbonnement
+ Figure 12: Diagramme de classe - EmissionAbonnement 
 
 ###### Classe "Emetteur"
 
@@ -664,7 +664,7 @@ Table 27 : Attributs de la classe "Professionnel"
 
 Ci-dessous le diagramme de classe concernant le Flux 4-TransmissionOrdreNotification et le Flux 5- NotificationEvenement. Les sous-sections suivantes donnent des définitions aux attributs de chaque classe identifiée
 
-Figure 13: Diagramme de classe – TransmissionOrdreNotification
+ Figure 13: Diagramme de classe – TransmissionOrdreNotification 
 
 ###### Classe "Abonne"
 
