@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.Emetteur | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-Emetteur | *Version*:0.1.0 |
 | Active as of 2022-01-26 | *Computable Name*:NdE_Emetteur |
 
  
@@ -24,7 +24,7 @@ L'émetteur est un système ou sous-système qui envoie un évènement au gestio
 {
   "resourceType" : "CapabilityStatement",
   "id" : "NdE-Emetteur",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.Emetteur",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-Emetteur",
   "version" : "0.1.0",
   "name" : "NdE_Emetteur",
   "title" : "CI-SIS Notification-D-Evenements - NdE_Emetteur",
@@ -58,9 +58,6 @@ L'émetteur est un système ou sous-système qui envoie un évènement au gestio
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["application/fhir+xml", "application/fhir+json"],
-  "implementationGuide" : [
-    "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.NotificationDEvenements"
-  ],
   "rest" : [
     {
       "mode" : "client",
@@ -72,7 +69,6 @@ L'émetteur est un système ou sous-système qui envoie un évènement au gestio
       "resource" : [
         {
           "type" : "CommunicationRequest",
-          "profile" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE",
           "interaction" : [
             {
               "code" : "create"

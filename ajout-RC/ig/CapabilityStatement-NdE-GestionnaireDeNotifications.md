@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.GestionnaireDeNotifications | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDeNotifications | *Version*:0.1.0 |
 | Active as of 2022-01-26 | *Computable Name*:NdE_GestionnaireDeNotifications |
 
  
@@ -24,7 +24,7 @@ Le gestionnaire de notifications est un acteur système qui envoie les notificat
 {
   "resourceType" : "CapabilityStatement",
   "id" : "NdE-GestionnaireDeNotifications",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.GestionnaireDeNotifications",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDeNotifications",
   "version" : "0.1.0",
   "name" : "NdE_GestionnaireDeNotifications",
   "title" : "CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications",
@@ -58,9 +58,6 @@ Le gestionnaire de notifications est un acteur système qui envoie les notificat
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["application/fhir+xml", "application/fhir+json"],
-  "implementationGuide" : [
-    "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.NotificationDEvenements"
-  ],
   "rest" : [
     {
       "mode" : "server",
@@ -72,7 +69,6 @@ Le gestionnaire de notifications est un acteur système qui envoie les notificat
       "resource" : [
         {
           "type" : "CommunicationRequest",
-          "profile" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE",
           "interaction" : [
             {
               "code" : "create"

@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.GestionnaireDAbonnements | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDAbonnements | *Version*:0.1.0 |
 | Active as of 2022-01-26 | *Computable Name*:NdE_GestionnaireDAbonnements |
 
  
@@ -24,7 +24,7 @@ Le gestionnaire d’abonnements est un acteur système qui stocke les abonnement
 {
   "resourceType" : "CapabilityStatement",
   "id" : "NdE-GestionnaireDAbonnements",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.GestionnaireDAbonnements",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDAbonnements",
   "version" : "0.1.0",
   "name" : "NdE_GestionnaireDAbonnements",
   "title" : "CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements",
@@ -58,9 +58,6 @@ Le gestionnaire d’abonnements est un acteur système qui stocke les abonnement
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["application/fhir+xml", "application/fhir+json"],
-  "implementationGuide" : [
-    "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.NotificationDEvenements"
-  ],
   "rest" : [
     {
       "mode" : "client",
@@ -72,7 +69,6 @@ Le gestionnaire d’abonnements est un acteur système qui stocke les abonnement
       "resource" : [
         {
           "type" : "CommunicationRequest",
-          "profile" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_NotificationRequestNdE",
           "interaction" : [
             {
               "code" : "create"
@@ -91,7 +87,6 @@ Le gestionnaire d’abonnements est un acteur système qui stocke les abonnement
       "resource" : [
         {
           "type" : "Subscription",
-          "profile" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE",
           "interaction" : [
             {
               "code" : "create"
@@ -106,7 +101,6 @@ Le gestionnaire d’abonnements est un acteur système qui stocke les abonnement
         },
         {
           "type" : "CommunicationRequest",
-          "profile" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_EventDeclarationNdE",
           "interaction" : [
             {
               "code" : "create"

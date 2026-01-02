@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.Souscripteur | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-Souscripteur | *Version*:0.1.0 |
 | Active as of 2022-01-26 | *Computable Name*:NdE_Souscripteur |
 
  
@@ -24,7 +24,7 @@ Un souscripteur est la personne (physique ou morale) qui est habilitée à crée
 {
   "resourceType" : "CapabilityStatement",
   "id" : "NdE-Souscripteur",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.Souscripteur",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-Souscripteur",
   "version" : "0.1.0",
   "name" : "NdE_Souscripteur",
   "title" : "CI-SIS Notification-D-Evenements - NdE_Souscripteur",
@@ -58,9 +58,6 @@ Un souscripteur est la personne (physique ou morale) qui est habilitée à crée
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["application/fhir+xml", "application/fhir+json"],
-  "implementationGuide" : [
-    "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.NotificationDEvenements"
-  ],
   "rest" : [
     {
       "mode" : "client",
@@ -72,7 +69,6 @@ Un souscripteur est la personne (physique ou morale) qui est habilitée à crée
       "resource" : [
         {
           "type" : "Subscription",
-          "profile" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/NdE_SubscriptionNdE",
           "interaction" : [
             {
               "code" : "create"

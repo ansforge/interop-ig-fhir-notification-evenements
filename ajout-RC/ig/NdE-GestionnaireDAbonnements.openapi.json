@@ -14,7 +14,7 @@
     }
   },
   "externalDocs": {
-    "url": "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/NdE.GestionnaireDAbonnements",
+    "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDAbonnements",
     "description": "FHIR CapabilityStatement"
   },
   "paths": {
