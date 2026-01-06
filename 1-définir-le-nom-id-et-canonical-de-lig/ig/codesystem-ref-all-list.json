@@ -99,7 +99,7 @@
       "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CodeSystem/competence-code-system",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "CompetenceCS",
@@ -110,7 +110,7 @@
       "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set"
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CodeSystem/type-carte-code-system",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "TypeCarteCS",
