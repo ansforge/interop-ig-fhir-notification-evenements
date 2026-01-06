@@ -6,8 +6,6 @@
 
 ## Flux 3:EmissionEvenement
 
-### Construction des flux
-
 Le **Flux 3 – EmissionEvenement** contient les informations relatives à un évènement qui a eu lieu.
 
 La première étape de la construction du flux 3 d’émission d’un évènement consiste à organiser son contenu. Le corps de la requête HTTP est constitué de la ressource « CommunicationRequest » (profil EventDeclarationNdE) contenant les ressources suivantes (utilisation de l’élément **contained**):

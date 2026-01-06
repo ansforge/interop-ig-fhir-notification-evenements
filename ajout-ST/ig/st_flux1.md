@@ -6,8 +6,6 @@
 
 ## Flux 1:SouscriptionAbonnement
 
-### Construction des flux
-
 **Flux 1 – SouscriptionAbonnement** contient les informations relatives à la souscription d’un abonnement pour un type d’évènement déterminé ou la mise à jour de celui-ci.
 
 La première étape de la construction du flux 1 de souscription d’un abonnement consiste à organiser son contenu. Le corps de la requête HTTP est constitué de la ressource « Subscription » contenant les ressources suivantes (utilisation de l’élément **contained**):

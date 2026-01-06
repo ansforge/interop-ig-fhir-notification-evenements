@@ -6,8 +6,6 @@
 
 ## Flux 2:SuppressionAbonnement
 
-### Construction des flux
-
 La demande de suppression d’un abonnement est réalisée en émettant une requête HTTP DELETE au gestionnaire d’abonnements. L’identifiant de la ressource Subscription (id) est utilisé pour permettre au Gestionnaire d’abonnements d’identifier l’abonnement à supprimer.
 
 La requête HTTP DELETE est ainsi formée :

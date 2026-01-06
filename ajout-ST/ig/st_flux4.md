@@ -6,8 +6,6 @@
 
 ## Flux 4:TransmissionOrdreNotification
 
-### Construction des flux
-
 Le **Flux 4 – TransmissionOrdreNotification** contient les informations nécessaires au gestionnaire de notifications pour émettre une notification à l’abonné.
 
 La première étape de la construction du flux 4 de transmission d’un ordre de notification consiste à organiser son contenu. Le corps de la requête HTTP est constitué de la ressource « CommunicationRequest » (profil NotificationRequestNdE) contenant les ressources suivantes (utilisation de l’élément **contained**):
