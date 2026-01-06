@@ -1,4 +1,3 @@
-### Construction des flux
 
 **Flux 1 – SouscriptionAbonnement** contient les informations relatives à la souscription d’un
 abonnement pour un type d’évènement déterminé ou la mise à jour de

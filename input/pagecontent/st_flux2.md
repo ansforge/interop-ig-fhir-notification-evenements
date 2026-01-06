@@ -1,4 +1,3 @@
-### Construction des flux
 
 La demande de suppression d’un abonnement est réalisée en émettant une
 requête HTTP DELETE au gestionnaire d’abonnements. L’identifiant de la

@@ -1,4 +1,3 @@
-### Construction des flux
 
 Le **Flux 4 – TransmissionOrdreNotification** contient les informations nécessaires au gestionnaire de
 notifications pour émettre une notification à l’abonné.

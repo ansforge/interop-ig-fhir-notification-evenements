@@ -1,4 +1,3 @@
-### Construction des flux
 
 Le **Flux 3 – EmissionEvenement** contient les informations relatives à un évènement qui a eu
 lieu.
