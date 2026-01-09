@@ -115,7 +115,7 @@ Le but de cette étape est de définir les processus métier identifiés dans le
 
 - **Abonnement**: un abonnement porte sur les types d'évènements qui intéressent l’abonné et doivent faire l’objet d’une notification. Un abonnement est défini par l’identification de l’abonné, le médium de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.
 
-- **Média de notification**: un média de notification est le moyen de communication par lequel la notification parvient à l’abonné (ex. sms, mail, pop-up dans une application…).v
+- **Média de notification**: un média de notification est le moyen de communication par lequel la notification parvient à l’abonné (ex. sms, mail, pop-up dans une application…).
 
 - **Professionnel**: un professionnel est une personne qui participe à la prise en charge d’une personne que ce soit au niveau sanitaire, médico-administratif, médico-social et social.
 
@@ -138,7 +138,7 @@ Le processus métier de gestion d'abonnement amène à considérer un cas d'util
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. |
 | Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
 
-Table 1: Table des acteurs impliqués dans le cas d’utilisation Création ou mise à jour d’un abonnement
+ Table 1: Table des acteurs impliqués dans le cas d’utilisation Création ou mise à jour d’un abonnement 
 
 * Détails du cas d'utilisation 
 
@@ -207,7 +207,7 @@ Le processus métier de gestion d'évènements amène à considérer un cas d'ut
 | Emetteur | L'émetteur est une personne morale ou physique qui envoie un évènement au gestionnaire d'abonnements soit de manière automatique, soit manuellement. L'émetteur est enregistré et connu par le système qui réceptionne et traite les évènements. |
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements joue aussi le rôle de gestionnaire d’évènements. C’est un acteur système qui enregistre tous les événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
 
-Table 2: Table des acteurs impliqués dans le cas d’utilisation Emission d’un évènement
+ Table 2: Table des acteurs impliqués dans le cas d’utilisation Emission d’un évènement 
 
 ###### Détails du cas d'utilisation
 
@@ -243,7 +243,7 @@ Le processus métier de gestion d'évènement amène à considérer un cas d'uti
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. Il joue aussi le rôle d’un gestionnaire d’évènements et enregistre tous les événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
 | Gestionnaire de notifications | Le gestionnaire de notifications est un acteur système qui envoie les notifications aux abonnés concernés en fonction des informations recueillies depuis les gestionnaires d’abonnements. |
 
-Table 3: Table des acteurs impliqués dans le cas d’utilisation Transmission d’un ordre de notification
+ Table 3: Table des acteurs impliqués dans le cas d’utilisation Transmission d’un ordre de notification 
 
 ###### Les détails du cas d'utilisation
 
@@ -312,7 +312,7 @@ Le processus métier de gestion d'abonnement implique le flux d’échange de de
 | Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui stocke les abonnements et les paramètres d’usage des notifications d’événements. |
 
-Table 4 : Liste des acteurs
+ Table 4 : Liste des acteurs 
 
 **Actions**
 
@@ -337,7 +337,7 @@ Le processus métier de gestion d'abonnement implique le flux d’échange de de
 | Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. |
 
-Table 5 : Liste des acteurs
+ Table 5 : Liste des acteurs 
 
 **Actions**
 
@@ -366,7 +366,7 @@ Le processus métier de gestion d'évènement implique le flux d’échange entr
 | Emetteur | L'émetteur est une personne morale ou physique qui envoie un évènement au gestionnaire d’abonnements soit de manière automatique, soit manuellement. L'Emetteur est enregistré et donc connu par le système qui réceptionne et traite les évènements. |
 | Gestionnaire d’abonnements | Le gestionnaire d’abonnements joue aussi le rôle de gestionnaire d’événements. C’est un acteur système qui enregistre l’ensemble des événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
 
-Table 6 : Liste des acteurs
+ Table 6 : Liste des acteurs 
 
 **Actions**
 
@@ -398,7 +398,7 @@ Le processus métier de gestion de notification implique le flux d’échange : 
 | Gestionnaire de notifications | Le gestionnaire de notifications est un acteur système qui envoie les notifications aux abonnés concernés en fonction des informations recueillies depuis les gestionnaires d’abonnements et d’événements. |
 | Abonné | Un abonné est une personne destinatrice des notifications d'évènements dans le cadre d’un abonnement. Un abonné peut être un professionnel, une structure, la personne prise en charge ou une tierce personne autorisée à recevoir des notifications concernant la personne prise en charge. |
 
-Table 7 : Liste des acteurs
+ Table 7 : Liste des acteurs 
 
 **Actions**
 
@@ -430,7 +430,7 @@ Les flux échangés entre les acteurs ont été identifiés à l'étape 3. Cette
 | Flux4 | TransmissionOrdreNotification | Gestionnaire d’abonnements | Gestionnaire denotifications | **Flux structuré** |
 | Flux5 | NotificationEvenement | Gestionnaire denotifications | Abonné | **Flux structuré** |
 
-Table 8 : Liste des flux identifiés
+ Table 8 : Liste des flux identifiés 
 
 #### Etape 5: Identification des informations véhiculées dans les flux
 
@@ -470,7 +470,7 @@ La Table ci-dessous liste les objets « métier » identifiés et leurs corres
 | **AbonnéPP** | PersonnePhysique | Oui |
 | **AbonnéPM** | - | - |
 
-Table 10 : Liste des correspondances entre les concepts « métier » identifiés et les concepts du MOS
+ Table 10 : Liste des correspondances entre les concepts « métier » identifiés et les concepts du MOS 
 
 A noter que les objets identifiés qui ne se trouvent pas dans le MOS vont faire l’objet d’une demande d’évolution du MOS ou rester spécifique au projet.
 
@@ -492,7 +492,7 @@ Ci-dessous le diagramme de classe concernant le Flux 1- SouscriptionAbonnement. 
 | validiteFin : [1..1] DateHeure | Date de fin de l’abonnement. | Oui |
 | dateDemande : [0..1] DateHeure | Date de la demande de création, modification ou suppression de l’abonnement. | Non |
 
-Table 11 : Attributs de la classe "Abonnement"
+ Table 11 : Attributs de la classe "Abonnement" 
 
 ###### Classe "Abonne"
 
@@ -500,7 +500,7 @@ Table 11 : Attributs de la classe "Abonnement"
 | :--- | :--- | :--- |
 | idAbonne : [1..1] Identifiant | Identifiant unique de l’abonné. | Oui |
 
-Table 12 : Attributs de la classe "Abonné"
+ Table 12 : Attributs de la classe "Abonné" 
 
 ###### Classe "PersonnePhysique"
 
@@ -509,7 +509,7 @@ Table 12 : Attributs de la classe "Abonné"
 | nomFamille : [0..1] Texte | Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.Ref.: Service-public.frSynonymes : nom patronymique, nom de naissance. | Non |
 | prenomUsuel: [0..1] Texte | Le prénom usuel est un des prénoms inscrit dans l'acte de naissance. | Non |
 
-Table 13 : Attributs de la classe "PersonnePhysique"
+ Table 13 : Attributs de la classe "PersonnePhysique" 
 
 ###### Classe "Evenement"
 
@@ -517,7 +517,7 @@ Table 13 : Attributs de la classe "PersonnePhysique"
 | :--- | :--- | :--- |
 | typeEvenement : [1..1] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
 
-Table 14 : Attributs de la classe "Evènement"
+ Table 14 : Attributs de la classe "Evènement" 
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -527,7 +527,7 @@ Table 14 : Attributs de la classe "Evènement"
 | adresse : [0..*] Adresse | Adresse(s) de correspondance permettant de contacter la personne prise en charge :- lorsque les structures ne sont pas identifiées : cas des remplaçants ou des professionnels venant de s’inscrire mais non encore installés;- hors de leurs lieux d’exercice, s’ils le souhaitent.Remarque : La première occurrence correspond aux coordonnées de correspondance du RPPS. | Non |
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.). | Non |
 
-Table 15: Attributs de la classe "PersonnePriseEnCharge"
+ Table 15: Attributs de la classe "PersonnePriseEnCharge" 
 
 ###### Classe "Professionnel"
 
@@ -537,7 +537,7 @@ Table 15: Attributs de la classe "PersonnePriseEnCharge"
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication du professionnel (numéro de téléphone, adresse email, URL, etc.). | Non |
 | adresse : [0..*] Adresse | Adresse(s) de correspondance du professionnel. | Non |
 
-Table 16 : Attributs de la classe "Professionnel"
+ Table 16 : Attributs de la classe "Professionnel" 
 
 ###### Classe "AbonnePP"
 
@@ -548,7 +548,7 @@ Table 16 : Attributs de la classe "Professionnel"
 | **addresse : [0..*] Addresse** | Point(s) de contact de la personne physique abonnée. | Non |
 | **telecommunication: [1..*] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 
-Table 17 : Attributs de la classe "AbonnePP"
+ Table 17 : Attributs de la classe "AbonnePP" 
 
 ###### Classe "AbonnePM"
 
@@ -560,7 +560,7 @@ Table 17 : Attributs de la classe "AbonnePP"
 | **telecommunication: [1..*] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 | **nom : [0..1] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
 
-Table 18 : Attributs de la classe "AbonnePM"
+ Table 18 : Attributs de la classe "AbonnePM" 
 
 ###### Classe "EntiteJuridique"
 
@@ -571,7 +571,7 @@ Table 18 : Attributs de la classe "AbonnePM"
 | telecommunication [0..*] telecommunication | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Non |
 | raisonSociale : [0..1] Texte | Nom de l’entité juridique. | Non |
 
-Table 19 : Attributs de la classe "EntiteJuridique"
+ Table 19 : Attributs de la classe "EntiteJuridique" 
 
 ###### Classe "Emetteur"
 
@@ -579,7 +579,7 @@ Table 19 : Attributs de la classe "EntiteJuridique"
 | :--- | :--- | :--- |
 | idEmetteur : [1..1] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Oui |
 
-Table 20 : Attributs de la classe "Emetteur"
+ Table 20 : Attributs de la classe "Emetteur" 
 
 ##### Flux 2 – SuppressionAbonnement
 
@@ -593,7 +593,7 @@ Ci-dessous le diagramme de classe concernant le Flux 2- SuppressionAbonnement. L
 | :--- | :--- | :--- |
 | idAbonnement : [1..1] Identifiant | Identifiant unique de l’abonnement. | Oui |
 
-Table 21 : Attributs de la classe "SuppressionAbonnement"
+ Table 21 : Attributs de la classe "SuppressionAbonnement" 
 
 ##### Flux 3 – EmissionEvenement
 
@@ -607,7 +607,7 @@ Ci-dessous le diagramme de classe concernant le Flux 3- EmissionEvenement. Les s
 | :--- | :--- | :--- |
 | idEmetteur : [1..1] Identifiant | Identifiant unique de l’émetteur. | Oui |
 
-Table 22 : Attributs de la classe "Emetteur"
+ Table 22 : Attributs de la classe "Emetteur" 
 
 ###### Classe "Evenement"
 
@@ -618,7 +618,7 @@ Table 22 : Attributs de la classe "Emetteur"
 | occurence : [1..1] DateHeure | Date et heure à laquelle l’évènement a eu lieu. | Oui |
 | declaration : [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non (Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.) |
 
-Table 23 : Attributs de la classe "Evènement"
+ Table 23 : Attributs de la classe "Evènement" 
 
 ###### Classe "PersonnePhysique"
 
@@ -627,7 +627,7 @@ Table 23 : Attributs de la classe "Evènement"
 | nomFamille : [0..1] Texte | Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.Ref.: Service-public.frSynonymes : nom patronymique, nom de naissance. | Non |
 | prenomUsuel : [0..1] Texte | Le prénom usuel est un des prénoms inscrit dans l'acte de naissance. | Non |
 
-Table 24 : Attributs de la classe "PersonnePhysique"
+ Table 24 : Attributs de la classe "PersonnePhysique" 
 
 ###### Classe "EntiteJuridique"
 
@@ -638,7 +638,7 @@ Table 24 : Attributs de la classe "PersonnePhysique"
 | telecommunication [0..*] telecommunication | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Non |
 | raisonSociale : [0..1] Texte | Nom de l’entité juridique. | Non |
 
-Table 25 : Attributs de la classe "EntiteJuridique"
+ Table 25 : Attributs de la classe "EntiteJuridique" 
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -648,7 +648,7 @@ Table 25 : Attributs de la classe "EntiteJuridique"
 | adresse : [0..*] Adresse | Adresse(s) de correspondance permettant de contacter la personne prise en charge :- lorsque les structures ne sont pas identifiées : cas des remplaçants ou des professionnels venant de s’inscrire mais non encore installés;- hors de leurs lieux d’exercice, s’ils le souhaitent.Remarque : La première occurrence correspond aux coordonnées de correspondance du RPPS. | Non |
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.). | Non |
 
-Table 26 : Attributs de la classe "PersonnePriseEnCharge"
+ Table 26 : Attributs de la classe "PersonnePriseEnCharge" 
 
 ###### Classe "Professionnel"
 
@@ -658,7 +658,7 @@ Table 26 : Attributs de la classe "PersonnePriseEnCharge"
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication du professionnel (numéro de téléphone, adresse email, URL, etc.). | Non |
 | adresse : [0..*] Adresse | Adresse(s) de correspondance du professionnel. | Non |
 
-Table 27 : Attributs de la classe "Professionnel"
+ Table 27 : Attributs de la classe "Professionnel" 
 
 ##### Flux 4 – TransmissionOrdreNotification
 
@@ -672,7 +672,7 @@ Ci-dessous le diagramme de classe concernant le Flux 4-TransmissionOrdreNotifica
 | :--- | :--- | :--- |
 | idAbonne : [1..1] Identifiant | Identifiant unique de l’abonné. | Oui |
 
-Table 28 : Attributs de la classe "Abonné"
+ Table 28 : Attributs de la classe "Abonné" 
 
 ###### Classe "Evenement"
 
@@ -683,7 +683,7 @@ Table 28 : Attributs de la classe "Abonné"
 | occurrence : [0..1] DateHeure | Date à laquelle l’évènement a eu lieu. | Non |
 | declaration : [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non (Cette information peut être générée automatiquement par le système et ne circule pas dans le flux.) |
 
-Table 29 : Attributs de la classe "Evènement"
+ Table 29 : Attributs de la classe "Evènement" 
 
 ###### Classe "PersonnePhysique"
 
@@ -692,7 +692,7 @@ Table 29 : Attributs de la classe "Evènement"
 | nomFamille : [0..1] Texte | Toute personne possède un nom de famille (appelé auparavant nom patronymique). Ce nom figure sur l'acte de naissance. Il peut s'agir par exemple du nom du père.Ref.: Service-public.frSynonymes : nom patronymique, nom de naissance. | Non |
 | prenomUsuel : [0..1] Texte | Le prénom usuel est un des prénoms inscrit dans l'acte de naissance. | Non |
 
-Table 30 : Attributs de la classe "PersonnePhysique"
+ Table 30 : Attributs de la classe "PersonnePhysique" 
 
 ###### Classe "Professionnel"
 
@@ -701,7 +701,7 @@ Table 30 : Attributs de la classe "PersonnePhysique"
 | idPP : [0..1] Identifiant | Identifiant national de la personne physique:** Pour les professionnels: N° RPPS ou ADELI** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure** Pour les étudiants, l'identifiant est le numéro SIRIUS ou le numéro Etudiant (identifiant ordinal dont les règles de génération sont propres à chaque ordre). | Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur de l’identifiant du professionnel (NIR, INS-C, etc.).) |
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication du professionnel (numéro de téléphone, adresse email, URL, etc.). | Non |
 
-Table 31 : Attributs de la classe "Professionnel"
+ Table 31 : Attributs de la classe "Professionnel" 
 
 ###### Classe "Abonnement"
 
@@ -710,7 +710,7 @@ Table 31 : Attributs de la classe "Professionnel"
 | idAbonnement : [1..1] Identifiant | Identifiant unique de l’abonnement. | Oui |
 | mediaNotification : [1..1] Code | Media de diffusion de la notification (sms, mail, etc.). | Oui |
 
-Table 32 : Attributs de la classe "Abonnement"
+ Table 32 : Attributs de la classe "Abonnement" 
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -719,7 +719,7 @@ Table 32 : Attributs de la classe "Abonnement"
 | idPersonnePriseEnCharge : [0..1] Identifiant | Identifiant(s) de la personne prise en charge (identifiants de santé, identifiants locaux, etc.). | Non (Si la personne prise en charge est un patient, ce champ contiendra l’identifiant du patient.) |
 | telecommunication : [0..*] Telecommunication | Adresse(s) de télécommunication de la personne prise en charge qui est abonnée aux notifications (numéro de téléphone, adresse email, URL, etc.). | Non |
 
-Table 33 : Attributs de la classe "PersonnePriseEnCharge"
+ Table 33 : Attributs de la classe "PersonnePriseEnCharge" 
 
 ###### Classe "EntiteJuridique"
 
@@ -729,7 +729,7 @@ Table 33 : Attributs de la classe "PersonnePriseEnCharge"
 | telecommunication [0..*] telecommunication | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Non |
 | raisonSociale : [0..1] Texte | Nom de l’entité juridique. | Non |
 
-Table 34 : Attributs de la classe "EntiteJuridique"
+ Table 34 : Attributs de la classe "EntiteJuridique" 
 
 ###### Classe "Emetteur"
 
@@ -738,7 +738,7 @@ Table 34 : Attributs de la classe "EntiteJuridique"
 | idEmetteur : [0..1] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Non |
 | dateDeclaration : [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non |
 
-Table 35 : Attributs de la classe "Emetteur"
+ Table 35 : Attributs de la classe "Emetteur" 
 
 ###### Classe "AbonnePP"
 
@@ -748,7 +748,7 @@ Table 35 : Attributs de la classe "Emetteur"
 | **typeAbonnePP : [0..1] Code** | Type de la personne physique abonnée (professionnel, personne prise en charge, personne tierce, etc.). | Non |
 | **telecommunication: [1..*] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 
-Table 36 : Attributs de la classe "AbonnePP"
+ Table 36 : Attributs de la classe "AbonnePP" 
 
 ###### Classe "AbonnePM"
 
@@ -759,7 +759,7 @@ Table 36 : Attributs de la classe "AbonnePP"
 | **telecommunication: [1..*] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 | **nom : [0..1] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
 
-Table 37 : Attributs de la classe "AbonnePM"
+ Table 37 : Attributs de la classe "AbonnePM" 
 
 ##### Flux 5 – NotificationEvenement
 
