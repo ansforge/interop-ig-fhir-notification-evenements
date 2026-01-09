@@ -219,7 +219,7 @@ période de validité de l’abonnement.
 
 \- **Média de notification**: un média de notification est le moyen de
 communication par lequel la notification parvient à l’abonné (ex. sms,
-mail, pop-up dans une application…).v
+mail, pop-up dans une application…).
 
 \- **Professionnel**: un professionnel est une personne qui participe à
 la prise en charge d’une personne que ce soit au niveau sanitaire,
@@ -260,8 +260,10 @@ abonnement (CI-SIS-NE-CU-SA-001)
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. |
 | Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
 
+<p style="text-align: center;">
 Table 1: Table des acteurs impliqués dans le cas d’utilisation Création
 ou mise à jour d’un abonnement
+</p>
 
 - Détails du cas d'utilisation <!-- Problème d'affichage dans l'IG : initialement #######-->
 
@@ -367,8 +369,10 @@ acteurs impliqués.
 | Emetteur | L'émetteur est une personne morale ou physique qui envoie un évènement au gestionnaire d'abonnements soit de manière automatique, soit manuellement. L'émetteur est enregistré et connu par le système qui réceptionne et traite les évènements. |
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements joue aussi le rôle de gestionnaire d’évènements. C’est un acteur système qui enregistre tous les événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
 
+<p style="text-align: center;">
 Table 2: Table des acteurs impliqués dans le cas d’utilisation Emission
 d’un évènement
+</p>
 
 ###### Détails du cas d'utilisation
 
@@ -423,8 +427,10 @@ notification (CI-SIS-NE-CU-TO-001)
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. Il joue aussi le rôle d’un gestionnaire d’évènements et enregistre tous les événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
 | Gestionnaire de notifications | Le gestionnaire de notifications est un acteur système qui envoie les notifications aux abonnés concernés en fonction des informations recueillies depuis les gestionnaires d’abonnements. |
 
+<p style="text-align: center;">
 Table 3: Table des acteurs impliqués dans le cas d’utilisation
 Transmission d’un ordre de notification
+</p>
 
 ###### Les détails du cas d'utilisation
 
@@ -531,7 +537,9 @@ abonnement (CI-SIS-NE-DA-SA-001)
 | Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui stocke les abonnements et les paramètres d’usage des notifications d’événements. |
 
+<p style="text-align: center;">
 Table 4 : Liste des acteurs
+</p>
 
 **Actions**
 
@@ -570,7 +578,9 @@ Figure 7 : Diagramme d'activité : Suppression d'un abonnement
 | Souscripteur | Un souscripteur est la personne (physique ou morale) qui est habilitée à créer, modifier ou supprimer un abonnement au service de notification d’événements. Un souscripteur peut être aussi l’abonné lui-même. |
 | Gestionnaire d'abonnements | Le gestionnaire d’abonnements est un acteur système qui administre les abonnements et les paramètres d’usage des notifications d’événements. |
 
+<p style="text-align: center;">
 Table 5 : Liste des acteurs
+</p>
 
 **Actions**
 
@@ -615,7 +625,9 @@ Figure 8 : Diagramme d'activité : Emission d'un évènement
 | Emetteur | L'émetteur est une personne morale ou physique qui envoie un évènement au gestionnaire d’abonnements soit de manière automatique, soit manuellement. L'Emetteur est enregistré et donc connu par le système qui réceptionne et traite les évènements. |
 | Gestionnaire d’abonnements | Le gestionnaire d’abonnements joue aussi le rôle de gestionnaire d’événements. C’est un acteur système qui enregistre l’ensemble des événements susceptibles de conduire à des notifications et transmet l’ordre de notification au gestionnaire de notifications. |
 
+<p style="text-align: center;">
 Table 6 : Liste des acteurs
+</p>
 
 **Actions**
 
@@ -664,7 +676,9 @@ notification (CI-SIS-NE-DA-TO-001)
 | Gestionnaire de notifications | Le gestionnaire de notifications est un acteur système qui envoie les notifications aux abonnés concernés en fonction des informations recueillies depuis les gestionnaires d’abonnements et d’événements. |
 | Abonné | Un abonné est une personne destinatrice des notifications d'évènements dans le cadre d’un abonnement. Un abonné peut être un professionnel, une structure, la personne prise en charge ou une tierce personne autorisée à recevoir des notifications concernant la personne prise en charge. |
 
+<p style="text-align: center;">
 Table 7 : Liste des acteurs
+</p>
 
 **Actions**
 
@@ -758,7 +772,9 @@ l'étape précédente et présenté ci-dessous.
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 8 : Liste des flux identifiés
+</p>
 
 #### Etape 5: Identification des informations véhiculées dans les flux
 
@@ -847,7 +863,6 @@ modèle du flux</th>
 <td>-</td>
 <td>-</td>
 </tr>
-</tr>
 <tr>
 <td><strong>Evènement</strong></td>
 <td>Evènement</td>
@@ -866,8 +881,10 @@ modèle du flux</th>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 10 : Liste des correspondances entre les concepts « métier »
 identifiés et les concepts du MOS
+</p>
 
 A noter que les objets identifiés qui ne se trouvent pas dans le MOS
 vont faire l’objet d’une demande d’évolution du MOS ou rester spécifique
@@ -935,7 +952,9 @@ Figure 10: Diagramme de classe – SouscriptionAbonnement
   </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 11 : Attributs de la classe "Abonnement"
+</p>
 
 ###### Classe "Abonne"
 
@@ -943,7 +962,9 @@ Table 11 : Attributs de la classe "Abonnement"
 |----|----|----|
 | idAbonne : \[1..1\] Identifiant | Identifiant unique de l’abonné. | Oui |
 
+<p style="text-align: center;">
 Table 12 : Attributs de la classe "Abonné"
+</P>
 
 ###### Classe "PersonnePhysique"
 
@@ -979,7 +1000,9 @@ naissance.</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 13 : Attributs de la classe "PersonnePhysique"
+</p>
 
 ###### Classe "Evenement"
 
@@ -987,7 +1010,9 @@ Table 13 : Attributs de la classe "PersonnePhysique"
 |----|----|----|
 | typeEvenement : \[1..1\] Code | Type de l’évènement (dépôt de document, sortie d’hôpital, etc.). | Oui |
 
+<p style="text-align: center;">
 Table 14 : Attributs de la classe "Evènement"
+</p>
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -1032,7 +1057,9 @@ correspondance du RPPS.</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 15: Attributs de la classe "PersonnePriseEnCharge"
+</p>
 
 ###### Classe "Professionnel"
 
@@ -1076,7 +1103,9 @@ téléphone, adresse email, URL, etc.).</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 16 : Attributs de la classe "Professionnel"
+</p>
 
 ###### Classe "AbonnePP"
 
@@ -1087,7 +1116,9 @@ Table 16 : Attributs de la classe "Professionnel"
 | **addresse : [0..\*\] Addresse** | Point(s) de contact de la personne physique abonnée. | Non |
 | **telecommunication: [1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 
+<p style="text-align: center;">
 Table 17 : Attributs de la classe "AbonnePP"
+</P>
 
 ###### Classe "AbonnePM"
 
@@ -1099,7 +1130,9 @@ Table 17 : Attributs de la classe "AbonnePP"
 | **telecommunication: [1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 | **nom : [0..1] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
 
+<p style="text-align: center;">
 Table 18 : Attributs de la classe "AbonnePM"
+</p>
 
 ###### Classe "EntiteJuridique"
 
@@ -1150,7 +1183,9 @@ URL, etc.).</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 19 : Attributs de la classe "EntiteJuridique"
+</p>
 
 ###### Classe "Emetteur"
 
@@ -1158,7 +1193,9 @@ Table 19 : Attributs de la classe "EntiteJuridique"
 |----|----|----|
 | idEmetteur : [1..1] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Oui |
 
+<p style="text-align: center;">
 Table 20 : Attributs de la classe "Emetteur"
+</p>
 
 ##### Flux 2 – SuppressionAbonnement
 
@@ -1183,7 +1220,9 @@ Figure 11: Diagramme de classe – SuppressionAbonnement
 |----|----|----|
 | idAbonnement : [1..1] Identifiant | Identifiant unique de l’abonnement. | Oui |
 
+<p style="text-align: center;">
 Table 21 : Attributs de la classe "SuppressionAbonnement"
+</p>
 
 ##### Flux 3 – EmissionEvenement
 
@@ -1208,7 +1247,9 @@ Figure 12: Diagramme de classe - EmissionAbonnement
 |----|----|----|
 | idEmetteur : [1..1] Identifiant | Identifiant unique de l’émetteur. | Oui |
 
+<p style="text-align: center;">
 Table 22 : Attributs de la classe "Emetteur"
+</p>
 
 ###### Classe "Evenement"
 
@@ -1244,7 +1285,9 @@ Table 22 : Attributs de la classe "Emetteur"
   </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 23 : Attributs de la classe "Evènement"
+</p>
 
 ###### Classe "PersonnePhysique"
 
@@ -1280,7 +1323,9 @@ naissance.</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 24 : Attributs de la classe "PersonnePhysique"
+</p>
 
 ###### Classe "EntiteJuridique"
 
@@ -1331,7 +1376,9 @@ URL, etc.).</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 25 : Attributs de la classe "EntiteJuridique"
+</p>
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -1375,7 +1422,9 @@ correspondance du RPPS.</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 26 : Attributs de la classe "PersonnePriseEnCharge"
+</p>
 
 ###### Classe "Professionnel"
 
@@ -1419,7 +1468,9 @@ téléphone, adresse email, URL, etc.).</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 27 : Attributs de la classe "Professionnel"
+</p>
 
 ##### Flux 4 – TransmissionOrdreNotification
 
@@ -1445,7 +1496,9 @@ Figure 13: Diagramme de classe – TransmissionOrdreNotification
 |----|----|----|
 | idAbonne : [1..1] Identifiant | Identifiant unique de l’abonné. | Oui |
 
+<p style="text-align: center;">
 Table 28 : Attributs de la classe "Abonné"
+</p>
 
 ###### Classe "Evenement"
 
@@ -1481,7 +1534,9 @@ Table 28 : Attributs de la classe "Abonné"
   </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 29 : Attributs de la classe "Evènement"
+</p>
 
 ###### Classe "PersonnePhysique"
 
@@ -1517,7 +1572,9 @@ naissance.</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 30 : Attributs de la classe "PersonnePhysique"
+</p>
 
 ###### Classe "Professionnel"
 
@@ -1556,7 +1613,9 @@ téléphone, adresse email, URL, etc.).</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 31 : Attributs de la classe "Professionnel"
+</p>
 
 ###### Classe "Abonnement"
 
@@ -1565,7 +1624,9 @@ Table 31 : Attributs de la classe "Professionnel"
 | idAbonnement : [1..1] Identifiant | Identifiant unique de l’abonnement. | Oui |
 | mediaNotification : [1..1] Code | Media de diffusion de la notification (sms, mail, etc.). | Oui |
 
+<p style="text-align: center;">
 Table 32 : Attributs de la classe "Abonnement"
+</p>
 
 ###### Classe "PersonnePriseEnCharge"
 
@@ -1591,7 +1652,9 @@ Table 32 : Attributs de la classe "Abonnement"
   </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 33 : Attributs de la classe "PersonnePriseEnCharge"
+</p>
 
 ###### Classe "EntiteJuridique"
 
@@ -1637,7 +1700,9 @@ URL, etc.).</td>
 </tbody>
 </table>
 
+<p style="text-align: center;">
 Table 34 : Attributs de la classe "EntiteJuridique"
+</p>
 
 ###### Classe "Emetteur"
 
@@ -1646,7 +1711,9 @@ Table 34 : Attributs de la classe "EntiteJuridique"
 | idEmetteur : [0..1] Identifiant | Identifiant(s) de l’émetteur de l’évènement. | Non |
 | dateDeclaration : [0..1] DateHeure | Date et heure de la transmission de l’évènement. | Non |
 
+<p style="text-align: center;">
 Table 35 : Attributs de la classe "Emetteur"
+</p>
 
 ###### Classe "AbonnePP"
 
@@ -1656,7 +1723,9 @@ Table 35 : Attributs de la classe "Emetteur"
 | **typeAbonnePP : [0..1] Code** | Type de la personne physique abonnée (professionnel, personne prise en charge, personne tierce, etc.). | Non |
 | **telecommunication: [1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 
+<p style="text-align: center;">
 Table 36 : Attributs de la classe "AbonnePP"
+</p>
 
 ###### Classe "AbonnePM"
 
@@ -1667,7 +1736,9 @@ Table 36 : Attributs de la classe "AbonnePP"
 | **telecommunication: [1..\*\] telecommunication** | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Oui |
 | **nom : [0..1] Texte** | Nom sous lequel la personne morale exerce son activité. | Non |
 
+<p style="text-align: center;">
 Table 37 : Attributs de la classe "AbonnePM"
+</p>
 
 ##### Flux 5 – NotificationEvenement
 
