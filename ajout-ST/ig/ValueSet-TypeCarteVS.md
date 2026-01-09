@@ -50,7 +50,7 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
   "name" : "TypeCarteVS",
   "title" : "Type Carte Value Set",
   "status" : "draft",
-  "date" : "2026-01-09T09:46:42+00:00",
+  "date" : "2026-01-09T15:11:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

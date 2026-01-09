@@ -40,7 +40,7 @@ HL7 France a profilé certaines ressources FHIR. Ces profils sont utilisés dans
 
 **_Note éditoriale :_**
 
-Dans l’ensemble de ce document, lorsqu’il est fait référence aux ressources Patient, Practitioner, RelatedPerson et Organization, il est entendu que le profil français (respectivement, FrPatient, FrPractioner, FrRelatedPerson et FrOrganization) doit être utilisé.
+Dans l’ensemble de ce document, lorsqu’il est fait référence aux ressources Patient, Practitioner, RelatedPerson et Organization, il est entendu que le profil français (respectivement, FRCorePatientProfile, FRCorePatientINSProfile, FRCorePractitionerProfile, FRCoreRelatedPersonProfile et FRCoreOrganizationProfile) doit être utilisé.
 
 #### Utilisation
 
