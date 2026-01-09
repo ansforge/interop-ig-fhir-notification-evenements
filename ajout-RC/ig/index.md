@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2026-01-02 | *Computable Name*:ExampleIG |
+| Draft as of 2026-01-09 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -51,12 +51,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [CompetenceCS](CodeSystem-competence-code-system.md), [ExampleIG](index.md)...Show 22 more,[EyeColorVS](ValueSet-EyeColorVS.md),[MeltingPotVS](ValueSet-MeltingPotVS.md),[ModifiedAdministrativeGender](ValueSet-ModifiedAdministrativeGender.md),[NdE_CommunicationRequest_EventType](SearchParameter-NdE-CommunicationRequest-EventType.md),[NdE_Declarant](StructureDefinition-declarant.md),[NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md),[NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md),[NdE_EventEmissionTime](StructureDefinition-event-emission-time.md),[NdE_EventTime](StructureDefinition-event-time.md),[NdE_EventType](StructureDefinition-event-type.md),[NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md),[NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md),[NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md),[NdE_RecipientEndpoint](StructureDefinition-recipient-endpoint.md),[NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md),[NdE_Start](StructureDefinition-start.md),[NdE_Subject](StructureDefinition-subject.md),[NdE_Subscriber](StructureDefinition-subscriber.md),[NdE_SubscriptionDate](StructureDefinition-subscription-date.md),[NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md),[TypeCarteCS](CodeSystem-type-carte-code-system.md)and[TypeCarteVS](ValueSet-TypeCarteVS.md)
-
-
-* This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
-
-* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-900000000000207008-20251001.html): [EyeColorVS](ValueSet-EyeColorVS.md) and [MeltingPotVS](ValueSet-MeltingPotVS.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [NdE_CommunicationRequest_EventType](SearchParameter-NdE-CommunicationRequest-EventType.md)...Show 16 more,[NdE_Declarant](StructureDefinition-declarant.md),[NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md),[NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md),[NdE_EventEmissionTime](StructureDefinition-event-emission-time.md),[NdE_EventTime](StructureDefinition-event-time.md),[NdE_EventType](StructureDefinition-event-type.md),[NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md),[NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md),[NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md),[NdE_RecipientEndpoint](StructureDefinition-recipient-endpoint.md),[NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md),[NdE_Start](StructureDefinition-start.md),[NdE_Subject](StructureDefinition-subject.md),[NdE_Subscriber](StructureDefinition-subscriber.md),[NdE_SubscriptionDate](StructureDefinition-subscription-date.md)and[NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 
 
 
@@ -72,7 +67,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2026-01-02T15:03:02+00:00",
+  "date" : "2026-01-09T09:23:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -941,20 +936,6 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
-          }
-        ],
-        "reference" : {
-          "reference" : "CodeSystem/competence-code-system"
-        },
-        "name" : "Compétences CodeSystem",
-        "description" : "Compétences des professionnels de santé.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:extension"
           }
         ],
@@ -1005,48 +986,6 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         },
         "name" : "Event Type",
         "description" : "Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/EyeColorVS"
-        },
-        "name" : "EyeColor Value Set",
-        "description" : "Different eye colors.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/MeltingPotVS"
-        },
-        "name" : "Melting Pot Value Set",
-        "description" : "Melting Pot Value Set.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/ModifiedAdministrativeGender"
-        },
-        "name" : "ModifiedAdministrativeGender",
-        "description" : "AdministrativeGender without unknown code",
         "exampleBoolean" : false
       },
       {
@@ -1186,34 +1125,6 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         },
         "name" : "Subscription Date",
         "description" : "Date de création de l’abonnement.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/TypeCarteVS"
-        },
-        "name" : "Type Carte Value Set",
-        "description" : "Type Carte Value Set.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
-          }
-        ],
-        "reference" : {
-          "reference" : "CodeSystem/type-carte-code-system"
-        },
-        "name" : "Type de carte",
-        "description" : "Type de carte professionnelle et personnelle.",
         "exampleBoolean" : false
       }
     ],

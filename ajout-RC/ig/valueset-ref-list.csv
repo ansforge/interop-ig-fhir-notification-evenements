@@ -1,6 +1,2 @@
 URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
-https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/EyeColorVS,0.1.0,draft,,EyeColorVS,EyeColor Value Set,"Different eye colors.",,"SCT"
-https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/MeltingPotVS,0.1.0,draft,,MeltingPotVS,Melting Pot Value Set,"Melting Pot Value Set.",,"SCT,Internal"
-https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/ModifiedAdministrativeGender,0.1.0,draft,,ModifiedAdministrativeGender,ModifiedAdministrativeGender,"AdministrativeGender without unknown code",,"hl7.fhir.r4.core"
-https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS,0.1.0,draft,,TypeCarteVS,Type Carte Value Set,"Type Carte Value Set.",,"Internal"
 https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS,20220624120000,active,"1.2.250.1.213.1.1.5.101",JDV_J46_TypeEvenementNotification_CISIS,,"Liste de types d'évènement pour lesquels une notification est possible","StructureDefinition/event-type","ans.fr.terminologies"

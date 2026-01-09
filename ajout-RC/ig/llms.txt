@@ -17,18 +17,6 @@
 
 ## Resources
 
-### CodeSystems
-
-* [Compétences CodeSystem](CodeSystem-competence-code-system.md)
-* [Type de carte](CodeSystem-type-carte-code-system.md)
-
-### ValueSets
-
-* [EyeColor Value Set](ValueSet-EyeColorVS.md)
-* [Melting Pot Value Set](ValueSet-MeltingPotVS.md)
-* [ModifiedAdministrativeGender](ValueSet-ModifiedAdministrativeGender.md)
-* [Type Carte Value Set](ValueSet-TypeCarteVS.md)
-
 ### Resource Profiles
 
 * [NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md)

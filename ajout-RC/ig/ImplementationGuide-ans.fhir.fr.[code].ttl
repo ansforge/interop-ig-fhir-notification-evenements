@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG Example"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-02T15:03:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-09T09:23:40+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1549,27 +1549,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "CodeSystem"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system> ;
-         fhir:reference [ fhir:v "CodeSystem/competence-code-system" ]
-       ] ;
-       fhir:name [ fhir:v "Compétences CodeSystem" ] ;
-       fhir:description [ fhir:v "Compétences des professionnels de santé." ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
@@ -1642,69 +1621,6 @@
        ] ;
        fhir:name [ fhir:v "Event Type" ] ;
        fhir:description [ fhir:v "Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.).." ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/EyeColorVS> ;
-         fhir:reference [ fhir:v "ValueSet/EyeColorVS" ]
-       ] ;
-       fhir:name [ fhir:v "EyeColor Value Set" ] ;
-       fhir:description [ fhir:v "Different eye colors." ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/MeltingPotVS> ;
-         fhir:reference [ fhir:v "ValueSet/MeltingPotVS" ]
-       ] ;
-       fhir:name [ fhir:v "Melting Pot Value Set" ] ;
-       fhir:description [ fhir:v "Melting Pot Value Set." ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/ModifiedAdministrativeGender> ;
-         fhir:reference [ fhir:v "ValueSet/ModifiedAdministrativeGender" ]
-       ] ;
-       fhir:name [ fhir:v "ModifiedAdministrativeGender" ] ;
-       fhir:description [ fhir:v "AdministrativeGender without unknown code" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -1915,48 +1831,6 @@
        ] ;
        fhir:name [ fhir:v "Subscription Date" ] ;
        fhir:description [ fhir:v "Date de création de l’abonnement." ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS> ;
-         fhir:reference [ fhir:v "ValueSet/TypeCarteVS" ]
-       ] ;
-       fhir:name [ fhir:v "Type Carte Value Set" ] ;
-       fhir:description [ fhir:v "Type Carte Value Set." ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "CodeSystem"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system> ;
-         fhir:reference [ fhir:v "CodeSystem/type-carte-code-system" ]
-       ] ;
-       fhir:name [ fhir:v "Type de carte" ] ;
-       fhir:description [ fhir:v "Type de carte professionnelle et personnelle." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false

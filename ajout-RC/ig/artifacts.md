@@ -52,26 +52,6 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [Subscriber](StructureDefinition-subscriber.md) | Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.).. |
 | [Subscription Date](StructureDefinition-subscription-date.md) | Date de création de l’abonnement. |
 
-### Terminology: Value Sets 
-
-These define sets of codes used by systems conforming to this implementation guide.
-
-| | |
-| :--- | :--- |
-| [EyeColor Value Set](ValueSet-EyeColorVS.md) | Different eye colors. |
-| [Melting Pot Value Set](ValueSet-MeltingPotVS.md) | Melting Pot Value Set. |
-| [ModifiedAdministrativeGender](ValueSet-ModifiedAdministrativeGender.md) | AdministrativeGender without unknown code |
-| [Type Carte Value Set](ValueSet-TypeCarteVS.md) | Type Carte Value Set. |
-
-### Terminology: Code Systems 
-
-These define new code systems used by systems conforming to this implementation guide.
-
-| | |
-| :--- | :--- |
-| [Compétences CodeSystem](CodeSystem-competence-code-system.md) | Compétences des professionnels de santé. |
-| [Type de carte](CodeSystem-type-carte-code-system.md) | Type de carte professionnelle et personnelle. |
-
 ### Example: Example Instances 
 
 These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.

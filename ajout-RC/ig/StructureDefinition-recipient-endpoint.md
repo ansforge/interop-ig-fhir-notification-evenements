@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint | *Version*:0.1.0 |
-| Draft as of 2026-01-02 | *Computable Name*:NdE_RecipientEndpoint |
+| Draft as of 2026-01-09 | *Computable Name*:NdE_RecipientEndpoint |
 
 Cette information contient les données nécessaires pour contacter l’abonné
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-recipient-endpoint.c
   "version" : "0.1.0",
   "name" : "NdE_RecipientEndpoint",
   "status" : "draft",
-  "date" : "2026-01-02T15:03:02+00:00",
+  "date" : "2026-01-09T09:23:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
