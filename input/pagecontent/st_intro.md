@@ -68,8 +68,8 @@ dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
 
 Dans l’ensemble de ce document, lorsqu’il est fait référence aux
 ressources Patient, Practitioner, RelatedPerson et Organization, il est
-entendu que le profil français (respectivement, FrPatient, FrPractioner,
-FrRelatedPerson et FrOrganization) doit être utilisé.
+entendu que le profil français (respectivement, FRCorePatientProfile, FRCorePatientINSProfile, FRCorePractitionerProfile,
+FRCoreRelatedPersonProfile et FRCoreOrganizationProfile) doit être utilisé.
 
 #### Utilisation
 

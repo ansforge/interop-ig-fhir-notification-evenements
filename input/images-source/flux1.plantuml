@@ -1,0 +1,7 @@
+@startuml
+participant Souscripteur
+participant "Gestionnaire d'abonnements" as GA
+
+Souscripteur -> GA : Flux 1 POST Subscription
+GA --> Souscripteur : OK 201 Created
+@enduml

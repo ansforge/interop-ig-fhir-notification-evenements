@@ -1,3 +1,6 @@
+<div style="text-align: center;">
+  {% include flux4.svg %}
+</div>
 
 Le **Flux 4 – TransmissionOrdreNotification** contient les informations nécessaires au gestionnaire de
 notifications pour émettre une notification à l’abonné.

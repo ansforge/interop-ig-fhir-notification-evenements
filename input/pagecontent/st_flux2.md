@@ -1,3 +1,6 @@
+<div style="text-align: center;">
+  {% include flux2.svg %}
+</div>
 
 La demande de suppression d’un abonnement est réalisée en émettant une
 requête HTTP DELETE au gestionnaire d’abonnements. L’identifiant de la

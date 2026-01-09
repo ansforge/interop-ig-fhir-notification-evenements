@@ -1,3 +1,6 @@
+<div style="text-align: center;">
+  {% include flux3.svg %}
+</div>
 
 Le **Flux 3 – EmissionEvenement** contient les informations relatives à un évènement qui a eu
 lieu.
