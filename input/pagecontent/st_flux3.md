@@ -20,7 +20,9 @@ FrOrganization
 La ressource CommunicationRequest ainsi formée sera envoyée dans le
 corps de la requête HTTP POST suivante :
 
-POST \[base\]/CommunicationRequest
+```HTTP
+POST [base]/CommunicationRequest
+```
 
 Où \[base\] est l’endpoint FHIR mis à disposition par le gestionnaire
 d’abonnements.

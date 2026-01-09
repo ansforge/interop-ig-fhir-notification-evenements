@@ -32,7 +32,9 @@ Aucune si l’abonné est le patient ou l’émetteur lui-même
 Pour la création d’un nouvel abonnement, la ressource Subscription ainsi
 formée sera envoyée dans le corps de la requête HTTP POST suivante :
 
-POST \[base\]/Subscription
+```HTTP
+POST [base]/Subscription
+```
 
 Où \[base\] est l’endpoint FHIR mis à disposition par le gestionnaire
 d’abonnements.
@@ -46,7 +48,9 @@ Dans le cas d’une mise à jour, l’opération PUT est utilisée. La
 ressource Subscription telle que définie ci-dessus sera envoyée dans le
 corps de la requête HTTP PUT suivante :
 
-PUT \[base\]/Subscription/\[id\]
+```HTTP
+PUT [base]/Subscription/[id]
+```
 
 Où \[base\] est l’endpoint FHIR mis à disposition par le gestionnaire
 d’abonnements et \[id\] correspond à l’élément id de la ressource

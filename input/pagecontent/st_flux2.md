@@ -6,7 +6,9 @@ d’abonnements d’identifier l’abonnement à supprimer.
 
 La requête HTTP DELETE est ainsi formée :
 
-DELETE \[base\]/Subscription/\[id\]
+```HTTP
+DELETE [base]/Subscription/[id]
+```
 
 Où \[base\] est l’endpoint FHIR mis à disposition par le gestionnaire
 d’abonnements et \[id\] correspond à l’élément id de la ressource à
