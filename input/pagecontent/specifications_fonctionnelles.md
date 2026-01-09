@@ -792,7 +792,9 @@ liste les concepts présents dans les flux identifiés.
 | AbonnéPP | Il s’agit d’une personne physique (un professionnel, une personne prise en charge, une personne tierce, etc.) qui possède un abonnement et qui est susceptible de recevoir des notifications concernant des évènements auxquels elle est inscrite. |
 | AbonnéPM | Il s’agit d’une personne morale qui possède un abonnement et qui est susceptible de recevoir des notifications concernant des évènements auxquels elle est inscrite. |
 
+<p style="text-align: center;">
 Table 9 : Liste des concepts «  métier » identifiés
+</p>
 
 #### Etape 6: Élaboration du modèle hiérarchique des flux structurés 
 
