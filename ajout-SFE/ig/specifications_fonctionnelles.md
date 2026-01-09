@@ -446,7 +446,7 @@ Dans cette section, il s'agit de définir les informations « métier » présen
 | AbonnéPP | Il s’agit d’une personne physique (un professionnel, une personne prise en charge, une personne tierce, etc.) qui possède un abonnement et qui est susceptible de recevoir des notifications concernant des évènements auxquels elle est inscrite. |
 | AbonnéPM | Il s’agit d’une personne morale qui possède un abonnement et qui est susceptible de recevoir des notifications concernant des évènements auxquels elle est inscrite. |
 
-Table 9 : Liste des concepts «  métier » identifiés
+ Table 9 : Liste des concepts «  métier » identifiés 
 
 #### Etape 6: Élaboration du modèle hiérarchique des flux structurés
 
