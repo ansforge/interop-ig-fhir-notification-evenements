@@ -10,7 +10,10 @@ La demande de suppression d’un abonnement est réalisée en émettant une requ
 
 La requête HTTP DELETE est ainsi formée :
 
+```
 DELETE [base]/Subscription/[id]
+
+```
 
 Où [base] est l’endpoint FHIR mis à disposition par le gestionnaire d’abonnements et [id] correspond à l’élément id de la ressource à supprimer.
 
