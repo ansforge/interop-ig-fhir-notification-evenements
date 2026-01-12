@@ -43,6 +43,8 @@ pages:
         title: Historique des versions
     autres_ressources.md:
         title: Autres Ressources
+        acronymes.md:
+            title: Acronymes
         securite.md:
             title: Sécurité
         downloads.md:
@@ -60,6 +62,7 @@ menu:
         NotificationEvenement: st_flux5.html
     Ressources de conformité: artifacts.html
     Autres ressources:
+        Acronymes: acronymes.html
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
