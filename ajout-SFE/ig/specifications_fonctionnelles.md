@@ -5,12 +5,6 @@
 
 ## Volume 1 - Etude fonctionnelle
 
-### Introduction
-
-Ce document présente une étude « métier » de mise en œuvre d’un mécanisme de notifications d’événements dans le domaine sanitaire, médico-administratif, médico-social et social. Il sert à évaluer les besoins en interopérabilité. Il sert également à définir le périmètre métier nécessaire à l’implémentation de ce mécanisme entre composants de systèmes d’information (SI) et entre les systèmes d’information (SI).
-
-A noter que les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. Celles-ci sont du ressort de chaque responsable de l’implémentation du mécanisme qui est dans l’obligation de se conformer au cadre juridique en la matière. L’ANS propose des référentiels dédiés à la politique de sécurité (la [PGSSI-S](https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante)) et des mécanismes de sécurisation sont définis dans les volets de la [couche Transport](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication) du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS).
-
 ### Exemples de cas d’usage
 
 ##### Parcours de soins d’une personne diabétique
