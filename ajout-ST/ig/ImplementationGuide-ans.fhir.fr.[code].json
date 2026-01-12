@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2026-01-09T15:11:14+00:00",
+  "date" : "2026-01-12T08:14:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -800,21 +800,12 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques.html"
+          "valueUrl" : "st_intro.html"
         }],
-        "nameUrl" : "specifications_techniques.html",
-        "title" : "Specifications Techniques",
+        "nameUrl" : "st_intro.html",
+        "title" : "Volume 2 - Détail des transactions",
         "generation" : "markdown",
         "page" : [{
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "st_intro.html"
-          }],
-          "nameUrl" : "st_intro.html",
-          "title" : "Volume 2 - Détail des transactions",
-          "generation" : "markdown"
-        },
-        {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
             "valueUrl" : "st_flux1.html"

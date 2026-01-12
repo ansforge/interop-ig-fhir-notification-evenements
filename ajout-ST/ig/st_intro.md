@@ -1,7 +1,6 @@
 # Volume 2 - Détail des transactions - ANS IG Example v0.1.0
 
 * [**Table of Contents**](toc.md)
-* [**Specifications Techniques**](specifications_techniques.md)
 * **Volume 2 - Détail des transactions**
 
 ## Volume 2 - Détail des transactions

@@ -10,7 +10,6 @@
 * [Flux 1:SouscriptionAbonnement](st_flux1.md)
 * [Artifacts Summary](artifacts.md)
 * [Flux 3:EmissionEvenement](st_flux3.md)
-* [Specifications Techniques](specifications_techniques.md)
 * [Flux 5:NotificationEvenement](st_flux5.md)
 * [Sécurité](securite.md)
 * [Flux 4:TransmissionOrdreNotification](st_flux4.md)

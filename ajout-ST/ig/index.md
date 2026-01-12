@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:ExampleIG |
+| Draft as of 2026-01-12 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -63,7 +63,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2026-01-09T15:11:14+00:00",
+  "date" : "2026-01-12T08:14:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -1009,24 +1009,13 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "specifications_techniques.html"
+              "valueUrl" : "st_intro.html"
             }
           ],
-          "nameUrl" : "specifications_techniques.html",
-          "title" : "Specifications Techniques",
+          "nameUrl" : "st_intro.html",
+          "title" : "Volume 2 - Détail des transactions",
           "generation" : "markdown",
           "page" : [
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_intro.html"
-                }
-              ],
-              "nameUrl" : "st_intro.html",
-              "title" : "Volume 2 - Détail des transactions",
-              "generation" : "markdown"
-            },
             {
               "extension" : [
                 {

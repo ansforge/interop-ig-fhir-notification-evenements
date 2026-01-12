@@ -1,7 +1,7 @@
 # Flux 3:EmissionEvenement - ANS IG Example v0.1.0
 
 * [**Table of Contents**](toc.md)
-* [**Specifications Techniques**](specifications_techniques.md)
+* [**Volume 2 - Détail des transactions**](st_intro.md)
 * **Flux 3:EmissionEvenement**
 
 ## Flux 3:EmissionEvenement
