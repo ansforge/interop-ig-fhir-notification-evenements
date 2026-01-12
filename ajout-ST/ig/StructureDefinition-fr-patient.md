@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient.csv), [Ex
   "name" : "FrPatient",
   "title" : "Patient français",
   "status" : "draft",
-  "date" : "2026-01-12T10:24:42+00:00",
+  "date" : "2026-01-12T13:47:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

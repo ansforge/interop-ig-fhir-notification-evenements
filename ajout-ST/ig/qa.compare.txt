@@ -18,7 +18,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://
 </table>
 == n/a ==
 ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
-ERROR: st_intro.html#/html/body/div/div/div/div/div/p/a at Line 224, column 90: The link 'norme_standard.html' for "l’étude des normes et standards" cannot be resolved
+ERROR: st_intro.html#/html/body/div/div/div/div/div/p/a at Line 227, column 90: The link 'norme_standard.html' for "l’étude des normes et standards" cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
