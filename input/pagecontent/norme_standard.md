@@ -1,6 +1,6 @@
 ### Introduction
 
-<div class="dragon">
+<div class="dragon" style="width: 65%">
 Étude du 10/2016, avec dernière mise à jour en 08/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
 </div>
 
