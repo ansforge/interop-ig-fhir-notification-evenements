@@ -1,9 +1,13 @@
 ### Introduction
 
+<div class="dragon">
+Étude du 10/2016, avec dernière mise à jour en 08/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
+</div>
+
 Ce document présente les normes, standards et profils de normes et
 standards qui ont été identifiés comme adaptés pour la mise en œuvre des
 flux structurés présentés dans le document [Étude métier – Notification
-d’évènements](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf) :
+d’évènements](specifications_fonctionnelles.html) :
 
 - La ressource Subscription de FHIR (Fast Healthcare Interoperability
   Ressources);
@@ -37,7 +41,7 @@ charge(Une personne prise en charge peut être un usager dans le secteur
     famille qui s’occupe quotidiennement de la personne prise en charge)) ou à une entité géographique de
 recevoir des notifications d’évènements.
 
-Une [étude « métier »](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf) a été menée concernant la modélisation des flux
+Une [étude « métier »](specifications_fonctionnelles.html) a été menée concernant la modélisation des flux
 entre composants d’un système d’information ou entre systèmes
 d’informations dans le cadre de la mise en œuvre du mécanisme de
 notification d’évènements. Dans ce contexte, une personne peut choisir
@@ -99,7 +103,7 @@ chaque ressource créée ou mise à jour. Si la ressource correspond aux
 critères enregistrés par l’abonné, le serveur envoie un message sur le
 «canal» défini pour que l’abonné prenne une action appropriée. Elle ne
 couvre cependant pas nativement l’ensemble des données des flux
-identifiées dans [l’étude métier](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf).
+identifiées dans [l’étude métier](specifications_fonctionnelles.html).
 
 ##### Périmètre FHIR
 
@@ -332,7 +336,7 @@ Le périmètre couvert par le standard WS Notification concerne les
 systèmes qui se basent sur des services web pour mettre en œuvre
 l’abonnement à notification, la déclaration d’événements et l’ordre de
 notification. Il ne couvre cependant pas nativement l’ensemble des
-données des flux identifiées dans [l’étude métier](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf).
+données des flux identifiées dans [l’étude métier](specifications_fonctionnelles.html).
 
 ##### Normes et standards sous-jacents
 
@@ -656,7 +660,7 @@ discriminantes opposées :
 
 En ce qui concerne leurs applicabilités dans le contexte de la
 notification d’évènements, il est à noter que les informations
-« métiers » identifiées dans [l’étude](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf) ne sont que partiellement
+« métiers » identifiées dans [l’étude](specifications_fonctionnelles.html) ne sont que partiellement
 couvertes par les deux standards étudiés dans ce document et qu’une mise
 en œuvre du cas d’usage nécessiterait des extensions quel que soit le
 standard utilisé.
