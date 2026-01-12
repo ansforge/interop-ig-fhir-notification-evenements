@@ -16,16 +16,7 @@ mécanismes de sécurisation sont définis dans les volets de la [couche
 Transport](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication) du Cadre d’Interopérabilité des systèmes d’information de
 santé (CI-SIS).
 
-Ci-dessous des exemples de cas d’usage concernant le mécanisme de
-notification d’évènements.
-
-#### Lectorat cible
-
-Les lecteurs cibles sont principalement des chefs de projets ainsi que
-toute personne concernée par la maîtrise d’ouvrage et qui spécifie des
-projets avec des interfaces interopérables.
-
-#### Exemples de cas d’usage
+### Exemples de cas d’usage
 
 ##### Parcours de soins d’une personne diabétique
 
@@ -117,35 +108,7 @@ Remarque : le « pool » de notification peut être intégré dans le
 logiciel métier du professionnel ou dans un outil « externe » qui peut
 gérer les notifications provenant de sources diverses.
 
-#### Méthode d’élaboration des spécifications métier
-
-Les spécifications « métier » présentées dans ce document suivent la
-[méthode d’élaboration](http://esante.gouv.fr/sites/MOS/MOS/0.html) des spécifications fonctionnelles des échanges
-élaborée par l’ANS. Cette méthode est constituée de plusieurs étapes :
-
-- **Etape 1**: Organisation du contexte métier;
-
-- **Etape 2**: Définition des processus métier collaboratifs;
-
-- **Etape 3**: Description de chaque processus défini et identification
-  des flux échangés
-
-- **Etape 4**: Qualification des flux échangés;
-
-- **Etape 5**: Pour chaque flux, identification des informations
-  véhiculées;
-
-- **Etape 6**: Elaboration du modèle hiérarchique de chaque flux
-  structuré (sous forme d’un ou plusieurs diagramme de classes UML). Le
-  modèle hiérarchique élaboré reposera sur la reprise des composants
-  mutualisés dans le modèle des objets de santé ([MOS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration)) et des
-  nomenclatures associées. A l'issue de cette élaboration, il se peut
-  que de nouveaux composants jusqu'alors inexistants dans le MOS aient
-  été définis et soient intégrés par la suite au MOS.
-
-### Élaboration des spécifications métier
-
-#### Etape 1: Organisation du contexte métier
+### Etape 1: Organisation du contexte métier
 
 Le but de cette étape est d’organiser la vue métier dans laquelle
 s’insère le projet et d'identifier le ou les processus du périmètre du
@@ -184,7 +147,7 @@ Cette étude métier couvre les processus suivants :
 
 - La transmission d’un ordre de notification.
 
-#### Etape 2: Définition du processus collaboratif
+### Etape 2: Définition du processus collaboratif
 
 Le but de cette étape est de définir les processus métier identifiés
 dans le diagramme défini à l’étape 1. Cette modélisation est entreprise
@@ -460,7 +423,7 @@ Les 4 types d’évènements pris en compte à ce jour sont :
 4.  Flux de création d'une note pour un patient dans le cahier de
     liaison
 
-#### Etape 3 : Description du processus collaboratif et identification des flux 
+### Etape 3 : Description du processus collaboratif et identification des flux 
 
 L’objectif de cette étape est de décrire les processus métier
 collaboratifs définis dans les cas d'utilisation de l’étape 2, ainsi que
@@ -631,7 +594,7 @@ Réceptionner la notification
 L'abonné est en mesure de réceptionner la notification via son propre
 système.
 
-#### Etape 4: Qualification des flux échangés 
+### Etape 4: Qualification des flux échangés 
 
 Les flux échangés entre les acteurs ont été identifiés à l'étape 3.
 Cette nouvelle étape vise à qualifier les flux d'informations en
@@ -697,7 +660,7 @@ l'étape précédente et présenté ci-dessous.
 </tbody>
 </table>
 
-#### Etape 5: Identification des informations véhiculées dans les flux
+### Etape 5: Identification des informations véhiculées dans les flux
 
 Dans cette section, il s'agit de définir les informations « métier »
 présentes dans chaque flux structuré identifié. La Table ci-dessous
@@ -713,7 +676,7 @@ liste les concepts présents dans les flux identifiés.
 | AbonnéPP | Il s’agit d’une personne physique (un professionnel, une personne prise en charge, une personne tierce, etc.) qui possède un abonnement et qui est susceptible de recevoir des notifications concernant des évènements auxquels elle est inscrite. |
 | AbonnéPM | Il s’agit d’une personne morale qui possède un abonnement et qui est susceptible de recevoir des notifications concernant des évènements auxquels elle est inscrite. |
 
-#### Etape 6: Élaboration du modèle hiérarchique des flux structurés 
+### Etape 6: Élaboration du modèle hiérarchique des flux structurés 
 
 Le but de cette étape est d'élaborer des diagrammes de classe (modèle
 hiérarchique) de chaque flux structuré à partir des informations métier
