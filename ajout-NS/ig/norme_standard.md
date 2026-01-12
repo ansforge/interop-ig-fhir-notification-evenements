@@ -7,7 +7,9 @@
 
 ### Introduction
 
-Ce document présente les normes, standards et profils de normes et standards qui ont été identifiés comme adaptés pour la mise en œuvre des flux structurés présentés dans le document [Étude métier – Notification d’évènements](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf) :
+Étude du 10/2016, avec dernière mise à jour en 08/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
+
+Ce document présente les normes, standards et profils de normes et standards qui ont été identifiés comme adaptés pour la mise en œuvre des flux structurés présentés dans le document [Étude métier – Notification d’évènements](specifications_fonctionnelles.md) :
 
 * La ressource Subscription de FHIR (Fast Healthcare Interoperability Ressources);
 * Le standard WS Notification d’OASIS (Advancing open standards for the information society);
@@ -23,7 +25,7 @@ Des tableaux de synthèses qui reprennent ces éléments afin d’en faciliter l
 
 Cette étude s’insère dans le cadre de la mise en œuvre d’un mécanisme de notification d’évènements dans le domaine sanitaire, médico-administratif, médico-social ou social. Ce mécanisme permet à une personne (que ce soit un professionnel (Un professionnel est une personne participant, dans le cadre de son activité professionnelle, à la prise en charge d’usagers), une personne prise en charge(Une personne prise en charge peut être un usager dans le secteur social ou un patient) ou une personne tierce(Une personne tierce peut être, par exemple, un membre de la famille qui s’occupe quotidiennement de la personne prise en charge)) ou à une entité géographique de recevoir des notifications d’évènements.
 
-Une [étude « métier »](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf) a été menée concernant la modélisation des flux entre composants d’un système d’information ou entre systèmes d’informations dans le cadre de la mise en œuvre du mécanisme de notification d’évènements. Dans ce contexte, une personne peut choisir d’utiliser son téléphone portable ou sa tablette pour recevoir des notifications, alors qu’une structure hospitalière peut choisir de mettre en œuvre un serveur, par exemple, pour l’émission et la réception de notifications d’évènements.
+Une [étude « métier »](specifications_fonctionnelles.md) a été menée concernant la modélisation des flux entre composants d’un système d’information ou entre systèmes d’informations dans le cadre de la mise en œuvre du mécanisme de notification d’évènements. Dans ce contexte, une personne peut choisir d’utiliser son téléphone portable ou sa tablette pour recevoir des notifications, alors qu’une structure hospitalière peut choisir de mettre en œuvre un serveur, par exemple, pour l’émission et la réception de notifications d’évènements.
 
 Dans le cadre de la gestion de la notification, le flux d’envoi de la notification à l’utilisateur final dépend du médium de diffusion choisi pour les notifications. Il est mis en œuvre par des composants spécifique au médium de diffusion de notification choisi. Il est donc considéré hors périmètre du besoin pour cette étude qui correspond aux flux d’abonnement à notification, de déclaration d’événement et d’ordre de notification.
 
@@ -49,7 +51,7 @@ L’organisme HL7 élabore des standards qui concernent spécifiquement le conte
 
 [FHIR](https://www.hl7.org/fhir/) (**Fast Healthcare Interoperability Resources**) est un standard élaboré par HL7 qui décrit un ensemble de formats de données et d’éléments (appelés ressources) ainsi qu’une API (**Application Programming Interface**) pour l’échange des informations de santé.
 
-La ressource FHIR [**Subscription**](https://www.hl7.org/fhir/subscription.html) concernée par cette étude est utilisée pour définir un abonnement de notifications « push » d’un serveur vers un autre système. Le mécanisme fonctionne comme suit : une fois qu’un abonnement est enregistré sur le serveur, ce dernier vérifie chaque ressource créée ou mise à jour. Si la ressource correspond aux critères enregistrés par l’abonné, le serveur envoie un message sur le «canal» défini pour que l’abonné prenne une action appropriée. Elle ne couvre cependant pas nativement l’ensemble des données des flux identifiées dans [l’étude métier](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf).
+La ressource FHIR [**Subscription**](https://www.hl7.org/fhir/subscription.html) concernée par cette étude est utilisée pour définir un abonnement de notifications « push » d’un serveur vers un autre système. Le mécanisme fonctionne comme suit : une fois qu’un abonnement est enregistré sur le serveur, ce dernier vérifie chaque ressource créée ou mise à jour. Si la ressource correspond aux critères enregistrés par l’abonné, le serveur envoie un message sur le «canal» défini pour que l’abonné prenne une action appropriée. Elle ne couvre cependant pas nativement l’ensemble des données des flux identifiées dans [l’étude métier](specifications_fonctionnelles.md).
 
 ##### Périmètre FHIR
 
@@ -147,7 +149,7 @@ Cette famille de standards contient les spécifications suivantes :
 
 ##### Périmètre WS Notification
 
-Le périmètre couvert par le standard WS Notification concerne les systèmes qui se basent sur des services web pour mettre en œuvre l’abonnement à notification, la déclaration d’événements et l’ordre de notification. Il ne couvre cependant pas nativement l’ensemble des données des flux identifiées dans [l’étude métier](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf).
+Le périmètre couvert par le standard WS Notification concerne les systèmes qui se basent sur des services web pour mettre en œuvre l’abonnement à notification, la déclaration d’événements et l’ordre de notification. Il ne couvre cependant pas nativement l’ensemble des données des flux identifiées dans [l’étude métier](specifications_fonctionnelles.md).
 
 ##### Normes et standards sous-jacents
 
@@ -241,5 +243,5 @@ La ressource FHIR Subscription et le standard WS notification sont tous les deux
 * le standard WS notification est un standard stable et installé sur une technologie qui n’est pas adapté aux terminaux mobiles actuels ;
 * la ressource FHIR Subscription peut être mise en œuvre via une technologie adaptée aux terminaux mobiles actuels ; elle n’est cependant pas stabilisée et pourrait subir des changements conséquents sur les prochaines années.
 
-En ce qui concerne leurs applicabilités dans le contexte de la notification d’évènements, il est à noter que les informations « métiers » identifiées dans [l’étude](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf) ne sont que partiellement couvertes par les deux standards étudiés dans ce document et qu’une mise en œuvre du cas d’usage nécessiterait des extensions quel que soit le standard utilisé.
+En ce qui concerne leurs applicabilités dans le contexte de la notification d’évènements, il est à noter que les informations « métiers » identifiées dans [l’étude](specifications_fonctionnelles.md) ne sont que partiellement couvertes par les deux standards étudiés dans ce document et qu’une mise en œuvre du cas d’usage nécessiterait des extensions quel que soit le standard utilisé.
 
