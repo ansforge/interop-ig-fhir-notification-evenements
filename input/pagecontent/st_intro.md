@@ -5,8 +5,8 @@ mise en œuvre d’un mécanisme de notifications d’événements dans le
 domaine sanitaire, médico-administratif, médico-social et social. Il
 constitue le volet Notification d’évènements du Cadre d’Interopérabilité
 des Systèmes d’Information de santé (CI-SIS). Sa production est basée
-sur les [spécifications fonctionnelles](https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS-TEC_SPECIFICATIONS_FONCTIONNELLES_NOTIFICATION_EVENEMENTS_v1.3.pdf), [l’étude des normes et
-standards](https://esante.gouv.fr/sites/default/files/media_entity/documents/CI_SIS_STANDARDS_NOTIFICATION_EVENEMENTS_V1.1.pdf) élaborés par l’ANS et disponibles sur esante.gouv.fr.
+sur les [spécifications fonctionnelles](specifications_fonctionnelles.html), [l’étude des normes et
+standards](norme_standard.html) élaborés par l’ANS et disponibles sur esante.gouv.fr.
 
 A noter que les spécifications techniques présentées dans ce document
 ont pour objectif d’être utilisées dans des premières implémentations
