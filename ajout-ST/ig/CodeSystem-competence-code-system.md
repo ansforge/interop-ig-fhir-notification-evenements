@@ -31,7 +31,7 @@ Compétences des professionnels de santé.
   "name" : "CompetenceCS",
   "title" : "Compétences CodeSystem",
   "status" : "draft",
-  "date" : "2026-01-12T08:14:34+00:00",
+  "date" : "2026-01-12T10:24:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
