@@ -1,4 +1,4 @@
-# Specifications Techniques - ANS IG Example v0.1.0
+# Specifications Techniques - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * **Specifications Techniques**

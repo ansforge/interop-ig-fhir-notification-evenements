@@ -1,4 +1,4 @@
-# Compétences CodeSystem - ANS IG Example v0.1.0
+# Compétences CodeSystem - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system | *Version*:0.1.0 |
-| Draft as of 2026-01-12 | *Computable Name*:CompetenceCS |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CodeSystem/competence-code-system | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:CompetenceCS |
 
  
 Compétences des professionnels de santé. 
@@ -26,12 +26,12 @@ Compétences des professionnels de santé.
 {
   "resourceType" : "CodeSystem",
   "id" : "competence-code-system",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CodeSystem/competence-code-system",
+  "version" : "3.0.0",
   "name" : "CompetenceCS",
   "title" : "Compétences CodeSystem",
   "status" : "draft",
-  "date" : "2026-01-12T16:01:49+00:00",
+  "date" : "2026-01-15T15:18:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
