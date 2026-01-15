@@ -1,4 +1,4 @@
-# ans.fhir.fr.[code]#0.1.0: ANS IG Example
+# ans.fhir.fr.nde#3.0.0: Notification d'Événements
 
 ## Pages
 
@@ -42,7 +42,7 @@
 
 ### ImplementationGuides
 
-* [ANS IG Example](index.md)
+* [Notification d'Événements](index.md)
 
 ### Examples
 

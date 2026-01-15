@@ -1,4 +1,4 @@
-# Flux 3:EmissionEvenement - ANS IG Example v0.1.0
+# Flux 3:EmissionEvenement - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Volume 2 - Détail des transactions**](st_intro.md)

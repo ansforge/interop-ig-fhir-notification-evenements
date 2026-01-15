@@ -1,4 +1,4 @@
-# ModifiedAdministrativeGender - ANS IG Example v0.1.0
+# ModifiedAdministrativeGender - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/ModifiedAdministrativeGender | *Version*:0.1.0 |
-| Draft as of 2026-01-12 | *Computable Name*:ModifiedAdministrativeGender |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ValueSet/ModifiedAdministrativeGender | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:ModifiedAdministrativeGender |
 
  
 AdministrativeGender without unknown code 
@@ -45,12 +45,12 @@ AdministrativeGender without unknown code
 {
   "resourceType" : "ValueSet",
   "id" : "ModifiedAdministrativeGender",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/ModifiedAdministrativeGender",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/ValueSet/ModifiedAdministrativeGender",
+  "version" : "3.0.0",
   "name" : "ModifiedAdministrativeGender",
   "title" : "ModifiedAdministrativeGender",
   "status" : "draft",
-  "date" : "2026-01-12T13:47:14+00:00",
+  "date" : "2026-01-15T15:19:04+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

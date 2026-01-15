@@ -1,4 +1,4 @@
-# Flux 5:NotificationEvenement - ANS IG Example v0.1.0
+# Flux 5:NotificationEvenement - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Volume 2 - Détail des transactions**](st_intro.md)

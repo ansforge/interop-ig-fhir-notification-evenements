@@ -1,4 +1,4 @@
-# EyeColor Value Set - ANS IG Example v0.1.0
+# EyeColor Value Set - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/EyeColorVS | *Version*:0.1.0 |
-| Draft as of 2026-01-12 | *Computable Name*:EyeColorVS |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ValueSet/EyeColorVS | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:EyeColorVS |
 
  
 Different eye colors. 
@@ -45,12 +45,12 @@ Different eye colors.
 {
   "resourceType" : "ValueSet",
   "id" : "EyeColorVS",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/EyeColorVS",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/ValueSet/EyeColorVS",
+  "version" : "3.0.0",
   "name" : "EyeColorVS",
   "title" : "EyeColor Value Set",
   "status" : "draft",
-  "date" : "2026-01-12T13:47:14+00:00",
+  "date" : "2026-01-15T15:19:04+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
