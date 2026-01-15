@@ -7,6 +7,6 @@ Usage: #definition
 * code = #event-type
 * base = #CommunicationRequest
 * type = #token
-* expression = "extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value"
+* expression = "extension.where(url='https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type').value"
 * multipleOr = true
 * multipleAnd = true
