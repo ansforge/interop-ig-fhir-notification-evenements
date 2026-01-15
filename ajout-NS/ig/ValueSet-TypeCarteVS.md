@@ -1,4 +1,4 @@
-# Type Carte Value Set - ANS IG Example v0.1.0
+# Type Carte Value Set - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS | *Version*:0.1.0 |
-| Draft as of 2026-01-12 | *Computable Name*:TypeCarteVS |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ValueSet/TypeCarteVS | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:TypeCarteVS |
 
  
 Type Carte Value Set. 
@@ -45,12 +45,12 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
 {
   "resourceType" : "ValueSet",
   "id" : "TypeCarteVS",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/ValueSet/TypeCarteVS",
+  "version" : "3.0.0",
   "name" : "TypeCarteVS",
   "title" : "Type Carte Value Set",
   "status" : "draft",
-  "date" : "2026-01-12T15:58:11+00:00",
+  "date" : "2026-01-15T15:18:49+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -78,7 +78,7 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
   "compose" : {
     "include" : [
       {
-        "system" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system"
+        "system" : "https://interop.esante.gouv.fr/ig/fhir/nde/CodeSystem/type-carte-code-system"
       }
     ]
   }

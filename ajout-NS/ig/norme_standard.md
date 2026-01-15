@@ -1,4 +1,4 @@
-# Normes et Standards - ANS IG Example v0.1.0
+# Normes et Standards - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * **Normes et Standards**

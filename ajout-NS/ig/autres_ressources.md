@@ -1,4 +1,4 @@
-# Autres Ressources - ANS IG Example v0.1.0
+# Autres Ressources - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * **Autres Ressources**
