@@ -1,4 +1,4 @@
-# Declarant - ANS IG Example v0.1.0
+# Declarant - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_Declarant |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_Declarant |
 
 Référence aux profils français des ressources qui identifient l’émetteur de l’évènement (Practitioner pour un professionnel, Organization pour un établissement)
 
@@ -22,7 +22,7 @@ Référence aux profils français des ressources qui identifient l’émetteur d
 * Utiliser ce Extension: [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 * Exemples pour ce Extension: [Subscription/sub1](Subscription-sub1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/declarant)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/declarant)
 
 ### Formal Views of Extension Content
 
@@ -42,12 +42,12 @@ Other representations of profile: [CSV](StructureDefinition-declarant.csv), [Exc
 {
   "resourceType" : "StructureDefinition",
   "id" : "declarant",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant",
+  "version" : "3.0.0",
   "name" : "NdE_Declarant",
   "title" : "Declarant",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -107,7 +107,7 @@ Other representations of profile: [CSV](StructureDefinition-declarant.csv), [Exc
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant"
       },
       {
         "id" : "Extension.value[x]",

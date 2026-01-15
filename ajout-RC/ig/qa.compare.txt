@@ -1,9 +1,9 @@
-ExampleIG : Validation Results
+NDE : Validation Results
 =========================================
 
-err = 4, warn = 15, info = 3
+err = 1, warn = 15, info = 3
 $--
-Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
+Generated $--. FHIR version $-- for ans.fhir.fr.nde#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/nde)
  Build Errors : 0 / 4 / 0
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-Emetteur : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-GestionnaireDAbonnements : 0 / 0 / 1
@@ -11,8 +11,8 @@ Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-Souscripteur : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CommunicationRequest-com1 : 0 / 2 / 8
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CommunicationRequest-com2 : 0 / 1 / 6
- /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code] : 3 / 0 / 1
- /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/SearchParameter-NdE-CommunicationRequest-EventType : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.nde : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/SearchParameter-NdE-CommunicationRequest-EventType : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-declarant : 0 / 1 / 1
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-event-emission-time : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-event-time : 0 / 0 / 1
@@ -43,12 +43,9 @@ WARNING: CommunicationRequest/com1: CommunicationRequest.contained[2]/*Practitio
 == fsh-generated/resources/CommunicationRequest-com2.json ==
 INFORMATION: CommunicationRequest/com2: CommunicationRequest.contained[0]/*Patient/pat1*/.extension[0].extension[0].value.ofType(Coding): Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445|2.1.0
 WARNING: CommunicationRequest/com2: CommunicationRequest.contained[0]/*Patient/pat1*/.extension[0].extension[2].value.ofType(Coding): A code with no system has no defined meaning, and it cannot be validated. A system should be provided
-== fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code].json ==
-ERROR: ImplementationGuide/ans.fhir.fr.[code]: ImplementationGuide.id: Invalid Resource id: Invalid Characters ('ans.fhir.fr.[code]')
-ERROR: ImplementationGuide/ans.fhir.fr.[code]: ImplementationGuide.packageId: id value 'ans.fhir.fr.[code]' is not valid
-ERROR: ImplementationGuide/ans.fhir.fr.[code]: ImplementationGuide.definition.extension[27].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+== fsh-generated/resources/ImplementationGuide-ans.fhir.fr.nde.json ==
+ERROR: ImplementationGuide/ans.fhir.fr.nde: ImplementationGuide.definition.extension[27].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 == fsh-generated/resources/SearchParameter-NdE-CommunicationRequest-EventType.json ==
-ERROR: SearchParameter/NdE-CommunicationRequest-EventType: SearchParameter.expression: Error in search expression 'extension(url='http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/EventType').value': Error evaluating FHIRPath expression: The name 'url' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/CommunicationRequest] (@char 11)
 == fsh-generated/resources/StructureDefinition-declarant.json ==
 WARNING: StructureDefinition/declarant: StructureDefinition.context[0]: Review the extension type for declarant: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 == fsh-generated/resources/StructureDefinition-event-emission-time.json ==

@@ -13,10 +13,10 @@
     <sch:title>f:CommunicationRequest</sch:title>
     <sch:rule context="f:CommunicationRequest">
       <sch:assert test="count(f:contained) &gt;= 1">contained: minimum cardinality of 'contained' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type']) &gt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type']) &lt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time']) &gt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time']) &lt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type']) &gt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type']) &lt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time']) &gt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time']) &lt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:subject) &gt;= 1">subject: minimum cardinality of 'subject' is 1</sch:assert>
       <sch:assert test="count(f:payload) &gt;= 1">payload: minimum cardinality of 'payload' is 1</sch:assert>
       <sch:assert test="count(f:payload) &lt;= 1">payload: maximum cardinality of 'payload' is 1</sch:assert>

@@ -1,4 +1,4 @@
-# Accueil - ANS IG Example v0.1.0
+# Accueil - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:ExampleIG |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -51,7 +51,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [NdE_CommunicationRequest_EventType](SearchParameter-NdE-CommunicationRequest-EventType.md)...Show 16 more,[NdE_Declarant](StructureDefinition-declarant.md),[NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md),[NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md),[NdE_EventEmissionTime](StructureDefinition-event-emission-time.md),[NdE_EventTime](StructureDefinition-event-time.md),[NdE_EventType](StructureDefinition-event-type.md),[NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md),[NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md),[NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md),[NdE_RecipientEndpoint](StructureDefinition-recipient-endpoint.md),[NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md),[NdE_Start](StructureDefinition-start.md),[NdE_Subject](StructureDefinition-subject.md),[NdE_Subscriber](StructureDefinition-subscriber.md),[NdE_SubscriptionDate](StructureDefinition-subscription-date.md)and[NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [NDE](index.md), [NdE_CommunicationRequest_EventType](SearchParameter-NdE-CommunicationRequest-EventType.md)...Show 16 more,[NdE_Declarant](StructureDefinition-declarant.md),[NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md),[NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md),[NdE_EventEmissionTime](StructureDefinition-event-emission-time.md),[NdE_EventTime](StructureDefinition-event-time.md),[NdE_EventType](StructureDefinition-event-type.md),[NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md),[NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md),[NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md),[NdE_RecipientEndpoint](StructureDefinition-recipient-endpoint.md),[NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md),[NdE_Start](StructureDefinition-start.md),[NdE_Subject](StructureDefinition-subject.md),[NdE_Subscriber](StructureDefinition-subscriber.md),[NdE_SubscriptionDate](StructureDefinition-subscription-date.md)and[NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 
 
 
@@ -61,13 +61,13 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 ```json
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ans.fhir.fr.[code]",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]",
-  "version" : "0.1.0",
-  "name" : "ExampleIG",
-  "title" : "ANS IG Example",
+  "id" : "ans.fhir.fr.nde",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde",
+  "version" : "3.0.0",
+  "name" : "NDE",
+  "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -91,7 +91,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       ]
     }
   ],
-  "packageId" : "ans.fhir.fr.[code]",
+  "packageId" : "ans.fhir.fr.nde",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [
@@ -285,7 +285,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           },
           {
             "url" : "value",
-            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/nde/history.html"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -646,7 +646,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           },
           {
             "url" : "value",
-            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/nde/history.html"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -916,7 +916,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         },
         "name" : "com1",
         "description" : "Exemple de demande de notification pour sortie du patient Robert Langdon.",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest"
       },
       {
         "extension" : [
@@ -930,7 +930,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         },
         "name" : "com2",
         "description" : "Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon.",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration"
       },
       {
         "extension" : [
@@ -1083,7 +1083,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "reference" : "Subscription/sub1"
         },
         "name" : "sub1",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription"
       },
       {
         "extension" : [

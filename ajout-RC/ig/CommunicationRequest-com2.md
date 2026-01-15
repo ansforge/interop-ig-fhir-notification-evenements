@@ -1,4 +1,4 @@
-# com2 - ANS IG Example v0.1.0
+# com2 - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -61,7 +61,7 @@ Profil: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
   "id" : "com2",
   "meta" : {
     "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"
+      "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration"
     ]
   },
   "contained" : [
@@ -147,7 +147,7 @@ Profil: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
   ],
   "extension" : [
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
       "valueCodeableConcept" : {
         "coding" : [
           {
@@ -159,7 +159,7 @@ Profil: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
       }
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time",
       "valueDateTime" : "2019-01-01T00:00:00Z"
     }
   ],

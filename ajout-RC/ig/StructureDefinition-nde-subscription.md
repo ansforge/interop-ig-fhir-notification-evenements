@@ -1,4 +1,4 @@
-# NdE_SubscriptionNdE - ANS IG Example v0.1.0
+# NdE_SubscriptionNdE - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_SubscriptionNdE |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_SubscriptionNdE |
 
  
 SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement. 
@@ -19,7 +19,7 @@ SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnemen
 * Référer à ce Profil: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md)
 * Exemples pour ce Profil: [Subscription/sub1](Subscription-sub1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/nde-subscription)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/nde-subscription)
 
 ### Formal Views of Profile Content
 
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
 {
   "resourceType" : "StructureDefinition",
   "id" : "nde-subscription",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription",
+  "version" : "3.0.0",
   "name" : "NdE_SubscriptionNdE",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -148,7 +148,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date"
             ]
           }
         ]
@@ -163,7 +163,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start"
             ]
           }
         ]
@@ -178,7 +178,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject"
             ]
           }
         ]
@@ -193,7 +193,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant"
             ]
           }
         ]
@@ -208,7 +208,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type"
             ]
           }
         ]
@@ -223,7 +223,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber"
             ]
           }
         ]

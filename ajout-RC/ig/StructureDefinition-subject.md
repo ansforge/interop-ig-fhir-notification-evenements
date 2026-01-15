@@ -1,4 +1,4 @@
-# Subject - ANS IG Example v0.1.0
+# Subject - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_Subject |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_Subject |
 
 Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient).
 
@@ -22,7 +22,7 @@ Référence au profil français de la ressource Patient contenant les informatio
 * Utiliser ce Extension: [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 * Exemples pour ce Extension: [Subscription/sub1](Subscription-sub1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/subject)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/subject)
 
 ### Formal Views of Extension Content
 
@@ -42,12 +42,12 @@ Other representations of profile: [CSV](StructureDefinition-subject.csv), [Excel
 {
   "resourceType" : "StructureDefinition",
   "id" : "subject",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject",
+  "version" : "3.0.0",
   "name" : "NdE_Subject",
   "title" : "Subject",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -107,7 +107,7 @@ Other representations of profile: [CSV](StructureDefinition-subject.csv), [Excel
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject"
       },
       {
         "id" : "Extension.value[x]",

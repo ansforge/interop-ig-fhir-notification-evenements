@@ -1,4 +1,4 @@
-# NdE_NotificationRequestNdE - ANS IG Example v0.1.0
+# NdE_NotificationRequestNdE - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_NotificationRequestNdE |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_NotificationRequestNdE |
 
  
 Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification 
@@ -21,7 +21,7 @@ Profil NotificationRequestNdE représentant le flux 4 - TransmissionOrdreNotific
 
 * Exemples pour ce Profil: [CommunicationRequest/com1](CommunicationRequest-com1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/nde-notificationrequest)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/nde-notificationrequest)
 
 ### Formal Views of Profile Content
 
@@ -39,11 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
 {
   "resourceType" : "StructureDefinition",
   "id" : "nde-notificationrequest",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest",
+  "version" : "3.0.0",
   "name" : "NdE_NotificationRequestNdE",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -103,7 +103,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
             "severity" : "error",
             "human" : "L’un des attributs subject ou about doit être présent",
             "expression" : "subject.exists() xor about.exists()",
-            "source" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"
+            "source" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest"
           }
         ]
       },
@@ -140,7 +140,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time"
             ]
           }
         ]
@@ -157,7 +157,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time"
             ]
           }
         ]
@@ -174,7 +174,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type"
             ]
           }
         ]
@@ -188,7 +188,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
           {
             "code" : "Reference",
             "targetProfile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription"
             ]
           }
         ]
@@ -275,7 +275,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-notificationrequ
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint"
             ]
           }
         ]

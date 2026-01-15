@@ -1,4 +1,4 @@
-# Start - ANS IG Example v0.1.0
+# Start - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_Start |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_Start |
 
 Cette information identifie la date de début de validité d’un abonnement.
 
@@ -22,7 +22,7 @@ Cette information identifie la date de début de validité d’un abonnement.
 * Utiliser ce Extension: [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 * Exemples pour ce Extension: [Subscription/sub1](Subscription-sub1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/start)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/start)
 
 ### Formal Views of Extension Content
 
@@ -42,12 +42,12 @@ Other representations of profile: [CSV](StructureDefinition-start.csv), [Excel](
 {
   "resourceType" : "StructureDefinition",
   "id" : "start",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start",
+  "version" : "3.0.0",
   "name" : "NdE_Start",
   "title" : "Start",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -107,7 +107,7 @@ Other representations of profile: [CSV](StructureDefinition-start.csv), [Excel](
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start"
       },
       {
         "id" : "Extension.value[x]",

@@ -1,4 +1,4 @@
-# Subscriber - ANS IG Example v0.1.0
+# Subscriber - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_Subscriber |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_Subscriber |
 
 Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..
 
@@ -22,7 +22,7 @@ Cette information identifie le type d’évènement qui est lié à un abonnemen
 * Utiliser ce Extension: [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 * Exemples pour ce Extension: [Subscription/sub1](Subscription-sub1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/subscriber)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/subscriber)
 
 ### Formal Views of Extension Content
 
@@ -42,12 +42,12 @@ Other representations of profile: [CSV](StructureDefinition-subscriber.csv), [Ex
 {
   "resourceType" : "StructureDefinition",
   "id" : "subscriber",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber",
+  "version" : "3.0.0",
   "name" : "NdE_Subscriber",
   "title" : "Subscriber",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -107,7 +107,7 @@ Other representations of profile: [CSV](StructureDefinition-subscriber.csv), [Ex
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber"
       },
       {
         "id" : "Extension.value[x]",

@@ -1,4 +1,4 @@
-# NdE_EventDeclarationNdE - ANS IG Example v0.1.0
+# NdE_EventDeclarationNdE - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_EventDeclarationNdE |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_EventDeclarationNdE |
 
  
 EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc. 
@@ -21,7 +21,7 @@ Profil EventDeclaratioNdE représentant le flux 3 - EmissionEvenement du volet N
 
 * Exemples pour ce Profil: [CommunicationRequest/com2](CommunicationRequest-com2.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/nde-eventdeclaration)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/nde-eventdeclaration)
 
 ### Formal Views of Profile Content
 
@@ -39,12 +39,12 @@ Other representations of profile: [CSV](StructureDefinition-nde-eventdeclaration
 {
   "resourceType" : "StructureDefinition",
   "id" : "nde-eventdeclaration",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration",
+  "version" : "3.0.0",
   "name" : "NdE_EventDeclarationNdE",
   "title" : "NdE_EventDeclarationNdE",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -105,7 +105,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-eventdeclaration
             "severity" : "error",
             "human" : "L’un des attributs subject ou about doit être présent",
             "expression" : "subject.exists() xor about.exists()",
-            "source" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"
+            "source" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration"
           }
         ]
       },
@@ -141,7 +141,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-eventdeclaration
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type"
             ]
           }
         ]
@@ -157,7 +157,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-eventdeclaration
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time"
+              "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time"
             ]
           }
         ]

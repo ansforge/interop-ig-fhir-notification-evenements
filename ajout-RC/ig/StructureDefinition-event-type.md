@@ -1,4 +1,4 @@
-# Event Type - ANS IG Example v0.1.0
+# Event Type - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_EventType |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_EventType |
 
 Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..
 
@@ -22,7 +22,7 @@ Cette information identifie le type d’évènement qui est lié à un abonnemen
 * Utiliser ce Extension: [NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md), [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md) and [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 * Exemples pour ce Extension: [CommunicationRequest/com1](CommunicationRequest-com1.md), [CommunicationRequest/com2](CommunicationRequest-com2.md) and [Subscription/sub1](Subscription-sub1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/event-type)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/event-type)
 
 ### Formal Views of Extension Content
 
@@ -44,12 +44,12 @@ Other representations of profile: [CSV](StructureDefinition-event-type.csv), [Ex
 {
   "resourceType" : "StructureDefinition",
   "id" : "event-type",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
+  "version" : "3.0.0",
   "name" : "NdE_EventType",
   "title" : "Event Type",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -113,7 +113,7 @@ Other representations of profile: [CSV](StructureDefinition-event-type.csv), [Ex
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type"
       },
       {
         "id" : "Extension.value[x]",

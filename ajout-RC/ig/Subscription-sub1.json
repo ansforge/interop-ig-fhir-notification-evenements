@@ -2,7 +2,7 @@
   "resourceType" : "Subscription",
   "id" : "sub1",
   "meta" : {
-    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription"]
   },
   "text" : {
     "status" : "extensions",
@@ -89,23 +89,23 @@
     }]
   }],
   "extension" : [{
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start",
     "valueDateTime" : "2019-02-01T01:30:00+01:00"
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject",
     "valueReference" : {
       "reference" : "#pat1"
     }
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant",
     "valueReference" : {
       "reference" : "#org1"
     }
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement",
@@ -115,13 +115,13 @@
     }
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber",
     "valueReference" : {
       "reference" : "#pract1"
     }
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date",
     "valueDateTime" : "2019-10-01T01:30:00+01:00"
   }],
   "status" : "requested",

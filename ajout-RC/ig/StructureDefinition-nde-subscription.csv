@@ -25,27 +25,27 @@ Practitioner {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Subscription.extension:SubscriptionDate","Subscription.extension","SubscriptionDate","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date]]} {[]}
+"Subscription.extension:SubscriptionDate","Subscription.extension","SubscriptionDate","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date]]} {[]}
 ","Subscription Date","Date de création de l’abonnement.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Subscription.extension:Start","Subscription.extension","Start","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start]]} {[]}
+"Subscription.extension:Start","Subscription.extension","Start","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start]]} {[]}
 ","Start","Cette information identifie la date de début de validité d’un abonnement.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Subscription.extension:Subject","Subscription.extension","Subject","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject]]} {[]}
+"Subscription.extension:Subject","Subscription.extension","Subject","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject]]} {[]}
 ","Subject","Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Subscription.extension:Declarant","Subscription.extension","Declarant","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant]]} {[]}
+"Subscription.extension:Declarant","Subscription.extension","Declarant","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant]]} {[]}
 ","Declarant","Référence aux profils français des ressources qui identifient l’émetteur de l’évènement (Practitioner pour un professionnel, Organization pour un établissement)","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Subscription.extension:EventType","Subscription.extension","EventType","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type]]} {[]}
+"Subscription.extension:EventType","Subscription.extension","EventType","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type]]} {[]}
 ","Event Type","Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Subscription.extension:Subscriber","Subscription.extension","Subscriber","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber]]} {[]}
+"Subscription.extension:Subscriber","Subscription.extension","Subscriber","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber]]} {[]}
 ","Subscriber","Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"

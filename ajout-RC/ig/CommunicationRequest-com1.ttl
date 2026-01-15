@@ -6,13 +6,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/[code]/CommunicationRequest/com1> a fhir:CommunicationRequest ;
+<https://interop.esante.gouv.fr/ig/fhir/nde/CommunicationRequest/com1> a fhir:CommunicationRequest ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "com1"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest>
      ] )
   ] ; # 
   fhir:text [
@@ -128,8 +128,8 @@
   ] ) ; # 
   fhir:extension ( [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type>
      ] ;
      fhir:value [
        a fhir:CodeableConcept ;
@@ -144,8 +144,8 @@
      ]
   ] [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time>
      ] ;
      fhir:value [
        a fhir:DateTime ;
@@ -153,8 +153,8 @@
      ]
   ] [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time>
      ] ;
      fhir:value [
        a fhir:DateTime ;
@@ -194,8 +194,8 @@
      fhir:l <#pract1> ;
      fhir:extension ( [
        fhir:url [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint>
        ] ;
        fhir:value [
          a fhir:Url ;

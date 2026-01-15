@@ -1,4 +1,4 @@
-# Subscription Date - ANS IG Example v0.1.0
+# Subscription Date - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_SubscriptionDate |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_SubscriptionDate |
 
 Date de création de l’abonnement.
 
@@ -22,7 +22,7 @@ Date de création de l’abonnement.
 * Utiliser ce Extension: [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 * Exemples pour ce Extension: [Subscription/sub1](Subscription-sub1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/subscription-date)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/subscription-date)
 
 ### Formal Views of Extension Content
 
@@ -42,12 +42,12 @@ Other representations of profile: [CSV](StructureDefinition-subscription-date.cs
 {
   "resourceType" : "StructureDefinition",
   "id" : "subscription-date",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date",
+  "version" : "3.0.0",
   "name" : "NdE_SubscriptionDate",
   "title" : "Subscription Date",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -107,7 +107,7 @@ Other representations of profile: [CSV](StructureDefinition-subscription-date.cs
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date"
       },
       {
         "id" : "Extension.value[x]",

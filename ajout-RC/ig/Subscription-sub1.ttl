@@ -6,13 +6,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/[code]/Subscription/sub1> a fhir:Subscription ;
+<https://interop.esante.gouv.fr/ig/fhir/nde/Subscription/sub1> a fhir:Subscription ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "sub1"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription>
      ] )
   ] ; # 
   fhir:text [
@@ -128,8 +128,8 @@
   ] ) ; # 
   fhir:extension ( [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start>
      ] ;
      fhir:value [
        a fhir:DateTime ;
@@ -137,8 +137,8 @@
      ]
   ] [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject>
      ] ;
      fhir:value [
        a fhir:Reference ;
@@ -147,8 +147,8 @@
      ]
   ] [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant>
      ] ;
      fhir:value [
        a fhir:Reference ;
@@ -157,8 +157,8 @@
      ]
   ] [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type>
      ] ;
      fhir:value [
        a fhir:CodeableConcept ;
@@ -173,8 +173,8 @@
      ]
   ] [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber>
      ] ;
      fhir:value [
        a fhir:Reference ;
@@ -183,8 +183,8 @@
      ]
   ] [
      fhir:url [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date>
      ] ;
      fhir:value [
        a fhir:DateTime ;

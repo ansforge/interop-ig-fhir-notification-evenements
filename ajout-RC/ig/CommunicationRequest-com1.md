@@ -1,4 +1,4 @@
-# com1 - ANS IG Example v0.1.0
+# com1 - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -77,7 +77,7 @@ Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
   "id" : "com1",
   "meta" : {
     "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"
+      "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest"
     ]
   },
   "contained" : [
@@ -186,7 +186,7 @@ Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
   ],
   "extension" : [
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
       "valueCodeableConcept" : {
         "coding" : [
           {
@@ -198,11 +198,11 @@ Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
       }
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time",
       "valueDateTime" : "2019-01-01T00:00:00Z"
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time",
       "valueDateTime" : "2019-01-01T02:00:00Z"
     }
   ],
@@ -238,7 +238,7 @@ Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
     {
       "extension" : [
         {
-          "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint",
+          "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint",
           "valueUrl" : "mailto:mailto:pierre.durant@aphp.fr"
         }
       ],

@@ -2,7 +2,7 @@
   "resourceType" : "CommunicationRequest",
   "id" : "com2",
   "meta" : {
-    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration"]
   },
   "text" : {
     "status" : "extensions",
@@ -72,7 +72,7 @@
     }]
   }],
   "extension" : [{
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement",
@@ -82,7 +82,7 @@
     }
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time",
     "valueDateTime" : "2019-01-01T00:00:00Z"
   }],
   "status" : "active",

@@ -6,22 +6,22 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]> a fhir:ImplementationGuide ;
+<https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ans.fhir.fr.[code]"] ; # 
+  fhir:id [ fhir:v "ans.fhir.fr.nde"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.[code]</b></p><a name=\"ans.fhir.fr.[code]\"> </a><a name=\"hcans.fhir.fr.[code]\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]</pre></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.nde</b></p><a name=\"ans.fhir.fr.nde\"> </a><a name=\"hcans.fhir.fr.nde\"> </a><h2>NDE</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde</pre></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
-     fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]"^^xsd:anyURI ;
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]>
+     fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde"^^xsd:anyURI ;
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "ExampleIG"] ; # 
-  fhir:title [ fhir:v "ANS IG Example"] ; # 
+  fhir:version [ fhir:v "3.0.0"] ; # 
+  fhir:name [ fhir:v "NDE"] ; # 
+  fhir:title [ fhir:v "Notification d'Événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-09T09:23:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-15T15:19:42+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -40,7 +40,7 @@
        fhir:display [ fhir:v "FRANCE" ]
      ] )
   ] ) ; # 
-  fhir:packageId [ fhir:v "ans.fhir.fr.[code]"] ; # 
+  fhir:packageId [ fhir:v "ans.fhir.fr.nde"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
   fhir:dependsOn ( [
@@ -378,7 +378,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+           fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/history.html"
          ]
        ] ) ;
        fhir:url [
@@ -752,7 +752,7 @@
        ] ;
        fhir:value [
          a fhir:Reference ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Parameters/expansion-parameters> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/Parameters/expansion-parameters> ;
          fhir:reference [ fhir:v "Parameters/expansion-parameters" ]
        ]
      ] [
@@ -1045,7 +1045,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+           fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/history.html"
          ]
        ] ) ;
        fhir:url [
@@ -1425,7 +1425,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-Emetteur> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Emetteur> ;
          fhir:reference [ fhir:v "CapabilityStatement/NdE-Emetteur" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Notification-D-Evenements - NdE_Emetteur" ] ;
@@ -1446,7 +1446,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDAbonnements> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDAbonnements> ;
          fhir:reference [ fhir:v "CapabilityStatement/NdE-GestionnaireDAbonnements" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements" ] ;
@@ -1467,7 +1467,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-GestionnaireDeNotifications> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDeNotifications> ;
          fhir:reference [ fhir:v "CapabilityStatement/NdE-GestionnaireDeNotifications" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications" ] ;
@@ -1488,7 +1488,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/NdE-Souscripteur> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Souscripteur> ;
          fhir:reference [ fhir:v "CapabilityStatement/NdE-Souscripteur" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Notification-D-Evenements - NdE_Souscripteur" ] ;
@@ -1509,15 +1509,15 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CommunicationRequest/com1> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/CommunicationRequest/com1> ;
          fhir:reference [ fhir:v "CommunicationRequest/com1" ]
        ] ;
        fhir:name [ fhir:v "com1" ] ;
        fhir:description [ fhir:v "Exemple de demande de notification pour sortie du patient Robert Langdon." ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest>
        ]
      ] [
        fhir:extension ( [
@@ -1531,15 +1531,15 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CommunicationRequest/com2> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/CommunicationRequest/com2> ;
          fhir:reference [ fhir:v "CommunicationRequest/com2" ]
        ] ;
        fhir:name [ fhir:v "com2" ] ;
        fhir:description [ fhir:v "Exemple d'une émission d'évènement pour notification de sortie du patient Robert Langdon." ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration>
        ]
      ] [
        fhir:extension ( [
@@ -1553,7 +1553,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant> ;
          fhir:reference [ fhir:v "StructureDefinition/declarant" ]
        ] ;
        fhir:name [ fhir:v "Declarant" ] ;
@@ -1574,7 +1574,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time> ;
          fhir:reference [ fhir:v "StructureDefinition/event-emission-time" ]
        ] ;
        fhir:name [ fhir:v "Emission Time" ] ;
@@ -1595,7 +1595,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time> ;
          fhir:reference [ fhir:v "StructureDefinition/event-time" ]
        ] ;
        fhir:name [ fhir:v "Event Time" ] ;
@@ -1616,7 +1616,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type> ;
          fhir:reference [ fhir:v "StructureDefinition/event-type" ]
        ] ;
        fhir:name [ fhir:v "Event Type" ] ;
@@ -1637,7 +1637,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/NdE-CommunicationRequest-EventType> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/SearchParameter/NdE-CommunicationRequest-EventType> ;
          fhir:reference [ fhir:v "SearchParameter/NdE-CommunicationRequest-EventType" ]
        ] ;
        fhir:name [ fhir:v "NdE-CommunicationRequest-EventType" ] ;
@@ -1658,7 +1658,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-eventdeclaration> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration> ;
          fhir:reference [ fhir:v "StructureDefinition/nde-eventdeclaration" ]
        ] ;
        fhir:name [ fhir:v "NdE_EventDeclarationNdE" ] ;
@@ -1679,7 +1679,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-notificationrequest> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest> ;
          fhir:reference [ fhir:v "StructureDefinition/nde-notificationrequest" ]
        ] ;
        fhir:name [ fhir:v "NdE_NotificationRequestNdE" ] ;
@@ -1700,7 +1700,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint> ;
          fhir:reference [ fhir:v "StructureDefinition/recipient-endpoint" ]
        ] ;
        fhir:name [ fhir:v "NdE_RecipientEndpoint" ] ;
@@ -1721,7 +1721,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription> ;
          fhir:reference [ fhir:v "StructureDefinition/nde-subscription" ]
        ] ;
        fhir:name [ fhir:v "NdE_SubscriptionNdE" ] ;
@@ -1742,7 +1742,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start> ;
          fhir:reference [ fhir:v "StructureDefinition/start" ]
        ] ;
        fhir:name [ fhir:v "Start" ] ;
@@ -1763,14 +1763,14 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Subscription/sub1> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/Subscription/sub1> ;
          fhir:reference [ fhir:v "Subscription/sub1" ]
        ] ;
        fhir:name [ fhir:v "sub1" ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription>
        ]
      ] [
        fhir:extension ( [
@@ -1784,7 +1784,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject> ;
          fhir:reference [ fhir:v "StructureDefinition/subject" ]
        ] ;
        fhir:name [ fhir:v "Subject" ] ;
@@ -1805,7 +1805,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber> ;
          fhir:reference [ fhir:v "StructureDefinition/subscriber" ]
        ] ;
        fhir:name [ fhir:v "Subscriber" ] ;
@@ -1826,7 +1826,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date> ;
          fhir:reference [ fhir:v "StructureDefinition/subscription-date" ]
        ] ;
        fhir:name [ fhir:v "Subscription Date" ] ;

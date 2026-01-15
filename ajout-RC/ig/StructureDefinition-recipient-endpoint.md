@@ -1,4 +1,4 @@
-# NdE_RecipientEndpoint - ANS IG Example v0.1.0
+# NdE_RecipientEndpoint - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_RecipientEndpoint |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_RecipientEndpoint |
 
 Cette information contient les données nécessaires pour contacter l’abonné
 
@@ -22,7 +22,7 @@ Cette information contient les données nécessaires pour contacter l’abonné
 * Utiliser ce Extension: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md)
 * Exemples pour ce Extension: [CommunicationRequest/com1](CommunicationRequest-com1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/recipient-endpoint)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/recipient-endpoint)
 
 ### Formal Views of Extension Content
 
@@ -42,11 +42,11 @@ Other representations of profile: [CSV](StructureDefinition-recipient-endpoint.c
 {
   "resourceType" : "StructureDefinition",
   "id" : "recipient-endpoint",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint",
+  "version" : "3.0.0",
   "name" : "NdE_RecipientEndpoint",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -105,7 +105,7 @@ Other representations of profile: [CSV](StructureDefinition-recipient-endpoint.c
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/recipient-endpoint"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint"
       },
       {
         "id" : "Extension.value[x]",

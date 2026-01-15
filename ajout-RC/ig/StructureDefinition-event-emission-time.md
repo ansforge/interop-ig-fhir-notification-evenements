@@ -1,4 +1,4 @@
-# Emission Time - ANS IG Example v0.1.0
+# Emission Time - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:NdE_EventEmissionTime |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time | *Version*:3.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:NdE_EventEmissionTime |
 
 Cette information identifie la date l’heure de l’émission d’un évènement.
 
@@ -22,7 +22,7 @@ Cette information identifie la date l’heure de l’émission d’un évènemen
 * Utiliser ce Extension: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md)
 * Exemples pour ce Extension: [CommunicationRequest/com1](CommunicationRequest-com1.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/event-emission-time)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.nde|current/StructureDefinition/event-emission-time)
 
 ### Formal Views of Extension Content
 
@@ -42,12 +42,12 @@ Other representations of profile: [CSV](StructureDefinition-event-emission-time.
 {
   "resourceType" : "StructureDefinition",
   "id" : "event-emission-time",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time",
+  "version" : "3.0.0",
   "name" : "NdE_EventEmissionTime",
   "title" : "Emission Time",
   "status" : "draft",
-  "date" : "2026-01-09T09:23:40+00:00",
+  "date" : "2026-01-15T15:19:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -107,7 +107,7 @@ Other representations of profile: [CSV](StructureDefinition-event-emission-time.
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-emission-time"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time"
       },
       {
         "id" : "Extension.value[x]",

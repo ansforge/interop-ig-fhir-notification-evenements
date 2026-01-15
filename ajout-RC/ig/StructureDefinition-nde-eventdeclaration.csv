@@ -24,11 +24,11 @@ anonymous resourcescontained resources","",1,*,"","","","Resource {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"CommunicationRequest.extension:EventType","CommunicationRequest.extension","EventType","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type]]} {[]}
+"CommunicationRequest.extension:EventType","CommunicationRequest.extension","EventType","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type]]} {[]}
 ","Event Type","Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..","Elle représente le type d’évènements qui est généralement lié à la personne prise en charge (ou patient).","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"CommunicationRequest.extension:EventTime","CommunicationRequest.extension","EventTime","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-time]]} {[]}
+"CommunicationRequest.extension:EventTime","CommunicationRequest.extension","EventTime","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time]]} {[]}
 ","Event Time","Date à laquelle l’évènement a eu lieu.","Date à laquelle l’évènement a eu lieu","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"

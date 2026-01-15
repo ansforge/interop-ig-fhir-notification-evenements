@@ -1,4 +1,4 @@
-# sub1 - ANS IG Example v0.1.0
+# sub1 - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -79,7 +79,7 @@ Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
   "id" : "sub1",
   "meta" : {
     "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/nde-subscription"
+      "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription"
     ]
   },
   "contained" : [
@@ -188,23 +188,23 @@ Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
   ],
   "extension" : [
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/start",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start",
       "valueDateTime" : "2019-02-01T01:30:00+01:00"
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subject",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject",
       "valueReference" : {
         "reference" : "#pat1"
       }
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/declarant",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant",
       "valueReference" : {
         "reference" : "#org1"
       }
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/event-type",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
       "valueCodeableConcept" : {
         "coding" : [
           {
@@ -216,13 +216,13 @@ Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
       }
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscriber",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber",
       "valueReference" : {
         "reference" : "#pract1"
       }
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/subscription-date",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date",
       "valueDateTime" : "2019-10-01T01:30:00+01:00"
     }
   ],
