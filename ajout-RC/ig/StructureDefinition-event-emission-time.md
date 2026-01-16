@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time | *Version*:3.0.0 |
-| Draft as of 2026-01-15 | *Computable Name*:NdE_EventEmissionTime |
+| Draft as of 2026-01-16 | *Computable Name*:NdE_EventEmissionTime |
 
 Cette information identifie la date l’heure de l’émission d’un évènement.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-event-emission-time.
   "name" : "NdE_EventEmissionTime",
   "title" : "Emission Time",
   "status" : "draft",
-  "date" : "2026-01-15T15:19:42+00:00",
+  "date" : "2026-01-16T10:55:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

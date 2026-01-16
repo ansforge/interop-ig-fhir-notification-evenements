@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/SearchParameter/NdE-CommunicationRequest-EventType | *Version*:3.0.0 |
-| Active as of 2026-01-15 | *Computable Name*:NdE_CommunicationRequest_EventType |
+| Active as of 2026-01-16 | *Computable Name*:NdE_CommunicationRequest_EventType |
 
  
 Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3) 
@@ -26,7 +26,7 @@ Permet de filtrer sur le type d'évènement véhiculé par la ressource Communic
   "version" : "3.0.0",
   "name" : "NdE_CommunicationRequest_EventType",
   "status" : "active",
-  "date" : "2026-01-15T15:19:42+00:00",
+  "date" : "2026-01-16T10:55:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
