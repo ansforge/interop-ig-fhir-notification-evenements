@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0 |
-| Draft as of 2026-01-15 | *Computable Name*:NDE |
+| Draft as of 2026-01-16 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -64,7 +64,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-15T15:18:25+00:00",
+  "date" : "2026-01-16T10:30:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
