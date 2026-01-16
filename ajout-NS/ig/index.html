@@ -220,7 +220,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2026-01-15
+            as of 2026-01-16
           
         
       </td>
@@ -248,7 +248,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#périmètre-du-projet" id="markdown-toc-périmètre-du-projet">Périmètre du projet</a></li>
-  <li><a href="#auteurs-et-contributeurs" id="markdown-toc-auteurs-et-contributeurs">Auteurs et contributeurs</a></li>
   <li><a href="#dépendances" id="markdown-toc-dépendances">Dépendances</a></li>
   <li><a href="#propriété-intellectuelle" id="markdown-toc-propriété-intellectuelle">Propriété intellectuelle</a></li>
 </ul>
@@ -256,8 +255,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br />
-[Add a brief description of this IG in English]
-</p>
+This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework.
+It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.</p>
 
 <div style="width: 65%">
     <blockquote class="stu-note">
@@ -265,50 +264,40 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </blockquote>
 </div>
 
-<!--  A décommenter si CI-SIS
 <div class="figure">
-    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
+    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;" />
 </div>
--->
 
 <h3 id="introduction">Introduction</h3>
 
-<p>Définir ici de quoi parle l'IG (En termes non expert, compréhensible par un patient). Rajouter également les détails techniques sur le contexte et le besoin de cet IG</p>
+<p>Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement survient au cours de sa prise en charge.</p>
 
-<p>Les principales sections de l'IG  sont :</p>
+<p>Il s'agit par exemple, de recevoir une information lorsqu’un document est disponible, lorsqu’une hospitalisation débute ou se termine, ou lorsqu’une information significative est ajoutée à un dossier. Ces notifications peuvent concerner un patient ou un usager, un professionnel de santé, ou toute autre personne autorisée.</p>
+
+<p>Sur le plan technique, cet IG s’inscrit dans le cadre du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS) et couvre les domaines sanitaire, médico-administratif, médico-social et social.<br />
+Elle formalise les mécanismes nécessaires à :</p>
 
 <ul>
-  <li>Le contexte de l'IG, quelle problématique il résout</li>
-  <li>Ce que les Implémenteurs doivent mettre en place</li>
-  <li>Un onglet "Ressources de conformité" pour s'assurer d'un schéma global entre tous les IGs</li>
+  <li>la gestion des abonnements à des types d’évènements,</li>
+  <li>la déclaration d’évènements par des systèmes émetteurs,</li>
+  <li>la transmission d’ordres de notification vers les abonnés concernés.</li>
 </ul>
 
 <h3 id="périmètre-du-projet">Périmètre du projet</h3>
 
-<p>Définir en quelques lignes en anglais quel est le périmètre du projet</p>
+<p>Cet Implementation Guide définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.</p>
 
-<p>Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohérence globales entre tous les IGs</p>
+<p>Elle couvre la gestion des abonnements aux notifications, la déclaration des évènements et la transmission des ordres de notification, en s’appuyant sur des ressources et profils HL7 FHIR R4.</p>
 
-<h3 id="auteurs-et-contributeurs">Auteurs et contributeurs</h3>
+<h4 id="lectorat-cible">Lectorat cible</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th>Role</th>
-      <th>Nom</th>
-      <th>Organisation</th>
-      <th>Contact</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Primary Editor</strong></td>
-      <td>Prenom Nom</td>
-      <td>Agence du Numérique en Santé</td>
-      <td>prenom.nom@address.email</td>
-    </tr>
-  </tbody>
-</table>
+<p>Ce document s’adresse aux développeurs des interfaces interopérables des systèmes implémentant le cas d’usage « Notification d’évènements » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.</p>
+
+<h4 id="ressources-fhir-profilées">Ressources FHIR profilées</h4>
+
+<p>Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes :</p>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Profil parent</td><td style="background-color: #eeeeee">Profil</td><td style="background-color: #eeeeee">Description</td></tr></table>
 
 <h3 id="dépendances">Dépendances</h3>
 
@@ -378,7 +367,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 15:18+0000">2026-01-15</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 16, 2026 10:54+0000">2026-01-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
