@@ -252,8 +252,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br />
-[Add a brief description of this IG in English]
-</p>
+This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework.
+It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.</p>
 
 <div style="width: 65%">
     <blockquote class="stu-note">
@@ -267,11 +267,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="introduction">Introduction</h3>
 
-<p>Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement important survient au cours de sa prise en charge.</p>
+<p>Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement survient au cours de sa prise en charge.</p>
 
-<p>De manière simple, il s’agit par exemple de recevoir une information lorsqu’un document est disponible, lorsqu’une hospitalisation débute ou se termine, ou lorsqu’une information significative est ajoutée à un dossier. Ces notifications peuvent concerner un patient ou un usager, un professionnel de santé, ou toute autre personne autorisée.</p>
+<p>Il s'agit par exemple, de recevoir une information lorsqu’un document est disponible, lorsqu’une hospitalisation débute ou se termine, ou lorsqu’une information significative est ajoutée à un dossier. Ces notifications peuvent concerner un patient ou un usager, un professionnel de santé, ou toute autre personne autorisée.</p>
 
-<p>Sur le plan technique, cette IG s’inscrit dans le cadre du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS) et couvre les domaines sanitaire, médico-administratif, médico-social et social.<br />
+<p>Sur le plan technique, cet IG s’inscrit dans le cadre du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS) et couvre les domaines sanitaire, médico-administratif, médico-social et social.<br />
 Elle formalise les mécanismes nécessaires à :</p>
 
 <ul>
@@ -282,13 +282,19 @@ Elle formalise les mécanismes nécessaires à :</p>
 
 <h3 id="périmètre-du-projet">Périmètre du projet</h3>
 
-<p>This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework.</p>
-
-<p>It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.</p>
-
-<p>Cette Implementation Guide définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.</p>
+<p>Cet Implementation Guide définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.</p>
 
 <p>Elle couvre la gestion des abonnements aux notifications, la déclaration des évènements et la transmission des ordres de notification, en s’appuyant sur des ressources et profils HL7 FHIR R4.</p>
+
+<h4 id="lectorat-cible">Lectorat cible</h4>
+
+<p>Ce document s’adresse aux développeurs des interfaces interopérables des systèmes implémentant le cas d’usage « Notification d’évènements » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.</p>
+
+<h4 id="ressources-fhir-profilées">Ressources FHIR profilées</h4>
+
+<p>Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes :</p>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Profil parent</td><td style="background-color: #eeeeee">Profil</td><td style="background-color: #eeeeee">Description</td></tr></table>
 
 <h3 id="dépendances">Dépendances</h3>
 
@@ -358,7 +364,7 @@ Elle formalise les mécanismes nécessaires à :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 16, 2026 10:30+0000">2026-01-16</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 16, 2026 10:53+0000">2026-01-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

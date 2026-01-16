@@ -11,17 +11,17 @@
 | Draft as of 2026-01-16 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
- [Add a brief description of this IG in English] 
+ This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework. It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
 
 > Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : http://interop.esante.gouv.fr/ig/fhir/[code - ig]
 
 ### Introduction
 
-Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement important survient au cours de sa prise en charge.
+Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement survient au cours de sa prise en charge.
 
-De manière simple, il s’agit par exemple de recevoir une information lorsqu’un document est disponible, lorsqu’une hospitalisation débute ou se termine, ou lorsqu’une information significative est ajoutée à un dossier. Ces notifications peuvent concerner un patient ou un usager, un professionnel de santé, ou toute autre personne autorisée.
+Il s'agit par exemple, de recevoir une information lorsqu’un document est disponible, lorsqu’une hospitalisation débute ou se termine, ou lorsqu’une information significative est ajoutée à un dossier. Ces notifications peuvent concerner un patient ou un usager, un professionnel de santé, ou toute autre personne autorisée.
 
-Sur le plan technique, cette IG s’inscrit dans le cadre du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS) et couvre les domaines sanitaire, médico-administratif, médico-social et social.
+Sur le plan technique, cet IG s’inscrit dans le cadre du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS) et couvre les domaines sanitaire, médico-administratif, médico-social et social.
  Elle formalise les mécanismes nécessaires à :
 
 * la gestion des abonnements à des types d’évènements,
@@ -30,13 +30,21 @@ Sur le plan technique, cette IG s’inscrit dans le cadre du Cadre d’Interopé
 
 ### Périmètre du projet
 
-This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework.
-
-It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
-
-Cette Implementation Guide définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.
+Cet Implementation Guide définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.
 
 Elle couvre la gestion des abonnements aux notifications, la déclaration des évènements et la transmission des ordres de notification, en s’appuyant sur des ressources et profils HL7 FHIR R4.
+
+#### Lectorat cible
+
+Ce document s’adresse aux développeurs des interfaces interopérables des systèmes implémentant le cas d’usage « Notification d’évènements » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.
+
+#### Ressources FHIR profilées
+
+Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes :
+
+| | | |
+| :--- | :--- | :--- |
+| Profil parent | Profil | Description |
 
 ### Dépendances
 
@@ -64,7 +72,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-16T10:30:25+00:00",
+  "date" : "2026-01-16T10:53:20+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
