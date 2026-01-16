@@ -1,7 +1,7 @@
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br>
-[Add a brief description of this IG in English]
-</p>
+This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework.
+It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.</p>
 
 {% if site.data.info.releaselabel == 'ci-build' %}
 <div style="width: 65%">
@@ -10,7 +10,6 @@
     </blockquote>
 </div>
 {% endif %}
-
 
 {% if site.data.info.releaselabel == 'public-comment' %}
 <div style="width: 65%">
@@ -30,11 +29,11 @@
 
 ### Introduction
 
-Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement important survient au cours de sa prise en charge.
+Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement survient au cours de sa prise en charge.
 
-De manière simple, il s’agit par exemple de recevoir une information lorsqu’un document est disponible, lorsqu’une hospitalisation débute ou se termine, ou lorsqu’une information significative est ajoutée à un dossier. Ces notifications peuvent concerner un patient ou un usager, un professionnel de santé, ou toute autre personne autorisée.
+Il s'agit par exemple, de recevoir une information lorsqu’un document est disponible, lorsqu’une hospitalisation débute ou se termine, ou lorsqu’une information significative est ajoutée à un dossier. Ces notifications peuvent concerner un patient ou un usager, un professionnel de santé, ou toute autre personne autorisée.
 
-Sur le plan technique, cette IG s’inscrit dans le cadre du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS) et couvre les domaines sanitaire, médico-administratif, médico-social et social.  
+Sur le plan technique, cet IG s’inscrit dans le cadre du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS) et couvre les domaines sanitaire, médico-administratif, médico-social et social.  
 Elle formalise les mécanismes nécessaires à :
 
 - la gestion des abonnements à des types d’évènements,
@@ -43,13 +42,34 @@ Elle formalise les mécanismes nécessaires à :
 
 ### Périmètre du projet
 
-This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework.
-
-It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
-
-Cette Implementation Guide définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.
+Cet Implementation Guide définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.
 
 Elle couvre la gestion des abonnements aux notifications, la déclaration des évènements et la transmission des ordres de notification, en s’appuyant sur des ressources et profils HL7 FHIR R4.
+
+#### Lectorat cible
+
+Ce document s’adresse aux développeurs des interfaces interopérables des systèmes implémentant le cas d’usage « Notification d’évènements » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.
+
+#### Ressources FHIR profilées
+
+Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes : 
+
+{% sql { 
+  "query" : " 
+    SELECT json_extract(Json, '$.baseDefinition') as Parent, Name, Description, Web 
+    FROM Resources 
+    WHERE Type = 'StructureDefinition' 
+      AND Id LIKE 'TDE%' 
+      AND json_extract(Json, '$.kind') = 'resource' 
+    ORDER BY Name 
+  ", 
+  "class" : "lines", 
+  "columns" : [ 
+    { "title" : "Profil parent", "source" : "Parent" }, 
+    { "title" : "Profil", "type" : "link", "source" : "Name", "target" : "Web" }, 
+    { "title" : "Description", "type" : "markdown", "source" : "Description" } 
+  ] 
+} %}
 
 ### Dépendances
 
