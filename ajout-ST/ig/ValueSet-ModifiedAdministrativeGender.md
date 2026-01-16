@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ValueSet/ModifiedAdministrativeGender | *Version*:3.0.0 |
-| Draft as of 2026-01-15 | *Computable Name*:ModifiedAdministrativeGender |
+| Draft as of 2026-01-16 | *Computable Name*:ModifiedAdministrativeGender |
 
  
 AdministrativeGender without unknown code 
@@ -50,7 +50,7 @@ AdministrativeGender without unknown code
   "name" : "ModifiedAdministrativeGender",
   "title" : "ModifiedAdministrativeGender",
   "status" : "draft",
-  "date" : "2026-01-15T15:19:04+00:00",
+  "date" : "2026-01-16T10:54:22+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
