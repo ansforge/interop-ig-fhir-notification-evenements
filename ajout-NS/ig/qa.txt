@@ -2,8 +2,8 @@ NDE : Validation Results
 =========================================
 
 err = 1, warn = 14, info = 17
-IG Publisher Version: 2.0.29
-Generated Fri Jan 16 10:56:10 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.nde#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/nde)
+IG Publisher Version: 2.0.30
+Generated Wed Jan 21 08:54:00 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.nde#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/nde)
  Build Errors : 1 / 3 / 0
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 3

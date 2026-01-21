@@ -208,7 +208,7 @@ Cette section présente une synthèse comparative des normes, standards et profi
 | Outillage**Des outils de tests sont mis en œuvre pour valider l’adhérence au standard.** | ✔ | ✔ |
 | Tests**Des tests sont effectués sur des versions de travail (dites STU – Standards for Trial Use) et/ou pour les guides d’implémentation normatifs.** | Non encore testé (maturité 1) | ✔ |
 | Processus de prise en compte des améliorations | ✔ | ✔ |
-| Existence de guides d’implémentation (Un guide d’implémentation combine un ou plusieurs standards afin de traiter des cas d’usage particuliers)**Les guides référencent les standards de base, c’est-à-dire des standards traitant des cas d’usage génériques et abstraits, avec au moins un cas d’usage et une optionalité sur les paramètres pour permettre les extensions.** | ✔ | ✔ |
+| Existence de guides d’implémentation (Un guide d’implémentation combine un ou plusieurs standards afin de traiter des cas d’usage particuliers)** Les guides référencent les standards de base, c’est-à-dire des standards traitant des cas d’usage génériques et abstraits, avec au moins un cas d’usage et une optionalité sur les paramètres pour permettre les extensions. ** | ✔ | ✔ |
 | Adapté aux dispositifs mobiles | ✔ |  |
 | Stabilité de la documentation |  | ✔ |
 | Adoption par le marché et utilisation (**L’adoption peut être démontrée par des exemples opérationnels d’implémentations conformes provenant de différents fournisseurs.**) |  | ✔ |
