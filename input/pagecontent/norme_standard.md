@@ -4,6 +4,8 @@
 Étude du 10/2016, avec dernière mise à jour en 08/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
 </div>
 
+<br>
+
 Ce document présente les normes, standards et profils de normes et
 standards qui ont été identifiés comme adaptés pour la mise en œuvre des
 flux structurés présentés dans le document [Étude métier – Notification
