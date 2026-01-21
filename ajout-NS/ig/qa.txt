@@ -3,8 +3,8 @@ NDE : Validation Results
 
 err = 1, warn = 14, info = 17
 IG Publisher Version: 2.0.30
-Generated Wed Jan 21 08:54:00 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.nde#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/nde)
- Build Errors : 1 / 3 / 0
+Generated Wed Jan 21 09:25:17 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.nde#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/nde)
+ Build Errors : 2 / 3 / 0
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.nde : 1 / 0 / 2
@@ -17,6 +17,7 @@ Generated Wed Jan 21 08:54:00 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.nde#3
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS : 0 / 1 / 2
 </table>
 == n/a ==
+ERROR: index.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 300, column 199: The link 'Patient' for "Patient" cannot be resolved
 ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide

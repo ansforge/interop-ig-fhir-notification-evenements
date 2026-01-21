@@ -44,7 +44,8 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
 
 | | | |
 | :--- | :--- | :--- |
-| Profil parent | Profil | Description |
+| Ressource FHIR | Profil | Description |
+| [Patient](Patient) | [FrPatient](StructureDefinition-fr-patient.md) | Description du patient français |
 
 ### Dépendances
 
@@ -72,7 +73,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-21T08:53:00+00:00",
+  "date" : "2026-01-21T09:24:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
