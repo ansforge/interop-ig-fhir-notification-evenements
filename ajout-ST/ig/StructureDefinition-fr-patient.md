@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/fr-patient | *Version*:3.0.0 |
-| Draft as of 2026-01-16 | *Computable Name*:FrPatient |
+| Draft as of 2026-01-21 | *Computable Name*:FrPatient |
 
  
 Description du patient français 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient.csv), [Ex
   "name" : "FrPatient",
   "title" : "Patient français",
   "status" : "draft",
-  "date" : "2026-01-16T10:54:22+00:00",
+  "date" : "2026-01-21T08:55:38+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

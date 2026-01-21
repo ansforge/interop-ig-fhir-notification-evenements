@@ -11,12 +11,6 @@ Ce document présente les spécifications techniques d’interopérabilité de m
 
 A noter que les spécifications techniques présentées dans ce document ont pour objectif d’être utilisées dans des premières implémentations (prototypes, mise en œuvre dans des environnements de tests, etc.). L’objectif est de pouvoir récolter des retours d’expériences de la mise en œuvre de la notification d’évènements avec des ressources FHIR qui peuvent encore subir des modifications de fond (la majorité des ressources FHIR utilisées dans ce document ont un niveau de maturité de 2 et 3 selon le modèle FHIR). Ces retours d’expérience pourront ensuite être partagés avec la communauté nationale et internationale de HL7 afin de stabiliser les ressources concernées.
 
-#### Lectorat cible
-
-Ce document s’adresse aux développeurs des interfaces interopérables des systèmes implémentant le cas d’usage « Notification d’évènements » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.
-
-Ces spécifications techniques s’appuient sur le standard HL7 FHIR et plus particulièrement à un sous-ensemble des ressources définies par ce standard ainsi que la notion d’extension et de profilage des ressources. Pour les opérations sur les ressources, l’API HTTP REST définie par le standard HL7 FHIR est mise en œuvre. L’hypothèse est faite que le lecteur est familier de ces concepts.
-
 #### Standards utilisés
 
 Ces spécifications techniques se basent sur le standard HL7 FHIR (R4). Elles font référence à un certain nombre de ressources du standard ainsi qu'aux spécifications de l'API REST FHIR, basée sur le protocole HTTP. Les ressources suivantes sont utilisées :
