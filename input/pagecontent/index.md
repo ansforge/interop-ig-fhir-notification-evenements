@@ -54,21 +54,24 @@ Ce document s’adresse aux développeurs des interfaces interopérables des sys
 
 Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes : 
 
-{% sql { 
-  "query" : " 
-    SELECT json_extract(Json, '$.baseDefinition') as Parent, Name, Description, Web 
-    FROM Resources 
-    WHERE Type = 'StructureDefinition' 
-      AND Id LIKE 'TDE%' 
-      AND json_extract(Json, '$.kind') = 'resource' 
-    ORDER BY Name 
-  ", 
-  "class" : "lines", 
-  "columns" : [ 
-    { "title" : "Profil parent", "source" : "Parent" }, 
-    { "title" : "Profil", "type" : "link", "source" : "Name", "target" : "Web" }, 
-    { "title" : "Description", "type" : "markdown", "source" : "Description" } 
-  ] 
+{% sql {
+  "query" : "
+    SELECT 
+      json_extract(Json, '$.type') AS Ressource,
+      Name,
+      Description,
+      Web
+    FROM Resources
+    WHERE Type = 'StructureDefinition'
+      AND json_extract(Json, '$.kind') = 'resource'
+      AND json_extract(Json, '$.url') LIKE '%NdE%'
+    ORDER BY Ressource, Name
+  ",
+  "columns" : [
+    { "title" : "Ressource FHIR", "source" : "Ressource" },
+    { "title" : "Profil", "type" : "link", "source" : "Name", "target" : "Web" },
+    { "title" : "Description", "type" : "markdown", "source" : "Description" }
+  ]
 } %}
 
 ### Dépendances
