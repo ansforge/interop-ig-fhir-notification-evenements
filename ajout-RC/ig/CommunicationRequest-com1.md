@@ -35,15 +35,15 @@ Profil: [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest
 
 -------
 
-> **Narratif généré : Organisation #org1**
+> **Narratif généré : Organisation #org1**  
 
 Profil: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html)
 
-**name**: Service de pneumologie, Hôpital Test**telecom**: ph: 022-655 6780,[pneumo@hopitalTest.fr](mailto:pneumo@hopitalTest.fr)**address**: Aile ouest, étage 5
+**name**: Service de pneumologie, Hôpital Test**telecom**: ph: 022-655 6780, [pneumo@hopitalTest.fr](mailto:pneumo@hopitalTest.fr)**address**: Aile ouest, étage 5 
 
 -------
 
-> **Narratif généré : Patient #pat1**
+> **Narratif généré : Patient #pat1**  
 
 Profil: [FR Core Patient Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html)
 
@@ -61,11 +61,11 @@ Langdon Robert Male, Date de Naissance :1960-03-20
 
 -------
 
-> **Narratif généré : Praticien #pract1**
+> **Narratif généré : Praticien #pract1**  
 
 Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html)
 
-**identifier**:`https://rpps.esante.gouv.fr`/801234567897**name**: Pierre Durand (Pneumologue) (Official)
+**identifier**: `https://rpps.esante.gouv.fr`/801234567897**name**: Pierre Durand (Pneumologue) (Official)
 
 
 

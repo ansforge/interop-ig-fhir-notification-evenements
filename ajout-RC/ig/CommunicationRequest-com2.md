@@ -27,7 +27,7 @@ Profil: [NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md)
 
 -------
 
-> **Narratif généré : Patient #pat1**
+> **Narratif généré : Patient #pat1**  
 
 Profil: [FR Core Patient Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html)
 
@@ -45,11 +45,11 @@ Langdon Robert Male, Date de Naissance :1960-03-20
 
 -------
 
-> **Narratif généré : Organisation #org1**
+> **Narratif généré : Organisation #org1**  
 
 Profil: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html)
 
-**name**: Service de pneumologie, Hôpital Test**telecom**: ph: 022-655 6780,[pneumo@hopitalTest.fr](mailto:pneumo@hopitalTest.fr)**address**: Aile ouest, étage 5
+**name**: Service de pneumologie, Hôpital Test**telecom**: ph: 022-655 6780, [pneumo@hopitalTest.fr](mailto:pneumo@hopitalTest.fr)**address**: Aile ouest, étage 5 
 
 
 

@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0 |
-| Draft as of 2026-01-16 | *Computable Name*:NDE |
+| Draft as of 2026-01-21 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
  This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework. It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
@@ -44,7 +44,10 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
 
 | | | |
 | :--- | :--- | :--- |
-| Profil parent | Profil | Description |
+| Ressource FHIR | Profil | Description |
+| [CommunicationRequest](CommunicationRequest) | [NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md) | EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc. |
+| [CommunicationRequest](CommunicationRequest) | [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md) | Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification |
+| [Subscription](Subscription) | [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md) | SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement. |
 
 ### Dépendances
 
@@ -60,7 +63,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [NDE](index.md), [NdE_CommunicationRequest_EventType](SearchParameter-NdE-CommunicationRequest-EventType.md)...Show 16 more,[NdE_Declarant](StructureDefinition-declarant.md),[NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md),[NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md),[NdE_EventEmissionTime](StructureDefinition-event-emission-time.md),[NdE_EventTime](StructureDefinition-event-time.md),[NdE_EventType](StructureDefinition-event-type.md),[NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md),[NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md),[NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md),[NdE_RecipientEndpoint](StructureDefinition-recipient-endpoint.md),[NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md),[NdE_Start](StructureDefinition-start.md),[NdE_Subject](StructureDefinition-subject.md),[NdE_Subscriber](StructureDefinition-subscriber.md),[NdE_SubscriptionDate](StructureDefinition-subscription-date.md)and[NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [NDE](index.md), [NdE_CommunicationRequest_EventType](SearchParameter-NdE-CommunicationRequest-EventType.md)... Show 16 more, [NdE_Declarant](StructureDefinition-declarant.md), [NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md), [NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md), [NdE_EventEmissionTime](StructureDefinition-event-emission-time.md), [NdE_EventTime](StructureDefinition-event-time.md), [NdE_EventType](StructureDefinition-event-type.md), [NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md), [NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md), [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md), [NdE_RecipientEndpoint](StructureDefinition-recipient-endpoint.md), [NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md), [NdE_Start](StructureDefinition-start.md), [NdE_Subject](StructureDefinition-subject.md), [NdE_Subscriber](StructureDefinition-subscriber.md), [NdE_SubscriptionDate](StructureDefinition-subscription-date.md) and [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
 
 
 
@@ -76,7 +79,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-16T10:55:18+00:00",
+  "date" : "2026-01-21T09:17:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
