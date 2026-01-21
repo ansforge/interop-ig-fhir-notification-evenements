@@ -19,20 +19,6 @@ ressources FHIR utilisées dans ce document ont un niveau de maturité de
 être partagés avec la communauté nationale et internationale de HL7 afin
 de stabiliser les ressources concernées.
 
-#### Lectorat cible
-
-Ce document s’adresse aux développeurs des interfaces interopérables des
-systèmes implémentant le cas d’usage « Notification d’évènements » ou à
-toute autre personne intervenant dans le processus de mise en place de
-ces interfaces.
-
-Ces spécifications techniques s’appuient sur le standard HL7 FHIR et
-plus particulièrement à un sous-ensemble des ressources définies par ce
-standard ainsi que la notion d’extension et de profilage des ressources.
-Pour les opérations sur les ressources, l’API HTTP REST définie par le
-standard HL7 FHIR est mise en œuvre. L’hypothèse est faite que le
-lecteur est familier de ces concepts.
-
 #### Standards utilisés
 
 Ces spécifications techniques se basent sur le standard HL7 FHIR (R4).
