@@ -202,7 +202,7 @@ L'émetteur est pré-enregistré via le gestionnaire d’inscriptions.
 
 ##### [Cas d’utilisation] Gestion des notifications (CI-SIS-NE-PGN-CU001)
 
-**_Cas d'usage_:** Une plateforme ou un système de gestion dédié traite l'évènement de manière à pouvoir aviser les abonnés auxquels l'évènement est destiné, cela se traduit par la transmission d'un ordre de notification.
+**_Cas d'usage_ :** Une plateforme ou un système de gestion dédié traite l'évènement de manière à pouvoir aviser les abonnés auxquels l'évènement est destiné, cela se traduit par la transmission d'un ordre de notification.
 
 ###### "Diagramme de cas d'utilisation: Transmission d'un ordre de notification (CI-SIS-NE-CU-TO-001)"
 
