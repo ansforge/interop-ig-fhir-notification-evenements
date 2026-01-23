@@ -58,12 +58,12 @@ menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle: specifications_fonctionnelles.html
     Volume 2 - Détail des transactions:
-        Introduction: specifications_techniques.html
-        Souscription Abonnement: st_flux1.html
-        SuppressionAbonnement: st_flux2.html
-        EmissionEvenement: st_flux3.html
-        TransmissionOrdreNotification: st_flux4.html
-        NotificationEvenement: st_flux5.html
+        Introduction: specifications_techniques_introduction.html
+        Souscription Abonnement: specifications_techniques_flux1.html
+        SuppressionAbonnement: specifications_techniques_flux2.html
+        EmissionEvenement: specifications_techniques_flux3.html
+        TransmissionOrdreNotification: specifications_techniques_flux4.html
+        NotificationEvenement: specifications_techniques_flux5.html
     Volume 3 - Annexes:
         Normes et Standards: norme_standard.html
         Acronymes: acronymes.html
