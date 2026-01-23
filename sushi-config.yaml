@@ -1,18 +1,21 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
-id: ans.fhir.fr.[code]
-canonical: https://interop.esante.gouv.fr/ig/fhir/[code] # the last part of canonical and id must be the same
-name: ExampleIG # Should be an acronym
-title: ANS IG Example
+id: ans.fhir.fr.nde
+canonical: https://interop.esante.gouv.fr/ig/fhir/nde # the last part of canonical and id must be the same
+name: NDE # Should be an acronym
+title: Notification d'Événements
 publisher:
   name: Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris
   url: https://esante.gouv.fr
 status: draft
-version: 0.1.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
+version: 3.0.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build # le release label doit être conforme au cycle de vie de la doctrine du ci-sis
 jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
+
+dependencies:
+    hl7.fhir.fr.core: 2.1.0
 
 parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
     shownav: 'true'
@@ -25,36 +28,48 @@ pages:
     index.md:
         title: Accueil
     specifications_fonctionnelles.md:
-        sf1.md:
-            title: Vue d'ensemble
     specifications_techniques.md:
-        construction_des_flux.md:
-            title: Vue d'ensemble
+        title: Volume 2 - Détail des transactions
         st_flux1.md:
-            title: Flux 01
+            title: Flux 1:SouscriptionAbonnement
         st_flux2.md:
-            title: Flux 02
-    change-log.md:
-        title: Historique des versions
+            title: Flux 2:SuppressionAbonnement
+        st_flux3.md:
+            title: Flux 3:EmissionEvenement
+        st_flux4.md:
+            title: Flux 4:TransmissionOrdreNotification
+        st_flux5.md:
+            title: Flux 5:NotificationEvenement
     autres_ressources.md:
         title: Autres Ressources
+        norme_standard.md:
+            title: Normes et Standards
+        acronymes.md:
+            title: Acronymes
         securite.md:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
+    change-log.md:
+        title: Historique des versions
 
 menu:
     Accueil: index.html
-    Volume 1 - Etude fonctionnelle: index.html
+    Volume 1 - Etude fonctionnelle: specifications_fonctionnelles.html
     Volume 2 - Détail des transactions:
-        Construction des flux: construction_des_flux.html
-        Flux 01: st_flux1.html
-        Flux 02: st_flux2.html
-    Ressources de conformité: artifacts.html
-    Autres ressources:
+        Introduction: specifications_techniques.html
+        Souscription Abonnement: st_flux1.html
+        SuppressionAbonnement: st_flux2.html
+        EmissionEvenement: st_flux3.html
+        TransmissionOrdreNotification: st_flux4.html
+        NotificationEvenement: st_flux5.html
+    Volume 3 - Annexes:
+        Normes et Standards: norme_standard.html
+        Acronymes: acronymes.html
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
+    Ressources de conformité: artifacts.html
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
     Historique: change-log.html
