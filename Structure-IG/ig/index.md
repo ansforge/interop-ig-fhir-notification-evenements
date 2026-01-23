@@ -74,7 +74,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-23T15:02:57+00:00",
+  "date" : "2026-01-23T15:45:20+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -878,7 +878,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
             }
           ],
           "nameUrl" : "specifications_fonctionnelles.html",
-          "title" : "Specifications Fonctionnelles",
+          "title" : "Volume 1 - Etude fonctionnelle",
           "generation" : "markdown"
         },
         {

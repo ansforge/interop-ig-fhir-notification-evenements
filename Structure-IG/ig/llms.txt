@@ -14,7 +14,7 @@
 * [Sécurité](securite.md)
 * [Flux 4:TransmissionOrdreNotification](st_flux4.md)
 * [Autres Ressources](autres_ressources.md)
-* [Specifications Fonctionnelles](specifications_fonctionnelles.md)
+* [Volume 1 - Etude fonctionnelle](specifications_fonctionnelles.md)
 * [Normes et Standards](norme_standard.md)
 * [Téléchargements et usages](downloads.md)
 
