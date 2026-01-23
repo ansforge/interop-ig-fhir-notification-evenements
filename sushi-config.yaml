@@ -28,6 +28,7 @@ pages:
     index.md:
         title: Accueil
     specifications_fonctionnelles.md:
+        title: Volume 1 - Etude fonctionnelle
     specifications_techniques.md:
         title: Volume 2 - Détail des transactions
         st_flux1.md:
