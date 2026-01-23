@@ -29,24 +29,24 @@ pages:
         title: Accueil
     specifications_fonctionnelles.md:
         title: Volume 1 - Etude fonctionnelle
-    specifications_techniques.md:
+    specifications_techniques_introduction.md:
         title: Volume 2 - Détail des transactions
-        st_flux1.md:
+        specifications_techniques_flux1.md:
             title: Flux 1:SouscriptionAbonnement
-        st_flux2.md:
+        specifications_techniques_flux2.md:
             title: Flux 2:SuppressionAbonnement
-        st_flux3.md:
+        specifications_techniques_flux3.md:
             title: Flux 3:EmissionEvenement
-        st_flux4.md:
+        specifications_techniques_flux4.md:
             title: Flux 4:TransmissionOrdreNotification
-        st_flux5.md:
+        specifications_techniques_flux5.md:
             title: Flux 5:NotificationEvenement
     autres_ressources.md:
         title: Autres Ressources
         norme_standard.md:
             title: Normes et Standards
-        acronymes.md:
-            title: Acronymes
+        glossaire.md:
+            title: Glossaire
         securite.md:
             title: Sécurité
         downloads.md:
@@ -66,7 +66,7 @@ menu:
         NotificationEvenement: specifications_techniques_flux5.html
     Volume 3 - Annexes:
         Normes et Standards: norme_standard.html
-        Acronymes: acronymes.html
+        Glossaire: glossaire.html
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
