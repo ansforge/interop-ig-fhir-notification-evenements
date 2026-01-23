@@ -45,7 +45,6 @@ Les ressources profilées dans cet IG sont les suivantes :
 | | | |
 | :--- | :--- | :--- |
 | Ressource FHIR | Profil | Description |
-| [Patient](Patient) | [FrPatient](StructureDefinition-fr-patient.md) | Description du patient français |
 
 ### Dépendances
 
@@ -53,12 +52,7 @@ Les ressources profilées dans cet IG sont les suivantes :
 
 ### Propriété intellectuelle
 
-Certaines ressources sémantiques de ce guide sont protégées par des droits de propriété intellectuelle couverte par les déclarations ci-dessous. L’utilisation de ces ressources est soumise à l’acceptation et au respect des conditions précisées dans la licence d’utilisation de chacune d’entre elle.
-
-* This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
-
-* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://tx.fhir.org/r4/ValueSet/snomedct): [EyeColor](StructureDefinition-EyeColor.md), [EyeColorVS](ValueSet-EyeColorVS.md) and [MeltingPotVS](ValueSet-MeltingPotVS.md)
-
+Pas dusage de PI externe (autre que celles de la spécification FHIR)
 
 
 
@@ -73,7 +67,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-23T10:32:32+00:00",
+  "date" : "2026-01-23T10:36:29+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -839,134 +833,6 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-      }
-    ],
-    "resource" : [
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
-          }
-        ],
-        "reference" : {
-          "reference" : "CodeSystem/competence-code-system"
-        },
-        "name" : "Compétences CodeSystem",
-        "description" : "Compétences des professionnels de santé.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "StructureDefinition:extension"
-          }
-        ],
-        "reference" : {
-          "reference" : "StructureDefinition/EyeColor"
-        },
-        "name" : "EyeColor",
-        "description" : "Eye color extension",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/EyeColorVS"
-        },
-        "name" : "EyeColor Value Set",
-        "description" : "Different eye colors.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Patient"
-          }
-        ],
-        "reference" : {
-          "reference" : "Patient/frpatient-exemple"
-        },
-        "name" : "frpatient-exemple",
-        "description" : "Exemple d'un patient français",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/fr-patient"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/MeltingPotVS"
-        },
-        "name" : "Melting Pot Value Set",
-        "description" : "Melting Pot Value Set.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/ModifiedAdministrativeGender"
-        },
-        "name" : "ModifiedAdministrativeGender",
-        "description" : "AdministrativeGender without unknown code",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "StructureDefinition:resource"
-          }
-        ],
-        "reference" : {
-          "reference" : "StructureDefinition/fr-patient"
-        },
-        "name" : "Patient français",
-        "description" : "Description du patient français",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/TypeCarteVS"
-        },
-        "name" : "Type Carte Value Set",
-        "description" : "Type Carte Value Set.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
-          }
-        ],
-        "reference" : {
-          "reference" : "CodeSystem/type-carte-code-system"
-        },
-        "name" : "Type de carte",
-        "description" : "Type de carte professionnelle et personnelle.",
-        "exampleBoolean" : false
       }
     ],
     "page" : {
