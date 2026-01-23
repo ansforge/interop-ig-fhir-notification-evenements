@@ -1,7 +1,7 @@
-# Specifications Techniques - ANS IG Example v0.1.0
+# Volume 2 - Détail des transactions - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
-* **Specifications Techniques**
+* **Volume 2 - Détail des transactions**
 
-## Specifications Techniques
+## Volume 2 - Détail des transactions
 

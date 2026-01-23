@@ -1,4 +1,4 @@
-# Accueil - ANS IG Example v0.1.0
+# Accueil - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,37 +7,48 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2026-01-23 | *Computable Name*:ExampleIG |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0 |
+| Draft as of 2026-01-23 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
- [Add a brief description of this IG in English] 
+ This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework. It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
 
 > Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : http://interop.esante.gouv.fr/ig/fhir/[code - ig]
 
 ### Introduction
 
-Définir ici de quoi parle l'IG (En termes non expert, compréhensible par un patient). Rajouter également les détails techniques sur le contexte et le besoin de cet IG
+Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement survient au cours de sa prise en charge.
 
-Les principales sections de l'IG sont :
+Il s'agit par exemple, de recevoir une information lorsqu’un document est disponible, lorsqu’une hospitalisation débute ou se termine, ou lorsqu’une information significative est ajoutée à un dossier. Ces notifications peuvent concerner un patient ou un usager, un professionnel de santé, ou toute autre personne autorisée.
 
-* Le contexte de l'IG, quelle problématique il résout
-* Ce que les Implémenteurs doivent mettre en place
-* Un onglet "Ressources de conformité" pour s'assurer d'un schéma global entre tous les IGs
+Sur le plan technique, cet IG s’inscrit dans le cadre du Cadre d’Interopérabilité des Systèmes d’Information de Santé (CI-SIS) et couvre les domaines sanitaire, médico-administratif, médico-social et social.
+ Elle formalise les mécanismes nécessaires à :
+
+* la gestion des abonnements à des types d’évènements,
+* la déclaration d’évènements par des systèmes émetteurs,
+* la transmission d’ordres de notification vers les abonnés concernés.
 
 ### Périmètre du projet
 
-Définir en quelques lignes en anglais quel est le périmètre du projet
+Cet IG définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.
 
-Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohérence globales entre tous les IGs
+Elle couvre la gestion des abonnements aux notifications, la déclaration des évènements et la transmission des ordres de notification, en s’appuyant sur des ressources et profils HL7 FHIR R4.
 
-### Auteurs et contributeurs
+#### Lectorat cible
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| **Primary Editor** | Prenom Nom | Agence du Numérique en Santé | prenom.nom@address.email |
+Ce document s’adresse aux développeurs des interfaces interopérables des systèmes implémentant le cas d’usage « Notification d’évènements » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.
+
+#### Ressources FHIR profilées
+
+Les ressources profilées dans cet IG sont les suivantes :
+
+| | | |
+| :--- | :--- | :--- |
+| Ressource FHIR | Profil | Description |
 
 ### Dépendances
+
+
 
 
 
@@ -45,9 +56,9 @@ Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohé
 
 Certaines ressources sémantiques de ce guide sont protégées par des droits de propriété intellectuelle couverte par les déclarations ci-dessous. L’utilisation de ces ressources est soumise à l’acceptation et au respect des conditions précisées dans la licence d’utilisation de chacune d’entre elle.
 
-* This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
+* ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](http://tx.fhir.org/r4/ValueSet/snomedct): [EyeColor](StructureDefinition-EyeColor.md), [EyeColorVS](ValueSet-EyeColorVS.md) and [MeltingPotVS](ValueSet-MeltingPotVS.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [NDE](index.md)
 
 
 
@@ -57,13 +68,13 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 ```json
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ans.fhir.fr.[code]",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]",
-  "version" : "0.1.0",
-  "name" : "ExampleIG",
-  "title" : "ANS IG Example",
+  "id" : "ans.fhir.fr.nde",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde",
+  "version" : "3.0.0",
+  "name" : "NDE",
+  "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-23T15:02:27+00:00",
+  "date" : "2026-01-23T15:02:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -87,7 +98,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       ]
     }
   ],
-  "packageId" : "ans.fhir.fr.[code]",
+  "packageId" : "ans.fhir.fr.nde",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [
@@ -114,6 +125,12 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
       "version" : "5.2.0"
+    },
+    {
+      "id" : "hl7_fhir_fr_core",
+      "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
+      "packageId" : "hl7.fhir.fr.core",
+      "version" : "2.1.0"
     }
   ],
   "definition" : {
@@ -269,7 +286,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           },
           {
             "url" : "value",
-            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/nde/history.html"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -630,7 +647,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           },
           {
             "url" : "value",
-            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/nde/history.html"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -831,134 +848,6 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
       }
     ],
-    "resource" : [
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
-          }
-        ],
-        "reference" : {
-          "reference" : "CodeSystem/competence-code-system"
-        },
-        "name" : "Compétences CodeSystem",
-        "description" : "Compétences des professionnels de santé.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "StructureDefinition:extension"
-          }
-        ],
-        "reference" : {
-          "reference" : "StructureDefinition/EyeColor"
-        },
-        "name" : "EyeColor",
-        "description" : "Eye color extension",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/EyeColorVS"
-        },
-        "name" : "EyeColor Value Set",
-        "description" : "Different eye colors.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Patient"
-          }
-        ],
-        "reference" : {
-          "reference" : "Patient/frpatient-exemple"
-        },
-        "name" : "frpatient-exemple",
-        "description" : "Exemple d'un patient français",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/MeltingPotVS"
-        },
-        "name" : "Melting Pot Value Set",
-        "description" : "Melting Pot Value Set.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/ModifiedAdministrativeGender"
-        },
-        "name" : "ModifiedAdministrativeGender",
-        "description" : "AdministrativeGender without unknown code",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "StructureDefinition:resource"
-          }
-        ],
-        "reference" : {
-          "reference" : "StructureDefinition/fr-patient"
-        },
-        "name" : "Patient français",
-        "description" : "Description du patient français",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/TypeCarteVS"
-        },
-        "name" : "Type Carte Value Set",
-        "description" : "Type Carte Value Set.",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
-          }
-        ],
-        "reference" : {
-          "reference" : "CodeSystem/type-carte-code-system"
-        },
-        "name" : "Type de carte",
-        "description" : "Type de carte professionnelle et personnelle.",
-        "exampleBoolean" : false
-      }
-    ],
     "page" : {
       "extension" : [
         {
@@ -990,20 +879,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           ],
           "nameUrl" : "specifications_fonctionnelles.html",
           "title" : "Specifications Fonctionnelles",
-          "generation" : "markdown",
-          "page" : [
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "sf1.html"
-                }
-              ],
-              "nameUrl" : "sf1.html",
-              "title" : "Vue d'ensemble",
-              "generation" : "markdown"
-            }
-          ]
+          "generation" : "markdown"
         },
         {
           "extension" : [
@@ -1013,20 +889,9 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
             }
           ],
           "nameUrl" : "specifications_techniques.html",
-          "title" : "Specifications Techniques",
+          "title" : "Volume 2 - Détail des transactions",
           "generation" : "markdown",
           "page" : [
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "construction_des_flux.html"
-                }
-              ],
-              "nameUrl" : "construction_des_flux.html",
-              "title" : "Vue d'ensemble",
-              "generation" : "markdown"
-            },
             {
               "extension" : [
                 {
@@ -1035,7 +900,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
                 }
               ],
               "nameUrl" : "st_flux1.html",
-              "title" : "Flux 01",
+              "title" : "Flux 1:SouscriptionAbonnement",
               "generation" : "markdown"
             },
             {
@@ -1046,21 +911,43 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
                 }
               ],
               "nameUrl" : "st_flux2.html",
-              "title" : "Flux 02",
+              "title" : "Flux 2:SuppressionAbonnement",
+              "generation" : "markdown"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+                  "valueUrl" : "st_flux3.html"
+                }
+              ],
+              "nameUrl" : "st_flux3.html",
+              "title" : "Flux 3:EmissionEvenement",
+              "generation" : "markdown"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+                  "valueUrl" : "st_flux4.html"
+                }
+              ],
+              "nameUrl" : "st_flux4.html",
+              "title" : "Flux 4:TransmissionOrdreNotification",
+              "generation" : "markdown"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+                  "valueUrl" : "st_flux5.html"
+                }
+              ],
+              "nameUrl" : "st_flux5.html",
+              "title" : "Flux 5:NotificationEvenement",
               "generation" : "markdown"
             }
           ]
-        },
-        {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "change-log.html"
-            }
-          ],
-          "nameUrl" : "change-log.html",
-          "title" : "Historique des versions",
-          "generation" : "markdown"
         },
         {
           "extension" : [
@@ -1073,6 +960,28 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "title" : "Autres Ressources",
           "generation" : "markdown",
           "page" : [
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+                  "valueUrl" : "norme_standard.html"
+                }
+              ],
+              "nameUrl" : "norme_standard.html",
+              "title" : "Normes et Standards",
+              "generation" : "markdown"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+                  "valueUrl" : "acronymes.html"
+                }
+              ],
+              "nameUrl" : "acronymes.html",
+              "title" : "Acronymes",
+              "generation" : "markdown"
+            },
             {
               "extension" : [
                 {
@@ -1096,6 +1005,17 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "generation" : "markdown"
             }
           ]
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "change-log.html"
+            }
+          ],
+          "nameUrl" : "change-log.html",
+          "title" : "Historique des versions",
+          "generation" : "markdown"
         }
       ]
     },

@@ -1,10 +1,10 @@
-# Flux 02 - ANS IG Example v0.1.0
+# Flux 2:SuppressionAbonnement - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
-* [**Specifications Techniques**](specifications_techniques.md)
-* **Flux 02**
+* [**Volume 2 - Détail des transactions**](specifications_techniques.md)
+* **Flux 2:SuppressionAbonnement**
 
-## Flux 02
+## Flux 2:SuppressionAbonnement
 
 ### Nom du flux
 
