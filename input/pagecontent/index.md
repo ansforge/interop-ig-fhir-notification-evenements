@@ -42,7 +42,7 @@ Elle formalise les mécanismes nécessaires à :
 
 ### Périmètre du projet
 
-Cet Implementation Guide définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.
+Cet IG définit le périmètre fonctionnel et technique de la mise en œuvre des mécanismes de notification d’évènements dans le cadre du CI-SIS.
 
 Elle couvre la gestion des abonnements aux notifications, la déclaration des évènements et la transmission des ordres de notification, en s’appuyant sur des ressources et profils HL7 FHIR R4.
 
@@ -52,7 +52,7 @@ Ce document s’adresse aux développeurs des interfaces interopérables des sys
 
 #### Ressources FHIR profilées
 
-Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes : 
+Les ressources profilées dans cet IG sont les suivantes : 
 
 {% sql {
   "query" : "
