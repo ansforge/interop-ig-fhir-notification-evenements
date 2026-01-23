@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/EyeColor | *Version*:3.0.0 |
-| Draft as of 2026-01-21 | *Computable Name*:EyeColor |
+| Draft as of 2026-01-23 | *Computable Name*:EyeColor |
 
 Eye color extension
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-EyeColor.csv), [Exce
   "version" : "3.0.0",
   "name" : "EyeColor",
   "status" : "draft",
-  "date" : "2026-01-21T09:19:52+00:00",
+  "date" : "2026-01-23T10:32:04+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
