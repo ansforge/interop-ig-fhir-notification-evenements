@@ -74,7 +74,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-23T15:45:20+00:00",
+  "date" : "2026-01-23T16:01:06+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -885,10 +885,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "specifications_techniques.html"
+              "valueUrl" : "specifications_techniques_introduction.html"
             }
           ],
-          "nameUrl" : "specifications_techniques.html",
+          "nameUrl" : "specifications_techniques_introduction.html",
           "title" : "Volume 2 - Détail des transactions",
           "generation" : "markdown",
           "page" : [
@@ -896,10 +896,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux1.html"
+                  "valueUrl" : "specifications_techniques_flux1.html"
                 }
               ],
-              "nameUrl" : "st_flux1.html",
+              "nameUrl" : "specifications_techniques_flux1.html",
               "title" : "Flux 1:SouscriptionAbonnement",
               "generation" : "markdown"
             },
@@ -907,10 +907,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux2.html"
+                  "valueUrl" : "specifications_techniques_flux2.html"
                 }
               ],
-              "nameUrl" : "st_flux2.html",
+              "nameUrl" : "specifications_techniques_flux2.html",
               "title" : "Flux 2:SuppressionAbonnement",
               "generation" : "markdown"
             },
@@ -918,10 +918,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux3.html"
+                  "valueUrl" : "specifications_techniques_flux3.html"
                 }
               ],
-              "nameUrl" : "st_flux3.html",
+              "nameUrl" : "specifications_techniques_flux3.html",
               "title" : "Flux 3:EmissionEvenement",
               "generation" : "markdown"
             },
@@ -929,10 +929,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux4.html"
+                  "valueUrl" : "specifications_techniques_flux4.html"
                 }
               ],
-              "nameUrl" : "st_flux4.html",
+              "nameUrl" : "specifications_techniques_flux4.html",
               "title" : "Flux 4:TransmissionOrdreNotification",
               "generation" : "markdown"
             },
@@ -940,10 +940,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux5.html"
+                  "valueUrl" : "specifications_techniques_flux5.html"
                 }
               ],
-              "nameUrl" : "st_flux5.html",
+              "nameUrl" : "specifications_techniques_flux5.html",
               "title" : "Flux 5:NotificationEvenement",
               "generation" : "markdown"
             }
@@ -975,11 +975,11 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "acronymes.html"
+                  "valueUrl" : "glossaire.html"
                 }
               ],
-              "nameUrl" : "acronymes.html",
-              "title" : "Acronymes",
+              "nameUrl" : "glossaire.html",
+              "title" : "Glossaire",
               "generation" : "markdown"
             },
             {

@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "NDE"] ; # 
   fhir:title [ fhir:v "Notification d'Événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-23T15:45:20+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-23T16:01:06+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1470,14 +1470,14 @@
            ] ;
            fhir:value [
              a fhir:Url ;
-             fhir:v "specifications_techniques.html"^^xsd:anyURI ;
-             fhir:l fhir:specifications_techniques.html
+             fhir:v "specifications_techniques_introduction.html"^^xsd:anyURI ;
+             fhir:l fhir:specifications_techniques_introduction.html
            ]
          ] ) ;
          fhir:name [
            a fhir:Url ;
-           fhir:v "specifications_techniques.html"^^xsd:anyURI ;
-           fhir:l fhir:specifications_techniques.html
+           fhir:v "specifications_techniques_introduction.html"^^xsd:anyURI ;
+           fhir:l fhir:specifications_techniques_introduction.html
          ] ;
          fhir:title [ fhir:v "Volume 2 - Détail des transactions" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
@@ -1489,14 +1489,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "st_flux1.html"^^xsd:anyURI ;
-               fhir:l fhir:st_flux1.html
+               fhir:v "specifications_techniques_flux1.html"^^xsd:anyURI ;
+               fhir:l fhir:specifications_techniques_flux1.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "st_flux1.html"^^xsd:anyURI ;
-             fhir:l fhir:st_flux1.html
+             fhir:v "specifications_techniques_flux1.html"^^xsd:anyURI ;
+             fhir:l fhir:specifications_techniques_flux1.html
            ] ;
            fhir:title [ fhir:v "Flux 1:SouscriptionAbonnement" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1508,14 +1508,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "st_flux2.html"^^xsd:anyURI ;
-               fhir:l fhir:st_flux2.html
+               fhir:v "specifications_techniques_flux2.html"^^xsd:anyURI ;
+               fhir:l fhir:specifications_techniques_flux2.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "st_flux2.html"^^xsd:anyURI ;
-             fhir:l fhir:st_flux2.html
+             fhir:v "specifications_techniques_flux2.html"^^xsd:anyURI ;
+             fhir:l fhir:specifications_techniques_flux2.html
            ] ;
            fhir:title [ fhir:v "Flux 2:SuppressionAbonnement" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1527,14 +1527,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "st_flux3.html"^^xsd:anyURI ;
-               fhir:l fhir:st_flux3.html
+               fhir:v "specifications_techniques_flux3.html"^^xsd:anyURI ;
+               fhir:l fhir:specifications_techniques_flux3.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "st_flux3.html"^^xsd:anyURI ;
-             fhir:l fhir:st_flux3.html
+             fhir:v "specifications_techniques_flux3.html"^^xsd:anyURI ;
+             fhir:l fhir:specifications_techniques_flux3.html
            ] ;
            fhir:title [ fhir:v "Flux 3:EmissionEvenement" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1546,14 +1546,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "st_flux4.html"^^xsd:anyURI ;
-               fhir:l fhir:st_flux4.html
+               fhir:v "specifications_techniques_flux4.html"^^xsd:anyURI ;
+               fhir:l fhir:specifications_techniques_flux4.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "st_flux4.html"^^xsd:anyURI ;
-             fhir:l fhir:st_flux4.html
+             fhir:v "specifications_techniques_flux4.html"^^xsd:anyURI ;
+             fhir:l fhir:specifications_techniques_flux4.html
            ] ;
            fhir:title [ fhir:v "Flux 4:TransmissionOrdreNotification" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1565,14 +1565,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "st_flux5.html"^^xsd:anyURI ;
-               fhir:l fhir:st_flux5.html
+               fhir:v "specifications_techniques_flux5.html"^^xsd:anyURI ;
+               fhir:l fhir:specifications_techniques_flux5.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "st_flux5.html"^^xsd:anyURI ;
-             fhir:l fhir:st_flux5.html
+             fhir:v "specifications_techniques_flux5.html"^^xsd:anyURI ;
+             fhir:l fhir:specifications_techniques_flux5.html
            ] ;
            fhir:title [ fhir:v "Flux 5:NotificationEvenement" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1623,16 +1623,16 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "acronymes.html"^^xsd:anyURI ;
-               fhir:l fhir:acronymes.html
+               fhir:v "glossaire.html"^^xsd:anyURI ;
+               fhir:l fhir:glossaire.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "acronymes.html"^^xsd:anyURI ;
-             fhir:l fhir:acronymes.html
+             fhir:v "glossaire.html"^^xsd:anyURI ;
+             fhir:l fhir:glossaire.html
            ] ;
-           fhir:title [ fhir:v "Acronymes" ] ;
+           fhir:title [ fhir:v "Glossaire" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
