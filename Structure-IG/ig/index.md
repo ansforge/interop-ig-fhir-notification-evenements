@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0 |
-| Draft as of 2026-01-23 | *Computable Name*:NDE |
+| Draft as of 2026-01-27 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
  This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework. It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
@@ -74,7 +74,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-23T16:01:06+00:00",
+  "date" : "2026-01-27T10:45:13+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -896,10 +896,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "specifications_techniques_flux1.html"
+                  "valueUrl" : "specifications_techniques_flux1_Souscription_Abonnement.html"
                 }
               ],
-              "nameUrl" : "specifications_techniques_flux1.html",
+              "nameUrl" : "specifications_techniques_flux1_Souscription_Abonnement.html",
               "title" : "Flux 1:SouscriptionAbonnement",
               "generation" : "markdown"
             },
@@ -907,10 +907,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "specifications_techniques_flux2.html"
+                  "valueUrl" : "specifications_techniques_flux2_Suppression_Abonnement.html"
                 }
               ],
-              "nameUrl" : "specifications_techniques_flux2.html",
+              "nameUrl" : "specifications_techniques_flux2_Suppression_Abonnement.html",
               "title" : "Flux 2:SuppressionAbonnement",
               "generation" : "markdown"
             },
@@ -918,10 +918,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "specifications_techniques_flux3.html"
+                  "valueUrl" : "specifications_techniques_flux3_Emission_Evenement.html"
                 }
               ],
-              "nameUrl" : "specifications_techniques_flux3.html",
+              "nameUrl" : "specifications_techniques_flux3_Emission_Evenement.html",
               "title" : "Flux 3:EmissionEvenement",
               "generation" : "markdown"
             },
@@ -929,10 +929,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "specifications_techniques_flux4.html"
+                  "valueUrl" : "specifications_techniques_flux4_Transmission_Ordre_Notification.html"
                 }
               ],
-              "nameUrl" : "specifications_techniques_flux4.html",
+              "nameUrl" : "specifications_techniques_flux4_Transmission_Ordre_Notification.html",
               "title" : "Flux 4:TransmissionOrdreNotification",
               "generation" : "markdown"
             },
@@ -940,10 +940,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "specifications_techniques_flux5.html"
+                  "valueUrl" : "specifications_techniques_flux5_NotificationEvenement.html"
                 }
               ],
-              "nameUrl" : "specifications_techniques_flux5.html",
+              "nameUrl" : "specifications_techniques_flux5_NotificationEvenement.html",
               "title" : "Flux 5:NotificationEvenement",
               "generation" : "markdown"
             }
