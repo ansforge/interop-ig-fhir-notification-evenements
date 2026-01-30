@@ -3,16 +3,19 @@
 ## Pages
 
 * [Accueil](index.md)
+* [Flux 1:SouscriptionAbonnement](specifications_techniques_flux1_Souscription_Abonnement.md)
 * [Historique des versions](change-log.md)
-* [Vue d'ensemble](sf1.md)
-* [Flux 02](st_flux2.md)
-* [Flux 01](st_flux1.md)
+* [Flux 2:SuppressionAbonnement](specifications_techniques_flux2_Suppression_Abonnement.md)
 * [Artifacts Summary](artifacts.md)
-* [Specifications Techniques](specifications_techniques.md)
+* [Flux 3:EmissionEvenement](specifications_techniques_flux3_Emission_Evenement.md)
+* [Flux 5:NotificationEvenement](specifications_techniques_flux5_NotificationEvenement.md)
 * [Sécurité](securite.md)
+* [Volume 2 - Détail des transactions](specifications_techniques_introduction.md)
+* [Flux 4:TransmissionOrdreNotification](specifications_techniques_flux4_Transmission_Ordre_Notification.md)
 * [Autres Ressources](autres_ressources.md)
-* [Specifications Fonctionnelles](specifications_fonctionnelles.md)
-* [Vue d'ensemble](construction_des_flux.md)
+* [Volume 1 - Etude fonctionnelle](specifications_fonctionnelles.md)
+* [Glossaire](glossaire.md)
+* [Normes et Standards](norme_standard.md)
 * [Téléchargements et usages](downloads.md)
 
 ## Resources

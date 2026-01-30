@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date | *Version*:3.0.0 |
-| Draft as of 2026-01-23 | *Computable Name*:NdE_SubscriptionDate |
+| Draft as of 2026-01-30 | *Computable Name*:NdE_SubscriptionDate |
 
 Date de création de l’abonnement.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-subscription-date.cs
   "name" : "NdE_SubscriptionDate",
   "title" : "Subscription Date",
   "status" : "draft",
-  "date" : "2026-01-23T10:31:33+00:00",
+  "date" : "2026-01-30T14:49:29+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

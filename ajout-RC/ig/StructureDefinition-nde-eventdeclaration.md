@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration | *Version*:3.0.0 |
-| Draft as of 2026-01-23 | *Computable Name*:NdE_EventDeclarationNdE |
+| Draft as of 2026-01-30 | *Computable Name*:NdE_EventDeclarationNdE |
 
  
 EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc. 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-eventdeclaration
   "name" : "NdE_EventDeclarationNdE",
   "title" : "NdE_EventDeclarationNdE",
   "status" : "draft",
-  "date" : "2026-01-23T10:31:33+00:00",
+  "date" : "2026-01-30T14:49:29+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

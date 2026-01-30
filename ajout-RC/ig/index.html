@@ -99,7 +99,7 @@
     <a href="index.html">Accueil</a>
   </li>
   <li>
-    <a href="index.html">Volume 1 - Etude fonctionnelle</a>
+    <a href="specifications_fonctionnelles.html">Volume 1 - Etude fonctionnelle</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
@@ -107,24 +107,36 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="construction_des_flux.html">Construction des flux</a>
+        <a href="specifications_techniques_introduction.html">Introduction</a>
       </li>
       <li>
-        <a href="st_flux1.html">Flux 01</a>
+        <a href="specifications_techniques_flux1_Souscription_Abonnement.html">Souscription Abonnement</a>
       </li>
       <li>
-        <a href="st_flux2.html">Flux 02</a>
+        <a href="specifications_techniques_flux2_Suppression_Abonnement.html">SuppressionAbonnement</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_flux3_Emission_Evenement.html">EmissionEvenement</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_flux4_Transmission_Ordre_Notification.html">TransmissionOrdreNotification</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_flux5_NotificationEvenement.html">NotificationEvenement</a>
       </li>
     </ul>
   </li>
-  <li>
-    <a href="artifacts.html">Ressources de conformité</a>
-  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3 - Annexes
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="norme_standard.html">Normes et Standards</a>
+      </li>
+      <li>
+        <a href="glossaire.html">Glossaire</a>
+      </li>
       <li>
         <a href="securite.html">Sécurité</a>
       </li>
@@ -138,6 +150,9 @@
         <a href="https://esante.gouv.fr/" target="_blank">Site de l'ANS </a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li>
     <a href="https://interop.esante.gouv.fr/ig/documentation/" target="_blank">Documentation</a>
@@ -217,7 +232,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2026-01-23
+            as of 2026-01-30
           
         
       </td>
@@ -294,9 +309,9 @@ Elle formalise les mécanismes nécessaires à :</p>
 
 <p>Les ressources profilées dans cet IG sont les suivantes :</p>
 
-<table class="grid"><tr><td style="background-color: #eeeeee">Ressource FHIR</td><td style="background-color: #eeeeee">Profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a name="l482">​</a><a href="CommunicationRequest">CommunicationRequest</a></td><td><a href="StructureDefinition-nde-eventdeclaration.html">NdE_EventDeclarationNdE</a></td><td><div><p>EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc.</p>
-</div></td></tr><tr><td><a name="l494">​</a><a href="CommunicationRequest">CommunicationRequest</a></td><td><a href="StructureDefinition-nde-notificationrequest.html">NdE_NotificationRequestNdE</a></td><td><div><p>Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification</p>
-</div></td></tr><tr><td><a name="l506">​</a><a href="Subscription">Subscription</a></td><td><a href="StructureDefinition-nde-subscription.html">NdE_SubscriptionNdE</a></td><td><div><p>SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.</p>
+<table class="grid"><tr><td style="background-color: #eeeeee">Ressource FHIR</td><td style="background-color: #eeeeee">Profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a name="l512">​</a><a href="CommunicationRequest">CommunicationRequest</a></td><td><a href="StructureDefinition-nde-eventdeclaration.html">NdE_EventDeclarationNdE</a></td><td><div><p>EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc.</p>
+</div></td></tr><tr><td><a name="l524">​</a><a href="CommunicationRequest">CommunicationRequest</a></td><td><a href="StructureDefinition-nde-notificationrequest.html">NdE_NotificationRequestNdE</a></td><td><div><p>Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification</p>
+</div></td></tr><tr><td><a name="l536">​</a><a href="Subscription">Subscription</a></td><td><a href="StructureDefinition-nde-subscription.html">NdE_SubscriptionNdE</a></td><td><div><p>SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.</p>
 </div></td></tr></table>
 
 <h3 id="dépendances">Dépendances</h3>
@@ -388,7 +403,7 @@ Elle formalise les mécanismes nécessaires à :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 23, 2026 10:31+0000">2026-01-23</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 14:49+0000">2026-01-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
