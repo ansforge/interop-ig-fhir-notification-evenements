@@ -14,6 +14,9 @@ copyrightYear: 2020+
 releaseLabel: ci-build # le release label doit être conforme au cycle de vie de la doctrine du ci-sis
 jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
+dependencies:
+    hl7.fhir.fr.core: 2.1.0
+
 parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
     shownav: 'true'
     path-expansion-params: '../../expansion-params.json' # for using French SNOMED CT Extension
@@ -26,34 +29,48 @@ pages:
         title: Accueil
     specifications_fonctionnelles.md:
         title: Volume 1 - Etude fonctionnelle
-    specifications_techniques.md:
-        construction_des_flux.md:
-            title: Vue d'ensemble
-        st_flux1.md:
-            title: Flux 01
-        st_flux2.md:
-            title: Flux 02
-    change-log.md:
-        title: Historique des versions
+    specifications_techniques_introduction.md:
+        title: Volume 2 - Détail des transactions
+        specifications_techniques_flux1_Souscription_Abonnement.md:
+            title: Flux 1:SouscriptionAbonnement
+        specifications_techniques_flux2_Suppression_Abonnement.md:
+            title: Flux 2:SuppressionAbonnement
+        specifications_techniques_flux3_Emission_Evenement.md:
+            title: Flux 3:EmissionEvenement
+        specifications_techniques_flux4_Transmission_Ordre_Notification.md:
+            title: Flux 4:TransmissionOrdreNotification
+        specifications_techniques_flux5_NotificationEvenement.md:
+            title: Flux 5:NotificationEvenement
     autres_ressources.md:
         title: Autres Ressources
+        norme_standard.md:
+            title: Normes et Standards
+        glossaire.md:
+            title: Glossaire
         securite.md:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
+    change-log.md:
+        title: Historique des versions
 
 menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle: specifications_fonctionnelles.html
     Volume 2 - Détail des transactions:
-        Construction des flux: construction_des_flux.html
-        Flux 01: st_flux1.html
-        Flux 02: st_flux2.html
-    Ressources de conformité: artifacts.html
-    Autres ressources:
+        Introduction: specifications_techniques_introduction.html
+        Souscription Abonnement: specifications_techniques_flux1_Souscription_Abonnement.html
+        SuppressionAbonnement: specifications_techniques_flux2_Suppression_Abonnement.html
+        EmissionEvenement: specifications_techniques_flux3_Emission_Evenement.html
+        TransmissionOrdreNotification: specifications_techniques_flux4_Transmission_Ordre_Notification.html
+        NotificationEvenement: specifications_techniques_flux5_NotificationEvenement.html
+    Volume 3 - Annexes:
+        Normes et Standards: norme_standard.html
+        Glossaire: glossaire.html
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
+    Ressources de conformité: artifacts.html
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
     Historique: change-log.html
