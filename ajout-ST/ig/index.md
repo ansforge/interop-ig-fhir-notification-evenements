@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0 |
-| Draft as of 2026-01-23 | *Computable Name*:NDE |
+| Draft as of 2026-01-30 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
  This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework. It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
@@ -50,9 +50,16 @@ Les ressources profilées dans cet IG sont les suivantes :
 
 
 
+
+
 ### Propriété intellectuelle
 
-Pas dusage de PI externe (autre que celles de la spécification FHIR)
+Certaines ressources sémantiques de ce guide sont protégées par des droits de propriété intellectuelle couverte par les déclarations ci-dessous. L’utilisation de ces ressources est soumise à l’acceptation et au respect des conditions précisées dans la licence d’utilisation de chacune d’entre elle.
+
+* ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
+
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [NDE](index.md)
+
 
 
 
@@ -67,7 +74,7 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-01-23T10:34:10+00:00",
+  "date" : "2026-01-30T14:44:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -118,6 +125,12 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
       "version" : "5.2.0"
+    },
+    {
+      "id" : "hl7_fhir_fr_core",
+      "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
+      "packageId" : "hl7.fhir.fr.core",
+      "version" : "2.1.0"
     }
   ],
   "definition" : {
@@ -865,30 +878,17 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
             }
           ],
           "nameUrl" : "specifications_fonctionnelles.html",
-          "title" : "Specifications Fonctionnelles",
-          "generation" : "markdown",
-          "page" : [
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "sf1.html"
-                }
-              ],
-              "nameUrl" : "sf1.html",
-              "title" : "Vue d'ensemble",
-              "generation" : "markdown"
-            }
-          ]
+          "title" : "Volume 1 - Etude fonctionnelle",
+          "generation" : "markdown"
         },
         {
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "st_intro.html"
+              "valueUrl" : "specifications_techniques_introduction.html"
             }
           ],
-          "nameUrl" : "st_intro.html",
+          "nameUrl" : "specifications_techniques_introduction.html",
           "title" : "Volume 2 - Détail des transactions",
           "generation" : "markdown",
           "page" : [
@@ -896,10 +896,10 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux1.html"
+                  "valueUrl" : "specifications_techniques_flux1_Souscription_Abonnement.html"
                 }
               ],
-              "nameUrl" : "st_flux1.html",
+              "nameUrl" : "specifications_techniques_flux1_Souscription_Abonnement.html",
               "title" : "Flux 1:SouscriptionAbonnement",
               "generation" : "markdown"
             },
@@ -907,10 +907,10 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux2.html"
+                  "valueUrl" : "specifications_techniques_flux2_Suppression_Abonnement.html"
                 }
               ],
-              "nameUrl" : "st_flux2.html",
+              "nameUrl" : "specifications_techniques_flux2_Suppression_Abonnement.html",
               "title" : "Flux 2:SuppressionAbonnement",
               "generation" : "markdown"
             },
@@ -918,10 +918,10 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux3.html"
+                  "valueUrl" : "specifications_techniques_flux3_Emission_Evenement.html"
                 }
               ],
-              "nameUrl" : "st_flux3.html",
+              "nameUrl" : "specifications_techniques_flux3_Emission_Evenement.html",
               "title" : "Flux 3:EmissionEvenement",
               "generation" : "markdown"
             },
@@ -929,10 +929,10 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux4.html"
+                  "valueUrl" : "specifications_techniques_flux4_Transmission_Ordre_Notification.html"
                 }
               ],
-              "nameUrl" : "st_flux4.html",
+              "nameUrl" : "specifications_techniques_flux4_Transmission_Ordre_Notification.html",
               "title" : "Flux 4:TransmissionOrdreNotification",
               "generation" : "markdown"
             },
@@ -940,25 +940,14 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "st_flux5.html"
+                  "valueUrl" : "specifications_techniques_flux5_NotificationEvenement.html"
                 }
               ],
-              "nameUrl" : "st_flux5.html",
+              "nameUrl" : "specifications_techniques_flux5_NotificationEvenement.html",
               "title" : "Flux 5:NotificationEvenement",
               "generation" : "markdown"
             }
           ]
-        },
-        {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "change-log.html"
-            }
-          ],
-          "nameUrl" : "change-log.html",
-          "title" : "Historique des versions",
-          "generation" : "markdown"
         },
         {
           "extension" : [
@@ -975,11 +964,22 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "acronymes.html"
+                  "valueUrl" : "norme_standard.html"
                 }
               ],
-              "nameUrl" : "acronymes.html",
-              "title" : "Acronymes",
+              "nameUrl" : "norme_standard.html",
+              "title" : "Normes et Standards",
+              "generation" : "markdown"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+                  "valueUrl" : "glossaire.html"
+                }
+              ],
+              "nameUrl" : "glossaire.html",
+              "title" : "Glossaire",
               "generation" : "markdown"
             },
             {
@@ -1005,6 +1005,17 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
               "generation" : "markdown"
             }
           ]
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "change-log.html"
+            }
+          ],
+          "nameUrl" : "change-log.html",
+          "title" : "Historique des versions",
+          "generation" : "markdown"
         }
       ]
     },

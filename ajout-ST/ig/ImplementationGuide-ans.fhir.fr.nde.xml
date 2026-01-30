@@ -10,7 +10,7 @@
   <name value="NDE"/>
   <title value="Notification d'Événements"/>
   <status value="draft"/>
-  <date value="2026-01-23T10:34:10+00:00"/>
+  <date value="2026-01-30T14:44:58+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -44,6 +44,11 @@
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_fr_core">
+    <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
+    <packageId value="hl7.fhir.fr.core"/>
+    <version value="2.1.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -506,72 +511,56 @@
           <valueUrl value="specifications_fonctionnelles.html"/>
         </extension>
         <nameUrl value="specifications_fonctionnelles.html"/>
-        <title value="Specifications Fonctionnelles"/>
+        <title value="Volume 1 - Etude fonctionnelle"/>
         <generation value="markdown"/>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="sf1.html"/>
-          </extension>
-          <nameUrl value="sf1.html"/>
-          <title value="Vue d'ensemble"/>
-          <generation value="markdown"/>
-        </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="st_intro.html"/>
+          <valueUrl value="specifications_techniques_introduction.html"/>
         </extension>
-        <nameUrl value="st_intro.html"/>
+        <nameUrl value="specifications_techniques_introduction.html"/>
         <title value="Volume 2 - Détail des transactions"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux1.html"/>
+            <valueUrl value="specifications_techniques_flux1_Souscription_Abonnement.html"/>
           </extension>
-          <nameUrl value="st_flux1.html"/>
+          <nameUrl value="specifications_techniques_flux1_Souscription_Abonnement.html"/>
           <title value="Flux 1:SouscriptionAbonnement"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux2.html"/>
+            <valueUrl value="specifications_techniques_flux2_Suppression_Abonnement.html"/>
           </extension>
-          <nameUrl value="st_flux2.html"/>
+          <nameUrl value="specifications_techniques_flux2_Suppression_Abonnement.html"/>
           <title value="Flux 2:SuppressionAbonnement"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux3.html"/>
+            <valueUrl value="specifications_techniques_flux3_Emission_Evenement.html"/>
           </extension>
-          <nameUrl value="st_flux3.html"/>
+          <nameUrl value="specifications_techniques_flux3_Emission_Evenement.html"/>
           <title value="Flux 3:EmissionEvenement"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux4.html"/>
+            <valueUrl value="specifications_techniques_flux4_Transmission_Ordre_Notification.html"/>
           </extension>
-          <nameUrl value="st_flux4.html"/>
+          <nameUrl value="specifications_techniques_flux4_Transmission_Ordre_Notification.html"/>
           <title value="Flux 4:TransmissionOrdreNotification"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux5.html"/>
+            <valueUrl value="specifications_techniques_flux5_NotificationEvenement.html"/>
           </extension>
-          <nameUrl value="st_flux5.html"/>
+          <nameUrl value="specifications_techniques_flux5_NotificationEvenement.html"/>
           <title value="Flux 5:NotificationEvenement"/>
           <generation value="markdown"/>
         </page>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="change-log.html"/>
-        </extension>
-        <nameUrl value="change-log.html"/>
-        <title value="Historique des versions"/>
-        <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -582,10 +571,18 @@
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="acronymes.html"/>
+            <valueUrl value="norme_standard.html"/>
           </extension>
-          <nameUrl value="acronymes.html"/>
-          <title value="Acronymes"/>
+          <nameUrl value="norme_standard.html"/>
+          <title value="Normes et Standards"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="glossaire.html"/>
+          </extension>
+          <nameUrl value="glossaire.html"/>
+          <title value="Glossaire"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -604,6 +601,14 @@
           <title value="Téléchargements et usages"/>
           <generation value="markdown"/>
         </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="change-log.html"/>
+        </extension>
+        <nameUrl value="change-log.html"/>
+        <title value="Historique des versions"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <parameter>

@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Flux 4:TransmissionOrdreNotification - Notification d&#39;Événements v3.0.0</title>
+    <title>Normes et Standards - Notification d&#39;Événements v3.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3.4"}
-    h3,h4,h5,h6{--heading-prefix:"3.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"4.1"}
+    h3,h4,h5,h6{--heading-prefix:"4.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -68,7 +68,7 @@
 
 
 
-  <span title="">FR</span>
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
 
 
             </span>
@@ -99,7 +99,7 @@
     <a href="index.html">Accueil</a>
   </li>
   <li>
-    <a href="index.html">Volume 1 - Etude fonctionnelle</a>
+    <a href="specifications_fonctionnelles.html">Volume 1 - Etude fonctionnelle</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
@@ -107,35 +107,35 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="st_intro.html">Introduction</a>
+        <a href="specifications_techniques_introduction.html">Introduction</a>
       </li>
       <li>
-        <a href="st_flux1.html">Souscription Abonnement</a>
+        <a href="specifications_techniques_flux1_Souscription_Abonnement.html">Souscription Abonnement</a>
       </li>
       <li>
-        <a href="st_flux2.html">SuppressionAbonnement</a>
+        <a href="specifications_techniques_flux2_Suppression_Abonnement.html">SuppressionAbonnement</a>
       </li>
       <li>
-        <a href="st_flux3.html">EmissionEvenement</a>
+        <a href="specifications_techniques_flux3_Emission_Evenement.html">EmissionEvenement</a>
       </li>
       <li>
-        <a href="st_flux4.html">TransmissionOrdreNotification</a>
+        <a href="specifications_techniques_flux4_Transmission_Ordre_Notification.html">TransmissionOrdreNotification</a>
       </li>
       <li>
-        <a href="st_flux5.html">NotificationEvenement</a>
+        <a href="specifications_techniques_flux5_NotificationEvenement.html">NotificationEvenement</a>
       </li>
     </ul>
   </li>
-  <li>
-    <a href="artifacts.html">Ressources de conformité</a>
-  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3 - Annexes
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="acronymes.html">Acronymes</a>
+        <a href="norme_standard.html">Normes et Standards</a>
+      </li>
+      <li>
+        <a href="glossaire.html">Glossaire</a>
       </li>
       <li>
         <a href="securite.html">Sécurité</a>
@@ -150,6 +150,9 @@
         <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li>
     <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
@@ -169,15 +172,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='st_intro.html'><b>Volume 2 - Détail des transactions</b></a></li><li><b>Flux 4:TransmissionOrdreNotification</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='autres_ressources.html'><b>Autres Ressources</b></a></li><li><b>Normes et Standards</b></li>
 
           <span style="float:right;">
 
-            <a href="st_flux3.html">&lt;prev</a> | 
+            <a href="autres_ressources.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="st_flux5.html">next&gt;</a>
+          | <a href="glossaire.html">next&gt;</a>
 
           </span>
 
@@ -199,7 +202,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Notification d'Événements - version de développement local (v3.0.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/nde/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
-  <h2>Flux 4:TransmissionOrdreNotification</h2>
+  <h2>Normes et Standards</h2>
   
 
 
@@ -217,59 +220,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<div style="text-align: center;">
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="149px" preserveAspectRatio="none" style="width:634px;height:149px;background:#FFFFFF;" version="1.1" viewBox="0 0 634 149" width="634px" zoomAndPan="magnify"><defs /><g><g><title>Gestionnaire d'abonnements</title><rect fill="#000000" fill-opacity="0.00000" height="78.2656" width="8" x="109.3838" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="113" x2="113" y1="36.2969" y2="114.5625" /></g><g><title>Gestionnaire de notifications</title><rect fill="#000000" fill-opacity="0.00000" height="78.2656" width="8" x="517.0806" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="520.2266" x2="520.2266" y1="36.2969" y2="114.5625" /></g><g class="participant participant-head" data-participant="GA"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="216.7676" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="202.7676" x="12" y="24.9951">Gestionnaire d'abonnements</text></g><g class="participant participant-tail" data-participant="GA"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="216.7676" x="5" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="202.7676" x="12" y="133.5576">Gestionnaire d'abonnements</text></g><g class="participant participant-head" data-participant="GN"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="215.708" x="413.2266" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201.708" x="420.2266" y="24.9951">Gestionnaire de notifications</text></g><g class="participant participant-tail" data-participant="GN"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="215.708" x="413.2266" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201.708" x="420.2266" y="133.5576">Gestionnaire de notifications</text></g><g class="message" data-participant-1="GA" data-participant-2="GN"><polygon fill="#181818" points="509.0806,63.4297,519.0806,67.4297,509.0806,71.4297,513.0806,67.4297" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="113.3838" x2="515.0806" y1="67.4297" y2="67.4297" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="383.6968" x="120.3838" y="62.3638">FLux 4 POST CommunicationRequest (NotificationRequest)</text></g><g class="message" data-participant-1="GN" data-participant-2="GA"><polygon fill="#181818" points="124.3838,92.5625,114.3838,96.5625,124.3838,100.5625,120.3838,96.5625" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="118.3838" x2="520.0806" y1="96.5625" y2="96.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103.5684" x="130.3838" y="91.4966">OK 201 Created</text></g></g></svg>
-</div>
-
-<p>Le <strong>Flux 4 – TransmissionOrdreNotification</strong> contient les informations nécessaires au gestionnaire de
-notifications pour émettre une notification à l’abonné.</p>
-
-<p>La première étape de la construction du flux 4 de transmission d’un
-ordre de notification consiste à organiser son contenu. Le corps de la
-requête HTTP est constitué de la ressource « CommunicationRequest »
-(profil NotificationRequestNdE) contenant les ressources suivantes
-(utilisation de l’élément <strong>contained</strong>):</p>
-
-<p>La ressource référencée comme sujet de l’évènement par l’élément
-subject : la ressource « Patient » utilisant le profil français
-FrPatient</p>
-
-<p>La ressource référencée en tant qu’émetteur de l’évènement par l’élément
-requester : la ressource « Practitioner » utilisant le profil français
-FrPractitioner ou « Organization » utilisant le profil français
-FrOrganization ;</p>
-
-<p>La ressource référencée en tant que destinataire de la notification par
-l’élément recipient:</p>
-
-<p>La ressource « RelatedPerson » utilisant le profil français
-FrRelatedPerson si le destinataire est le représentant légal du
-patient ;</p>
-
-<p>La ressource « Practitioner » utilisant le profil français
-FrPractitioner ou « Organization » utilisant le profil français
-FrOrganization si le destinataire est le professionnel ou l’organisation
-et qu’ils ne sont pas émetteur de l’évènement</p>
-
-<p>Aucune si le destinataire est le sujet ou l’émetteur de l’évènement</p>
-
-<p>La ressource CommunicationRequest ainsi formée sera envoyée dans le
-corps de la requête HTTP POST suivante :</p>
-
-<pre><code class="language-HTTP">POST [base]/CommunicationRequest
-</code></pre>
-
-<p>Où [base] est l’endpoint FHIR mis à disposition par le gestionnaire de
-notifications.</p>
-
-<p>Si la transmission d’ordre de notification est correctement effectuée,
-le système Gestionnaire d’évènements doit retourner un code « 201
-created » avec, dans le corps de la réponse, la ressource
-« CommunicationRequest ».</p>
-
-<p>En cas d’erreur, le Gestionnaire de notifications doit répondre avec les
-codes HTTP appropriés tels que définis par l’API REST FHIR et renvoyer
-une ressource de type OperationOutcome dans le corps de la réponse.</p>
 
 
 
@@ -294,7 +244,7 @@ une ressource de type OperationOutcome dans le corps de la réponse.</p>
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="st_flux3.html">&lt;prev</a>
+                <a href="autres_ressources.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -302,7 +252,7 @@ une ressource de type OperationOutcome dans le corps de la réponse.</p>
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="st_flux5.html">next&gt;</a>
+                <a href="glossaire.html">next&gt;</a>
 
               </td>
             </tr>
@@ -312,7 +262,7 @@ une ressource de type OperationOutcome dans le corps de la réponse.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 23, 2026 10:34+0000">2026-01-23</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 14:44+0000">2026-01-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
