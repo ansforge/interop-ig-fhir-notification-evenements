@@ -1,5 +1,5 @@
 {
-  "date" : "Tue, 03 Feb, 2026 14:07:46 +0000",
+  "date" : "Tue, 03 Feb, 2026 15:28:18 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,48 +8,48 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 38,
-          "length" : 45
+          "start" : 48,
+          "length" : 59
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 39,
-          "length" : 15
+          "start" : 49,
+          "length" : 18
         },
         {
           "activity" : "generateNarratives",
-          "start" : 39,
-          "length" : 101
+          "start" : 49,
+          "length" : 107
         },
         {
           "activity" : "validate",
-          "start" : 39,
-          "length" : 4353
+          "start" : 49,
+          "length" : 6200
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 43,
+          "start" : 56,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 43,
-          "length" : 73
+          "start" : 56,
+          "length" : 83
         },
         {
           "activity" : "generate2",
-          "start" : 46,
-          "length" : 112
+          "start" : 60,
+          "length" : 140
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 57,
-          "length" : 3
+          "start" : 74,
+          "length" : 2
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 61,
-          "length" : 2
+          "start" : 77,
+          "length" : 1
         }
       ]
     },
@@ -67,25 +67,25 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 46,
+          "start" : 60,
           "length" : 1
         }
       ]
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_introduction.md",
-      "size" : 4284
-    },
-    {
-      "name" : "/input/pagecontent/specifications_techniques_flux4_Transmission_Ordre_Notification.md",
-      "size" : 2362,
+      "size" : 4492,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 46,
+          "start" : 60,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/specifications_techniques_flux4_Transmission_Ordre_Notification.md",
+      "size" : 2362
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux3_Emission_Evenement.md",
@@ -97,18 +97,18 @@
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux2_Suppression_Abonnement.md",
-      "size" : 976
-    },
-    {
-      "name" : "/input/pagecontent/tests.md",
-      "size" : 1184,
+      "size" : 976,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 46,
+          "start" : 60,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/tests.md",
+      "size" : 1184
     },
     {
       "name" : "/input/pagecontent/norme_standard.md",
@@ -128,7 +128,14 @@
     },
     {
       "name" : "/input/pagecontent/securite.md",
-      "size" : 1339
+      "size" : 1339,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 60,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/construction_des_flux.md",
@@ -136,14 +143,7 @@
     },
     {
       "name" : "/input/pagecontent/st_flux5.md",
-      "size" : 573,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 46,
-          "length" : 1
-        }
-      ]
+      "size" : 573
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux1_Souscription_Abonnement.md",
@@ -151,7 +151,14 @@
     },
     {
       "name" : "/input/pagecontent/acronymes.md",
-      "size" : 482
+      "size" : 482,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 60,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/downloads.md",
@@ -167,25 +174,25 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 46,
-          "length" : 4
+          "start" : 60,
+          "length" : 3
         }
       ]
     },
     {
       "name" : "/input/pagecontent/st_flux3.md",
-      "size" : 1600
-    },
-    {
-      "name" : "/input/pagecontent/autres_ressources.md",
-      "size" : 155,
+      "size" : 1600,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 46,
+          "start" : 60,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/autres_ressources.md",
+      "size" : 155
     },
     {
       "name" : "/template/config",
@@ -213,7 +220,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 46,
+          "start" : 60,
           "length" : 1
         }
       ]
