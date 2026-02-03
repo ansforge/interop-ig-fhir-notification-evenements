@@ -146,7 +146,7 @@ Le processus métier de gestion d'abonnement amène à considérer un cas d'util
 
 * Les acteurs impliqués 
 
-Voir section 2.2.1.1.1.
+[Voir section](#les-acteurs-impliqués)
 
 * Détails du cas d'utilisation 
 
