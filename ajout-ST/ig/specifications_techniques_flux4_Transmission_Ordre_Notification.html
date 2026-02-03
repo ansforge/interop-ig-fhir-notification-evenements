@@ -235,23 +235,23 @@ requête HTTP est constitué de la ressource « CommunicationRequest »
 
 <p>La ressource référencée comme sujet de l’évènement par l’élément
 subject : la ressource « Patient » utilisant le profil français
-FRCorePatientProfile ou FRCorePatientINSProfile</p>
+FRCorePatientProfile/FRCorePatientINSProfile</p>
 
 <p>La ressource référencée en tant qu’émetteur de l’évènement par l’élément
 requester : la ressource « Practitioner » utilisant le profil français
-FrPractitioner ou « Organization » utilisant le profil français
-FrOrganization ;</p>
+FRCorePractitionerProfile ou « Organization » utilisant le profil français
+FRCoreOrganizationProfile ;</p>
 
 <p>La ressource référencée en tant que destinataire de la notification par
 l’élément recipient:</p>
 
 <p>La ressource « RelatedPerson » utilisant le profil français
-FrRelatedPerson si le destinataire est le représentant légal du
+FRCoreRelatedPersonProfile si le destinataire est le représentant légal du
 patient ;</p>
 
 <p>La ressource « Practitioner » utilisant le profil français
-FrPractitioner ou « Organization » utilisant le profil français
-FrOrganization si le destinataire est le professionnel ou l’organisation
+FRCorePractitionerProfile ou « Organization » utilisant le profil français
+FRCoreOrganizationProfile si le destinataire est le professionnel ou l’organisation
 et qu’ils ne sont pas émetteur de l’évènement</p>
 
 <p>Aucune si le destinataire est le sujet ou l’émetteur de l’évènement</p>
@@ -315,7 +315,7 @@ une ressource de type OperationOutcome dans le corps de la réponse.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 3, 2026 11:08+0000">2026-02-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 3, 2026 14:07+0000">2026-02-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

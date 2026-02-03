@@ -1,5 +1,5 @@
 {
-  "date" : "Tue, 03 Feb, 2026 11:08:51 +0000",
+  "date" : "Tue, 03 Feb, 2026 14:07:46 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,43 +8,48 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 35,
-          "length" : 46
+          "start" : 38,
+          "length" : 45
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 35,
-          "length" : 14
+          "start" : 39,
+          "length" : 15
         },
         {
           "activity" : "generateNarratives",
-          "start" : 35,
-          "length" : 98
+          "start" : 39,
+          "length" : 101
         },
         {
           "activity" : "validate",
-          "start" : 35,
-          "length" : 3976
+          "start" : 39,
+          "length" : 4353
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 43,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 40,
-          "length" : 94
+          "start" : 43,
+          "length" : 73
         },
         {
           "activity" : "generate2",
-          "start" : 42,
-          "length" : 115
+          "start" : 46,
+          "length" : 112
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 53,
-          "length" : 2
+          "start" : 57,
+          "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 56,
-          "length" : 1
+          "start" : 61,
+          "length" : 2
         }
       ]
     },
@@ -54,37 +59,37 @@
     },
     {
       "name" : "/input/data/features.yml",
-      "size" : 164,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 42,
-          "length" : 1
-        }
-      ]
+      "size" : 164
     },
     {
       "name" : "/input/pagecontent/st_flux4.md",
-      "size" : 2276
-    },
-    {
-      "name" : "/input/pagecontent/specifications_techniques_introduction.md",
-      "size" : 4284,
+      "size" : 2276,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 46,
           "length" : 1
         }
       ]
     },
     {
+      "name" : "/input/pagecontent/specifications_techniques_introduction.md",
+      "size" : 4284
+    },
+    {
       "name" : "/input/pagecontent/specifications_techniques_flux4_Transmission_Ordre_Notification.md",
-      "size" : 2310
+      "size" : 2362,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 46,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux3_Emission_Evenement.md",
-      "size" : 1592
+      "size" : 1649
     },
     {
       "name" : "/input/pagecontent/glossaire.md",
@@ -100,7 +105,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 46,
           "length" : 1
         }
       ]
@@ -131,18 +136,18 @@
     },
     {
       "name" : "/input/pagecontent/st_flux5.md",
-      "size" : 573
-    },
-    {
-      "name" : "/input/pagecontent/specifications_techniques_flux1_Souscription_Abonnement.md",
-      "size" : 3010,
+      "size" : 573,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 46,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/specifications_techniques_flux1_Souscription_Abonnement.md",
+      "size" : 3010
     },
     {
       "name" : "/input/pagecontent/acronymes.md",
@@ -154,14 +159,7 @@
     },
     {
       "name" : "/input/pagecontent/change-log.md",
-      "size" : 330,
-      "processes" : [
-        {
-          "activity" : "scan",
-          "start" : 35,
-          "length" : 1
-        }
-      ]
+      "size" : 330
     },
     {
       "name" : "/input/pagecontent/index.md",
@@ -169,7 +167,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 46,
           "length" : 4
         }
       ]
@@ -180,7 +178,14 @@
     },
     {
       "name" : "/input/pagecontent/autres_ressources.md",
-      "size" : 155
+      "size" : 155,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 46,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/template/config",
@@ -196,14 +201,7 @@
     },
     {
       "name" : "/input/images/anImage.png",
-      "size" : 36288,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 42,
-          "length" : 1
-        }
-      ]
+      "size" : 36288
     },
     {
       "name" : "/input/images/ci-sis-logo.png",
@@ -211,7 +209,14 @@
     },
     {
       "name" : "/temp/pages/_includes/artifacts.xml",
-      "size" : 600
+      "size" : 600,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 46,
+          "length" : 1
+        }
+      ]
     }
   ]
 }

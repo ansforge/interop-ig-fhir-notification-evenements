@@ -10,9 +10,9 @@ Le **Flux 3 – EmissionEvenement** contient les informations relatives à un é
 
 La première étape de la construction du flux 3 d’émission d’un évènement consiste à organiser son contenu. Le corps de la requête HTTP est constitué de la ressource « CommunicationRequest » (profil EventDeclarationNdE) contenant les ressources suivantes (utilisation de l’élément **contained**):
 
-La ressource référencée comme sujet de l’évènement par l’élément subject : la ressource « Patient » utilisant le profil français FrPatient ;
+La ressource référencée comme sujet de l’évènement par l’élément subject : la ressource « Patient » utilisant le profil français FRCorePatientProfile/FRCorePatientINSProfile ;
 
-La ressource référencée en tant qu’émetteur de l’évènement par l’élément requester: la ressource « Practitioner » utilisant le profil français FrPractitioner ou « Organization » utilisant le profil français FrOrganization
+La ressource référencée en tant qu’émetteur de l’évènement par l’élément requester: la ressource « Practitioner » utilisant le profil français FRCorePractitionerProfile ou « Organization » utilisant le profil français FRCoreOrganizationProfile
 
 La ressource CommunicationRequest ainsi formée sera envoyée dans le corps de la requête HTTP POST suivante :
 
