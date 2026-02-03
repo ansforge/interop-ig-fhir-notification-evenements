@@ -75,6 +75,6 @@ volets de la [couche Transport](http://esante.gouv.fr/services/referentiels/ci-s
 systèmes d’information de santé (CI-SIS).
 
 > Ces spécifications sont à adopter dans des implémentations expérimentales.
-  Les ressources FHIR en lien avec la gestion d’abonnement à notifications
+Les ressources FHIR en lien avec la gestion d’abonnement à notifications ont été revues pour la release 5 et backporté en R4 (http://hl7.org/fhir/uv/subscriptions-backport) avec l'introduction d’une nouvelle ressource SubscriptionTopic représentant le sujet d’un abonnement.
   sont en train d’être revues pour la release 5 du standard (introduction
   d’une nouvelle ressource Topic représentant le sujet d’un abonnement)
