@@ -17,8 +17,8 @@ FrPatient ;
 
 La ressource référencée en tant qu’émetteur de l’évènement par l’élément
 requester: la ressource « Practitioner » utilisant le profil français
-FrPractitioner ou « Organization » utilisant le profil français
-FrOrganization
+FRCorePractitioner ou « Organization » utilisant le profil français
+FRCoreOrganization
 
 La ressource CommunicationRequest ainsi formée sera envoyée dans le
 corps de la requête HTTP POST suivante :

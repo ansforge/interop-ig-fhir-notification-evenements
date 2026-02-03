@@ -13,7 +13,7 @@ requête HTTP est constitué de la ressource « CommunicationRequest »
 
 La ressource référencée comme sujet de l’évènement par l’élément
 subject : la ressource « Patient » utilisant le profil français
-FrPatient
+FRCorePatient
 
 La ressource référencée en tant qu’émetteur de l’évènement par l’élément
 requester : la ressource « Practitioner » utilisant le profil français
