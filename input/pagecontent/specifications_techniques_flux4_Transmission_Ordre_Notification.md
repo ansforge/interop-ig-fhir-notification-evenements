@@ -13,23 +13,23 @@ requête HTTP est constitué de la ressource « CommunicationRequest »
 
 La ressource référencée comme sujet de l’évènement par l’élément
 subject : la ressource « Patient » utilisant le profil français
-FRCorePatientProfile ou FRCorePatientINSProfile
+FRCorePatientProfile/FRCorePatientINSProfile
 
 La ressource référencée en tant qu’émetteur de l’évènement par l’élément
 requester : la ressource « Practitioner » utilisant le profil français
-FrPractitioner ou « Organization » utilisant le profil français
-FrOrganization ;
+FRCorePractitionerProfile ou « Organization » utilisant le profil français
+FRCoreOrganizationProfile ;
 
 La ressource référencée en tant que destinataire de la notification par
 l’élément recipient:
 
 La ressource « RelatedPerson » utilisant le profil français
-FrRelatedPerson si le destinataire est le représentant légal du
+FRCoreRelatedPersonProfile si le destinataire est le représentant légal du
 patient ;
 
 La ressource « Practitioner » utilisant le profil français
-FrPractitioner ou « Organization » utilisant le profil français
-FrOrganization si le destinataire est le professionnel ou l’organisation
+FRCorePractitionerProfile ou « Organization » utilisant le profil français
+FRCoreOrganizationProfile si le destinataire est le professionnel ou l’organisation
 et qu’ils ne sont pas émetteur de l’évènement
 
 Aucune si le destinataire est le sujet ou l’émetteur de l’évènement

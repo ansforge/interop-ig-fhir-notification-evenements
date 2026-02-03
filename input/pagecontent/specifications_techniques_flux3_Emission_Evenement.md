@@ -13,12 +13,12 @@ l’élément **contained**):
 
 La ressource référencée comme sujet de l’évènement par l’élément
 subject : la ressource « Patient » utilisant le profil français
-FrPatient ;
+FRCorePatientProfile/FRCorePatientINSProfile ;
 
 La ressource référencée en tant qu’émetteur de l’évènement par l’élément
 requester: la ressource « Practitioner » utilisant le profil français
-FrPractitioner ou « Organization » utilisant le profil français
-FrOrganization
+FRCorePractitionerProfile ou « Organization » utilisant le profil français
+FRCoreOrganizationProfile
 
 La ressource CommunicationRequest ainsi formée sera envoyée dans le
 corps de la requête HTTP POST suivante :
