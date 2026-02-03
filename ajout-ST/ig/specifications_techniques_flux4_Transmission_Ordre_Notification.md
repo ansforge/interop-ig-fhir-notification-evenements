@@ -10,7 +10,7 @@ Le **Flux 4 – TransmissionOrdreNotification** contient les informations néces
 
 La première étape de la construction du flux 4 de transmission d’un ordre de notification consiste à organiser son contenu. Le corps de la requête HTTP est constitué de la ressource « CommunicationRequest » (profil NotificationRequestNdE) contenant les ressources suivantes (utilisation de l’élément **contained**):
 
-La ressource référencée comme sujet de l’évènement par l’élément subject : la ressource « Patient » utilisant le profil français FrPatient
+La ressource référencée comme sujet de l’évènement par l’élément subject : la ressource « Patient » utilisant le profil français FRCorePatientProfile ou FRCorePatientINSProfile
 
 La ressource référencée en tant qu’émetteur de l’évènement par l’élément requester : la ressource « Practitioner » utilisant le profil français FrPractitioner ou « Organization » utilisant le profil français FrOrganization ;
 

@@ -16,7 +16,7 @@ La ressource référencée en tant qu’émetteur de l’évènement par l’ext
 
 La ressource référencée en tant qu’abonné par l’extension Subscriber:
 
-La ressource « RelatedPerson » utilisant le profil français FRCoreRelatedPersonProfileatedPerson si l’abonné n’est ni la personne prise en charge, ni l’émetteur de l’évènement
+La ressource « RelatedPerson » utilisant le profil français FRCoreRelatedPersonProfile si l’abonné n’est ni la personne prise en charge, ni l’émetteur de l’évènement
 
 La ressource « Organization » utilisant le profil français FRCoreOrganizationProfile ou « Practitioner » utilisant le profil français FRCorePractitionerProfile si l’abonné est différent de l’émetteur
 
