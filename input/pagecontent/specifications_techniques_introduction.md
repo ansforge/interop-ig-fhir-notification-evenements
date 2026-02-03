@@ -44,7 +44,7 @@ CommunicationRequest (NM2)
 HL7 France a profilé certaines ressources FHIR. Ces profils sont
 utilisés dans le cadre des spécifications techniques du volet
 « Notification d’évènements ». Les présentes spécifications se basent
-sur le guide d'implémentation [Fr Core](https://hl7.fr/ig/fhir/core/). Le tableau ci-après spécifie les profils utilisés pour
+sur le guide d'implémentation [FR Core]({{ site.data.fhir.ver.hl7frcore }}). Le tableau ci-après spécifie les profils utilisés pour
 les ressources et types de données mentionnés dans ce document. Les
 présentes spécifications définissent également des profils propres au
 présent volet. Pour les ressources et types de données non mentionnés
