@@ -70,20 +70,6 @@ Les spécifications des ressources FHIR (dont la ressource **Subscription**) son
 * L’implémentation qui contient des informations sur la mise en œuvre des ressources selon l’architecture [REST](https://fr.wikipedia.org/wiki/Representational_state_transfer), ainsi que les types de messages et de documents qui peuvent être mis en œuvre avec les ressources FHIR.
 * Les ressources et qui contiennent les définitions détaillées des ressources FHIR.
 
-##### Processus d’élaboration et gouvernance
-
-La [méthodologie](http://wiki.hl7.org/index.php?title=FHIR_Methodology_Process#Methodology_Locations) d’élaboration des ressources FHIR (dont la ressource **Subscription**) se base sur trois composants principaux :
-
-* Le méta modèle qui se base sur une ressource « Profile » et qui définit la structure des ressources FHIR, les éléments de données et leurs significations, les contraintes à respecter, etc. Ce méta modèle est maintenu via une procédure de Ballot ou de vote.
-* La partie technique qui concerne des aspects comme la création des ressources et la manière dont l’outillage est utilisé pour créer du contenu. Cette partie se trouve dans le document [FHIR Guide to Authoring Resources](http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Authoring_Resources).
-* La partie contenu qui couvre les aspects « qualité » et fournit des lignes directrices et des meilleures pratiques pour la création et le maintien des ressources. Cette partie se trouve dans le document [FHIR Guide to Designing Resources](http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Designing_Resources) et [FHIR Design Patterns](http://wiki.hl7.org/index.php?title=FHIR_Design_Patterns).
-* Afin de maintenir et faire évoluer les ressources, la gouvernance deFHIR est alignée avec les exigences de la [gouvernance](http://wiki.hl7.org/index.php?title=FHIR_Governance_Process) des autres normes produites par HL7. Elle est gérée par trois groupes:
-* [FHIR Governance Board](http://wiki.hl7.org/index.php?title=FHIR_Governance_Board) qui établit les principes guidant le développement des spécifications, les ressources FHIR, etc.
-* [FHIR Management Group](http://wiki.hl7.org/index.php?title=FHIR_Management_Group)(FMG) qui maintient et gère les ressources FHIR. Ceci inclut les propositions d’évolution (Change Requests), les procédures de gestion des Ballots, la relation avec les groupes de travail HL7, la gestion des Connectathons (évènements de tests), etc. Les demandes d’évolutions des Ballots sont évaluées selon divers critères :
-* [Modeling and Methodology](http://wiki.hl7.org/index.php?title=Modeling_and_Methodology) qui gère les règles des bonnes pratiques qui gouvernent la création des ressources.
-
-FHIR utilise l’outil [gForge](https://www.gforge.org/) pour la [traçabilité des demandes](http://wiki.hl7.org/index.php?title=FHIR_Change_requests) d’évolutions des spécifications.
-
 ##### Maturité et adoption
 
 FHIR a mis en œuvre un [modèle de maturité de ressources](http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model) basé sur le [CMM](http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model) (**Capability Maturity Model**) afin de fournir aux développeurs une idée de la maturité d’une ressource avant son utilisation et son implémentation. Ci-dessous les 5 niveaux de maturité utilisés par FHIR :
@@ -96,20 +82,6 @@ FHIR a mis en œuvre un [modèle de maturité de ressources](http://wiki.hl7.org
 * Niveau 5 : la ressource a été publiée en tant que ressource de niveau de maturité 1 ou supérieur au cours d’au moins deux cycles (en tant que STU) formels de publication. Elle a par ailleurs été mise en œuvre dans au moins 5 systèmes de production indépendants dans plus d’un pays.
 
 Le niveau de maturité de la ressource **Subscription** est de 1.
-
-##### Outillage
-
-Des outils sont élaborés pour implémenter et tester des systèmes basés sur le standard FHIR, dont :
-
-* [FHIR Notepad++](http://www.healthintersections.com.au/FhirServer/fhirnpp.htm)
-* [Value Set Editor](http://www.healthintersections.com.au/FhirServer/fhirvse.htm)
-* [Des serveurs](http://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing) publiquement accessibles à des fins de tests
-* [Java Validator](http://hl7.org/implement/standards/fhir/validator.zip) ainsi qu’un ensemble [d’outils de validation](http://hl7.org/implement/standards/fhir/validation.html) des ressources FHIR
-* [HAPI](http://hapifhir.io/index.html), une librairie de développement des ressources FHIR en Java
-* [Des schémas XSD](http://hl7.org/implement/standards/fhir/fhir-all-xsd.zip) de validation et de [génération de code](http://hl7.org/implement/standards/fhir/fhir-codegen-xsd.zip)
-* D’autres outils sont également disponibles pour mettre en œuvre et tester des ressources FHIR comme [XmlSpy](http://www.altova.com/xmlspy.html), [Oxygen](http://www.oxygenxml.com/), etc.
-
-L’ensemble de ces outils peuvent être utilisés pour la ressource **Subscription**.
 
 ### OASIS
 

@@ -394,70 +394,6 @@ ressources FHIR.</p>
   </li>
 </ul>
 
-<h5 id="processus-délaboration-et-gouvernance">Processus d’élaboration et gouvernance</h5>
-
-<p>La <a href="http://wiki.hl7.org/index.php?title=FHIR_Methodology_Process#Methodology_Locations">méthodologie</a> d’élaboration des ressources FHIR (dont la ressource <strong>Subscription</strong>) se base sur trois composants principaux :</p>
-
-<ul>
-  <li>
-    <p>Le méta modèle qui se base sur une ressource « Profile » et qui
-définit la structure des ressources FHIR, les éléments de données et
-leurs significations, les contraintes à respecter, etc. Ce méta modèle
-est maintenu via une procédure de Ballot ou de vote.</p>
-  </li>
-  <li>
-    <p>La partie technique qui concerne des aspects comme la création des
-ressources et la manière dont l’outillage est utilisé pour créer du
-contenu. Cette partie se trouve dans le document <a href="http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Authoring_Resources">FHIR Guide to
-Authoring Resources</a>.</p>
-  </li>
-  <li>
-    <p>La partie contenu qui couvre les aspects « qualité » et fournit des
-lignes directrices et des meilleures pratiques pour la création et le
-maintien des ressources. Cette partie se trouve dans le document <a href="http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Designing_Resources">FHIR
-Guide to Designing Resources</a> et <a href="http://wiki.hl7.org/index.php?title=FHIR_Design_Patterns">FHIR Design Patterns</a>.</p>
-  </li>
-  <li>
-    <p>Afin de maintenir et faire évoluer les ressources, la gouvernance deFHIR est alignée avec les exigences de la
-<a href="http://wiki.hl7.org/index.php?title=FHIR_Governance_Process">gouvernance</a> des autres normes produites par HL7. Elle est gérée par trois groupes:</p>
-  </li>
-  <li>
-    <p><a href="http://wiki.hl7.org/index.php?title=FHIR_Governance_Board">FHIR Governance Board</a> qui établit les principes guidant le développement des spécifications, les ressources FHIR, etc.</p>
-  </li>
-  <li>
-    <p><a href="http://wiki.hl7.org/index.php?title=FHIR_Management_Group">FHIR Management Group</a>(FMG) qui maintient et gère  les ressources
-FHIR. Ceci inclut les propositions d’évolution (Change Requests), les
-procédures de gestion des Ballots, la relation avec les groupes de
-travail HL7, la gestion des Connectathons (évènements de tests), etc.
-Les demandes d’évolutions des Ballots sont évaluées selon divers
-critères :</p>
-
-    <ul>
-      <li>
-        <p>Est-ce que l’évolution demandée bénéficie aux développeurs et
-comment ?</p>
-      </li>
-      <li>
-        <p>Est-ce que l’évolution est alignée avec le méta-modèle FHIR ?</p>
-      </li>
-      <li>
-        <p>Est-ce que l’évolution a un impact métier ?</p>
-      </li>
-      <li>
-        <p>Est-ce que c’est complexe d’intégrer l’évolution souhaitée dans les
-outils ?</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><a href="http://wiki.hl7.org/index.php?title=Modeling_and_Methodology">Modeling and Methodology</a> qui gère les règles des bonnes pratiques
-qui gouvernent la création des ressources.</p>
-  </li>
-</ul>
-
-<p>FHIR utilise l’outil <a href="https://www.gforge.org/">gForge</a> pour la <a href="http://wiki.hl7.org/index.php?title=FHIR_Change_requests">traçabilité des demandes</a>
-d’évolutions des spécifications.</p>
-
 <h5 id="maturité-et-adoption">Maturité et adoption</h5>
 
 <p>FHIR a mis en œuvre un <a href="http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model">modèle de maturité de ressources</a> basé sur le
@@ -510,40 +446,6 @@ moins 5 systèmes de production indépendants dans plus d’un pays.</p>
 </ul>
 
 <p>Le niveau de maturité de la ressource <strong>Subscription</strong> est de 1.</p>
-
-<h5 id="outillage">Outillage</h5>
-
-<p>Des outils sont élaborés pour implémenter et tester des systèmes basés
-sur le standard FHIR, dont :</p>
-
-<ul>
-  <li>
-    <p><a href="http://www.healthintersections.com.au/FhirServer/fhirnpp.htm">FHIR Notepad++</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.healthintersections.com.au/FhirServer/fhirvse.htm">Value Set Editor</a></p>
-  </li>
-  <li>
-    <p><a href="http://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing">Des serveurs</a> publiquement accessibles à des fins de tests</p>
-  </li>
-  <li>
-    <p><a href="http://hl7.org/implement/standards/fhir/validator.zip">Java Validator</a> ainsi qu’un ensemble <a href="http://hl7.org/implement/standards/fhir/validation.html">d’outils de validation</a>
-des ressources FHIR</p>
-  </li>
-  <li>
-    <p><a href="http://hapifhir.io/index.html">HAPI</a>, une librairie de développement des ressources FHIR en Java</p>
-  </li>
-  <li>
-    <p><a href="http://hl7.org/implement/standards/fhir/fhir-all-xsd.zip">Des schémas XSD</a> de validation et de <a href="http://hl7.org/implement/standards/fhir/fhir-codegen-xsd.zip">génération de code</a></p>
-  </li>
-  <li>
-    <p>D’autres outils sont également disponibles pour mettre en œuvre et
-tester des ressources FHIR comme <a href="http://www.altova.com/xmlspy.html">XmlSpy</a>, <a href="http://www.oxygenxml.com/">Oxygen</a>, etc.</p>
-  </li>
-</ul>
-
-<p>L’ensemble de ces outils peuvent être utilisés pour la ressource
-<strong>Subscription</strong>.</p>
 
 <h3 id="oasis">OASIS</h3>
 
@@ -662,7 +564,7 @@ v1.3</a>.
 Ces documents sont accessibles publiquement et gratuitement sur
 internet.</p>
 
-<h5 id="processus-délaboration-et-gouvernance-1">Processus d’élaboration et gouvernance</h5>
+<h5 id="processus-délaboration-et-gouvernance">Processus d’élaboration et gouvernance</h5>
 
 <p>Les standards OASIS (dont WS Notification) passent par les phases
 suivantes avant d’être publiés :</p>
@@ -725,7 +627,7 @@ s’interfacer avec d’autres systèmes d’informations basés sur d’autres
 standards. Ces spécifications ont des niveaux de maturité, de qualité et
 de stabilité élevés.</p>
 
-<h5 id="outillage-1">Outillage</h5>
+<h5 id="outillage">Outillage</h5>
 
 <p>Il existe quelques initiatives pour la mise en place des outils de tests
 de conformité pour les standards OASIS :</p>
@@ -1033,7 +935,7 @@ standard utilisé.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 14:44+0000">2026-01-30</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 3, 2026 10:41+0000">2026-02-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
