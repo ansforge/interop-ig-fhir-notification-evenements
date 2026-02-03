@@ -258,8 +258,7 @@ acteurs impliqués.
 
 - Les acteurs impliqués <!-- Problème d'affichage dans l'IG : initialement #######-->
 
-Voir section 2.2.1.1.1.
-
+[Voir section](#les-acteurs-impliqués)
 - Détails du cas d'utilisation <!-- Problème d'affichage dans l'IG : initialement #######-->
 
 Cette section décrit en détail chaque cas d'utilisation de la manière
