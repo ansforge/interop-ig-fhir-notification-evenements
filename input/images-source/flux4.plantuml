@@ -1,0 +1,7 @@
+@startuml
+participant "Gestionnaire d'abonnements" as GA
+participant "Gestionnaire de notifications" as GN
+
+GA -> GN : FLux 4 POST CommunicationRequest (NotificationRequest)
+GN --> GA : OK 201 Created
+@enduml

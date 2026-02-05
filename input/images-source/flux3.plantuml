@@ -1,0 +1,7 @@
+@startuml
+participant "Émetteur d'événements" as EE
+participant "Gestionnaire d'abonnements" as GA
+
+EE -> GA : FLux 3 POST CommunicationRequest (EventDeclaration)
+GA --> EE : OK 201 Created
+@enduml

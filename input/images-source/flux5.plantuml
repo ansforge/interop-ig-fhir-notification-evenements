@@ -1,0 +1,6 @@
+@startuml
+participant "Gestionnaire de notifications" as GN
+actor Abonné
+
+GN -> Abonné : Flux 5 Notification
+@enduml

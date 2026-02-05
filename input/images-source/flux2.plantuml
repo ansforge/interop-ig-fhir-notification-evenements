@@ -1,0 +1,7 @@
+@startuml
+participant Souscripteur
+participant "Gestionnaire d'abonnements" as GA
+
+Souscripteur -> GA : Flux 2 DELETE Subscriptions
+GA --> Souscripteur : OK 200 Deleted
+@enduml
