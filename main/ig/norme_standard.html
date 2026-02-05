@@ -217,9 +217,487 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#présentation-synthétique-de-la-notification-dévènements" id="markdown-toc-présentation-synthétique-de-la-notification-dévènements">Présentation synthétique de la notification d’évènements</a></li>
+  <li><a href="#hl7" id="markdown-toc-hl7">HL7</a></li>
+  <li><a href="#oasis" id="markdown-toc-oasis">OASIS</a></li>
+  <li><a href="#synthèse" id="markdown-toc-synthèse">Synthèse</a></li>
+</ul>
+
 </div>
+<h3 id="introduction">Introduction</h3>
+
+<div class="dragon" style="width: 65%">
+Étude du 10/2016, avec dernière mise à jour en 08/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
+</div>
+
+<p><br /></p>
+
+<p>Ce document présente les normes, standards et profils de normes et standards qui ont été identifiés comme adaptés pour la mise en œuvre des flux structurés présentés dans le document <a href="specifications_fonctionnelles.html">Étude métier – Notification d’évènements</a> :</p>
+
+<ul>
+  <li>
+    <p>La ressource Subscription de FHIR (Fast Healthcare Interoperability Ressources);</p>
+  </li>
+  <li>
+    <p>Le standard WS Notification d’OASIS (Advancing open standards for the information society);</p>
+  </li>
+</ul>
+
+<p>Après un rappel synthétique du contexte en section 2, pour chaque norme, standard et profil analysé sont présentés :</p>
+
+<ul>
+  <li>
+    <p>l’organisme producteur et son périmètre;</p>
+  </li>
+  <li>
+    <p>la norme, le standard ou le profil, son périmètre, les technologies sous-jacentes, l’organisation de la documentation, le processus d’élaboration et la gouvernance, la maturité et adoption ainsi que l’outillage mis à disposition des développeurs en particulier l’outillage de test;</p>
+  </li>
+</ul>
+
+<p>Des tableaux de synthèses qui reprennent ces éléments afin d’en faciliter la comparaison sont fournis en section 5.</p>
+
+<h3 id="présentation-synthétique-de-la-notification-dévènements">Présentation synthétique de la notification d’évènements</h3>
+
+<p>Cette étude s’insère dans le cadre de la mise en œuvre d’un mécanisme de notification d’évènements dans le domaine sanitaire,
+médico-administratif, médico-social ou social. Ce mécanisme permet à une personne (que ce soit un professionnel (Un professionnel est une personne participant, dans le cadre de son activité professionnelle, à la prise en charge d’usagers), une personne prise en charge(Une personne prise en charge peut être un usager dans le secteur social ou un patient) ou une personne tierce(Une personne tierce peut être, par exemple, un membre de la famille qui s’occupe quotidiennement de la personne prise en charge)) ou à une entité géographique de recevoir des notifications d’évènements.</p>
+
+<p>Une <a href="specifications_fonctionnelles.html">étude « métier »</a> a été menée concernant la modélisation des flux entre composants d’un système d’information ou entre systèmes d’informations dans le cadre de la mise en œuvre du mécanisme de notification d’évènements. Dans ce contexte, une personne peut choisir d’utiliser son téléphone portable ou sa tablette pour recevoir des
+notifications, alors qu’une structure hospitalière peut choisir de mettre en œuvre un serveur, par exemple, pour l’émission et la réception de notifications d’évènements.</p>
+
+<p>Dans le cadre de la gestion de la notification, le flux d’envoi de la notification à l’utilisateur final dépend du médium de diffusion choisi pour les notifications. Il est mis en œuvre par des composants spécifique au médium de diffusion de notification choisi. Il est donc considéré hors périmètre du besoin pour cette étude qui correspond aux
+flux d’abonnement à notification, de déclaration d’événement et d’ordre de notification.</p>
+
+<h3 id="hl7">HL7</h3>
+
+<h4 id="organisme-producteur">Organisme Producteur</h4>
+
+<h5 id="présentation">Présentation</h5>
+
+<p><a href="http://www.hl7.org/">HL7</a> (<em>Health Level Seven</em>) est un organisme à but non lucratif accrédité par l’ANSI (<em>American National Standards Institute</em>) et impliqué dans le développement de standards d’interopérabilité internationaux pour l’informatique de santé. Il regroupe des experts de l’informatique de santé qui collaborent pour créer un cadre et des standards connexes pour l’échange, l’intégration, le partage et l’accès à des données de santé. Il vise à promouvoir l’utilisation de ces
+standards entre les organisations de santé et au sein d’une même organisation.</p>
+
+<p>Il est possible de devenir membre de l’organisation HL7 selon divers types d’adhésion adaptés aux besoins des organisations ou des individus. Le coût annuel dépend du type d’adhésion.</p>
+
+<p>Les spécifications produites par HL7 sont librement utilisables sans nécessité d’adhésion à HL7.</p>
+
+<h5 id="périmètre-hl7">Périmètre HL7</h5>
+
+<p>L’organisme HL7 élabore des standards qui concernent spécifiquement le contexte sanitaire ou clinique.</p>
+
+<h4 id="le-standard---fhir">Le standard - FHIR</h4>
+
+<h5 id="présentation-1">Présentation</h5>
+
+<p><a href="https://www.hl7.org/fhir/">FHIR</a> (<em>Fast Healthcare Interoperability Resources</em>) est un standard élaboré par HL7 qui décrit un ensemble de formats de données et d’éléments (appelés ressources) ainsi qu’une API (<em>Application Programming Interface</em>) pour l’échange des informations de santé.</p>
+
+<p>La ressource FHIR <a href="https://www.hl7.org/fhir/subscription.html"><strong>Subscription</strong></a> concernée par cette étude est utilisée pour définir un abonnement de notifications « push » d’un serveur vers un autre système. Le mécanisme fonctionne comme suit : une
+fois qu’un abonnement est enregistré sur le serveur, ce dernier vérifie chaque ressource créée ou mise à jour. Si la ressource correspond aux critères enregistrés par l’abonné, le serveur envoie un message sur le «canal» défini pour que l’abonné prenne une action appropriée. Elle ne couvre cependant pas nativement l’ensemble des données des flux identifiées dans <a href="specifications_fonctionnelles.html">l’étude métier</a>.</p>
+
+<h5 id="périmètre-fhir">Périmètre FHIR</h5>
+
+<p>FHIR est un standard générique qui a vocation à couvrir l’ensemble des flux des systèmes d’information de santé. L’objectif est de proposer des ressources qui possèdent un large éventail d'utilisation qui va des plans de soins et des rapports de diagnostic à l'infrastructure technique tel que l’entête des messages. Ces ressources partagent des caractéristiques techniques communes mais peuvent être utilisées d’une manière totalement différente.</p>
+
+<h5 id="normes-et-standards-sous-jacents">Normes et standards sous-jacents</h5>
+
+<p>FHIR est conçu pour une utilisation sur internet et peut être mis en œuvre via XML ou JSON, HTTP, le format <a href="https://validator.w3.org/feed/docs/atom.html">Atom</a> et le standard d’autorisation <a href="https://oauth.net/">OAuth</a>. Les ressources FHIR peuvent être réutilisées d’une façon interopérable (indépendamment de l’infrastructure technique des systèmes d’information les implémentant). Lorsqu’elles sont mises en œuvre en JSON, les ressources FHIR peuvent être utilisées nativement dans des plateformes ayant des ressources logicielles et matérielles limitées (téléphones portables ou tablettes) afin de concevoir des
+applications mobiles et de permettre des communications avec des systèmes sur le Cloud.</p>
+
+<h5 id="organisation-de-la-documentation">Organisation de la documentation</h5>
+
+<p>Les spécifications des ressources FHIR (dont la ressource <strong>Subscription</strong>) sont accessibles directement sur internet (y compris aux non-membres) et entièrement documentées en HTML pour permettre une navigation facile entre les sections. Elles sont divisées en trois grandes parties:</p>
+
+<ul>
+  <li>
+    <p>La documentation générale qui présente la façon dont les ressources sont définies. Cette partie présente des informations telles les types de données, les codes utilisés et les formats XML et JSON.</p>
+  </li>
+  <li>
+    <p>L’implémentation qui contient des informations sur la mise en œuvre des ressources selon l’architecture <a href="https://fr.wikipedia.org/wiki/Representational_state_transfer">REST</a>, ainsi que les types de messages et de documents qui peuvent être mis en œuvre avec les ressources FHIR.</p>
+  </li>
+  <li>
+    <p>Les ressources et qui contiennent les définitions détaillées des ressources FHIR.</p>
+  </li>
+</ul>
+
+<h5 id="maturité-et-adoption">Maturité et adoption</h5>
+
+<p>FHIR a mis en œuvre un <a href="http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model">modèle de maturité de ressources</a> basé sur le
+<a href="http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model">CMM</a> (<em>Capability Maturity Model</em>) afin de fournir aux développeurs une idée de la maturité d’une ressource avant son utilisation et son implémentation. Ci-dessous les 5 niveaux de maturité utilisés par FHIR :</p>
+
+<ul>
+  <li>
+    <p>Niveau 0 : Cette version est comparable à un « draft » ou une version de travail et n’est pas encore prête pour une implémentation.</p>
+  </li>
+  <li>
+    <p>Niveau 1 : la ressource ne produit aucun avertissement au cours du processus de « build » (qui peut faire référence aux étapes de la production comme la compilation, le packaging, la distribution, la génération de documentation, le déploiement, etc.). De plus, le groupe de travail dédié estime qu’elle est complète et prête pour une implémentation.</p>
+  </li>
+  <li>
+    <p>Niveau 2 : la ressource est testée et échangée avec succès entre au moins trois systèmes développés indépendamment dans un environnement de test comme un <a href="http://wiki.hl7.org/index.php?title=FHIR_Connectathon_12">Connectathon</a> et dont les résultats ont été reportés au groupe de gestion FHIR.</p>
+  </li>
+  <li>
+    <p>Niveau 3 : le respect par la ressource des <a href="http://wiki.hl7.org/index.php?title=DSTU_2_QA_guidelines">normes de qualité</a> adoptées par FHIR a été vérifié. De plus, la ressource a fait l'objet d'un « ballot » avec au moins 10 commentaires de développeurs en provenance d'au moins 3 organisations et qui ont donné lieu à au moins une évolution de fond.</p>
+  </li>
+  <li>
+    <p>Niveau 4 : la ressource est testée dans son champ d'application et publiée officiellement, par exemple dans un STU((<em>Standard for Trial Use</em>) signifie que le standard a été testé et implémenté dans des environnements de tests mais qui peut toujours subir des évolutions afin d’atteindre un statut normatif) et mise en œuvre dans plusieurs projets de prototypes. De plus, le groupe de travail estime que la ressource est suffisamment stable pour exiger une consultation des développeurs avant toute modification sans compatibilité ascendante.</p>
+  </li>
+  <li>
+    <p>Niveau 5 : la ressource a été publiée en tant que ressource de niveau de maturité 1 ou supérieur au cours d’au moins deux cycles (en tant que STU) formels de publication. Elle a par ailleurs été mise en œuvre dans au moins 5 systèmes de production indépendants dans plus d’un pays.</p>
+  </li>
+</ul>
+
+<p>Le niveau de maturité de la ressource <strong>Subscription</strong> est de 1.</p>
+
+<h3 id="oasis">OASIS</h3>
+
+<h4 id="organisme-producteur-1">Organisme Producteur</h4>
+
+<h5 id="présentation-2">Présentation</h5>
+
+<p>OASIS est un consortium à but non lucratif qui promeut le développement, la convergence et l'adoption de normes et de standards ouverts afin de réduire les coûts et protéger le droit du libre choix de la technologie.</p>
+
+<p>Les membres OASIS représentent le marché public et privé et comptent plus de 5000 participants de plus de 600 organisations dans plus de 65 pays. Toute organisation, société ou individu peut être un membre OASIS et peut définir la nature de son adhésion selon ses besoins. Le coût annuel dépend du type d’adhésion.</p>
+
+<p>Les standards produits sont accessibles sur internet et disponibles en <a href="https://fr.wikipedia.org/wiki/Portable_Document_Format">PDF</a>, Word et dans un format HTML.</p>
+
+<p>Les spécifications produites par OASIS sont librement utilisables sansnécessité d’adhésion à HL7.</p>
+
+<h5 id="périmètre-oasis">Périmètre OASIS</h5>
+
+<p>Le périmètre couvert par les standards OASIS est très large et varié. OASIS produit des normes et standards mondiaux dans plusieurs domaines dont la sécurité, l’Internet des objets, le Cloud computing, l’énergie, les technologies de gestion de contenu, etc.</p>
+
+<h4 id="oasis-ws-notification">OASIS WS Notification</h4>
+
+<h5 id="présentation-3">Présentation</h5>
+
+<p><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsn">OASIS WS-notification</a> est une famille de spécifications qui se basent sur des services Web pour mettre en œuvre un mécanisme de notification. Ceci inclut :</p>
+
+<ul>
+  <li>
+    <p>les échanges de messages standardisés par des fournisseurs de services,</p>
+  </li>
+  <li>
+    <p>les échanges de messages standardisés pour mettre en œuvre un mécanisme de Broker (« proxy ») permettant la publication de messages en provenance d’entités qui ne sont pas nécessairement des fournisseurs de services,</p>
+  </li>
+  <li>
+    <p>les exigences opérationnelles attendues des fournisseurs et demandeurs de services qui participent aux notifications,</p>
+  </li>
+  <li>
+    <p>un modèle XML qui décrit les sujets d’intérêts pour abonnement à notification.</p>
+  </li>
+</ul>
+
+<p>Les standards WS Notification fournissent un moyen standardisé pourqu’un Web service interagisse avec un ou plusieurs autres Web services sans connaissance préalable de ces derniers.</p>
+
+<p>Cette famille de standards contient les spécifications suivantes :</p>
+
+<ul>
+  <li>
+    <p>WS-BaseNotification pour standardiser les terminologies, les concepts, les opérations ainsi que les fichiers WSDL et XML.</p>
+  </li>
+  <li>
+    <p>WS-BrokeredNotification pour standardiser les échanges de messages mettant en œuvre un MessageBroker ou un « proxy » entre l’entité responsable de la publication des messages et celle responsable des abonnements.</p>
+  </li>
+  <li>
+    <p>WS-Topics utilisés conjointement avec WS-BaseNotification pour définir des dialectes qui peuvent être utilisés dans les flux mis en œuvre.</p>
+  </li>
+</ul>
+
+<h5 id="périmètre-ws-notification">Périmètre WS Notification</h5>
+
+<p>Le périmètre couvert par le standard WS Notification concerne les systèmes qui se basent sur des services web pour mettre en œuvre l’abonnement à notification, la déclaration d’événements et l’ordre de notification. Il ne couvre cependant pas nativement l’ensemble des données des flux identifiées dans <a href="specifications_fonctionnelles.html">l’étude métier</a>.</p>
+
+<h5 id="normes-et-standards-sous-jacents-1">Normes et standards sous-jacents</h5>
+
+<p>L’infrastructure de base des standards OASIS est le langage XML.</p>
+
+<p>En ce qui concerne le standard WS notification, il est principalement basé sur langage XML et des standards établis tels <a href="https://www.w3.org/TR/soap/">SOAP</a> et WSDL pour la mise en œuvre, l’accès et la définition de services web. Ces standards ne sont pas adaptés aux dispositifs mobiles.</p>
+
+<h5 id="organisation-de-la-documentation-1">Organisation de la documentation</h5>
+
+<p>La documentation des standards d’OASIS se présente comme suit : les spécifications de chaque standard sont contenues dans un document publié en PDF, HTML et Word. Elles peuvent également être publiées dans plusieurs documents si elles traitent des aspects différents du même standard.</p>
+
+<p>En ce qui concerne le standard WS Notification, les spécifications se composent en trois documents qui contiennent les spécifications <a href="http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm">WS-BaseNotification v1.3</a>,
+<a href="http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm">WS-BrokeredNotification v1.3</a> et <a href="http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm">WS-Topics v1.3</a>. Ces documents sont accessibles publiquement et gratuitement sur
+internet.</p>
+
+<h5 id="processus-délaboration-et-gouvernance">Processus d’élaboration et gouvernance</h5>
+
+<p>Les standards OASIS (dont WS Notification) passent par les phases suivantes avant d’être publiés :</p>
+
+<ul>
+  <li>
+    <p>Un « Draft » (version de travail) d’une spécification : la création d’une première version de travail se fait selon un vote du comité technique et qui doit avoir la majorité des votes.</p>
+  </li>
+  <li>
+    <p>Un «Draft » prêt pour une concertation publique (qui peut durer 60 jours) : il s’agit d’une période obligatoire pour que les spécifications passent d’une version de travail « Draft » à une version plus stable.</p>
+  </li>
+  <li>
+    <p>Une spécification sur la base des retours de la phase de concertation publique (soumis à un vote des membres OASIS - chaque membre OASIS a le droit à un vote),</p>
+  </li>
+  <li>
+    <p>Un standard OASIS candidat : qui est soumis à une autre phase de concertation publique puis à un Ballot des membres OASIS,</p>
+  </li>
+  <li>
+    <p>Un standard OASIS,</p>
+  </li>
+  <li>
+    <p>“Errata” (une liste d’erreurs remontée) approuvé : le comité technique peut approuver une liste d’erreurs identifiées et qui ne concerne pas des modifications de fond. Cette liste doit être mise à disposition avec le standard OASIS.</p>
+  </li>
+</ul>
+
+<p>De plus, il existe deux façons afin de maintenir et de faire évoluer les standards OASIS :</p>
+
+<ul>
+  <li>
+    <p><strong>Processus d’Errata</strong> : utilisé pour les modifications mineures - le comité technique peut adopter une liste de modification à un standard existant ou en cours d’élaboration, à condition que la majorité du comité technique vote pour l’adoption de ces modifications.</p>
+  </li>
+  <li>
+    <p><strong>Activités de maintenance</strong> : il s’agit d’une procédure initiée dans le cas où des changements majeurs doivent être apportés à un standard OASIS dans sa version finale (avant sa publication).</p>
+  </li>
+</ul>
+
+<h5 id="maturité-et-adoption-1">Maturité et adoption</h5>
+
+<p>La famille de spécifications OASIS WS Notification a été publiée en 2006 comme des standards OASIS. Elle a depuis été largement adoptée pour mettre en œuvre des systèmes de notifications basés sur XML qui peuvent s’interfacer avec d’autres systèmes d’informations basés sur d’autres standards. Ces spécifications ont des niveaux de maturité, de qualité et
+de stabilité élevés.</p>
+
+<h5 id="outillage">Outillage</h5>
+
+<p>Il existe quelques initiatives pour la mise en place des outils de tests de conformité pour les standards OASIS :</p>
+
+<ul>
+  <li>
+    <p><strong>XML 1.0 Second Edition Conformance Test Suite (2001)</strong> qui fournit un ensemble de tests pour déterminer la conformité des standards OASIS aux recommandations XML 1.0 de l’organisation <a href="https://www.w3.org/">W3C</a>.</p>
+  </li>
+  <li>
+    <p><strong>DOM Level 1 Conformance Test Suite (2001)</strong> qui est un ensemble d’outils développés par le <a href="https://www.nist.gov/">NIST</a> et soumis à OASIS. Il fournit un ensemble standardisé d’objets pour représenter les documents HTML et XML, un modèle qui concernent la façon dont ces objets peuvent être combinés ainsi qu’une interface pour les manipuler.</p>
+  </li>
+  <li>
+    <p><strong>XML Test Suite (1999)</strong> qui est un ensemble de métriques développé par OASIS et NIST pour déterminer la conformité des standards OASIS aux recommandations XML 1.0 de W3C.</p>
+  </li>
+</ul>
+
+<p>Ces outils peuvent être utilisés pour la mise en œuvre du standard WS Notification, qui est également fourni avec des schémas XML et WSDL afin de faciliter aux utilisateurs l’implémentation et le test des standards à adopter.</p>
+
+<h3 id="synthèse">Synthèse</h3>
+
+<p>Cette section présente une synthèse comparative des normes, standards et profils analysés dans les sections précédentes. Les items de cette synthèse sont inspirés des documents suivants :</p>
+
+<ul>
+  <li>
+    <p>La <a href="https://esante.gouv.fr/interoperabilite/ci-sis/demarche-elaboration">doctrine du CI-SIS</a>.</p>
+  </li>
+  <li>
+    <p>« <a href="http://www.himss.org/evaluating-hit-standards?ItemNumber=22775">Evaluating HIT Standards</a> » document sur la comparaison des standards publié par l’organisation <a href="http://www.himss.org/">HIMSS</a>.</p>
+  </li>
+  <li>
+    <p>La méthode <a href="http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm">CAMSS</a> (Common Assessment Method for Standards and Specifications), soutenue par le programme de la commission européenne concernant les solutions d’interopérabilité pour les administrations publiques. Cette initiative vise à promouvoir la collaboration entre les états membres de l’union européenne dans la définition d’une méthode d’évaluation commune de standards pour le développement des services administratifs en ligne.</p>
+  </li>
+</ul>
+
+<h4 id="synthèse-comparative-des-standards">Synthèse comparative des standards</h4>
+
+<table style="width:92%;">
+  <colgroup>
+    <col style="width: 49%" />
+    <col style="width: 23%" />
+    <col style="width: 28%" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th style="text-align: center;">Critères d’évaluation des standards</th>
+      <th style="text-align: center;">FHIR Subscription</th>
+      <th style="text-align: center;">OASIS WS Notification</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        <p>Outillage</p>
+        <p><em>Des outils de tests sont mis en œuvre pour valider l’adhérence au standard.</em></p>
+      </td>
+      <td style="text-align: center;">✔</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>Tests</p>
+        <p><em>Des tests sont effectués sur des versions de travail (dites STU – Standards for Trial Use) et/ou pour les guides d’implémentation normatifs.</em></p>
+      </td>
+      <td style="text-align: center;">Non encore testé (maturité 1)</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>Processus de prise en compte des améliorations</td>
+      <td style="text-align: center;">✔</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>Existence de guides d’implémentation (Un guide d’implémentation combine un ou plusieurs standards afin de traiter des cas d’usage particuliers)</p>
+        <p><em>
+          Les guides référencent les standards de base, c’est-à-dire des standards traitant des cas d’usage génériques et abstraits, avec au moins un cas d’usage et une optionalité sur les paramètres pour permettre les extensions.
+        </em></p>
+      </td>
+      <td style="text-align: center;">✔</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>Adapté aux dispositifs mobiles</td>
+      <td style="text-align: center;">✔</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>Stabilité de la documentation</td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>
+        Adoption par le marché et utilisation  
+        (<em>L’adoption peut être démontrée par des exemples opérationnels d’implémentations conformes provenant de différents fournisseurs.</em>)
+      </td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>Neutralité</p>
+        <ul>
+          <li><em>les spécifications ne limitent pas la concurrence et l’innovation ;</em></li>
+          <li><em>les spécifications sont basées sur des développements scientifiques et technologiques de pointe.</em></li>
+        </ul>
+      </td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>Qualité</p>
+        <ul>
+          <li><em>la qualité est suffisante pour permettre le développement de produits et de services interopérables concurrents.</em></li>
+        </ul>
+      </td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>Accessibilité</p>
+        <p><em>Les spécifications sont disponibles au public à des conditions raisonnables (gratuitement ou à coût raisonnable).</em></p>
+      </td>
+      <td style="text-align: center;">✔</td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>Couverture des spécifications (notification d’évènements)</p>
+      </td>
+      <td style="text-align: center;"><strong>partielle</strong></td>
+      <td style="text-align: center;"><strong>partielle</strong></td>
+    </tr>
+
+    <tr>
+      <td>Mises en œuvre existantes du cas d’usage (notification d’évènements)</td>
+      <td></td>
+      <td style="text-align: center;">✔</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="synthèse-comparative-des-organismes-producteurs">Synthèse comparative des organismes producteurs</h4>
+
+<table style="width:92%;">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 25%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Critères d’évaluations des organismes
+producteurs</th>
+<th style="text-align: center;">FHIR HL7</th>
+<th style="text-align: center;">OASIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Maintenance</p>
+<p><em>Assurer la continuité et la mise à jour du standard</em></p></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><p>Ouverture et transparence</p>
+<p><em>Utiliser un processus de développement ouvert et
+consensuel :</em></p>
+<ul>
+<li><p><em>les informations concernant les discussions techniques et la prise de décision sont archivées et identifiées.</em></p></li>
+<li><p><em>les informations sur les activités de normalisation sont
+largement annoncées par les moyens appropriés.</em></p></li>
+</ul></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><p>Large participation</p>
+<ul>
+<li><p><em>assurer une participation équilibrée des développeurs et des fournisseurs de logiciels</em></p></li>
+<li><p><em>assurer que les données appropriées sont incluses et
+partagées</em></p></li>
+<li><p><em>assurer une participation des institutions professionnelles
+(cliniques, administratives, etc.)</em></p></li>
+</ul></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><p>Propriété intellectuelle</p>
+<p><em>Les standards sont utilisables avec une licence raisonnable et
+non discriminatoire.</em></p></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Organisme à but non lucratif</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="analyse">Analyse</h4>
+
+<p>La ressource FHIR Subscription et le standard WS notification sont tous les deux élaborés par des organismes qui assurent leur évolution, développement et adoption. Ils présentent des caractéristiques discriminantes opposées :</p>
+
+<ul>
+  <li>
+    <p>le standard WS notification est un standard stable et installé sur une technologie qui n’est pas adapté aux terminaux mobiles actuels ;</p>
+  </li>
+  <li>
+    <p>la ressource FHIR Subscription peut être mise en œuvre via une technologie adaptée aux terminaux mobiles actuels ; elle n’est
+cependant pas stabilisée et pourrait subir des changements conséquents sur les prochaines années.</p>
+  </li>
+</ul>
+
+<p>En ce qui concerne leurs applicabilités dans le contexte de la notification d’évènements, il est à noter que les informations
+« métiers » identifiées dans <a href="specifications_fonctionnelles.html">l’étude</a> ne sont que partiellement couvertes par les deux standards étudiés dans ce document et qu’une mise en œuvre du cas d’usage nécessiterait des extensions quel que soit le
+standard utilisé.</p>
 
 
 
@@ -262,7 +740,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 5, 2026 14:47+0000">2026-02-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 5, 2026 14:57+0000">2026-02-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
