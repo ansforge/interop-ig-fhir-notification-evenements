@@ -95,7 +95,7 @@ Les membres OASIS représentent le marché public et privé et comptent plus de 
 
 Les standards produits sont accessibles sur internet et disponibles en [PDF](https://fr.wikipedia.org/wiki/Portable_Document_Format), Word et dans un format HTML.
 
-Les spécifications produites par OASIS sont librement utilisables sans nécessité d’adhésion à HL7.
+Les spécifications produites par OASIS sont librement utilisables sansnécessité d’adhésion à HL7.
 
 ##### Périmètre OASIS
 
@@ -112,7 +112,7 @@ Le périmètre couvert par les standards OASIS est très large et varié. OASIS 
 * les exigences opérationnelles attendues des fournisseurs et demandeurs de services qui participent aux notifications,
 * un modèle XML qui décrit les sujets d’intérêts pour abonnement à notification.
 
-Les standards WS Notification fournissent un moyen standardisé pour qu’un Web service interagisse avec un ou plusieurs autres Web services sans connaissance préalable de ces derniers.
+Les standards WS Notification fournissent un moyen standardisé pourqu’un Web service interagisse avec un ou plusieurs autres Web services sans connaissance préalable de ces derniers.
 
 Cette famille de standards contient les spécifications suivantes :
 
