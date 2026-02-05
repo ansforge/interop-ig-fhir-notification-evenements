@@ -217,21 +217,48 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#nom-du-flux" id="markdown-toc-nom-du-flux">Nom du flux</a></li>
-  <li><a href="#construction-du-flux" id="markdown-toc-construction-du-flux">Construction du flux</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<div style="text-align: center;">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="149px" preserveAspectRatio="none" style="width:602px;height:149px;background:#FFFFFF;" version="1.1" viewBox="0 0 602 149" width="602px" zoomAndPan="magnify"><defs /><g><g><title>&#201;metteur d'&#233;v&#233;nements</title><rect fill="#000000" fill-opacity="0.00000" height="78.2656" width="8" x="92.7041" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="96" x2="96" y1="36.2969" y2="114.5625" /></g><g><title>Gestionnaire d'abonnements</title><rect fill="#000000" fill-opacity="0.00000" height="78.2656" width="8" x="484.6079" y="36.2969" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="488.2241" x2="488.2241" y1="36.2969" y2="114.5625" /></g><g class="participant participant-head" data-participant="EE"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="183.4082" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169.4082" x="12" y="24.9951">&#201;metteur d'&#233;v&#233;nements</text></g><g class="participant participant-tail" data-participant="EE"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="183.4082" x="5" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169.4082" x="12" y="133.5576">&#201;metteur d'&#233;v&#233;nements</text></g><g class="participant participant-head" data-participant="GA"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="216.7676" x="380.2241" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="202.7676" x="387.2241" y="24.9951">Gestionnaire d'abonnements</text></g><g class="participant participant-tail" data-participant="GA"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="216.7676" x="380.2241" y="113.5625" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="202.7676" x="387.2241" y="133.5576">Gestionnaire d'abonnements</text></g><g class="message" data-participant-1="EE" data-participant-2="GA"><polygon fill="#181818" points="476.6079,63.4297,486.6079,67.4297,476.6079,71.4297,480.6079,67.4297" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;" x1="96.7041" x2="482.6079" y1="67.4297" y2="67.4297" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="367.9038" x="103.7041" y="62.3638">FLux 3 POST CommunicationRequest (EventDeclaration)</text></g><g class="message" data-participant-1="GA" data-participant-2="EE"><polygon fill="#181818" points="107.7041,92.5625,97.7041,96.5625,107.7041,100.5625,103.7041,96.5625" style="stroke:#181818;stroke-width:1;" /><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="101.7041" x2="487.6079" y1="96.5625" y2="96.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103.5684" x="113.7041" y="91.4966">OK 201 Created</text></g></g></svg>
 </div>
 
-<h3 id="nom-du-flux">Nom du flux</h3>
+<p>Le <strong>Flux 3 – EmissionEvenement</strong> contient les informations relatives à un évènement qui a eu
+lieu.</p>
 
-<p>Description du flux</p>
+<p>La première étape de la construction du flux 3 d’émission d’un évènement
+consiste à organiser son contenu. Le corps de la requête HTTP est
+constitué de la ressource « CommunicationRequest » (profil
+EventDeclarationNdE) contenant les ressources suivantes (utilisation de
+l’élément <strong>contained</strong>):</p>
 
-<h3 id="construction-du-flux">Construction du flux</h3>
+<p>La ressource référencée comme sujet de l’évènement par l’élément
+subject : la ressource « Patient » utilisant le profil français
+FRCorePatientProfile/FRCorePatientINSProfile ;</p>
 
-<p>Explication de comment doit être construit le flux</p>
+<p>La ressource référencée en tant qu’émetteur de l’évènement par l’élément
+requester: la ressource « Practitioner » utilisant le profil français
+FRCorePractitionerProfile ou « Organization » utilisant le profil français
+FRCoreOrganizationProfile</p>
+
+<p>La ressource CommunicationRequest ainsi formée sera envoyée dans le
+corps de la requête HTTP POST suivante :</p>
+
+<pre><code class="language-HTTP">POST [base]/CommunicationRequest
+</code></pre>
+
+<p>Où [base] est l’endpoint FHIR mis à disposition par le gestionnaire
+d’abonnements.</p>
+
+<p>Si l’évènement est correctement pris en compte, le système Gestionnaire
+d’abonnements doit retourner un code « 201 created » avec, dans le corps
+de la réponse, la ressource « CommunicationRequest » reçue.</p>
+
+<p>En cas d’erreur, le Gestionnaire d’abonnements doit répondre avec les
+codes HTTP appropriés tels que définis par l’API REST FHIR et renvoyer
+une ressource de type OperationOutcome dans le corps de la réponse.</p>
+
 
 
 
@@ -273,7 +300,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 5, 2026 14:57+0000">2026-02-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 5, 2026 15:01+0000">2026-02-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
