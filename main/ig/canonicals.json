@@ -1,9 +1,128 @@
 [
   {
+    "id" : "NdE-Emetteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Emetteur",
+    "version" : "3.0.0",
+    "name" : "NdE_Emetteur"
+  },
+  {
+    "id" : "NdE-GestionnaireDAbonnements",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDAbonnements",
+    "version" : "3.0.0",
+    "name" : "NdE_GestionnaireDAbonnements"
+  },
+  {
+    "id" : "NdE-GestionnaireDeNotifications",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDeNotifications",
+    "version" : "3.0.0",
+    "name" : "NdE_GestionnaireDeNotifications"
+  },
+  {
+    "id" : "NdE-Souscripteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Souscripteur",
+    "version" : "3.0.0",
+    "name" : "NdE_Souscripteur"
+  },
+  {
     "id" : "ans.fhir.fr.nde",
     "type" : "ImplementationGuide",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde",
     "version" : "3.0.0",
     "name" : "NDE"
+  },
+  {
+    "id" : "NdE-CommunicationRequest-EventType",
+    "type" : "SearchParameter",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/SearchParameter/NdE-CommunicationRequest-EventType",
+    "version" : "3.0.0",
+    "name" : "NdE_CommunicationRequest_EventType"
+  },
+  {
+    "id" : "declarant",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant",
+    "version" : "3.0.0",
+    "name" : "NdE_Declarant"
+  },
+  {
+    "id" : "event-emission-time",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time",
+    "version" : "3.0.0",
+    "name" : "NdE_EventEmissionTime"
+  },
+  {
+    "id" : "event-time",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time",
+    "version" : "3.0.0",
+    "name" : "NdE_EventTime"
+  },
+  {
+    "id" : "event-type",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
+    "version" : "3.0.0",
+    "name" : "NdE_EventType"
+  },
+  {
+    "id" : "nde-eventdeclaration",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration",
+    "version" : "3.0.0",
+    "name" : "NdE_EventDeclarationNdE"
+  },
+  {
+    "id" : "nde-notificationrequest",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest",
+    "version" : "3.0.0",
+    "name" : "NdE_NotificationRequestNdE"
+  },
+  {
+    "id" : "nde-subscription",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription",
+    "version" : "3.0.0",
+    "name" : "NdE_SubscriptionNdE"
+  },
+  {
+    "id" : "recipient-endpoint",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint",
+    "version" : "3.0.0",
+    "name" : "NdE_RecipientEndpoint"
+  },
+  {
+    "id" : "start",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start",
+    "version" : "3.0.0",
+    "name" : "NdE_Start"
+  },
+  {
+    "id" : "subject",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject",
+    "version" : "3.0.0",
+    "name" : "NdE_Subject"
+  },
+  {
+    "id" : "subscriber",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber",
+    "version" : "3.0.0",
+    "name" : "NdE_Subscriber"
+  },
+  {
+    "id" : "subscription-date",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date",
+    "version" : "3.0.0",
+    "name" : "NdE_SubscriptionDate"
   }
 ]

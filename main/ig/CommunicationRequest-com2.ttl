@@ -1,0 +1,153 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/nde/CommunicationRequest/com2> a fhir:CommunicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "com2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : DemandeDeCommunication com2</b></p><a name=\"com2\"> </a><a name=\"hccom2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-nde-eventdeclaration.html\">NdE_EventDeclarationNdE</a></p></div><p><b>Event Type</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement SOR}\">Sortie d'un patient de l'établissement de santé</span></p><p><b>Event Time</b>: 2019-01-01 00:00:00+0000</p><p><b>status</b>: Active</p><p><b>subject</b>: <a href=\"#hccom2/pat1\">Langdon Robert  Male, Date de Naissance :1960-03-20</a></p><h3>Payloads</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Content[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>text/plain : SGVsbG8=</td></tr></table><p><b>requester</b>: <a href=\"#hccom2/org1\">Organization Service de pneumologie, Hôpital Test</a></p><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : Patient #pat1</b></p><a name=\"com2/pat1\"> </a><a name=\"hccom2/pat1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html\">FR Core Patient Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Langdon Robert  Male, Date de Naissance :1960-03-20</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Moyens de contacter le Patient\">Coordonnées</td><td colspan=\"3\">ph: (03) 3410 5613(Mobile)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection\">FR Core Patient Ident Reliability Extension:</td><td colspan=\"3\"><ul><li>identityStatus: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI\">FR Core CodeSystem v2-0445: VALI</a> (Identité validée)</li><li>validationDate: 2020-04-22</li><li>validationMode: [non précisé]: CN (Carte nationale d'identité)</li></ul></td></tr></table></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : Organisation #org1</b></p><a name=\"com2/org1\"> </a><a name=\"hccom2/org1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html\">FR Core Organization Profile</a></p></div><p><b>name</b>: Service de pneumologie, Hôpital Test</p><p><b>telecom</b>: ph: 022-655 6780, <a href=\"mailto:pneumo@hopitalTest.fr\">pneumo@hopitalTest.fr</a></p><p><b>address</b>: Aile ouest, étage 5 </p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Patient ;
+     fhir:id [ fhir:v "pat1" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"^^xsd:anyURI ;
+         fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient>
+       ] )
+     ] ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "identityStatus"^^xsd:anyURI ;
+           fhir:l fhir:identityStatus
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"^^xsd:anyURI ;
+             fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445>
+           ] ;
+           fhir:code [ fhir:v "VALI" ] ;
+           fhir:display [ fhir:v "Identité validée" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "validationDate"^^xsd:anyURI ;
+           fhir:l fhir:validationDate
+         ] ;
+         fhir:value [
+           a fhir:Date ;
+           fhir:v "2020-04-22"^^xsd:date
+         ]
+       ] [
+         fhir:url [
+           fhir:v "validationMode"^^xsd:anyURI ;
+           fhir:l fhir:validationMode
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:code [ fhir:v "CN" ] ;
+           fhir:display [ fhir:v "Carte nationale d'identité" ]
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"^^xsd:anyURI ;
+         fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability>
+       ]
+     ] ) ;
+     fhir:name ( [
+       fhir:use [ fhir:v "usual" ] ;
+       fhir:family [ fhir:v "Robert" ] ;
+       fhir:given ( [ fhir:v "Langdon" ] ) ;
+       fhir:prefix ( [ fhir:v "MR" ] )
+     ] ) ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "(03) 3410 5613" ] ;
+       fhir:use [ fhir:v "mobile" ] ;
+       fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+     ] ) ;
+     fhir:gender [ fhir:v "male" ] ;
+     fhir:birthDate [ fhir:v "1960-03-20"^^xsd:date ]
+  ] [
+     a fhir:Organization ;
+     fhir:id [ fhir:v "org1" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"^^xsd:anyURI ;
+         fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization>
+       ] )
+     ] ;
+     fhir:name [ fhir:v "Service de pneumologie, Hôpital Test" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "022-655 6780" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pneumo@hopitalTest.fr" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] ) ;
+     fhir:address ( [
+       fhir:line ( [ fhir:v "Aile ouest, étage 5" ] )
+     ] )
+  ] ) ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement"^^xsd:anyURI ;
+           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement>
+         ] ;
+         fhir:code [ fhir:v "SOR" ] ;
+         fhir:display [ fhir:v "Sortie d'un patient de l'établissement de santé" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time>
+     ] ;
+     fhir:value [
+       a fhir:DateTime ;
+       fhir:v "2019-01-01T00:00:00Z"^^xsd:dateTime
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:subject [
+     fhir:l <#pat1> ;
+     fhir:reference [ fhir:v "#pat1" ]
+  ] ; # 
+  fhir:payload ( [
+     fhir:content [
+       a fhir:Attachment ;
+       fhir:contentType [ fhir:v "text/plain" ] ;
+       fhir:data [ fhir:v "SGVsbG8="^^xsd:base64Binary ] ;
+       fhir:title [ fhir:v "Sortie du patient Robert Langdon de l'établissement de santé" ] ;
+       fhir:creation [ fhir:v "2019-01-01T00:00:00Z"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:requester [
+     fhir:l <#org1> ;
+     fhir:reference [ fhir:v "#org1" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,35 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "NdE-CommunicationRequest-EventType",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche NdE-CommunicationRequest-EventType</b></p><a name=\"NdE-CommunicationRequest-EventType\"> </a><a name=\"hcNdE-CommunicationRequest-EventType\"> </a><h2>NdE_CommunicationRequest_EventType</h2><p>Paramètre <code>event-type</code>:<code>token</code></p><div><p>Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/communicationrequest.html\">CommunicationRequest</a></td></tr><tr><td>Expression</td><td><code>extension.where(url='https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/SearchParameter/NdE-CommunicationRequest-EventType",
+  "version" : "3.0.0",
+  "name" : "NdE_CommunicationRequest_EventType",
+  "status" : "active",
+  "date" : "2026-02-05T15:09:09+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Permet de filtrer sur le type d'évènement véhiculé par la ressource CommunicationRequest (dans le cadre du flux 3)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "code" : "event-type",
+  "base" : ["CommunicationRequest"],
+  "type" : "token",
+  "expression" : "extension.where(url='https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type').value",
+  "multipleOr" : true,
+  "multipleAnd" : true
+}

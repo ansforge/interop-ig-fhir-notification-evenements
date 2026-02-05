@@ -6,7 +6,20 @@
   </head>
   <body>
     <h2>Unattributed Code Systems</h2>
-    <ul></ul>
+    <ul>
+      <li>
+        <a href="Subscription-sub1.html">
+<code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445</code>        </a>
+      </li>
+      <li>
+        <a href="CommunicationRequest-com1.html">
+<code>https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication</code>        </a>
+      </li>
+      <li>
+        <a href="Subscription-sub1.html">
+<code>https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement</code>        </a>
+      </li>
+    </ul>
     <h2>Copyright Fragment</h2>
     <p>
 This fragment is available on       <a href="index.html">index.html</a>
@@ -26,8 +39,13 @@ ISO maintains the copyright on the country codes, and controls its use carefully
             <ul>
 
               <li>
-                <a href="http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+                <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
 :                 <a href="index.html">NDE</a>
+,                 <a href="SearchParameter-NdE-CommunicationRequest-EventType.html">NdE_CommunicationRequest_EventType</a>
+                <span onClick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 16 more</span>                </span>
+                <span style="display: none" id="ips2_1">
+, <a href="StructureDefinition-declarant.html">NdE_Declarant</a>, <a href="CapabilityStatement-NdE-Emetteur.html">NdE_Emetteur</a>, <a href="StructureDefinition-nde-eventdeclaration.html">NdE_EventDeclarationNdE</a>, <a href="StructureDefinition-event-emission-time.html">NdE_EventEmissionTime</a>, <a href="StructureDefinition-event-time.html">NdE_EventTime</a>, <a href="StructureDefinition-event-type.html">NdE_EventType</a>, <a href="CapabilityStatement-NdE-GestionnaireDAbonnements.html">NdE_GestionnaireDAbonnements</a>, <a href="CapabilityStatement-NdE-GestionnaireDeNotifications.html">NdE_GestionnaireDeNotifications</a>, <a href="StructureDefinition-nde-notificationrequest.html">NdE_NotificationRequestNdE</a>, <a href="StructureDefinition-recipient-endpoint.html">NdE_RecipientEndpoint</a>, <a href="CapabilityStatement-NdE-Souscripteur.html">NdE_Souscripteur</a>, <a href="StructureDefinition-start.html">NdE_Start</a>, <a href="StructureDefinition-subject.html">NdE_Subject</a>, <a href="StructureDefinition-subscriber.html">NdE_Subscriber</a>, <a href="StructureDefinition-subscription-date.html">NdE_SubscriptionDate</a> and <a href="StructureDefinition-nde-subscription.html">NdE_SubscriptionNdE</a>                </span>
               </li>
 
 
@@ -79,7 +97,19 @@ Notification d'Événements - version de développement local (intégration cont
       </tr>
       <tr>
         <td>
-          <a href="artifacts.html">web</a>
+          <a href="CommunicationRequest-com1.html">web</a>
+        </td>
+        <td>
+          <a href="http://serverexample.org/FHIR/Subscription/sub1">serverexample.org</a>
+        </td>
+        <td>
+          <b>basedOn</b>
+:           <a href="http://serverexample.org/FHIR/Subscription/sub1">http://serverexample.org/FHIR/Subscription/sub1</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
         </td>
         <td>
           <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
@@ -97,7 +127,7 @@ Notification d'Événements - version de développement local (intégration cont
       </tr>
       <tr>
         <td>
-          <a href="artifacts.html">web</a>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
         </td>
         <td>
           <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
@@ -111,7 +141,7 @@ Notification d'Événements - version de développement local (intégration cont
       </tr>
       <tr>
         <td>
-          <a href="artifacts.html">web</a>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
         </td>
         <td>
           <a href="https://interop.esante.gouv.fr/ig/documentation/">interop.esante.gouv.fr</a>
@@ -125,7 +155,7 @@ Notification d'Événements - version de développement local (intégration cont
       </tr>
       <tr>
         <td>
-          <a href="artifacts.html">web</a>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
         </td>
         <td>
           <a href="https://esante.gouv.fr">esante.gouv.fr</a>
@@ -134,7 +164,7 @@ Notification d'Événements - version de développement local (intégration cont
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.fhir.fr.nde#3.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Feb 5, 2026 15:01+0000">2026-02-05</span>
+. Generated           <span title="Thu, Feb 5, 2026 15:09+0000">2026-02-05</span>
 
                     <br/>
 
@@ -157,7 +187,7 @@ Notification d'Événements - version de développement local (intégration cont
       </tr>
       <tr>
         <td>
-          <a href="artifacts.html">web</a>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
         </td>
         <td>
           <a href="https://interop.esante.gouv.fr/ig/documentation">interop.esante.gouv.fr</a>
@@ -166,7 +196,7 @@ Notification d'Événements - version de développement local (intégration cont
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.fhir.fr.nde#3.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Feb 5, 2026 15:01+0000">2026-02-05</span>
+. Generated           <span title="Thu, Feb 5, 2026 15:09+0000">2026-02-05</span>
 
                     <br/>
 
@@ -189,7 +219,7 @@ Notification d'Événements - version de développement local (intégration cont
       </tr>
       <tr>
         <td>
-          <a href="artifacts.html">web</a>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
         </td>
         <td>
           <a href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new">github.com</a>
@@ -198,7 +228,7 @@ Notification d'Événements - version de développement local (intégration cont
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.fhir.fr.nde#3.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Feb 5, 2026 15:01+0000">2026-02-05</span>
+. Generated           <span title="Thu, Feb 5, 2026 15:09+0000">2026-02-05</span>
 
                     <br/>
 
@@ -221,7 +251,7 @@ Notification d'Événements - version de développement local (intégration cont
       </tr>
       <tr>
         <td>
-          <a href="artifacts.html">web</a>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
         </td>
         <td>
           <a href="https://solidarites-sante.gouv.fr">solidarites-sante.gouv.fr</a>
@@ -241,7 +271,7 @@ Notification d'Événements - version de développement local (intégration cont
       </tr>
       <tr>
         <td>
-          <a href="artifacts.html">web</a>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
         </td>
         <td>
           <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
@@ -346,8 +376,13 @@ ISO maintains the copyright on the country codes, and controls its use carefully
             <ul>
 
               <li>
-                <a href="http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+                <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
 :                 <a href="index.html">NDE</a>
+,                 <a href="SearchParameter-NdE-CommunicationRequest-EventType.html">NdE_CommunicationRequest_EventType</a>
+                <span onclick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 16 more</span>                </span>
+                <span style="display: none" id="ips2_1">
+, <a href="StructureDefinition-declarant.html">NdE_Declarant</a>, <a href="CapabilityStatement-NdE-Emetteur.html">NdE_Emetteur</a>, <a href="StructureDefinition-nde-eventdeclaration.html">NdE_EventDeclarationNdE</a>, <a href="StructureDefinition-event-emission-time.html">NdE_EventEmissionTime</a>, <a href="StructureDefinition-event-time.html">NdE_EventTime</a>, <a href="StructureDefinition-event-type.html">NdE_EventType</a>, <a href="CapabilityStatement-NdE-GestionnaireDAbonnements.html">NdE_GestionnaireDAbonnements</a>, <a href="CapabilityStatement-NdE-GestionnaireDeNotifications.html">NdE_GestionnaireDeNotifications</a>, <a href="StructureDefinition-nde-notificationrequest.html">NdE_NotificationRequestNdE</a>, <a href="StructureDefinition-recipient-endpoint.html">NdE_RecipientEndpoint</a>, <a href="CapabilityStatement-NdE-Souscripteur.html">NdE_Souscripteur</a>, <a href="StructureDefinition-start.html">NdE_Start</a>, <a href="StructureDefinition-subject.html">NdE_Subject</a>, <a href="StructureDefinition-subscriber.html">NdE_Subscriber</a>, <a href="StructureDefinition-subscription-date.html">NdE_SubscriptionDate</a> and <a href="StructureDefinition-nde-subscription.html">NdE_SubscriptionNdE</a>                </span>
               </li>
 
 
@@ -1059,6 +1094,12 @@ ci-sis-logo.png          <br/>
         <td>
 organisationContexteMetier.png          <br/>
           <img src="organisationContexteMetier.png" alt="organisationContexteMetier.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+tree-filter.png          <br/>
+          <img src="tree-filter.png" alt="tree-filter.png" width="600px" height="auto"/>
         </td>
       </tr>
     </table>

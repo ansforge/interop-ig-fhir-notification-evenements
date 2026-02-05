@@ -20,6 +20,41 @@
 
 ## Resources
 
+### Resource Profiles
+
+* [NdE_EventDeclarationNdE](StructureDefinition-nde-eventdeclaration.md)
+* [NdE_NotificationRequestNdE](StructureDefinition-nde-notificationrequest.md)
+* [NdE_SubscriptionNdE](StructureDefinition-nde-subscription.md)
+
+### Extensions
+
+* [Declarant](StructureDefinition-declarant.md)
+* [Emission Time](StructureDefinition-event-emission-time.md)
+* [Event Time](StructureDefinition-event-time.md)
+* [Event Type](StructureDefinition-event-type.md)
+* [NdE_RecipientEndpoint](StructureDefinition-recipient-endpoint.md)
+* [Start](StructureDefinition-start.md)
+* [Subject](StructureDefinition-subject.md)
+* [Subscriber](StructureDefinition-subscriber.md)
+* [Subscription Date](StructureDefinition-subscription-date.md)
+
+### CapabilityStatements
+
+* [CI-SIS Notification-D-Evenements - NdE_Emetteur](CapabilityStatement-NdE-Emetteur.md)
+* [CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements](CapabilityStatement-NdE-GestionnaireDAbonnements.md)
+* [CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications](CapabilityStatement-NdE-GestionnaireDeNotifications.md)
+* [CI-SIS Notification-D-Evenements - NdE_Souscripteur](CapabilityStatement-NdE-Souscripteur.md)
+
 ### ImplementationGuides
 
 * [Notification d'Événements](index.md)
+
+### SearchParameters
+
+* [NdE_CommunicationRequest_EventType](SearchParameter-NdE-CommunicationRequest-EventType.md)
+
+### Examples
+
+* [com1 (CommunicationRequest)](CommunicationRequest-com1.md)
+* [com2 (CommunicationRequest)](CommunicationRequest-com2.md)
+* [sub1 (Subscription)](Subscription-sub1.md)
