@@ -6,3 +6,11 @@
 
 ## Glossaire
 
+| | |
+| :--- | :--- |
+| API | Application Programming Interface |
+| ANS | Agence du Numérique en Santé |
+| CI-SIS | Cadre d’Interopérabilité des SI de Santé |
+| FHIR | Fast Healthcare Interoperability Resources |
+| HL7 | Health Level 7 |
+

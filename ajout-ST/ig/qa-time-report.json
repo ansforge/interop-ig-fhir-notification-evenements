@@ -1,5 +1,5 @@
 {
-  "date" : "Thu, 05 Feb, 2026 14:23:06 +0000",
+  "date" : "Thu, 05 Feb, 2026 14:33:32 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,80 +8,80 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 51,
-          "length" : 44
+          "start" : 43,
+          "length" : 43
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 44,
+          "length" : 1
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 54,
+          "start" : 44,
           "length" : 22
         },
         {
           "activity" : "generateNarratives",
-          "start" : 54,
-          "length" : 143
+          "start" : 44,
+          "length" : 90
         },
         {
           "activity" : "validate",
-          "start" : 54,
-          "length" : 6291
+          "start" : 44,
+          "length" : 5182
         },
         {
           "activity" : "generate1",
-          "start" : 61,
-          "length" : 94
+          "start" : 50,
+          "length" : 88
         },
         {
           "activity" : "generate2",
-          "start" : 64,
-          "length" : 106
-        },
-        {
-          "activity" : "makeDependencies",
-          "start" : 66,
-          "length" : 1
+          "start" : 53,
+          "length" : 104
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 75,
-          "length" : 2
+          "start" : 66,
+          "length" : 4
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 79,
+          "start" : 70,
           "length" : 2
         }
       ]
     },
     {
       "name" : "/fsh-generated/includes/menu.xml",
-      "size" : 3016
-    },
-    {
-      "name" : "/input/data/features.yml",
-      "size" : 164,
-      "processes" : [
-        {
-          "activity" : "scan",
-          "start" : 54,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "/input/pagecontent/st_flux4.md",
-      "size" : 2276,
+      "size" : 3016,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 64,
+          "start" : 53,
           "length" : 1
         }
       ]
     },
     {
+      "name" : "/input/data/features.yml",
+      "size" : 164
+    },
+    {
+      "name" : "/input/pagecontent/st_flux4.md",
+      "size" : 2276
+    },
+    {
       "name" : "/input/pagecontent/specifications_techniques_introduction.md",
-      "size" : 4488
+      "size" : 4488,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 53,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux4_Transmission_Ordre_Notification.md",
@@ -89,18 +89,18 @@
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux3_Emission_Evenement.md",
-      "size" : 1649,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 64,
-          "length" : 1
-        }
-      ]
+      "size" : 1649
     },
     {
       "name" : "/input/pagecontent/glossaire.md",
-      "size" : 0
+      "size" : 482,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 53,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux2_Suppression_Abonnement.md",
@@ -120,18 +120,18 @@
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux5_NotificationEvenement.md",
-      "size" : 573,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 64,
-          "length" : 1
-        }
-      ]
+      "size" : 573
     },
     {
       "name" : "/input/pagecontent/specifications_fonctionnelles.md",
-      "size" : 0
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 53,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/securite.md",
@@ -147,18 +147,18 @@
     },
     {
       "name" : "/input/pagecontent/specifications_techniques_flux1_Souscription_Abonnement.md",
-      "size" : 3010,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 64,
-          "length" : 1
-        }
-      ]
+      "size" : 3010
     },
     {
       "name" : "/input/pagecontent/acronymes.md",
-      "size" : 482
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 53,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/downloads.md",
@@ -174,14 +174,21 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 64,
-          "length" : 3
+          "start" : 53,
+          "length" : 2
         }
       ]
     },
     {
       "name" : "/input/pagecontent/st_flux3.md",
-      "size" : 1600
+      "size" : 1600,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 53,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/autres_ressources.md",
@@ -189,14 +196,7 @@
     },
     {
       "name" : "/template/config",
-      "size" : 0,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 64,
-          "length" : 1
-        }
-      ]
+      "size" : 0
     },
     {
       "name" : "/template/config/_config.yml",
@@ -216,7 +216,14 @@
     },
     {
       "name" : "/temp/pages/_includes/artifacts.xml",
-      "size" : 600
+      "size" : 600,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 53,
+          "length" : 1
+        }
+      ]
     }
   ]
 }
