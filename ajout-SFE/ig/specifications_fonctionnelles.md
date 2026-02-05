@@ -117,7 +117,7 @@ Le processus métier de gestion d'abonnement amène à considérer un cas d'util
 
 * Détails du cas d'utilisation 
 
-Cette section décrit en détail chaque cas d'utilisation de la manière usuelle: description, pré-condition, scénario(s), exception, post-condition, contraintes fonctionnelles, autres contraintes.
+Cette section décrit en détail chaque cas d'utilisation de la manière usuelle: description, pré-condition, scénario(s),exception, post-condition, contraintes fonctionnelles, autres contraintes.
 
 Qui:
 
@@ -129,8 +129,7 @@ Scénario nominal : Le souscripteur crée ou met à jour un abonnement pour un 
 
 Pré-Conditions:
 
-- Les personnes physiques ou morales impliquées dans la notification d’évènements sont enregistrées via un gestionnaire d’inscriptions et par conséquent connues du système.
-
+* Les personnes physiques ou morales impliquées dans la notification d’évènements sont enregistrées via un gestionnaire d’inscriptions et par conséquent connues du système.
 * Le paramétrage des média de diffusion est pris en charge par le gestionnaire d’inscriptions.
 * L’abonné effectue une demande d’abonnements à notification au souscripteur.
 
@@ -158,8 +157,7 @@ Gestionnaire d'abonnements, Souscripteur
 
 Description:
 
-Le souscripteur supprime un abonnement.
- Le cas "Suppression d’un abonnement" est distinct du cas d’utilisation "Création ou mise à jour d’un abonnement" parce que les informations métier manipulées sont différentes.
+Le souscripteur supprime un abonnement. Le cas "Suppression d’un abonnement" est distinct du cas d’utilisation "Création ou mise à jour d’un abonnement" parce que les informations métier manipulées sont différentes.
 
 Scenario Alternatif:
 
@@ -382,8 +380,7 @@ Traiter l'évènement
 La plateforme ou le système dédié prend en compte l'évènement liée à une action réalisée et l'analyse.
  Les actions sont de type admission ou sortie d'un établissement de santé, dépôt de document, création d’une note dans le cahier de liaison, etc.
  La plateforme ou le système dédié vérifie si le contexte de cet évènement (l'action opérée et la personne prise en charge) concerne des abonnés destinataires.
- Si des abonnés sont identifiés, un ordre de notification de l'évènement est transmis.
- Les abonnés sont forcément habilités à recevoir les notifications.
+ Si des abonnés sont identifiés, un ordre de notification de l'évènement est transmis. Les abonnés sont forcément habilités à recevoir les notifications.
 
 Transmettre un ordre de notification
 
@@ -453,7 +450,7 @@ Les sections qui suivent présentent les diagrammes de classes de chaque flux st
 
 ##### Flux 1 – SouscriptionAbonnement
 
-Ci-dessous le diagramme de classe concernant le Flux 1- SouscriptionAbonnement. Cette section contient également la description des attributs dans chaque classe identifiée.
+Ci-dessous le diagramme de classe concernant le Flux 1-SouscriptionAbonnement. Cette section contient également la description des attributs dans chaque classe identifiée.
 
  Diagramme de classe – SouscriptionAbonnement 
 
@@ -541,7 +538,7 @@ Ci-dessous le diagramme de classe concernant le Flux 1- SouscriptionAbonnement. 
 
 | | | |
 | :--- | :--- | :--- |
-| numFINESS : [0..1] Identifiant | Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)). | Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique) |
+| numFINESS : [0..1] Identifiant | Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros SIREN. Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé(PGSSI-S)). | Non (L’attribut idEmetteur de la classe Emetteur peut être la même valeur du numéro FINESS de l’entité juridique) |
 | addresseEJ : [0..*] Texte Addresse | Point(s) de contact. | Non |
 | telecommunication [0..*] telecommunication | Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.). | Non |
 | raisonSociale : [0..1] Texte | Nom de l’entité juridique. | Non |
@@ -558,7 +555,7 @@ Ci-dessous le diagramme de classe concernant le Flux 1- SouscriptionAbonnement. 
 
 ##### Flux 2 – SuppressionAbonnement
 
-Ci-dessous le diagramme de classe concernant le Flux 2- SuppressionAbonnement. Les sous-sections suivantes donnent des définitions aux attributs de chaque class identifiée.
+Ci-dessous le diagramme de classe concernant le Flux 2-SuppressionAbonnement. Les sous-sections suivantes donnent des définitions aux attributs de chaque class identifiée.
 
  Diagramme de classe – SuppressionAbonnement 
 
@@ -572,7 +569,7 @@ Ci-dessous le diagramme de classe concernant le Flux 2- SuppressionAbonnement. L
 
 ##### Flux 3 – EmissionEvenement
 
-Ci-dessous le diagramme de classe concernant le Flux 3- EmissionEvenement. Les sous-sections suivantes donnent des définitions aux attributs de chaque class identifiée.
+Ci-dessous le diagramme de classe concernant le Flux 3-EmissionEvenement. Les sous-sections suivantes donnent des définitions aux attributs de chaque class identifiée.
 
  Diagramme de classe - EmissionAbonnement 
 
@@ -637,7 +634,7 @@ Ci-dessous le diagramme de classe concernant le Flux 3- EmissionEvenement. Les s
 
 ##### Flux 4 – TransmissionOrdreNotification
 
-Ci-dessous le diagramme de classe concernant le Flux 4-TransmissionOrdreNotification et le Flux 5- NotificationEvenement. Les sous-sections suivantes donnent des définitions aux attributs de chaque classe identifiée
+Ci-dessous le diagramme de classe concernant le Flux4-TransmissionOrdreNotification et le Flux 5-NotificationEvenement. Les sous-sections suivantes donnent des définitions aux attributs de chaque classe identifiée
 
  Diagramme de classe – TransmissionOrdreNotification 
 
@@ -738,5 +735,5 @@ Ci-dessous le diagramme de classe concernant le Flux 4-TransmissionOrdreNotifica
 
 ##### Flux 5 – NotificationEvenement
 
-Ce flux est modélisé par le même modèle hiérarchique du Flux 3 – TransmissionOrdreNotification étant donné qu’ils peuvent contenir les mêmes informations métier.
+Ce flux est modélisé par le même modèle hiérarchique du Flux 3 –TransmissionOrdreNotification étant donné qu’ils peuvent contenir les mêmes informations métier.
 
