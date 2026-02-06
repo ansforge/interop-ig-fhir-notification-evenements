@@ -17,7 +17,7 @@ It covers subscription management, event declaration, and notification order tra
 <p>
   <b>Attention !</b>
   <br>
- Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : http://interop.esante.gouv.fr/ig/fhir/[code - ig]
+ Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : http://interop.esante.gouv.fr/ig/fhir/ans.fhir.fr.nde
 </p>
 </blockquote>
 </div>
