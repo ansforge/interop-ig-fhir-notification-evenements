@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-event-emission-time.
   "name" : "NdE_EventEmissionTime",
   "title" : "Emission Time",
   "status" : "draft",
-  "date" : "2026-02-06T14:15:42+00:00",
+  "date" : "2026-02-06T14:21:59+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
