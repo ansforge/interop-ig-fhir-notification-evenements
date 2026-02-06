@@ -1,0 +1,16 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement",
+      "version" : "20240329120000",
+      "status" : "active",
+      "name" : "TRE_R254_TypeEvenement",
+      "title" : null,
+      "description" : "Liste de types d'évènement",
+      "oids" : ["1.2.250.1.213.1.1.4.337"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J46-TypeEvenementNotification-CISIS.html" : "JDV_J46_TypeEvenementNotification_CISIS"
+    }
+  ]
+}

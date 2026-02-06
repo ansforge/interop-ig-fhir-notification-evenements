@@ -1,0 +1,1107 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>IP Review</title>
+    <link rel="stylesheet" href="fhir.css"/>
+  </head>
+  <body>
+    <h2>Unattributed Code Systems</h2>
+    <ul>
+      <li>
+        <a href="Subscription-sub1.html">
+<code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445</code>        </a>
+      </li>
+      <li>
+        <a href="CommunicationRequest-com1.html">
+<code>https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication</code>        </a>
+      </li>
+      <li>
+        <a href="Subscription-sub1.html">
+<code>https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement</code>        </a>
+      </li>
+    </ul>
+    <h2>Copyright Fragment</h2>
+    <p>
+This fragment is available on       <a href="index.html">index.html</a>
+    </p>
+    <div>
+      <p>Certaines ressources sémantiques de ce guide sont protégées par des droits de propriété intellectuelle couverte par les déclarations ci-dessous. L’utilisation de ces ressources est soumise à l’acceptation et au respect des conditions précisées dans la licence d’utilisation de chacune d’entre elle.</p>
+
+      <ul>
+
+        <li>
+ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page:           <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>
+          <div onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_1">
+
+            <ul>
+
+              <li>
+                <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+:                 <a href="index.html">NDE</a>
+,                 <a href="SearchParameter-NdE-CommunicationRequest-EventType.html">NdE_CommunicationRequest_EventType</a>
+                <span onClick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 16 more</span>                </span>
+                <span style="display: none" id="ips2_1">
+, <a href="StructureDefinition-declarant.html">NdE_Declarant</a>, <a href="CapabilityStatement-NdE-Emetteur.html">NdE_Emetteur</a>, <a href="StructureDefinition-nde-eventdeclaration.html">NdE_EventDeclarationNdE</a>, <a href="StructureDefinition-event-emission-time.html">NdE_EventEmissionTime</a>, <a href="StructureDefinition-event-time.html">NdE_EventTime</a>, <a href="StructureDefinition-event-type.html">NdE_EventType</a>, <a href="CapabilityStatement-NdE-GestionnaireDAbonnements.html">NdE_GestionnaireDAbonnements</a>, <a href="CapabilityStatement-NdE-GestionnaireDeNotifications.html">NdE_GestionnaireDeNotifications</a>, <a href="StructureDefinition-nde-notificationrequest.html">NdE_NotificationRequestNdE</a>, <a href="StructureDefinition-recipient-endpoint.html">NdE_RecipientEndpoint</a>, <a href="CapabilityStatement-NdE-Souscripteur.html">NdE_Souscripteur</a>, <a href="StructureDefinition-start.html">NdE_Start</a>, <a href="StructureDefinition-subject.html">NdE_Subject</a>, <a href="StructureDefinition-subscriber.html">NdE_Subscriber</a>, <a href="StructureDefinition-subscription-date.html">NdE_SubscriptionDate</a> and <a href="StructureDefinition-nde-subscription.html">NdE_SubscriptionNdE</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+
+      </ul>
+
+
+    </div>
+    <h2>Copyright and Registered Trademark Uses</h2>
+    <ul>
+      <li>
+
+          IG &copy; 2020+ Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris.  Package ans.fhir.fr.nde#3.0.0 based on FHIR 4.0.1. Generated 2026-02-06 
+          
+           
+            Liens : Table des matières |
+QA |
+Historique des versions
+Documentation
+ | New Issue
+
+          
+         (        <a href="toc.html">src</a>
+)
+      </li>
+      <li>
+Notification d'Événements - version de développement local (intégration continue v3.0.0) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le répertoire des versions publiées (        <a href="toc.html">src</a>
+)
+      </li>
+    </ul>
+    <h2>External References</h2>
+    <table class="grid">
+      <tr>
+        <th>
+          <b>Type</b>
+        </th>
+        <th>
+          <b>Reference</b>
+        </th>
+        <th>
+          <b>Content</b>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <a href="CommunicationRequest-com1.html">web</a>
+        </td>
+        <td>
+          <a href="http://serverexample.org/FHIR/Subscription/sub1">serverexample.org</a>
+        </td>
+        <td>
+          <b>basedOn</b>
+:           <a href="http://serverexample.org/FHIR/Subscription/sub1">http://serverexample.org/FHIR/Subscription/sub1</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
+        </td>
+        <td>
+
+              <a id="hl7-logo" href="https://esante.gouv.fr/" data-no-external="true">
+<img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/>          </a>
+
+              <a id="hl7-search-lnk" href="searchform.html" data-no-external="true">
+<img src="assets/images/search.png" alt="Search FHIR"/>          </a>
+
+  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
+        </td>
+        <td>
+
+                  <a href="https://esante.gouv.fr/" target="_blank">Site de l'ANS </a>
+
+      
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://interop.esante.gouv.fr/ig/documentation/">interop.esante.gouv.fr</a>
+        </td>
+        <td>
+
+              <a href="https://interop.esante.gouv.fr/ig/documentation/" target="_blank">Documentation</a>
+
+  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr">esante.gouv.fr</a>
+        </td>
+        <td>
+
+          IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
+.  Package ans.fhir.fr.nde#3.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
+. Generated           <span title="Fri, Feb 6, 2026 14:15+0000">2026-02-06</span>
+
+                    <br/>
+
+                    <span style="color: var(--footer-highlight-text-color)"></span>
+
+            Liens :           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a>
+ |
+          <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a>
+ |
+          <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/nde/history.html" target="_blank">Historique des versions</a>
+
+          <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation" target="_blank">Documentation</a>
+
+ |           <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new" target="_blank">New Issue</a>
+
+
+          
+        
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://interop.esante.gouv.fr/ig/documentation">interop.esante.gouv.fr</a>
+        </td>
+        <td>
+
+          IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
+.  Package ans.fhir.fr.nde#3.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
+. Generated           <span title="Fri, Feb 6, 2026 14:15+0000">2026-02-06</span>
+
+                    <br/>
+
+                    <span style="color: var(--footer-highlight-text-color)"></span>
+
+            Liens :           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a>
+ |
+          <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a>
+ |
+          <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/nde/history.html" target="_blank">Historique des versions</a>
+
+          <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation" target="_blank">Documentation</a>
+
+ |           <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new" target="_blank">New Issue</a>
+
+
+          
+        
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new">github.com</a>
+        </td>
+        <td>
+
+          IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
+.  Package ans.fhir.fr.nde#3.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
+. Generated           <span title="Fri, Feb 6, 2026 14:15+0000">2026-02-06</span>
+
+                    <br/>
+
+                    <span style="color: var(--footer-highlight-text-color)"></span>
+
+            Liens :           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a>
+ |
+          <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a>
+ |
+          <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/nde/history.html" target="_blank">Historique des versions</a>
+
+          <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation" target="_blank">Documentation</a>
+
+ |           <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new" target="_blank">New Issue</a>
+
+
+          
+        
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://solidarites-sante.gouv.fr">solidarites-sante.gouv.fr</a>
+        </td>
+        <td>
+
+                        <a rel="nofollow" href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank">
+
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" loading="lazy" height="77"/>
+                
+              
+          </a>
+
+            
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CapabilityStatement-NdE-Emetteur-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
+        </td>
+        <td>
+
+                        <a rel="nofollow" href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank">
+
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" loading="lazy" height="74"/>
+              
+          </a>
+
+            
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="autres_ressources.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/">Site de l'ANS</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="change-log.html">web</a>
+        </td>
+        <td>
+          <a href="https://interop.esante.gouv.fr/ig/fhir/xxx">interop.esante.gouv.fr</a>
+        </td>
+        <td>
+URL :           <a href="https://interop.esante.gouv.fr/ig/fhir/xxx">https://interop.esante.gouv.fr/ig/fhir/xxx</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="change-log.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/xxx/milestone/10?closed=1">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/xxx/milestone/10?closed=1">Modifications apportées dans cette release</a>
+ :
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="change-log.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/xxx/issues/numéro d'issue">github.com</a>
+        </td>
+        <td>
+[narratif] modification xxx           <a href="https://github.com/ansforge/xxx/issues/numéro d'issue">numéro d'issue</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="downloads.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/nmdp-bioinformatics/igloader">github.com</a>
+        </td>
+        <td>
+Pour cela, il suffit de télécharger le           <a href="package.tgz">package.tgz</a>
+ et l'importer dans un serveur, par exemple sur hapi en suivant ce           <a href="https://github.com/nmdp-bioinformatics/igloader">script python</a>
+ open source.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="downloads.html">web</a>
+        </td>
+        <td>
+          <a href="https://interop.esante.gouv.fr/ig/documentation/valider_res.html">interop.esante.gouv.fr</a>
+        </td>
+        <td>
+Pour plus d'information sur la validation des instances de ressource contre un profil issu de cette spécification, consulter la documentation de l'opération           <a href="https://www.hl7.org/fhir/resource-operation-validate.html">$validate</a>
+ et la           <a href="https://interop.esante.gouv.fr/ig/documentation/valider_res.html">documentation de l'ANS</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.iso.org/iso-3166-country-codes.html">www.iso.org</a>
+        </td>
+        <td>
+ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page:           <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>
+          <div onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_1">
+
+            <ul>
+
+              <li>
+                <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+:                 <a href="index.html">NDE</a>
+,                 <a href="SearchParameter-NdE-CommunicationRequest-EventType.html">NdE_CommunicationRequest_EventType</a>
+                <span onclick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 16 more</span>                </span>
+                <span style="display: none" id="ips2_1">
+, <a href="StructureDefinition-declarant.html">NdE_Declarant</a>, <a href="CapabilityStatement-NdE-Emetteur.html">NdE_Emetteur</a>, <a href="StructureDefinition-nde-eventdeclaration.html">NdE_EventDeclarationNdE</a>, <a href="StructureDefinition-event-emission-time.html">NdE_EventEmissionTime</a>, <a href="StructureDefinition-event-time.html">NdE_EventTime</a>, <a href="StructureDefinition-event-type.html">NdE_EventType</a>, <a href="CapabilityStatement-NdE-GestionnaireDAbonnements.html">NdE_GestionnaireDAbonnements</a>, <a href="CapabilityStatement-NdE-GestionnaireDeNotifications.html">NdE_GestionnaireDeNotifications</a>, <a href="StructureDefinition-nde-notificationrequest.html">NdE_NotificationRequestNdE</a>, <a href="StructureDefinition-recipient-endpoint.html">NdE_RecipientEndpoint</a>, <a href="CapabilityStatement-NdE-Souscripteur.html">NdE_Souscripteur</a>, <a href="StructureDefinition-start.html">NdE_Start</a>, <a href="StructureDefinition-subject.html">NdE_Subject</a>, <a href="StructureDefinition-subscriber.html">NdE_Subscriber</a>, <a href="StructureDefinition-subscription-date.html">NdE_SubscriptionDate</a> and <a href="StructureDefinition-nde-subscription.html">NdE_SubscriptionNdE</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="https://oauth.net/">oauth.net</a>
+        </td>
+        <td>
+FHIR est conçu pour une utilisation sur internet et peut être mis en œuvre via XML ou JSON, HTTP, le format           <a href="https://validator.w3.org/feed/docs/atom.html">Atom</a>
+ et le standard d’autorisation           <a href="https://oauth.net/">OAuth</a>
+. Les ressources FHIR peuvent être réutilisées d’une façon interopérable (indépendamment de l’infrastructure technique des systèmes d’information les implémentant). Lorsqu’elles sont mises en œuvre en JSON, les ressources FHIR peuvent être utilisées nativement dans des plateformes ayant des ressources logicielles et matérielles limitées (téléphones portables ou tablettes) afin de concevoir des
+applications mobiles et de permettre des communications avec des systèmes sur le Cloud.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="https://fr.wikipedia.org/wiki/Representational_state_transfer">fr.wikipedia.org</a>
+        </td>
+        <td>
+L’implémentation qui contient des informations sur la mise en œuvre des ressources selon l’architecture           <a href="https://fr.wikipedia.org/wiki/Representational_state_transfer">REST</a>
+, ainsi que les types de messages et de documents qui peuvent être mis en œuvre avec les ressources FHIR.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model">www.selectbs.com</a>
+        </td>
+        <td>
+FHIR a mis en œuvre un           <a href="http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model">modèle de maturité de ressources</a>
+ basé sur le
+          <a href="http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model">CMM</a>
+ (          <em>Capability Maturity Model</em>
+) afin de fournir aux développeurs une idée de la maturité d’une ressource avant son utilisation et son implémentation. Ci-dessous les 5 niveaux de maturité utilisés par FHIR&nbsp;:
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="https://fr.wikipedia.org/wiki/Portable_Document_Format">fr.wikipedia.org</a>
+        </td>
+        <td>
+Les standards produits sont accessibles sur internet et disponibles en&nbsp;          <a href="https://fr.wikipedia.org/wiki/Portable_Document_Format">PDF</a>
+, Word et dans un format HTML.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsn">www.oasis-open.org</a>
+        </td>
+        <td>
+          <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsn">OASIS WS-notification</a>
+ est une famille de spécifications qui se basent sur des services Web pour mettre en œuvre un mécanisme de notification. Ceci inclut :
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm">docs.oasis-open.org</a>
+        </td>
+        <td>
+En ce qui concerne le standard WS Notification, les spécifications se composent en trois documents qui contiennent les spécifications           <a href="http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm">WS-BaseNotification v1.3</a>
+,
+          <a href="http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm">WS-BrokeredNotification v1.3</a>
+ et           <a href="http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm">WS-Topics v1.3</a>
+. Ces documents sont accessibles publiquement et gratuitement sur
+internet.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm">docs.oasis-open.org</a>
+        </td>
+        <td>
+En ce qui concerne le standard WS Notification, les spécifications se composent en trois documents qui contiennent les spécifications           <a href="http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm">WS-BaseNotification v1.3</a>
+,
+          <a href="http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm">WS-BrokeredNotification v1.3</a>
+ et           <a href="http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm">WS-Topics v1.3</a>
+. Ces documents sont accessibles publiquement et gratuitement sur
+internet.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm">docs.oasis-open.org</a>
+        </td>
+        <td>
+En ce qui concerne le standard WS Notification, les spécifications se composent en trois documents qui contiennent les spécifications           <a href="http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-spec-os.htm">WS-BaseNotification v1.3</a>
+,
+          <a href="http://docs.oasis-open.org/wsn/wsn-ws_brokered_notification-1.3-spec-os.htm">WS-BrokeredNotification v1.3</a>
+ et           <a href="http://docs.oasis-open.org/wsn/wsn-ws_topics-1.3-spec-os.htm">WS-Topics v1.3</a>
+. Ces documents sont accessibles publiquement et gratuitement sur
+internet.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/interoperabilite/ci-sis/demarche-elaboration">esante.gouv.fr</a>
+        </td>
+        <td>
+La           <a href="https://esante.gouv.fr/interoperabilite/ci-sis/demarche-elaboration">doctrine du CI-SIS</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.himss.org/evaluating-hit-standards?ItemNumber=22775">www.himss.org</a>
+        </td>
+        <td>
+«&nbsp;          <a href="http://www.himss.org/evaluating-hit-standards?ItemNumber=22775">Evaluating HIT Standards</a>
+&nbsp;» document sur la comparaison des standards publié par l’organisation           <a href="http://www.himss.org/">HIMSS</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.himss.org/">www.himss.org</a>
+        </td>
+        <td>
+«&nbsp;          <a href="http://www.himss.org/evaluating-hit-standards?ItemNumber=22775">Evaluating HIT Standards</a>
+&nbsp;» document sur la comparaison des standards publié par l’organisation           <a href="http://www.himss.org/">HIMSS</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="norme_standard.html">web</a>
+        </td>
+        <td>
+          <a href="http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm">ec.europa.eu</a>
+        </td>
+        <td>
+La méthode           <a href="http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm">CAMSS</a>
+ (Common Assessment Method for Standards and Specifications), soutenue par le programme de la commission européenne concernant les solutions d’interopérabilité pour les administrations publiques. Cette initiative vise à promouvoir la collaboration entre les états membres de l’union européenne dans la définition d’une méthode d’évaluation commune de standards pour le développement des services administratifs en ligne.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="searchform.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
+        </td>
+        <td>
+
+            <a id="hl7-logo" href="https://esante.gouv.fr/" data-no-external="true">
+<img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50">
+
+
+
+      <div id="ig-status">
+        <p><span style="font-size:12pt;font-weight:bold">Recherche sur Notification d'Événements (Current Build)</span>
+  
+<img src="assets/images/fra.svg" alt="France flag" title="France" height="16">
+
+
+          
+        
+      
+       <!-- /container -->
+  
+
+
+
+
+
+
+
+
+	<div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+		<div id="stripe"> </div>
+		<div class="container">    <!-- container -->
+     <!-- HEADER CONTENT -->
+ 	      		
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+     <a href="http://hl7.org/fhir/index.html" class="navbar-brand hidden">FHIR</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Specification</a></li>
+            </ul>
+					</div>    <!-- /.nav-collapse -->
+				</div>    <!-- /.container -->
+			</nav>    <!-- /.navbar -->
+      		
+    <!-- /HEADER CONTENT -->				
+		</div>    <!-- /container -->
+	</div>    <!-- /segment-navbar -->
+	
+
+
+    <!-- ============BreadCrumb=============== -->
+
+      <!-- /container -->
+     <!-- /segment-breadcrumb -->
+
+	<div id="segment-content" class="segment">    <!-- segment-content -->
+	<div class="container">    <!-- container -->
+            <div class="row">
+            	<div class="inner-wrapper">
+
+
+<div class="col-12">
+
+<h2>Recherche Notification d'Événements (Current Build)</h2>
+
+<form id="searchForm">
+  <input name="q" id="q" placeholder="Recherche..." type="text" aria-label="Recherche sur qwant"/>
+  <button id="search" type="submit">Lancer la recherche</button>
+</form>
+
+
+
+<hr/>
+
+
+</div>
+
+    </div>    <!-- /inner-wrapper -->
+            </div>    <!-- /row -->
+        </div>    <!-- /container -->
+
+    </div>    <!-- /segment-content -->
+
+
+    
+
+
+				    <!-- /inner-wrapper -->
+                <!-- /row -->
+            <!-- /container -->
+        
+        <!-- /segment-content -->
+
+
+	<div id="segment-footer" class="segment">    <!-- segment-footer -->
+		<div class="container">    <!-- container -->
+			<div class="inner-wrapper">
+				<p>
+                  </p>
+			</div>    <!-- /inner-wrapper -->
+		</div>    <!-- /container -->
+	</div>    <!-- /segment-footer -->
+    <!-- disqus thread -->
+    <!-- disqus -->
+    <!-- end disqus -->        
+	
+	<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+		<div class="container">    <!-- container -->
+		</div>    <!-- /container -->
+	</div>    <!-- /segment-post-footer -->
+  <footer role="contentinfo" class="footer footer-principal">
+    <div class="footer__region1">
+      <div class="container">
+        <div class="row">
+  
+          <div class="col-md-6 col-lg-4 text-center text-md-left">
+            <div class="logos">        
+              <div class="logo logo--0">
+                <a rel="nofollow" href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank">
+                  
+                  <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" loading="lazy" height="77">
+                  
+                
+              
+          
+              <div class="logo logo--1">
+                <a rel="nofollow" href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank">
+                  
+                  <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" loading="lazy" height="74">
+                
+              
+            
+          
+          
+          <div class="col-md-6 col-lg-4 text-center text-md-left">
+            <p class="footer__title">Agence du Numérique en Santé</p>
+            <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+  
+              <!-- <div class="m-social">
+              <ul class="m-social__list">        
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                    </div>
+                    <span class="sr-only">linkedin</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                    </div>
+                    <span class="sr-only">twitter</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                    </div>
+                    <span class="sr-only">youtube</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                    </div>
+                    <span class="sr-only">rss</span>
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+          
+          <div class="col-6 col-lg-4">
+            <ul class="footer-list">
+              <li class="footer-list__item footer-list__item--hasIcon">
+                <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                  <svg aria-hidden="true" focusable="false" class="svg-icon svg-angle-right"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+                </li>
+                  <!-- <li class="footer-list__item">
+                  <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+                </li> -->
+              </ul>
+            </div>
+  
+          
+        
+      
+      
+        <!-- <div class="footer__region2">
+        <div class="container">
+          <div class="footer-contentinfo">
+            <ul class="footer-list footer-list--inline">
+  
+            </ul>
+          </div>
+        </div>
+      </div> -->
+    
+    <script src="assets/js/jquery.js" type="text/javascript"> </script>         <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+    <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+    <script src="assets/js/ans-ig-addings.js" type="text/javascript"> </script>
+
+      
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+
+
+
+</img></a></div></img></a></div></div></div></div></div></div></footer></img></p></div></img>          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="searchform.html">web</a>
+        </td>
+        <td>
+          <a href="https://solidarites-sante.gouv.fr">solidarites-sante.gouv.fr</a>
+        </td>
+        <td>
+
+                          <a rel="nofollow" href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank">
+
+                  
+                  <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" loading="lazy" height="77">
+                  
+                
+              
+          
+              <div class="logo logo--1">
+                <a rel="nofollow" href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank">
+                  
+                  <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" loading="lazy" height="74">
+                
+              
+            
+          
+          
+          <div class="col-md-6 col-lg-4 text-center text-md-left">
+            <p class="footer__title">Agence du Numérique en Santé</p>
+            <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+  
+              <!-- <div class="m-social">
+              <ul class="m-social__list">        
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                    </div>
+                    <span class="sr-only">linkedin</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                    </div>
+                    <span class="sr-only">twitter</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                    </div>
+                    <span class="sr-only">youtube</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                    </div>
+                    <span class="sr-only">rss</span>
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+          
+          <div class="col-6 col-lg-4">
+            <ul class="footer-list">
+              <li class="footer-list__item footer-list__item--hasIcon">
+                <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                  <svg aria-hidden="true" focusable="false" class="svg-icon svg-angle-right"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+                </li>
+                  <!-- <li class="footer-list__item">
+                  <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+                </li> -->
+              </ul>
+            </div>
+  
+          
+        
+      
+      
+        <!-- <div class="footer__region2">
+        <div class="container">
+          <div class="footer-contentinfo">
+            <ul class="footer-list footer-list--inline">
+  
+            </ul>
+          </div>
+        </div>
+      </div> -->
+    
+    <script src="assets/js/jquery.js" type="text/javascript"> </script>         <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+    <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+    <script src="assets/js/ans-ig-addings.js" type="text/javascript"> </script>
+
+      
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+
+
+
+</img></a></div></img>          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="searchform.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/">esante.gouv.fr</a>
+        </td>
+        <td>
+
+                          <a rel="nofollow" href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank">
+
+                  
+                  <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" loading="lazy" height="74">
+                
+              
+            
+          
+          
+          <div class="col-md-6 col-lg-4 text-center text-md-left">
+            <p class="footer__title">Agence du Numérique en Santé</p>
+            <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+  
+              <!-- <div class="m-social">
+              <ul class="m-social__list">        
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                    </div>
+                    <span class="sr-only">linkedin</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                    </div>
+                    <span class="sr-only">twitter</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                    </div>
+                    <span class="sr-only">youtube</span>
+                  </a>
+                </li>
+                <li class="m-social__item">
+                  <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                    <div class="m-social__icon">
+                      <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                    </div>
+                    <span class="sr-only">rss</span>
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+          
+          <div class="col-6 col-lg-4">
+            <ul class="footer-list">
+              <li class="footer-list__item footer-list__item--hasIcon">
+                <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                  <svg aria-hidden="true" focusable="false" class="svg-icon svg-angle-right"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+                </li>
+                  <!-- <li class="footer-list__item">
+                  <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+                </li> -->
+              </ul>
+            </div>
+  
+          
+        
+      
+      
+        <!-- <div class="footer__region2">
+        <div class="container">
+          <div class="footer-contentinfo">
+            <ul class="footer-list footer-list--inline">
+  
+            </ul>
+          </div>
+        </div>
+      </div> -->
+    
+    <script src="assets/js/jquery.js" type="text/javascript"> </script>         <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+    <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+    <script src="assets/js/ans-ig-addings.js" type="text/javascript"> </script>
+
+      
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+
+
+
+</img>          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_techniques_introduction.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante">esante.gouv.fr</a>
+        </td>
+        <td>
+Il est à noter que les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. Celles-ci sont du ressort de chaque responsable de l’implémentation du mécanisme qui est dans l’obligation de se conformer au cadre juridique en la matière. ANS propose des référentiels dédiés à la politique de sécurité (la           <a href="https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante">PGSSI-S</a>
+) et des mécanismes de sécurisation sont définis dans les volets de la           <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication">couche Transport</a>
+ du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_techniques_introduction.html">web</a>
+        </td>
+        <td>
+          <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication">esante.gouv.fr</a>
+        </td>
+        <td>
+Il est à noter que les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. Celles-ci sont du ressort de chaque responsable de l’implémentation du mécanisme qui est dans l’obligation de se conformer au cadre juridique en la matière. ANS propose des référentiels dédiés à la politique de sécurité (la           <a href="https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante">PGSSI-S</a>
+) et des mécanismes de sécurisation sont définis dans les volets de la           <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication">couche Transport</a>
+ du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS).
+        </td>
+      </tr>
+    </table>
+    <h2>Internal Images</h2>
+    <table class="grid">
+      <tr>
+        <td>
+CI-SIS-NE-CU-DA-001.png          <br/>
+          <img src="CI-SIS-NE-CU-DA-001.png" alt="CI-SIS-NE-CU-DA-001.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+CI-SIS-NE-CU-EE-001.png          <br/>
+          <img src="CI-SIS-NE-CU-EE-001.png" alt="CI-SIS-NE-CU-EE-001.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+CI-SIS-NE-CU-SA-001.png          <br/>
+          <img src="CI-SIS-NE-CU-SA-001.png" alt="CI-SIS-NE-CU-SA-001.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+CI-SIS-NE-CU-TO-001.png          <br/>
+          <img src="CI-SIS-NE-CU-TO-001.png" alt="CI-SIS-NE-CU-TO-001.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+CI-SIS-NE-DA-DA-001.png          <br/>
+          <img src="CI-SIS-NE-DA-DA-001.png" alt="CI-SIS-NE-DA-DA-001.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+CI-SIS-NE-DA-EE-001.png          <br/>
+          <img src="CI-SIS-NE-DA-EE-001.png" alt="CI-SIS-NE-DA-EE-001.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+CI-SIS-NE-DA-SA-001.png          <br/>
+          <img src="CI-SIS-NE-DA-SA-001.png" alt="CI-SIS-NE-DA-SA-001.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+CI-SIS-NE-DA-TO-001.png          <br/>
+          <img src="CI-SIS-NE-DA-TO-001.png" alt="CI-SIS-NE-DA-TO-001.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+EmissionAbonnement.png          <br/>
+          <img src="EmissionAbonnement.png" alt="EmissionAbonnement.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+SouscriptionAbonnement.png          <br/>
+          <img src="SouscriptionAbonnement.png" alt="SouscriptionAbonnement.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+SuppressionAbonnement.png          <br/>
+          <img src="SuppressionAbonnement.png" alt="SuppressionAbonnement.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+TransmissionOrdreNotification.png          <br/>
+          <img src="TransmissionOrdreNotification.png" alt="TransmissionOrdreNotification.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+ci-sis-logo.png          <br/>
+          <img src="ci-sis-logo.png" alt="ci-sis-logo.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+organisationContexteMetier.png          <br/>
+          <img src="organisationContexteMetier.png" alt="organisationContexteMetier.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+tree-filter.png          <br/>
+          <img src="tree-filter.png" alt="tree-filter.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

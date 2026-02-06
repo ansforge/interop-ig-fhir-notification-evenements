@@ -1,0 +1,167 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/communication-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommunicationCategory",
+      "title" : "CommunicationCategory",
+      "description" : "Codes for general categories of communications such as alerts, instructions, etc.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/communication-category"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.172"],
+      "sources" : ["2.16.840.1.113883.4.642.3.172"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.20"],
+      "sources" : ["2.16.840.1.113883.4.642.3.20"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-subscription.html" : "NdE_SubscriptionNdE",
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Mime Types",
+      "title" : "MimeType",
+      "description" : "This value set includes all possible codes from BCP-13 (http://tools.ietf.org/html/bcp13)",
+      "systems" : ["urn:ietf:bcp:13"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1024"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1024"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-subscription.html" : "NdE_SubscriptionNdE"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "Request priority",
+      "description" : "The clinical priority of a diagnostic order.",
+      "systems" : ["http://hl7.org/fhir/request-priority"],
+      "oids" : ["2.16.840.1.113883.4.642.3.115"],
+      "sources" : ["2.16.840.1.113883.4.642.3.115"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "systems" : ["http://hl7.org/fhir/request-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.111"],
+      "sources" : ["2.16.840.1.113883.4.642.3.111"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.27"],
+      "sources" : ["2.16.840.1.113883.4.642.3.27"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscription-channel-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriptionChannelType",
+      "title" : "SubscriptionChannelType",
+      "description" : "The type of method used to execute a subscription.",
+      "systems" : ["http://hl7.org/fhir/subscription-channel-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.500"],
+      "sources" : ["2.16.840.1.113883.4.642.3.500"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-subscription.html" : "NdE_SubscriptionNdE"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscription-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriptionStatus",
+      "title" : "SubscriptionStatus",
+      "description" : "The status of a subscription.",
+      "systems" : ["http://hl7.org/fhir/subscription-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.502"],
+      "sources" : ["2.16.840.1.113883.4.642.3.502"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-subscription.html" : "NdE_SubscriptionNdE"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActReason",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActReason",
+      "title" : "v3 Code System ActReason",
+      "description" : " A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.  Examples:\r\nExample reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ParticipationMode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ParticipationMode",
+      "title" : "ParticipationMode",
+      "description" : "Identifies the primary means by which an Entity participates in an Act.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"],
+      "oids" : ["2.16.840.1.113883.1.11.16543"],
+      "sources" : ["2.16.840.1.113883.1.11.16543"],
+      "uses" : {
+      },
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS",
+      "version" : "20220624120000",
+      "status" : "active",
+      "name" : "JDV_J46_TypeEvenementNotification_CISIS",
+      "title" : null,
+      "description" : "Liste de types d'évènement pour lesquels une notification est possible",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.101"],
+      "sources" : ["1.2.250.1.213.1.1.5.101"],
+      "uses" : {
+      },
+      "StructureDefinition-event-type.html" : "Event Type"
+    }
+  ]
+}

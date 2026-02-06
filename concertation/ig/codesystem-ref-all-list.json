@@ -1,0 +1,123 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/request-priority",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "RequestPriority",
+      "description" : "Identifies the level of importance to be assigned to actioning the request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.116"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-request-priority.html" : "Request priority"
+    },
+    {
+      "url" : "http://hl7.org/fhir/request-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.112"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-request-status.html" : "RequestStatus"
+    },
+    {
+      "url" : "http://hl7.org/fhir/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
+    },
+    {
+      "url" : "http://hl7.org/fhir/subscription-channel-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriptionChannelType",
+      "title" : "SubscriptionChannelType",
+      "description" : "The type of method used to execute a subscription.",
+      "oids" : ["2.16.840.1.113883.4.642.4.501"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-subscription-channel-type.html" : "SubscriptionChannelType"
+    },
+    {
+      "url" : "http://hl7.org/fhir/subscription-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriptionStatus",
+      "title" : "SubscriptionStatus",
+      "description" : "The status of a subscription.",
+      "oids" : ["2.16.840.1.113883.4.642.4.503"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-subscription-status.html" : "SubscriptionStatus"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/communication-category",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "CommunicationCategory",
+      "title" : "CommunicationCategory",
+      "description" : "Codes for general categories of communications such as alerts, instructions, etc.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1076"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-communication-category.html" : "CommunicationCategory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "ActReason",
+      "title" : "ActReason",
+      "description" : "A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.\r\n\r\n*Examples:* Example reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
+      "oids" : ["2.16.840.1.113883.5.8"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActReason.html" : "v3 Code System ActReason"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
+      "version" : "4.0.0",
+      "status" : "active",
+      "name" : "ParticipationMode",
+      "title" : "ParticipationMode",
+      "description" : "A set of codes specifying the modality by which the Entity playing the Role is participating in the Act.\r\n\r\n*Examples:* Physically present, over the telephone, written communication.\r\n\r\n*Rationale:* Particularly for author (originator) participants this is used to specify whether the information represented by the act was initially provided verbally, (hand-)written, or electronically.\r\n\r\n*Open Issue:* There needs to be a reexamination of the hierarchies as there seems to be some muddling between ELECTRONIC and other concepts that involve electronic communication that are in other hierarchies.",
+      "oids" : ["2.16.840.1.113883.5.1064"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ParticipationMode.html" : "ParticipationMode"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement",
+      "version" : "20240329120000",
+      "status" : "active",
+      "name" : "TRE_R254_TypeEvenement",
+      "title" : null,
+      "description" : "Liste de types d'évènement",
+      "oids" : ["1.2.250.1.213.1.1.4.337"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J46-TypeEvenementNotification-CISIS.html" : "JDV_J46_TypeEvenementNotification_CISIS"
+    },
+    {
+      "url" : "urn:ietf:bcp:47",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "Ietf3066",
+      "title" : "Tags for the Identification of Languages",
+      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+      "oids" : ["2.16.840.1.113883.6.121"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
+    }
+  ]
+}

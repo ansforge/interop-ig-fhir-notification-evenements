@@ -1,0 +1,20 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS",
+      "version" : "20220624120000",
+      "status" : "active",
+      "name" : "JDV_J46_TypeEvenementNotification_CISIS",
+      "title" : null,
+      "description" : "Liste de types d'évènement pour lesquels une notification est possible",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.101"],
+      "sources" : ["1.2.250.1.213.1.1.5.101"],
+      "uses" : {
+      },
+      "StructureDefinition-event-type.html" : "Event Type"
+    }
+  ]
+}
