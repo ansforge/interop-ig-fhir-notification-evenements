@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-event-type.csv), [Ex
   "name" : "NdE_EventType",
   "title" : "Event Type",
   "status" : "draft",
-  "date" : "2026-02-06T14:23:42+00:00",
+  "date" : "2026-02-06T15:35:13+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

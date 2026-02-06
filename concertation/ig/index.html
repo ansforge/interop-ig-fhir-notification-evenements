@@ -64,7 +64,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Notification d'Événements</span>
             <br/>
-            <span style="display:inline-block;">3.0.0-ballot - ci-build
+            <span style="display:inline-block;">3.0.0-ballot - public-comment
 
 
 
@@ -271,9 +271,13 @@ This Implementation Guide defines the functional and technical scope for impleme
 It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.</p>
 
 <div style="width: 65%">
-    <blockquote class="stu-note">
-    <p>Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : http://interop.esante.gouv.fr/ig/fhir/[code - ig]</p>
-    </blockquote>
+<blockquote class="stu-note">
+<p>
+  <b>Attention !</b>
+  <br/>
+ Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : http://interop.esante.gouv.fr/ig/fhir/ans.fhir.fr.nde
+</p>
+</blockquote>
 </div>
 
 <div class="figure">
@@ -309,9 +313,9 @@ Elle formalise les mécanismes nécessaires à :</p>
 
 <p>Les ressources profilées dans cet IG sont les suivantes :</p>
 
-<table class="grid"><tr><td style="background-color: #eeeeee">Ressource FHIR</td><td style="background-color: #eeeeee">Profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a name="l512">​</a><a href="CommunicationRequest">CommunicationRequest</a></td><td><a href="StructureDefinition-nde-eventdeclaration.html">NdE_EventDeclarationNdE</a></td><td><div><p>EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc.</p>
-</div></td></tr><tr><td><a name="l524">​</a><a href="CommunicationRequest">CommunicationRequest</a></td><td><a href="StructureDefinition-nde-notificationrequest.html">NdE_NotificationRequestNdE</a></td><td><div><p>Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification</p>
-</div></td></tr><tr><td><a name="l536">​</a><a href="Subscription">Subscription</a></td><td><a href="StructureDefinition-nde-subscription.html">NdE_SubscriptionNdE</a></td><td><div><p>SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.</p>
+<table class="grid"><tr><td style="background-color: #eeeeee">Ressource FHIR</td><td style="background-color: #eeeeee">Profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a name="l517">​</a><a href="CommunicationRequest">CommunicationRequest</a></td><td><a href="StructureDefinition-nde-eventdeclaration.html">NdE_EventDeclarationNdE</a></td><td><div><p>EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc.</p>
+</div></td></tr><tr><td><a name="l529">​</a><a href="CommunicationRequest">CommunicationRequest</a></td><td><a href="StructureDefinition-nde-notificationrequest.html">NdE_NotificationRequestNdE</a></td><td><div><p>Ressource CommunicationRequest utilisée dans le Flux 4 - TransmissionOrdreNotification</p>
+</div></td></tr><tr><td><a name="l541">​</a><a href="Subscription">Subscription</a></td><td><a href="StructureDefinition-nde-subscription.html">NdE_SubscriptionNdE</a></td><td><div><p>SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification  à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement.</p>
 </div></td></tr></table>
 
 <h3 id="dépendances">Dépendances</h3>
@@ -403,7 +407,7 @@ Elle formalise les mécanismes nécessaires à :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 6, 2026 14:23+0000">2026-02-06</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.nde#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 6, 2026 15:35+0000">2026-02-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
