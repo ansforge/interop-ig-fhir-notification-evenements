@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide ans.fhir.fr.nde</b></p><a name="ans.fhir.fr.nde"> </a><a name="hcans.fhir.fr.nde"> </a><h2>NDE</h2><p>L'URL officielle pour ce guide d'implémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde"/>
-  <version value="3.0.0"/>
+  <version value="3.0.0-ballot"/>
   <name value="NDE"/>
   <title value="Notification d'Événements"/>
   <status value="draft"/>
-  <date value="2026-02-06T14:21:59+00:00"/>
+  <date value="2026-02-06T14:23:42+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>

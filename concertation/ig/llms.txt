@@ -1,4 +1,4 @@
-# ans.fhir.fr.nde#3.0.0: Notification d'Événements
+# ans.fhir.fr.nde#3.0.0-ballot: Notification d'Événements
 
 ## Pages
 

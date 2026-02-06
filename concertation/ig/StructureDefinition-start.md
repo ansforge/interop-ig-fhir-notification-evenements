@@ -1,4 +1,4 @@
-# Start - Notification d'Événements v3.0.0
+# Start - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start | *Version*:3.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start | *Version*:3.0.0-ballot |
 | Draft as of 2026-02-06 | *Computable Name*:NdE_Start |
 
 Cette information identifie la date de début de validité d’un abonnement.
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-start.csv), [Excel](
   "resourceType" : "StructureDefinition",
   "id" : "start",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_Start",
   "title" : "Start",
   "status" : "draft",
-  "date" : "2026-02-06T14:21:59+00:00",
+  "date" : "2026-02-06T14:23:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

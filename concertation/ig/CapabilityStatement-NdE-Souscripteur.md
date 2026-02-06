@@ -1,4 +1,4 @@
-# CI-SIS Notification-D-Evenements - NdE_Souscripteur - Notification d'Événements v3.0.0
+# CI-SIS Notification-D-Evenements - NdE_Souscripteur - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Souscripteur | *Version*:3.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Souscripteur | *Version*:3.0.0-ballot |
 | Active as of 2022-01-26 | *Computable Name*:NdE_Souscripteur |
 
  
@@ -25,7 +25,7 @@ Un souscripteur est la personne (physique ou morale) qui est habilitée à crée
   "resourceType" : "CapabilityStatement",
   "id" : "NdE-Souscripteur",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Souscripteur",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_Souscripteur",
   "title" : "CI-SIS Notification-D-Evenements - NdE_Souscripteur",
   "status" : "active",

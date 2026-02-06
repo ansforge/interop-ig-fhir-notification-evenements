@@ -1,4 +1,4 @@
-# Accueil - Notification d'Événements v3.0.0
+# Accueil - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0-ballot |
 | Draft as of 2026-02-06 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
@@ -75,11 +75,11 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "resourceType" : "ImplementationGuide",
   "id" : "ans.fhir.fr.nde",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-02-06T14:21:59+00:00",
+  "date" : "2026-02-06T14:23:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

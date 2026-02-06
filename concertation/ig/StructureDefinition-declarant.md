@@ -1,4 +1,4 @@
-# Declarant - Notification d'Événements v3.0.0
+# Declarant - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant | *Version*:3.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant | *Version*:3.0.0-ballot |
 | Draft as of 2026-02-06 | *Computable Name*:NdE_Declarant |
 
 Référence aux profils français des ressources qui identifient l’émetteur de l’évènement (Practitioner pour un professionnel, Organization pour un établissement)
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-declarant.csv), [Exc
   "resourceType" : "StructureDefinition",
   "id" : "declarant",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_Declarant",
   "title" : "Declarant",
   "status" : "draft",
-  "date" : "2026-02-06T14:21:59+00:00",
+  "date" : "2026-02-06T14:23:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

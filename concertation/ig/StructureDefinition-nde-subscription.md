@@ -1,4 +1,4 @@
-# NdE_SubscriptionNdE - Notification d'Événements v3.0.0
+# NdE_SubscriptionNdE - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription | *Version*:3.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription | *Version*:3.0.0-ballot |
 | Draft as of 2026-02-06 | *Computable Name*:NdE_SubscriptionNdE |
 
  
@@ -38,10 +38,10 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
   "resourceType" : "StructureDefinition",
   "id" : "nde-subscription",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_SubscriptionNdE",
   "status" : "draft",
-  "date" : "2026-02-06T14:21:59+00:00",
+  "date" : "2026-02-06T14:23:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

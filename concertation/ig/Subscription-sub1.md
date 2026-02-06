@@ -1,4 +1,4 @@
-# sub1 - Notification d'Événements v3.0.0
+# sub1 - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

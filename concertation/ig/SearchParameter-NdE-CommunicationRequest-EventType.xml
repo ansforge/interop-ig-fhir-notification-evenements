@@ -7,10 +7,10 @@
 </div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/communicationrequest.html">CommunicationRequest</a></td></tr><tr><td>Expression</td><td><code>extension.where(url='https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/nde/SearchParameter/NdE-CommunicationRequest-EventType"/>
-  <version value="3.0.0"/>
+  <version value="3.0.0-ballot"/>
   <name value="NdE_CommunicationRequest_EventType"/>
   <status value="active"/>
-  <date value="2026-02-06T14:21:59+00:00"/>
+  <date value="2026-02-06T14:23:42+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>

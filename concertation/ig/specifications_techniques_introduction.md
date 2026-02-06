@@ -1,4 +1,4 @@
-# Volume 2 - Détail des transactions - Notification d'Événements v3.0.0
+# Volume 2 - Détail des transactions - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Volume 2 - Détail des transactions**

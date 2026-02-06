@@ -1,4 +1,4 @@
-# CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements - Notification d'Événements v3.0.0
+# CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDAbonnements | *Version*:3.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDAbonnements | *Version*:3.0.0-ballot |
 | Active as of 2022-01-26 | *Computable Name*:NdE_GestionnaireDAbonnements |
 
  
@@ -25,7 +25,7 @@ Le gestionnaire d’abonnements est un acteur système qui stocke les abonnement
   "resourceType" : "CapabilityStatement",
   "id" : "NdE-GestionnaireDAbonnements",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDAbonnements",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_GestionnaireDAbonnements",
   "title" : "CI-SIS Notification-D-Evenements - NdE_GestionnaireDAbonnements",
   "status" : "active",

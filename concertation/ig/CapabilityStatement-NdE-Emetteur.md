@@ -1,4 +1,4 @@
-# CI-SIS Notification-D-Evenements - NdE_Emetteur - Notification d'Événements v3.0.0
+# CI-SIS Notification-D-Evenements - NdE_Emetteur - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Emetteur | *Version*:3.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Emetteur | *Version*:3.0.0-ballot |
 | Active as of 2022-01-26 | *Computable Name*:NdE_Emetteur |
 
  
@@ -25,7 +25,7 @@ L'émetteur est un système ou sous-système qui envoie un évènement au gestio
   "resourceType" : "CapabilityStatement",
   "id" : "NdE-Emetteur",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-Emetteur",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_Emetteur",
   "title" : "CI-SIS Notification-D-Evenements - NdE_Emetteur",
   "status" : "active",

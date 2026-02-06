@@ -1,4 +1,4 @@
-# com2 - Notification d'Événements v3.0.0
+# com2 - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
