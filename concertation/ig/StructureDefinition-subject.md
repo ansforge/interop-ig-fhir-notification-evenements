@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject | *Version*:3.0.0-ballot |
-| Draft as of 2026-02-06 | *Computable Name*:NdE_Subject |
+| Draft as of 2026-02-09 | *Computable Name*:NdE_Subject |
 
 Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient).
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-subject.csv), [Excel
   "name" : "NdE_Subject",
   "title" : "Subject",
   "status" : "draft",
-  "date" : "2026-02-06T15:35:13+00:00",
+  "date" : "2026-02-09T08:07:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

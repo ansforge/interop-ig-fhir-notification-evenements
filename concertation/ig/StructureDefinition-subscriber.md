@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber | *Version*:3.0.0-ballot |
-| Draft as of 2026-02-06 | *Computable Name*:NdE_Subscriber |
+| Draft as of 2026-02-09 | *Computable Name*:NdE_Subscriber |
 
 Cette information identifie le type d’évènement qui est lié à un abonnement particulier (i.e : dépôt de document, sortie d’hôpital, etc.)..
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-subscriber.csv), [Ex
   "name" : "NdE_Subscriber",
   "title" : "Subscriber",
   "status" : "draft",
-  "date" : "2026-02-06T15:35:13+00:00",
+  "date" : "2026-02-09T08:07:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

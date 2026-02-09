@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription | *Version*:3.0.0-ballot |
-| Draft as of 2026-02-06 | *Computable Name*:NdE_SubscriptionNdE |
+| Draft as of 2026-02-09 | *Computable Name*:NdE_SubscriptionNdE |
 
  
 SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
   "version" : "3.0.0-ballot",
   "name" : "NdE_SubscriptionNdE",
   "status" : "draft",
-  "date" : "2026-02-06T15:35:13+00:00",
+  "date" : "2026-02-09T08:07:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

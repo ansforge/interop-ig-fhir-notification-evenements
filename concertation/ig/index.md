@@ -8,13 +8,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde | *Version*:3.0.0-ballot |
-| Draft as of 2026-02-06 | *Computable Name*:NDE |
+| Draft as of 2026-02-09 | *Computable Name*:NDE |
 
  **Brief description of this Implementation Guide**
  This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework. It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
 
 >  **Attention !** 
- Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : http://interop.esante.gouv.fr/ig/fhir/ans.fhir.fr.nde 
+ Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : https://interop.esante.gouv.fr/ig/fhir/nde 
 
 ### Introduction
 
@@ -80,7 +80,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "draft",
-  "date" : "2026-02-06T15:35:13+00:00",
+  "date" : "2026-02-09T08:07:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

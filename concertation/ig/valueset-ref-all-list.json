@@ -29,8 +29,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-nde-subscription.html" : "NdE_SubscriptionNdE",
       "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
+      "StructureDefinition-nde-subscription.html" : "NdE_SubscriptionNdE",
       "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
     },
     {
