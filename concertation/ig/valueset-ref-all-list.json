@@ -14,8 +14,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.172"],
       "uses" : {
       },
-      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
-      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE",
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -29,9 +29,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE",
       "StructureDefinition-nde-subscription.html" : "NdE_SubscriptionNdE",
-      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
@@ -59,8 +59,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.115"],
       "uses" : {
       },
-      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
-      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE",
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/request-status",
@@ -74,8 +74,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.111"],
       "uses" : {
       },
-      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
-      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE",
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/resource-types",
@@ -129,8 +129,8 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
       "uses" : {
       },
-      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
-      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE",
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-ParticipationMode",
@@ -144,8 +144,8 @@
       "sources" : ["2.16.840.1.113883.1.11.16543"],
       "uses" : {
       },
-      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE",
-      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE"
+      "StructureDefinition-nde-eventdeclaration.html" : "NdE_EventDeclarationNdE",
+      "StructureDefinition-nde-notificationrequest.html" : "NdE_NotificationRequestNdE"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS",

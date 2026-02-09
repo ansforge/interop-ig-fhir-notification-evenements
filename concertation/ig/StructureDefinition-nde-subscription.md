@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
   "version" : "3.0.0-ballot",
   "name" : "NdE_SubscriptionNdE",
   "status" : "draft",
-  "date" : "2026-02-09T08:54:30+00:00",
+  "date" : "2026-02-09T14:29:20+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

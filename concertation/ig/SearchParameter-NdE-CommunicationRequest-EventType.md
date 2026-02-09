@@ -26,7 +26,7 @@ Permet de filtrer sur le type d'évènement véhiculé par la ressource Communic
   "version" : "3.0.0-ballot",
   "name" : "NdE_CommunicationRequest_EventType",
   "status" : "active",
-  "date" : "2026-02-09T08:54:30+00:00",
+  "date" : "2026-02-09T14:29:20+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
