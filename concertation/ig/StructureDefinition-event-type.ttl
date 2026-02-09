@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "NdE_EventType"] ; # 
   fhir:title [ fhir:v "Event Type"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-09T08:07:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-09T08:54:30+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
