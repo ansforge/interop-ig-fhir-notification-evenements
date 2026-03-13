@@ -1,0 +1,2 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement,20240329120000,active,"1.2.250.1.213.1.1.4.337",TRE_R254_TypeEvenement,,"Liste de types d'évènement","ValueSet/JDV-J46-TypeEvenementNotification-CISIS"

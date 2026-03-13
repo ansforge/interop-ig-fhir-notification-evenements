@@ -1,0 +1,93 @@
+NDE : Validation Results
+=========================================
+
+err = 19, warn = 15, info = 3
+IG Publisher Version: 2.1.2
+Generated Fri Mar 13 15:06:03 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.nde#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/nde)
+ Build Errors : 5 / 4 / 0
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-Emetteur : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-GestionnaireDAbonnements : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-GestionnaireDeNotifications : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-Souscripteur : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CommunicationRequest-com1 : 0 / 2 / 8
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CommunicationRequest-com2 : 0 / 1 / 6
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.nde : 2 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/SearchParameter-NdE-CommunicationRequest-EventType : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-declarant : 1 / 1 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-event-emission-time : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-event-time : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-event-type : 1 / 2 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-nde-eventdeclaration : 1 / 2 / 2
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-nde-notificationrequest : 1 / 2 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-nde-subscription : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-recipient-endpoint : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-start : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-subject : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-subscriber : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/StructureDefinition-subscription-date : 1 / 0 / 1
+ /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/Subscription-sub1 : 0 / 1 / 3
+</table>
+== n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Subscription/sub1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: change-log.html#/html/body/div/div/div/div/div/p/a at Line 231, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/nde/3.0.0' for "https://interop.esante.gouv.fr/ig/fhir/nde/3.0.0" cannot be resolved
+ERROR: index.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 306, column 199: The link 'CommunicationRequest' for "CommunicationRequest" cannot be resolved
+ERROR: index.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 307, column 26: The link 'CommunicationRequest' for "CommunicationRequest" cannot be resolved
+ERROR: index.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 308, column 26: The link 'Subscription' for "Subscription" cannot be resolved
+ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CapabilityStatement-NdE-Emetteur.json ==
+ERROR: CapabilityStatement/NdE-Emetteur: CapabilityStatement.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/CapabilityStatement-NdE-GestionnaireDAbonnements.json ==
+ERROR: CapabilityStatement/NdE-GestionnaireDAbonnements: CapabilityStatement.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/CapabilityStatement-NdE-GestionnaireDeNotifications.json ==
+ERROR: CapabilityStatement/NdE-GestionnaireDeNotifications: CapabilityStatement.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/CapabilityStatement-NdE-Souscripteur.json ==
+ERROR: CapabilityStatement/NdE-Souscripteur: CapabilityStatement.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/CommunicationRequest-com1.json ==
+INFORMATION: CommunicationRequest/com1: CommunicationRequest.contained[1]/*Patient/pat1*/.extension[0].extension[0].value.ofType(Coding): Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445|2.1.0
+WARNING: CommunicationRequest/com1: CommunicationRequest.contained[1]/*Patient/pat1*/.extension[0].extension[2].value.ofType(Coding): A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: CommunicationRequest/com1: CommunicationRequest.contained[2]/*Practitioner/pract1*/.identifier[0].system: No definition could be found for URL value 'https://rpps.esante.gouv.fr'
+== fsh-generated/resources/CommunicationRequest-com2.json ==
+INFORMATION: CommunicationRequest/com2: CommunicationRequest.contained[0]/*Patient/pat1*/.extension[0].extension[0].value.ofType(Coding): Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445|2.1.0
+WARNING: CommunicationRequest/com2: CommunicationRequest.contained[0]/*Patient/pat1*/.extension[0].extension[2].value.ofType(Coding): A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+== fsh-generated/resources/ImplementationGuide-ans.fhir.fr.nde.json ==
+ERROR: ImplementationGuide/ans.fhir.fr.nde: ImplementationGuide.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+ERROR: ImplementationGuide/ans.fhir.fr.nde: ImplementationGuide.definition.extension[27].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+== fsh-generated/resources/SearchParameter-NdE-CommunicationRequest-EventType.json ==
+ERROR: SearchParameter/NdE-CommunicationRequest-EventType: SearchParameter.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/StructureDefinition-declarant.json ==
+ERROR: StructureDefinition/declarant: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+WARNING: StructureDefinition/declarant: StructureDefinition.context[0]: Review the extension type for declarant: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+== fsh-generated/resources/StructureDefinition-event-emission-time.json ==
+ERROR: StructureDefinition/event-emission-time: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/StructureDefinition-event-time.json ==
+ERROR: StructureDefinition/event-time: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/StructureDefinition-event-type.json ==
+ERROR: StructureDefinition/event-type: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+WARNING: StructureDefinition/event-type: StructureDefinition.snapshot.element[4].binding.valueSet: There are multiple different potential matches for the url 'https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '20220624120000', found versions: 1.3.0 (from ans.fr.nos#1.3.0), 20220624120000 (from ans.fr.terminologies#1.7.0). Suggested fix: change the canonical reference from 'https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS' to 'https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS|20220624120000'
+WARNING: StructureDefinition/event-type: StructureDefinition.differential.element[3].binding.valueSet: There are multiple different potential matches for the url 'https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '20220624120000', found versions: 1.3.0 (from ans.fr.nos#1.3.0), 20220624120000 (from ans.fr.terminologies#1.7.0). Suggested fix: change the canonical reference from 'https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS' to 'https://mos.esante.gouv.fr/NOS/JDV_J46-TypeEvenementNotification-CISIS/FHIR/JDV-J46-TypeEvenementNotification-CISIS|20220624120000'
+== fsh-generated/resources/StructureDefinition-nde-eventdeclaration.json ==
+ERROR: StructureDefinition/nde-eventdeclaration: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+INFORMATION: StructureDefinition/nde-eventdeclaration: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+WARNING: StructureDefinition/nde-eventdeclaration: StructureDefinition.snapshot.element[20].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ParticipationMode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ParticipationMode' to 'http://terminology.hl7.org/ValueSet/v3-ParticipationMode|3.0.0'
+WARNING: StructureDefinition/nde-eventdeclaration: StructureDefinition.snapshot.element[34].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActReason'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActReason' to 'http://terminology.hl7.org/ValueSet/v3-ActReason|3.0.0'
+== fsh-generated/resources/StructureDefinition-nde-notificationrequest.json ==
+ERROR: StructureDefinition/nde-notificationrequest: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+WARNING: StructureDefinition/nde-notificationrequest: StructureDefinition.snapshot.element[21].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ParticipationMode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ParticipationMode' to 'http://terminology.hl7.org/ValueSet/v3-ParticipationMode|3.0.0'
+WARNING: StructureDefinition/nde-notificationrequest: StructureDefinition.snapshot.element[42].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActReason'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#5.0.0), 3.0.0 (from hl7.terminology.r4#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActReason' to 'http://terminology.hl7.org/ValueSet/v3-ActReason|3.0.0'
+== fsh-generated/resources/StructureDefinition-nde-subscription.json ==
+ERROR: StructureDefinition/nde-subscription: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/StructureDefinition-recipient-endpoint.json ==
+ERROR: StructureDefinition/recipient-endpoint: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/StructureDefinition-start.json ==
+ERROR: StructureDefinition/start: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/StructureDefinition-subject.json ==
+ERROR: StructureDefinition/subject: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/StructureDefinition-subscriber.json ==
+ERROR: StructureDefinition/subscriber: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/StructureDefinition-subscription-date.json ==
+ERROR: StructureDefinition/subscription-date: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr'. Default display is 'France'
+== fsh-generated/resources/Subscription-sub1.json ==
+WARNING: Subscription/sub1: Subscription.contained[2]/*Practitioner/pract1*/.identifier[0].system: No definition could be found for URL value 'https://rpps.esante.gouv.fr'

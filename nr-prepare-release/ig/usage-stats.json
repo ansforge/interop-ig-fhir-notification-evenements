@@ -1,0 +1,164 @@
+{
+  "package": "ans.fhir.fr.nde",
+  "version": "3.0.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "FR",
+  "extensions": [
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant",
+      "title": "Declarant",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time",
+      "title": "Emission Time",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time",
+      "title": "Event Time",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
+      "title": "Event Type",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint",
+      "title": "NdE_RecipientEndpoint",
+      "types": [
+        "url"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start",
+      "title": "Start",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject",
+      "title": "Subject",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber",
+      "title": "Subscriber",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date",
+      "title": "Subscription Date",
+      "types": [
+        "dateTime"
+      ]
+    }
+  ],
+  "profiles": {
+    "CommunicationRequest": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration",
+        "title": "NdE_EventDeclarationNdE"
+      },
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-notificationrequest",
+        "title": "NdE_NotificationRequestNdE"
+      }
+    ],
+    "Subscription": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription",
+        "title": "NdE_SubscriptionNdE"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "ImplementationGuide.definition.page.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability": [
+      "CommunicationRequest.contained",
+      "Subscription.contained"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/declarant": [
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-emission-time": [
+      "CommunicationRequest"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time": [
+      "CommunicationRequest"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type": [
+      "CommunicationRequest",
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint": [
+      "CommunicationRequest.recipient"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start": [
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject": [
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscriber": [
+      "Subscription"
+    ],
+    "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subscription-date": [
+      "Subscription"
+    ]
+  }
+}
