@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-recipient-endpoint.c
   "version" : "3.0.0",
   "name" : "NdE_RecipientEndpoint",
   "status" : "active",
-  "date" : "2026-03-13T16:21:37+00:00",
+  "date" : "2026-03-13T16:37:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

@@ -13,6 +13,8 @@
  **Brief description of this Implementation Guide**
  This Implementation Guide defines the functional and technical scope for implementing event notification mechanisms within the French CI-SIS interoperability framework. It covers subscription management, event declaration, and notification order transmission using HL7 FHIR R4 resources and profiles.
 
+> Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : http://interop.esante.gouv.fr/ig/fhir/[code - ig]
+
 ### Introduction
 
 Ce guide d'implémentation (IG) décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement survient au cours de sa prise en charge.
@@ -77,7 +79,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "active",
-  "date" : "2026-03-13T16:21:37+00:00",
+  "date" : "2026-03-13T16:37:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -147,7 +149,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       },
       {
         "url" : "value",
-        "valueString" : "trial-use"
+        "valueString" : "ci-build"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -454,7 +456,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       },
       {
         "url" : "value",
-        "valueString" : "trial-use"
+        "valueString" : "ci-build"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
