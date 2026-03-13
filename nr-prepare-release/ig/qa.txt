@@ -3,7 +3,7 @@ NDE : Validation Results
 
 err = 19, warn = 15, info = 3
 IG Publisher Version: 2.1.2
-Generated Fri Mar 13 15:12:49 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.nde#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/nde)
+Generated Fri Mar 13 15:34:54 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.nde#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/nde)
  Build Errors : 5 / 4 / 0
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-Emetteur : 1 / 0 / 1
  /home/runner/work/interop-ig-fhir-notification-evenements/interop-ig-fhir-notification-evenements/igSource/fsh-generated/resources/CapabilityStatement-NdE-GestionnaireDAbonnements : 1 / 0 / 1

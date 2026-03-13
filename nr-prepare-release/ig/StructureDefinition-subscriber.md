@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-subscriber.csv), [Ex
   "name" : "NdE_Subscriber",
   "title" : "Subscriber",
   "status" : "active",
-  "date" : "2026-03-13T15:11:04+00:00",
+  "date" : "2026-03-13T15:32:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
