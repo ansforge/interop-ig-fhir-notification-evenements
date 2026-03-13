@@ -77,7 +77,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "NDE",
   "title" : "Notification d'Événements",
   "status" : "active",
-  "date" : "2026-03-13T16:21:24+00:00",
+  "date" : "2026-03-13T16:21:37+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
