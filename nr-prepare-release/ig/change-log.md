@@ -11,7 +11,7 @@
 
 URL : [https://interop.esante.gouv.fr/ig/fhir/nde/3.0.0](https://interop.esante.gouv.fr/ig/fhir/nde/3.0.0)
 
-[Modifications apportées dans cette release](https://github.com/ansforge/interop-ig-fhir-notification-evenements/pulls?q=is%3Apr+is%3Aclosed) :
+[Modifications apportées dans cette release](https://github.com/ansforge/interop-ig-fhir-notification-evenements/milestone/1) :
 
 * Création de la structure de l'IG [#7](https://github.com/ansforge/interop-ig-fhir-notification-evenements/pull/7)
 * Ajout des spécifications fonctionnelles [#8](https://github.com/ansforge/interop-ig-fhir-notification-evenements/pull/8)
