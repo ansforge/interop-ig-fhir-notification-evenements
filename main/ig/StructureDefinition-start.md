@@ -1,4 +1,4 @@
-# Start - Notification d'Événements v3.0.0-ballot
+# Start - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start | *Version*:3.0.0-ballot |
-| Draft as of 2026-03-13 | *Computable Name*:NdE_Start |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start | *Version*:3.0.0 |
+| Active as of 2026-03-13 | *Computable Name*:NdE_Start |
 
 Cette information identifie la date de début de validité d’un abonnement.
 
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-start.csv), [Excel](
   "resourceType" : "StructureDefinition",
   "id" : "start",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/start",
-  "version" : "3.0.0-ballot",
+  "version" : "3.0.0",
   "name" : "NdE_Start",
   "title" : "Start",
-  "status" : "draft",
-  "date" : "2026-03-13T14:54:50+00:00",
+  "status" : "active",
+  "date" : "2026-03-13T16:20:59+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

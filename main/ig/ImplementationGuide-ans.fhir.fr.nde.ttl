@@ -17,11 +17,11 @@
      fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde"^^xsd:anyURI ;
      fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde>
   ] ; # 
-  fhir:version [ fhir:v "3.0.0-ballot"] ; # 
+  fhir:version [ fhir:v "3.0.0"] ; # 
   fhir:name [ fhir:v "NDE"] ; # 
   fhir:title [ fhir:v "Notification d'Événements"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-13T14:54:50+00:00"^^xsd:dateTime] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-03-13T16:20:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -138,7 +138,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "public-comment"
+           fhir:v "trial-use"
          ]
        ] ) ;
        fhir:url [
@@ -805,7 +805,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "public-comment"
+           fhir:v "trial-use"
          ]
        ] ) ;
        fhir:url [

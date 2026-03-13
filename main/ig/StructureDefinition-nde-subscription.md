@@ -1,4 +1,4 @@
-# NdE_SubscriptionNdE - Notification d'Événements v3.0.0-ballot
+# NdE_SubscriptionNdE - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription | *Version*:3.0.0-ballot |
-| Draft as of 2026-03-13 | *Computable Name*:NdE_SubscriptionNdE |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription | *Version*:3.0.0 |
+| Active as of 2026-03-13 | *Computable Name*:NdE_SubscriptionNdE |
 
  
 SouscriptionAbonnement concerne la création ou la mise à jour d’un abonnement. Un abonnement porte sur les types d'évènements qui intéressent l’abonné et qui peuvent faire l’objet d’une notification. Il est défini par l’identification de l’abonné, le média de notification à utiliser, la personne prise en charge associée aux évènements, le type d’événement donnant lieu à notification et la période de validité de l’abonnement. 
@@ -38,10 +38,10 @@ Other representations of profile: [CSV](StructureDefinition-nde-subscription.csv
   "resourceType" : "StructureDefinition",
   "id" : "nde-subscription",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-subscription",
-  "version" : "3.0.0-ballot",
+  "version" : "3.0.0",
   "name" : "NdE_SubscriptionNdE",
-  "status" : "draft",
-  "date" : "2026-03-13T14:54:50+00:00",
+  "status" : "active",
+  "date" : "2026-03-13T16:20:59+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

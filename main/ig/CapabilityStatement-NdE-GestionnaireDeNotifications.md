@@ -1,4 +1,4 @@
-# CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications - Notification d'Événements v3.0.0-ballot
+# CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDeNotifications | *Version*:3.0.0-ballot |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDeNotifications | *Version*:3.0.0 |
 | Active as of 2022-01-26 | *Computable Name*:NdE_GestionnaireDeNotifications |
 
  
@@ -25,7 +25,7 @@ Le gestionnaire de notifications est un acteur système qui envoie les notificat
   "resourceType" : "CapabilityStatement",
   "id" : "NdE-GestionnaireDeNotifications",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/CapabilityStatement/NdE-GestionnaireDeNotifications",
-  "version" : "3.0.0-ballot",
+  "version" : "3.0.0",
   "name" : "NdE_GestionnaireDeNotifications",
   "title" : "CI-SIS Notification-D-Evenements - NdE_GestionnaireDeNotifications",
   "status" : "active",

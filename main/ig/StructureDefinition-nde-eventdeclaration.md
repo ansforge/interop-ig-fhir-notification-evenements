@@ -1,4 +1,4 @@
-# NdE_EventDeclarationNdE - Notification d'Événements v3.0.0-ballot
+# NdE_EventDeclarationNdE - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration | *Version*:3.0.0-ballot |
-| Draft as of 2026-03-13 | *Computable Name*:NdE_EventDeclarationNdE |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration | *Version*:3.0.0 |
+| Active as of 2026-03-13 | *Computable Name*:NdE_EventDeclarationNdE |
 
  
 EmissionEvenement contient les informations nécessaires pour transmettre un évènement à un système d’information ou à un composant d’un système d’information (gestionnaire d’évènements). Un évènement peut être un dépôt de documents, une sortie d’hôpital, etc. 
@@ -40,11 +40,11 @@ Other representations of profile: [CSV](StructureDefinition-nde-eventdeclaration
   "resourceType" : "StructureDefinition",
   "id" : "nde-eventdeclaration",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration",
-  "version" : "3.0.0-ballot",
+  "version" : "3.0.0",
   "name" : "NdE_EventDeclarationNdE",
   "title" : "NdE_EventDeclarationNdE",
-  "status" : "draft",
-  "date" : "2026-03-13T14:54:50+00:00",
+  "status" : "active",
+  "date" : "2026-03-13T16:20:59+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

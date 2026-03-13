@@ -1,4 +1,4 @@
-# NdE-CommunicationRequest-EventType - Notification d'Événements v3.0.0-ballot
+# NdE-CommunicationRequest-EventType - Notification d'Événements v3.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/SearchParameter/NdE-CommunicationRequest-EventType | *Version*:3.0.0-ballot |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/SearchParameter/NdE-CommunicationRequest-EventType | *Version*:3.0.0 |
 | Active as of 2026-03-13 | *Computable Name*:NdE_CommunicationRequest_EventType |
 
  
@@ -23,10 +23,10 @@ Permet de filtrer sur le type d'évènement véhiculé par la ressource Communic
   "resourceType" : "SearchParameter",
   "id" : "NdE-CommunicationRequest-EventType",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/SearchParameter/NdE-CommunicationRequest-EventType",
-  "version" : "3.0.0-ballot",
+  "version" : "3.0.0",
   "name" : "NdE_CommunicationRequest_EventType",
   "status" : "active",
-  "date" : "2026-03-13T14:54:50+00:00",
+  "date" : "2026-03-13T16:20:59+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
