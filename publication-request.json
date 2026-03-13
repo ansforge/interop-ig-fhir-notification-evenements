@@ -1,0 +1,16 @@
+{
+    "package-id" : "ans.fhir.fr.nde",
+    "version" : "3.0.0-ballot",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/nde/3.0.0-ballot",
+    "mode" : "working",
+    "status" : "ballot",
+    "sequence" : "STU1",
+    "title" : "Volet Traçabilité des notifications d'événements",
+    "first" : true,
+    "desc" : "Ce guide décrit les mechanismes de notification d’évènements.",
+    "ci-build" : "https://ansforge.github.io/interop-ig-fhir-notification-evenements/main/ig/",
+    "category" : "Infrastructure",
+    "introduction" : "Ce guide décrit un mécanisme de notification d’évènements permettant d’informer automatiquement une personne lorsqu’un évènement survient au cours de sa prise en charge.",
+    "changes": "change-log.html"
+
+  }
