@@ -1,4 +1,4 @@
-# Glossaire - Notification d'Événements v3.0.0
+# Glossaire - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Autres Ressources**](autres_ressources.md)

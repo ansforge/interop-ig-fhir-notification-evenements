@@ -17,11 +17,11 @@
      fhir:v "https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde"^^xsd:anyURI ;
      fhir:l <https://interop.esante.gouv.fr/ig/fhir/nde/ImplementationGuide/ans.fhir.fr.nde>
   ] ; # 
-  fhir:version [ fhir:v "3.0.0"] ; # 
+  fhir:version [ fhir:v "3.0.0-ballot"] ; # 
   fhir:name [ fhir:v "NDE"] ; # 
   fhir:title [ fhir:v "Notification d'Événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-05T15:09:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-13T14:54:50+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -60,7 +60,7 @@
        fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.0.1" ]
+     fhir:version [ fhir:v "7.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -94,7 +94,7 @@
        fhir:l <https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies>
      ] ;
      fhir:packageId [ fhir:v "ans.fr.terminologies" ] ;
-     fhir:version [ fhir:v "1.4.0" ]
+     fhir:version [ fhir:v "1.7.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -138,7 +138,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ci-build"
+           fhir:v "public-comment"
          ]
        ] ) ;
        fhir:url [
@@ -805,7 +805,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ci-build"
+           fhir:v "public-comment"
          ]
        ] ) ;
        fhir:url [

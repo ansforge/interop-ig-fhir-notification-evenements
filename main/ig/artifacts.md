@@ -1,4 +1,4 @@
-# Artifacts Summary - Notification d'Événements v3.0.0
+# Artifacts Summary - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Artifacts Summary**

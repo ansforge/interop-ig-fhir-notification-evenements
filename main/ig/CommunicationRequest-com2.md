@@ -1,4 +1,4 @@
-# com2 - Notification d'Événements v3.0.0
+# com2 - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -60,123 +60,97 @@ Profil: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
   "resourceType" : "CommunicationRequest",
   "id" : "com2",
   "meta" : {
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration"
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/nde-eventdeclaration"]
   },
-  "contained" : [
-    {
-      "resourceType" : "Patient",
-      "id" : "pat1",
-      "meta" : {
-        "profile" : [
-          "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"
-        ]
+  "contained" : [{
+    "resourceType" : "Patient",
+    "id" : "pat1",
+    "meta" : {
+      "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
+    },
+    "extension" : [{
+      "extension" : [{
+        "url" : "identityStatus",
+        "valueCoding" : {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445",
+          "code" : "VALI",
+          "display" : "Identité validée"
+        }
       },
-      "extension" : [
-        {
-          "extension" : [
-            {
-              "url" : "identityStatus",
-              "valueCoding" : {
-                "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445",
-                "code" : "VALI",
-                "display" : "Identité validée"
-              }
-            },
-            {
-              "url" : "validationDate",
-              "valueDate" : "2020-04-22"
-            },
-            {
-              "url" : "validationMode",
-              "valueCoding" : {
-                "code" : "CN",
-                "display" : "Carte nationale d'identité"
-              }
-            }
-          ],
-          "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"
+      {
+        "url" : "validationDate",
+        "valueDate" : "2020-04-22"
+      },
+      {
+        "url" : "validationMode",
+        "valueCoding" : {
+          "code" : "CN",
+          "display" : "Carte nationale d'identité"
         }
-      ],
-      "name" : [
-        {
-          "use" : "usual",
-          "family" : "Robert",
-          "given" : ["Langdon"],
-          "prefix" : ["MR"]
-        }
-      ],
-      "telecom" : [
-        {
-          "system" : "phone",
-          "value" : "(03) 3410 5613",
-          "use" : "mobile",
-          "rank" : 1
-        }
-      ],
-      "gender" : "male",
-      "birthDate" : "1960-03-20"
+      }],
+      "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"
+    }],
+    "name" : [{
+      "use" : "usual",
+      "family" : "Robert",
+      "given" : ["Langdon"],
+      "prefix" : ["MR"]
+    }],
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "(03) 3410 5613",
+      "use" : "mobile",
+      "rank" : 1
+    }],
+    "gender" : "male",
+    "birthDate" : "1960-03-20"
+  },
+  {
+    "resourceType" : "Organization",
+    "id" : "org1",
+    "meta" : {
+      "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"]
+    },
+    "name" : "Service de pneumologie, Hôpital Test",
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "022-655 6780"
     },
     {
-      "resourceType" : "Organization",
-      "id" : "org1",
-      "meta" : {
-        "profile" : [
-          "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"
-        ]
-      },
-      "name" : "Service de pneumologie, Hôpital Test",
-      "telecom" : [
-        {
-          "system" : "phone",
-          "value" : "022-655 6780"
-        },
-        {
-          "system" : "email",
-          "value" : "pneumo@hopitalTest.fr",
-          "use" : "work"
-        }
-      ],
-      "address" : [
-        {
-          "line" : ["Aile ouest, étage 5"]
-        }
-      ]
+      "system" : "email",
+      "value" : "pneumo@hopitalTest.fr",
+      "use" : "work"
+    }],
+    "address" : [{
+      "line" : ["Aile ouest, étage 5"]
+    }]
+  }],
+  "extension" : [{
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement",
+        "code" : "SOR",
+        "display" : "Sortie d'un patient de l'établissement de santé"
+      }]
     }
-  ],
-  "extension" : [
-    {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-type",
-      "valueCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R254-TypeEvenement/FHIR/TRE-R254-TypeEvenement",
-            "code" : "SOR",
-            "display" : "Sortie d'un patient de l'établissement de santé"
-          }
-        ]
-      }
-    },
-    {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time",
-      "valueDateTime" : "2019-01-01T00:00:00Z"
-    }
-  ],
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time",
+    "valueDateTime" : "2019-01-01T00:00:00Z"
+  }],
   "status" : "active",
   "subject" : {
     "reference" : "#pat1"
   },
-  "payload" : [
-    {
-      "contentAttachment" : {
-        "contentType" : "text/plain",
-        "data" : "SGVsbG8=",
-        "title" : "Sortie du patient Robert Langdon de l'établissement de santé",
-        "creation" : "2019-01-01T00:00:00Z"
-      }
+  "payload" : [{
+    "contentAttachment" : {
+      "contentType" : "text/plain",
+      "data" : "SGVsbG8=",
+      "title" : "Sortie du patient Robert Langdon de l'établissement de santé",
+      "creation" : "2019-01-01T00:00:00Z"
     }
-  ],
+  }],
   "requester" : {
     "reference" : "#org1"
   }

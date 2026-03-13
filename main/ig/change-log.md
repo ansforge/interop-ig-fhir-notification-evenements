@@ -1,4 +1,4 @@
-# Historique des versions - Notification d'Événements v3.0.0
+# Historique des versions - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Historique des versions**

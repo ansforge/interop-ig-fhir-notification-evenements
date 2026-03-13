@@ -1,4 +1,4 @@
-# Autres Ressources - Notification d'Événements v3.0.0
+# Autres Ressources - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Autres Ressources**

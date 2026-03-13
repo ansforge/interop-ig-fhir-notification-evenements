@@ -1,4 +1,4 @@
-# Subject - Notification d'Événements v3.0.0
+# Subject - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject | *Version*:3.0.0 |
-| Draft as of 2026-02-05 | *Computable Name*:NdE_Subject |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject | *Version*:3.0.0-ballot |
+| Draft as of 2026-03-13 | *Computable Name*:NdE_Subject |
 
 Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient).
 
@@ -43,86 +43,68 @@ Other representations of profile: [CSV](StructureDefinition-subject.csv), [Excel
   "resourceType" : "StructureDefinition",
   "id" : "subject",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_Subject",
   "title" : "Subject",
   "status" : "draft",
-  "date" : "2026-02-05T15:09:09+00:00",
+  "date" : "2026-03-13T14:54:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
-  "contact" : [
-    {
-      "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient).",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "Subscription"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "Subscription"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "Subject",
-        "definition" : "Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient)."
-      },
-      {
-        "id" : "Extension.extension",
-        "path" : "Extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient",
-              "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"
-            ]
-          }
-        ]
-      }
-    ]
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "Subject",
+      "definition" : "Référence au profil français de la ressource Patient contenant les informations relatives à la personne prise en charge (ou au patient)."
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/subject"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient",
+        "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"]
+      }]
+    }]
   }
 }
 

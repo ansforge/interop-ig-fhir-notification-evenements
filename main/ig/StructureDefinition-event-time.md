@@ -1,4 +1,4 @@
-# Event Time - Notification d'Événements v3.0.0
+# Event Time - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time | *Version*:3.0.0 |
-| Draft as of 2026-02-05 | *Computable Name*:NdE_EventTime |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time | *Version*:3.0.0-ballot |
+| Draft as of 2026-03-13 | *Computable Name*:NdE_EventTime |
 
 Date à laquelle l’évènement a eu lieu.
 
@@ -43,82 +43,66 @@ Other representations of profile: [CSV](StructureDefinition-event-time.csv), [Ex
   "resourceType" : "StructureDefinition",
   "id" : "event-time",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_EventTime",
   "title" : "Event Time",
   "status" : "draft",
-  "date" : "2026-02-05T15:09:09+00:00",
+  "date" : "2026-03-13T14:54:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
-  "contact" : [
-    {
-      "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Date à laquelle l’évènement a eu lieu.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "CommunicationRequest"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "CommunicationRequest"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "Event Time",
-        "definition" : "Date à laquelle l’évènement a eu lieu."
-      },
-      {
-        "id" : "Extension.extension",
-        "path" : "Extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "type" : [
-          {
-            "code" : "dateTime"
-          }
-        ]
-      }
-    ]
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "Event Time",
+      "definition" : "Date à laquelle l’évènement a eu lieu."
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/event-time"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    }]
   }
 }
 

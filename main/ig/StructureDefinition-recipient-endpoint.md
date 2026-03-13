@@ -1,4 +1,4 @@
-# NdE_RecipientEndpoint - Notification d'Événements v3.0.0
+# NdE_RecipientEndpoint - Notification d'Événements v3.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint | *Version*:3.0.0 |
-| Draft as of 2026-02-05 | *Computable Name*:NdE_RecipientEndpoint |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint | *Version*:3.0.0-ballot |
+| Draft as of 2026-03-13 | *Computable Name*:NdE_RecipientEndpoint |
 
 Cette information contient les données nécessaires pour contacter l’abonné
 
@@ -43,81 +43,65 @@ Other representations of profile: [CSV](StructureDefinition-recipient-endpoint.c
   "resourceType" : "StructureDefinition",
   "id" : "recipient-endpoint",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint",
-  "version" : "3.0.0",
+  "version" : "3.0.0-ballot",
   "name" : "NdE_RecipientEndpoint",
   "status" : "draft",
-  "date" : "2026-02-05T15:09:09+00:00",
+  "date" : "2026-03-13T14:54:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
-  "contact" : [
-    {
-      "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Cette information contient les données nécessaires pour contacter l’abonné",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "CommunicationRequest.recipient"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "CommunicationRequest.recipient"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "definition" : "Cette information contient les données nécessaires pour contacter l’abonné"
-      },
-      {
-        "id" : "Extension.extension",
-        "path" : "Extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "url"
-          }
-        ]
-      }
-    ]
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "definition" : "Cette information contient les données nécessaires pour contacter l’abonné"
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/nde/StructureDefinition/recipient-endpoint"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "min" : 1,
+      "type" : [{
+        "code" : "url"
+      }]
+    }]
   }
 }
 
